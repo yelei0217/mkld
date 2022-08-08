@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleSet xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.mkld.sapinterage.app</package>
+    <name>ReceClaimRecordRuleSet</name>
+    <alias>ruleSet[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordRuleSet].alias</alias>
+    <description>ruleSet[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordRuleSet].description</description>
+    <userDefined>true</userDefined>
+    <resource>
+        <rs key="ruleSet[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordRuleSet].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordRuleSet].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+    </resource>
+</ruleSet>
+

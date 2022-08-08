@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizUnit xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.mkld.sapinterage</package>
+    <name>ReceClaimRecord</name>
+    <alias>bizUnit[com.kingdee.eas.mkld.sapinterage.ReceClaimRecord].alias</alias>
+    <description>bizUnit[com.kingdee.eas.mkld.sapinterage.ReceClaimRecord].description</description>
+    <userDefined>true</userDefined>
+    <bizType>BusinessBill</bizType>
+    <template>false</template>
+    <entityPK>com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord</entityPK>
+    <queryPK>com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery</queryPK>
+    <editUIPK>com.kingdee.eas.mkld.sapinterage.client.ReceClaimRecordEditUI</editUIPK>
+    <listUIPK>com.kingdee.eas.mkld.sapinterage.client.ReceClaimRecordListUI</listUIPK>
+    <webEditUIPK />
+    <webListUIPK />
+    <entityFunctionPK />
+    <editUIFunctionPK>com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordEditUIFunction</editUIFunctionPK>
+    <listUIFunctionPK>com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordListUIFunction</listUIFunctionPK>
+    <entryUIPK />
+    <versionDate />
+    <versionNumber />
+    <extendTablePKs />
+    <extendEntityPKs />
+    <extendQueryPKs />
+    <extendEditUIPKs />
+    <extendListUIPKs />
+    <menuPKList />
+    <bimTemplateType>MCoreBillBase</bimTemplateType>
+    <relatedTablePK />
+    <relatedEntityPK />
+    <relatedEditUIPK />
+    <genImplementCode>true</genImplementCode>
+    <webEditPagePK />
+    <webListPagePK />
+    <webPagePKS />
+    <webViewPagePK />
+    <webBriefPagePK />
+    <relatedWebEditPagePK />
+    <relatedQueryPK />
+    <resource>
+        <rs key="bizUnit[com.kingdee.eas.mkld.sapinterage.ReceClaimRecord].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收款认领记录" />
+            <lang locale="zh_HK" value="收款認領記錄" />
+            <lang locale="zh_TW" value="收款認領記錄" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.mkld.sapinterage.ReceClaimRecord].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.mkld.sapinterage.ReceClaimRecord].extendedProperty.MainOrgFieldName">
+            <lang locale="en_US" value="FICompany" />
+            <lang locale="zh_CN" value="FICompany" />
+            <lang locale="zh_TW" value="FICompany" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.mkld.sapinterage.ReceClaimRecord].extendedProperty.OrgType">
+            <lang locale="en_US" value="Company" />
+            <lang locale="zh_CN" value="Company" />
+            <lang locale="zh_TW" value="Company" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.mkld.sapinterage.ReceClaimRecord].extendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.mkld.sapinterage.ReceClaimRecord].extendedProperty.configured">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.mkld.sapinterage.ReceClaimRecord].extendedProperty.defaultDisplayField">
+            <lang locale="en_US" value="" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.mkld.sapinterage.ReceClaimRecord].extendedProperty.defaultF7Query">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.mkld.sapinterage.ReceClaimRecord].extendedProperty.editUI">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.client.ReceClaimRecordEditUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.client.ReceClaimRecordEditUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.client.ReceClaimRecordEditUI" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.mkld.sapinterage.ReceClaimRecord].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.mkld.sapinterage.ReceClaimRecord].extendedProperty.isParamObject">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.mkld.sapinterage.ReceClaimRecord].extendedProperty.listUI">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.client.ReceClaimRecordListUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.client.ReceClaimRecordListUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.client.ReceClaimRecordListUI" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.mkld.sapinterage.ReceClaimRecord].extendedProperty.maxFieldIndex">
+            <lang locale="en_US" value="24" />
+            <lang locale="zh_CN" value="24" />
+            <lang locale="zh_TW" value="24" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.mkld.sapinterage.ReceClaimRecord].extendedProperty.useTableEditUI">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="bizUnit[com.kingdee.eas.mkld.sapinterage.ReceClaimRecord].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</bizUnit>
+
