@@ -456,65 +456,23 @@
             <precision>0</precision>
         </column>
         <column>
-            <name>CFCurrRequest</name>
-            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFCurrRequest].alias</alias>
-            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFCurrRequest].description</description>
+            <name>CFPayerName</name>
+            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFPayerName].alias</alias>
+            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFPayerName].description</description>
             <userDefined>true</userDefined>
             <isMultilingual>false</isMultilingual>
             <isEncoded>false</isEncoded>
             <isNullable>true</isNullable>
             <defaultValue />
             <sqlType>NVARCHAR</sqlType>
-            <length>255</length>
+            <length>200</length>
             <scale>0</scale>
             <precision>0</precision>
         </column>
         <column>
-            <name>CFCurrRespond</name>
-            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFCurrRespond].alias</alias>
-            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFCurrRespond].description</description>
-            <userDefined>true</userDefined>
-            <isMultilingual>false</isMultilingual>
-            <isEncoded>false</isEncoded>
-            <isNullable>true</isNullable>
-            <defaultValue />
-            <sqlType>NVARCHAR</sqlType>
-            <length>255</length>
-            <scale>0</scale>
-            <precision>0</precision>
-        </column>
-        <column>
-            <name>CFNextRequest</name>
-            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFNextRequest].alias</alias>
-            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFNextRequest].description</description>
-            <userDefined>true</userDefined>
-            <isMultilingual>false</isMultilingual>
-            <isEncoded>false</isEncoded>
-            <isNullable>true</isNullable>
-            <defaultValue />
-            <sqlType>NVARCHAR</sqlType>
-            <length>255</length>
-            <scale>0</scale>
-            <precision>0</precision>
-        </column>
-        <column>
-            <name>CFNextRespond</name>
-            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFNextRespond].alias</alias>
-            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFNextRespond].description</description>
-            <userDefined>true</userDefined>
-            <isMultilingual>false</isMultilingual>
-            <isEncoded>false</isEncoded>
-            <isNullable>true</isNullable>
-            <defaultValue />
-            <sqlType>NVARCHAR</sqlType>
-            <length>255</length>
-            <scale>0</scale>
-            <precision>0</precision>
-        </column>
-        <column>
-            <name>CFCurrSentStatus</name>
-            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFCurrSentStatus].alias</alias>
-            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFCurrSentStatus].description</description>
+            <name>CFSendSentFlag</name>
+            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFSendSentFlag].alias</alias>
+            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFSendSentFlag].description</description>
             <userDefined>true</userDefined>
             <isMultilingual>false</isMultilingual>
             <isEncoded>false</isEncoded>
@@ -526,9 +484,9 @@
             <precision>0</precision>
         </column>
         <column>
-            <name>CFNextSentStatus</name>
-            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFNextSentStatus].alias</alias>
-            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFNextSentStatus].description</description>
+            <name>CFFirstSentFlag</name>
+            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFFirstSentFlag].alias</alias>
+            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFFirstSentFlag].description</description>
             <userDefined>true</userDefined>
             <isMultilingual>false</isMultilingual>
             <isEncoded>false</isEncoded>
@@ -540,30 +498,16 @@
             <precision>0</precision>
         </column>
         <column>
-            <name>CFCurrSentTime</name>
-            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFCurrSentTime].alias</alias>
-            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFCurrSentTime].description</description>
+            <name>CFCurrencyNo</name>
+            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFCurrencyNo].alias</alias>
+            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFCurrencyNo].description</description>
             <userDefined>true</userDefined>
             <isMultilingual>false</isMultilingual>
             <isEncoded>false</isEncoded>
             <isNullable>true</isNullable>
             <defaultValue />
-            <sqlType>DATETIME</sqlType>
-            <length>8</length>
-            <scale>0</scale>
-            <precision>0</precision>
-        </column>
-        <column>
-            <name>CFNextSentTime</name>
-            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFNextSentTime].alias</alias>
-            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFNextSentTime].description</description>
-            <userDefined>true</userDefined>
-            <isMultilingual>false</isMultilingual>
-            <isEncoded>false</isEncoded>
-            <isNullable>true</isNullable>
-            <defaultValue />
-            <sqlType>DATETIME</sqlType>
-            <length>8</length>
+            <sqlType>NVARCHAR</sqlType>
+            <length>100</length>
             <scale>0</scale>
             <precision>0</precision>
         </column>
@@ -764,53 +708,17 @@
             <lang locale="zh_HK" value="認領類型" />
             <lang locale="zh_TW" value="認領類型" />
         </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFCurrRequest].alias">
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFCurrencyNo].alias">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="当月认领请求" />
-            <lang locale="zh_HK" value="當月認領請求" />
-            <lang locale="zh_TW" value="當月認領請求" />
+            <lang locale="zh_CN" value="币种编码" />
+            <lang locale="zh_HK" value="幣種編碼" />
+            <lang locale="zh_TW" value="幣種編碼" />
         </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFCurrRequest].description">
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFCurrencyNo].description">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="当月认领请求" />
-            <lang locale="zh_HK" value="當月認領請求" />
-            <lang locale="zh_TW" value="當月認領請求" />
-        </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFCurrRespond].alias">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="当月认领响应" />
-            <lang locale="zh_HK" value="當月認領回應" />
-            <lang locale="zh_TW" value="當月認領回應" />
-        </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFCurrRespond].description">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="当月认领请求" />
-            <lang locale="zh_HK" value="當月認領請求" />
-            <lang locale="zh_TW" value="當月認領請求" />
-        </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFCurrSentStatus].alias">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="本月发送状态" />
-            <lang locale="zh_HK" value="本月發送狀態" />
-            <lang locale="zh_TW" value="本月發送狀態" />
-        </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFCurrSentStatus].description">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="本月发送状态" />
-            <lang locale="zh_HK" value="本月發送狀態" />
-            <lang locale="zh_TW" value="本月發送狀態" />
-        </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFCurrSentTime].alias">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="本月发送时间" />
-            <lang locale="zh_HK" value="本月發送時間" />
-            <lang locale="zh_TW" value="本月發送時間" />
-        </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFCurrSentTime].description">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="本月发送时间" />
-            <lang locale="zh_HK" value="本月發送時間" />
-            <lang locale="zh_TW" value="本月發送時間" />
+            <lang locale="zh_CN" value="币种编码" />
+            <lang locale="zh_HK" value="幣種編碼" />
+            <lang locale="zh_TW" value="幣種編碼" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFCustomerNo].alias">
             <lang locale="en_US" value="null" />
@@ -848,6 +756,18 @@
             <lang locale="zh_HK" value="財務組織" />
             <lang locale="zh_TW" value="財務組織" />
         </rs>
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFFirstSentFlag].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="一次发送状态" />
+            <lang locale="zh_HK" value="一次發送狀態" />
+            <lang locale="zh_TW" value="一次發送狀態" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFFirstSentFlag].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="第一次发送SAP状态" />
+            <lang locale="zh_HK" value="第一次發送SAP狀態" />
+            <lang locale="zh_TW" value="第一次發送SAP狀態" />
+        </rs>
         <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFLoans].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="货款" />
@@ -884,53 +804,17 @@
             <lang locale="zh_HK" value="月份" />
             <lang locale="zh_TW" value="月份" />
         </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFNextRequest].alias">
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFPayerName].alias">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="次月认领请求" />
-            <lang locale="zh_HK" value="次月認領請求" />
-            <lang locale="zh_TW" value="次月認領請求" />
+            <lang locale="zh_CN" value="往来户姓名" />
+            <lang locale="zh_HK" value="往來戶姓名" />
+            <lang locale="zh_TW" value="往來戶姓名" />
         </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFNextRequest].description">
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFPayerName].description">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="当月认领请求" />
-            <lang locale="zh_HK" value="當月認領請求" />
-            <lang locale="zh_TW" value="當月認領請求" />
-        </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFNextRespond].alias">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="次月认领响应" />
-            <lang locale="zh_HK" value="次月認領回應" />
-            <lang locale="zh_TW" value="次月認領回應" />
-        </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFNextRespond].description">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="当月认领请求" />
-            <lang locale="zh_HK" value="當月認領請求" />
-            <lang locale="zh_TW" value="當月認領請求" />
-        </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFNextSentStatus].alias">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="次月发送状态" />
-            <lang locale="zh_HK" value="次月發送狀態" />
-            <lang locale="zh_TW" value="次月發送狀態" />
-        </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFNextSentStatus].description">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="次月发送状态" />
-            <lang locale="zh_HK" value="次月發送狀態" />
-            <lang locale="zh_TW" value="次月發送狀態" />
-        </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFNextSentTime].alias">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="次月发送时间" />
-            <lang locale="zh_HK" value="次月發送時間" />
-            <lang locale="zh_TW" value="次月發送時間" />
-        </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFNextSentTime].description">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="次月发送时间" />
-            <lang locale="zh_HK" value="次月發送時間" />
-            <lang locale="zh_TW" value="次月發送時間" />
+            <lang locale="zh_CN" value="往来户姓名" />
+            <lang locale="zh_HK" value="往來戶姓名" />
+            <lang locale="zh_TW" value="往來戶姓名" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFPaymentId].alias">
             <lang locale="en_US" value="null" />
@@ -980,17 +864,29 @@
             <lang locale="zh_HK" value="收款日期" />
             <lang locale="zh_TW" value="收款日期" />
         </rs>
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFSendSentFlag].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="二次发送状态" />
+            <lang locale="zh_HK" value="二次發送狀態" />
+            <lang locale="zh_TW" value="二次發送狀態" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFSendSentFlag].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="二次发送状态" />
+            <lang locale="zh_HK" value="二次發送狀態" />
+            <lang locale="zh_TW" value="二次發送狀態" />
+        </rs>
         <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFTrsreq].alias">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="EAS流水码" />
-            <lang locale="zh_HK" value="EAS流水碼" />
-            <lang locale="zh_TW" value="EAS流水碼" />
+            <lang locale="zh_CN" value="流水号" />
+            <lang locale="zh_HK" value="流水號" />
+            <lang locale="zh_TW" value="流水號" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFTrsreq].description">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="EAS流水码" />
-            <lang locale="zh_HK" value="EAS流水碼" />
-            <lang locale="zh_TW" value="EAS流水碼" />
+            <lang locale="zh_CN" value="流水号" />
+            <lang locale="zh_HK" value="流水號" />
+            <lang locale="zh_TW" value="流水號" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFYear].alias">
             <lang locale="en_US" value="null" />

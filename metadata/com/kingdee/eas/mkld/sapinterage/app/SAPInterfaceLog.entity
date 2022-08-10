@@ -1,0 +1,1314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entityObject xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.mkld.sapinterage.app</package>
+    <name>SAPInterfaceLog</name>
+    <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].alias</alias>
+    <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].description</description>
+    <userDefined>true</userDefined>
+    <bosType>D380C1E4</bosType>
+    <stereoType>false</stereoType>
+    <businessImplName>com.kingdee.eas.mkld.sapinterage.SAPInterfaceLog</businessImplName>
+    <businessControllerName>com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLogController</businessControllerName>
+    <accessLevel>public</accessLevel>
+    <subClassingMode>normal</subClassingMode>
+    <methods>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getCollection].description</description>
+            <innerID>6f6e9cf1-540c-4605-acc4-ab8b90a1a993</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getCollection].description</description>
+            <innerID>2df56798-e155-4ee5-a3fe-5f125bb00130</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>view</name>
+                    <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getCollection].parameters.parameter[view].alias</alias>
+                    <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getCollection].parameters.parameter[view].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.EntityViewInfo</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getCollection].description</description>
+            <innerID>2f8f6468-aa44-49a8-93db-da1c860b7d93</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getCollection].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getCollection].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getValue].description</description>
+            <innerID>ee2c0d10-767a-4db3-bf37-d4ca7ff5bb43</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getValue].description</description>
+            <innerID>6353233a-6df9-4064-a28f-35a041ae5ea0</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>selector</name>
+                    <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getValue].parameters.parameter[selector].alias</alias>
+                    <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getValue].parameters.parameter[selector].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.SelectorItemCollection</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getValue].description</description>
+            <innerID>540f726d-15ff-4ced-b842-b2f6a9c39a0b</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getValue].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getValue].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+    </methods>
+    <isAbstract>false</isAbstract>
+    <bizUnitPK>com.kingdee.eas.mkld.sapinterage.SAPInterfaceLog</bizUnitPK>
+    <baseEntity>
+        <key name="package" value="com.kingdee.eas.framework.app" />
+        <key name="name" value="CoreBillBase" />
+    </baseEntity>
+    <table>
+        <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
+        <key name="name" value="CT_SIG_SAPInterfaceLog" />
+    </table>
+    <properties>
+        <ownProperty>
+            <name>InterType</name>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[InterType].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[InterType].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>Enum</dataType>
+            <metadataRef>com.kingdee.eas.mkld.sapinterage.app.SAPInterTypeMenu</metadataRef>
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>80</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[InterType].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFInterType" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>ClaimType</name>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[ClaimType].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[ClaimType].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>Enum</dataType>
+            <metadataRef>com.kingdee.eas.mkld.sapinterage.app.ClaimTypeMenu</metadataRef>
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>80</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[ClaimType].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFClaimType" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>InterResult</name>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[InterResult].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[InterResult].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>Enum</dataType>
+            <metadataRef>com.kingdee.eas.mkld.sapinterage.app.InterResultMenu</metadataRef>
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>80</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[InterResult].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFInterResult" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>reqTime</name>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[reqTime].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[reqTime].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>Date</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>8</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[reqTime].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFReqTime" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>request</name>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[request].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[request].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>1000</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[request].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFRequest" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>respond</name>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[respond].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[respond].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>1000</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[respond].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFRespond" />
+            </mappingField>
+        </ownProperty>
+    </properties>
+    <logicalKey>
+        <name>id</name>
+        <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].logicalKey[id].alias</alias>
+        <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].logicalKey[id].description</description>
+        <keyClass>com.kingdee.bos.dao.IObjectPK</keyClass>
+        <userDefined>true</userDefined>
+        <keyProperties>
+            <baseProperty>
+                <key name="name" value="id" />
+            </baseProperty>
+        </keyProperties>
+    </logicalKey>
+    <events>
+        <event>
+            <name>submitEvent</name>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[submitEvent].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[submitEvent].description</description>
+            <userDefined>true</userDefined>
+            <eventMethods>
+                <eventMethod>
+                    <name>dfd2c083-00fa-1000-e000-001fc0a813e6</name>
+                    <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].alias</alias>
+                    <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].description</description>
+                    <entityMethodRef>
+                        <key name="name" value="submit" />
+                        <key name="innerID" value="dfd2c083-00fa-1000-e000-001fc0a813e6" />
+                    </entityMethodRef>
+                    <parameterMappings>
+                        <parameterMapping>
+                            <name />
+                            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].parameterMappings.parameterMappingalias</alias>
+                            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].parameterMappings.parameterMappingdescription</description>
+                            <formalParameterInnerID>50cf5dac-0105-1000-e000-0096c0a813a4evfp</formalParameterInnerID>
+                            <actualParameterIndex>0</actualParameterIndex>
+                            <isBOPK>true</isBOPK>
+                        </parameterMapping>
+                    </parameterMappings>
+                </eventMethod>
+            </eventMethods>
+            <formalParameters>
+                <formalParameter>
+                    <innerID>50cf5dac-0105-1000-e000-0096c0a813a4evfp</innerID>
+                    <userDefined>true</userDefined>
+                    <parameter>
+                        <name>model</name>
+                        <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[submitEvent].formalParameters.formalParameter.parameter[model].alias</alias>
+                        <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[submitEvent].formalParameters.formalParameter.parameter[model].description</description>
+                        <direction>in</direction>
+                        <dataType>ObjectValue</dataType>
+                        <metadataRef>com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog</metadataRef>
+                        <userDefined>true</userDefined>
+                    </parameter>
+                </formalParameter>
+            </formalParameters>
+        </event>
+        <event>
+            <name>deleteEvent</name>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[deleteEvent].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[deleteEvent].description</description>
+            <userDefined>true</userDefined>
+            <eventMethods>
+                <eventMethod>
+                    <name>be5779dd-00fe-1000-e000-0007c0a813a9</name>
+                    <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[deleteEvent].eventMethods.eventMethod[be5779dd-00fe-1000-e000-0007c0a813a9].alias</alias>
+                    <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[deleteEvent].eventMethods.eventMethod[be5779dd-00fe-1000-e000-0007c0a813a9].description</description>
+                    <entityMethodRef>
+                        <key name="name" value="delete" />
+                        <key name="innerID" value="be5779dd-00fe-1000-e000-0007c0a813a9" />
+                    </entityMethodRef>
+                    <parameterMappings>
+                        <parameterMapping>
+                            <name />
+                            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[deleteEvent].eventMethods.eventMethod[be5779dd-00fe-1000-e000-0007c0a813a9].parameterMappings.parameterMappingalias</alias>
+                            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[deleteEvent].eventMethods.eventMethod[be5779dd-00fe-1000-e000-0007c0a813a9].parameterMappings.parameterMappingdescription</description>
+                            <formalParameterInnerID>50cf5dac-0105-1000-e000-009ac0a813a4evfp</formalParameterInnerID>
+                            <actualParameterIndex>0</actualParameterIndex>
+                            <isBOPK>true</isBOPK>
+                        </parameterMapping>
+                    </parameterMappings>
+                </eventMethod>
+            </eventMethods>
+            <formalParameters>
+                <formalParameter>
+                    <innerID>50cf5dac-0105-1000-e000-009ac0a813a4evfp</innerID>
+                    <userDefined>true</userDefined>
+                    <parameter>
+                        <name>pk</name>
+                        <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[deleteEvent].formalParameters.formalParameter.parameter[pk].alias</alias>
+                        <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[deleteEvent].formalParameters.formalParameter.parameter[pk].description</description>
+                        <direction>in</direction>
+                        <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                        <metadataRef>com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog</metadataRef>
+                        <userDefined>true</userDefined>
+                    </parameter>
+                </formalParameter>
+            </formalParameters>
+        </event>
+        <event>
+            <name>passAuditEvent</name>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[passAuditEvent].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[passAuditEvent].description</description>
+            <userDefined>true</userDefined>
+            <eventMethods>
+                <eventMethod>
+                    <name>bbce8906-00fa-1000-e000-000ec0a813e6</name>
+                    <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[passAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000ec0a813e6].alias</alias>
+                    <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[passAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000ec0a813e6].description</description>
+                    <entityMethodRef>
+                        <key name="name" value="passAudit" />
+                        <key name="innerID" value="bbce8906-00fa-1000-e000-000ec0a813e6" />
+                    </entityMethodRef>
+                    <parameterMappings>
+                        <parameterMapping>
+                            <name />
+                            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[passAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000ec0a813e6].parameterMappings.parameterMappingalias</alias>
+                            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[passAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000ec0a813e6].parameterMappings.parameterMappingdescription</description>
+                            <formalParameterInnerID>50cf5dac-0105-1000-e000-009dc0a813a4evfp</formalParameterInnerID>
+                            <actualParameterIndex>0</actualParameterIndex>
+                            <isBOPK>true</isBOPK>
+                        </parameterMapping>
+                        <parameterMapping>
+                            <name />
+                            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[passAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000ec0a813e6].parameterMappings.parameterMappingalias</alias>
+                            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[passAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000ec0a813e6].parameterMappings.parameterMappingdescription</description>
+                            <formalParameterInnerID>50cf5dac-0105-1000-e000-009ec0a813a4evfp</formalParameterInnerID>
+                            <actualParameterIndex>1</actualParameterIndex>
+                            <isBOPK>false</isBOPK>
+                        </parameterMapping>
+                    </parameterMappings>
+                </eventMethod>
+            </eventMethods>
+            <formalParameters>
+                <formalParameter>
+                    <innerID>50cf5dac-0105-1000-e000-009dc0a813a4evfp</innerID>
+                    <userDefined>true</userDefined>
+                    <parameter>
+                        <name>pk</name>
+                        <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[passAuditEvent].formalParameters.formalParameter.parameter[pk].alias</alias>
+                        <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[passAuditEvent].formalParameters.formalParameter.parameter[pk].description</description>
+                        <direction>in</direction>
+                        <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                        <metadataRef>com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog</metadataRef>
+                        <userDefined>true</userDefined>
+                    </parameter>
+                </formalParameter>
+                <formalParameter>
+                    <innerID>50cf5dac-0105-1000-e000-009ec0a813a4evfp</innerID>
+                    <userDefined>true</userDefined>
+                    <parameter>
+                        <name>model</name>
+                        <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[passAuditEvent].formalParameters.formalParameter.parameter[model].alias</alias>
+                        <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[passAuditEvent].formalParameters.formalParameter.parameter[model].description</description>
+                        <direction>in</direction>
+                        <dataType>ObjectValue</dataType>
+                        <metadataRef>com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog</metadataRef>
+                        <userDefined>true</userDefined>
+                    </parameter>
+                </formalParameter>
+            </formalParameters>
+        </event>
+        <event>
+            <name>unpassAuditEvent</name>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[unpassAuditEvent].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[unpassAuditEvent].description</description>
+            <userDefined>true</userDefined>
+            <eventMethods>
+                <eventMethod>
+                    <name>bbce8906-00fa-1000-e000-000fc0a813e6</name>
+                    <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[unpassAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000fc0a813e6].alias</alias>
+                    <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[unpassAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000fc0a813e6].description</description>
+                    <entityMethodRef>
+                        <key name="name" value="unpassAudit" />
+                        <key name="innerID" value="bbce8906-00fa-1000-e000-000fc0a813e6" />
+                    </entityMethodRef>
+                    <parameterMappings>
+                        <parameterMapping>
+                            <name />
+                            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[unpassAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000fc0a813e6].parameterMappings.parameterMappingalias</alias>
+                            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[unpassAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000fc0a813e6].parameterMappings.parameterMappingdescription</description>
+                            <formalParameterInnerID>50cf5dac-0105-1000-e000-00a5c0a813a4evfp</formalParameterInnerID>
+                            <actualParameterIndex>0</actualParameterIndex>
+                            <isBOPK>true</isBOPK>
+                        </parameterMapping>
+                        <parameterMapping>
+                            <name />
+                            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[unpassAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000fc0a813e6].parameterMappings.parameterMappingalias</alias>
+                            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[unpassAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000fc0a813e6].parameterMappings.parameterMappingdescription</description>
+                            <formalParameterInnerID>50cf5dac-0105-1000-e000-00a6c0a813a4evfp</formalParameterInnerID>
+                            <actualParameterIndex>1</actualParameterIndex>
+                            <isBOPK>false</isBOPK>
+                        </parameterMapping>
+                    </parameterMappings>
+                </eventMethod>
+            </eventMethods>
+            <formalParameters>
+                <formalParameter>
+                    <innerID>50cf5dac-0105-1000-e000-00a5c0a813a4evfp</innerID>
+                    <userDefined>true</userDefined>
+                    <parameter>
+                        <name>pk</name>
+                        <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[unpassAuditEvent].formalParameters.formalParameter.parameter[pk].alias</alias>
+                        <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[unpassAuditEvent].formalParameters.formalParameter.parameter[pk].description</description>
+                        <direction>in</direction>
+                        <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                        <metadataRef>com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog</metadataRef>
+                        <userDefined>true</userDefined>
+                    </parameter>
+                </formalParameter>
+                <formalParameter>
+                    <innerID>50cf5dac-0105-1000-e000-00a6c0a813a4evfp</innerID>
+                    <userDefined>true</userDefined>
+                    <parameter>
+                        <name>model</name>
+                        <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[unpassAuditEvent].formalParameters.formalParameter.parameter[model].alias</alias>
+                        <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[unpassAuditEvent].formalParameters.formalParameter.parameter[model].description</description>
+                        <direction>in</direction>
+                        <dataType>ObjectValue</dataType>
+                        <metadataRef>com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog</metadataRef>
+                        <userDefined>true</userDefined>
+                    </parameter>
+                </formalParameter>
+            </formalParameters>
+        </event>
+    </events>
+    <defaultView>
+        <name />
+        <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].defaultViewalias</alias>
+        <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].defaultViewdescription</description>
+        <filter>
+            <maskString />
+        </filter>
+    </defaultView>
+    <resource>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="SAP接口调用日志" />
+            <lang locale="zh_HK" value="SAP介面調用日誌" />
+            <lang locale="zh_TW" value="SAP介面調用日誌" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].defaultView.filterextendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].defaultViewalias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].defaultViewdescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].defaultViewextendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="多分錄基礎單據範本" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[deleteEvent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="删除事件" />
+            <lang locale="zh_HK" value="刪除事件" />
+            <lang locale="zh_TW" value="刪除事件" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[deleteEvent].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="删除事件" />
+            <lang locale="zh_HK" value="刪除事件" />
+            <lang locale="zh_TW" value="刪除事件" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[deleteEvent].eventMethods.eventMethod[be5779dd-00fe-1000-e000-0007c0a813a9].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[deleteEvent].eventMethods.eventMethod[be5779dd-00fe-1000-e000-0007c0a813a9].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[deleteEvent].eventMethods.eventMethod[be5779dd-00fe-1000-e000-0007c0a813a9].parameterMappings.parameterMappingalias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[deleteEvent].eventMethods.eventMethod[be5779dd-00fe-1000-e000-0007c0a813a9].parameterMappings.parameterMappingdescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[deleteEvent].formalParameters.formalParameter.parameter[pk].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="主键" />
+            <lang locale="zh_HK" value="主鍵" />
+            <lang locale="zh_TW" value="主鍵" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[deleteEvent].formalParameters.formalParameter.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="主键" />
+            <lang locale="zh_HK" value="主鍵" />
+            <lang locale="zh_TW" value="主鍵" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[passAuditEvent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="审核通过事件" />
+            <lang locale="zh_HK" value="審核通過事件" />
+            <lang locale="zh_TW" value="審核通過事件" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[passAuditEvent].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="审核通过事件" />
+            <lang locale="zh_HK" value="審核通過事件" />
+            <lang locale="zh_TW" value="審核通過事件" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[passAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000ec0a813e6].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[passAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000ec0a813e6].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[passAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000ec0a813e6].parameterMappings.parameterMappingalias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[passAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000ec0a813e6].parameterMappings.parameterMappingdescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[passAuditEvent].formalParameters.formalParameter.parameter[model].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="值对象" />
+            <lang locale="zh_HK" value="值對象" />
+            <lang locale="zh_TW" value="值對象" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[passAuditEvent].formalParameters.formalParameter.parameter[model].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="值对象" />
+            <lang locale="zh_HK" value="值對象" />
+            <lang locale="zh_TW" value="值對象" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[passAuditEvent].formalParameters.formalParameter.parameter[pk].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="对象主键" />
+            <lang locale="zh_HK" value="對象主鍵" />
+            <lang locale="zh_TW" value="對象主鍵" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[passAuditEvent].formalParameters.formalParameter.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="对象主键" />
+            <lang locale="zh_HK" value="對象主鍵" />
+            <lang locale="zh_TW" value="對象主鍵" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[submitEvent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="提交" />
+            <lang locale="zh_HK" value="提交" />
+            <lang locale="zh_TW" value="提交" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[submitEvent].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].parameterMappings.parameterMappingalias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[submitEvent].eventMethods.eventMethod[dfd2c083-00fa-1000-e000-001fc0a813e6].parameterMappings.parameterMappingdescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[submitEvent].formalParameters.formalParameter.parameter[model].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="值对象" />
+            <lang locale="zh_HK" value="值對象" />
+            <lang locale="zh_TW" value="值對象" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[submitEvent].formalParameters.formalParameter.parameter[model].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[unpassAuditEvent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="反审核事件" />
+            <lang locale="zh_HK" value="反審核事件" />
+            <lang locale="zh_TW" value="反審核事件" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[unpassAuditEvent].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="反审核事件" />
+            <lang locale="zh_HK" value="反審核事件" />
+            <lang locale="zh_TW" value="反審核事件" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[unpassAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000fc0a813e6].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[unpassAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000fc0a813e6].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[unpassAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000fc0a813e6].parameterMappings.parameterMappingalias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[unpassAuditEvent].eventMethods.eventMethod[bbce8906-00fa-1000-e000-000fc0a813e6].parameterMappings.parameterMappingdescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[unpassAuditEvent].formalParameters.formalParameter.parameter[model].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="值对象" />
+            <lang locale="zh_HK" value="值對象" />
+            <lang locale="zh_TW" value="值對象" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[unpassAuditEvent].formalParameters.formalParameter.parameter[model].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="值对象" />
+            <lang locale="zh_HK" value="值對象" />
+            <lang locale="zh_TW" value="值對象" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[unpassAuditEvent].formalParameters.formalParameter.parameter[pk].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="对象主键" />
+            <lang locale="zh_HK" value="對象主鍵" />
+            <lang locale="zh_TW" value="對象主鍵" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].events.event[unpassAuditEvent].formalParameters.formalParameter.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="对象主键" />
+            <lang locale="zh_HK" value="對象主鍵" />
+            <lang locale="zh_TW" value="對象主鍵" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].extendedProperty.OrgType">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].extendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].extendedProperty.defaultDisplayField">
+            <lang locale="en_US" value="" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].extendedProperty.defaultF7Query">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLogQuery" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLogQuery" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLogQuery" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].extendedProperty.editUI">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.client.SAPInterfaceLogEditUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.client.SAPInterfaceLogEditUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.client.SAPInterfaceLogEditUI" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].extendedProperty.isParamObject">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].extendedProperty.listUI">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.client.SAPInterfaceLogListUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.client.SAPInterfaceLogListUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.client.SAPInterfaceLogListUI" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].logicalKey[id].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].logicalKey[id].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getCollection].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getCollection].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getCollection].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getCollection].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getCollection].parameters.parameter[view].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getCollection].parameters.parameter[view].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getValue].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getValue].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getValue].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getValue].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getValue].parameters.parameter[pk].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getValue].parameters.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getValue].parameters.parameter[selector].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].methods.method[getValue].parameters.parameter[selector].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[ClaimType].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="认领类型" />
+            <lang locale="zh_HK" value="認領類型" />
+            <lang locale="zh_TW" value="認領類型" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[ClaimType].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="CurrMonth" />
+            <lang locale="zh_HK" value="CurrMonth" />
+            <lang locale="zh_TW" value="CurrMonth" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[ClaimType].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="认领类型" />
+            <lang locale="zh_HK" value="認領類型" />
+            <lang locale="zh_TW" value="認領類型" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[ClaimType].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[ClaimType].extendedProperty.bizDataType">
+            <lang locale="en_US" value="ENUM" />
+            <lang locale="zh_CN" value="ENUM" />
+            <lang locale="zh_TW" value="ENUM" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[ClaimType].extendedProperty.defaultValue">
+            <lang locale="en_US" value="CurrMonth" />
+            <lang locale="zh_CN" value="CurrMonth" />
+            <lang locale="zh_TW" value="CurrMonth" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[ClaimType].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[ClaimType].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[ClaimType].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[ClaimType].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[ClaimType].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[ClaimType].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[ClaimType].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[InterResult].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="接口结果" />
+            <lang locale="zh_HK" value="介面結果" />
+            <lang locale="zh_TW" value="介面結果" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[InterResult].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="SUCCESS" />
+            <lang locale="zh_HK" value="SUCCESS" />
+            <lang locale="zh_TW" value="SUCCESS" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[InterResult].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="接口结果" />
+            <lang locale="zh_HK" value="介面結果" />
+            <lang locale="zh_TW" value="介面結果" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[InterResult].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[InterResult].extendedProperty.bizDataType">
+            <lang locale="en_US" value="ENUM" />
+            <lang locale="zh_CN" value="ENUM" />
+            <lang locale="zh_TW" value="ENUM" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[InterResult].extendedProperty.defaultValue">
+            <lang locale="en_US" value="SUCCESS" />
+            <lang locale="zh_CN" value="SUCCESS" />
+            <lang locale="zh_TW" value="SUCCESS" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[InterResult].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[InterResult].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[InterResult].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[InterResult].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[InterResult].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[InterResult].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[InterResult].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[InterType].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="接口类型" />
+            <lang locale="zh_HK" value="介面類型" />
+            <lang locale="zh_TW" value="介面類型" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[InterType].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="FICO_I012" />
+            <lang locale="zh_HK" value="FICO_I012" />
+            <lang locale="zh_TW" value="FICO_I012" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[InterType].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="接口类型" />
+            <lang locale="zh_HK" value="介面類型" />
+            <lang locale="zh_TW" value="介面類型" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[InterType].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[InterType].extendedProperty.bizDataType">
+            <lang locale="en_US" value="ENUM" />
+            <lang locale="zh_CN" value="ENUM" />
+            <lang locale="zh_TW" value="ENUM" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[InterType].extendedProperty.defaultValue">
+            <lang locale="en_US" value="FICO_I012" />
+            <lang locale="zh_CN" value="FICO_I012" />
+            <lang locale="zh_TW" value="FICO_I012" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[InterType].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[InterType].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[InterType].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[InterType].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[InterType].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[InterType].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[InterType].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[reqTime].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="请求时间" />
+            <lang locale="zh_HK" value="請求時間" />
+            <lang locale="zh_TW" value="請求時間" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[reqTime].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[reqTime].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="请求时间" />
+            <lang locale="zh_HK" value="請求時間" />
+            <lang locale="zh_TW" value="請求時間" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[reqTime].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[reqTime].extendedProperty.bizDataType">
+            <lang locale="en_US" value="DATE" />
+            <lang locale="zh_CN" value="DATE" />
+            <lang locale="zh_TW" value="DATE" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[reqTime].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[reqTime].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[reqTime].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[reqTime].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[reqTime].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[reqTime].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[reqTime].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[request].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="请求参数" />
+            <lang locale="zh_HK" value="請求參數" />
+            <lang locale="zh_TW" value="請求參數" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[request].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[request].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="请求参数" />
+            <lang locale="zh_HK" value="請求參數" />
+            <lang locale="zh_TW" value="請求參數" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[request].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[request].extendedProperty.bizDataType">
+            <lang locale="en_US" value="NOTE" />
+            <lang locale="zh_CN" value="NOTE" />
+            <lang locale="zh_TW" value="NOTE" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[request].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[request].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[request].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[request].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[request].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[request].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[request].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[respond].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="响应信息" />
+            <lang locale="zh_HK" value="回應信息" />
+            <lang locale="zh_TW" value="回應信息" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[respond].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[respond].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="请求参数" />
+            <lang locale="zh_HK" value="請求參數" />
+            <lang locale="zh_TW" value="請求參數" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[respond].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[respond].extendedProperty.bizDataType">
+            <lang locale="en_US" value="NOTE" />
+            <lang locale="zh_CN" value="NOTE" />
+            <lang locale="zh_TW" value="NOTE" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[respond].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[respond].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[respond].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[respond].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[respond].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[respond].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.SAPInterfaceLog].properties.ownProperty[respond].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</entityObject>
+

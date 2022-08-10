@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizEnum xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.mkld.sapinterage.app</package>
+    <name>SAPInterTypeMenu</name>
+    <alias>bizEnum[com.kingdee.eas.mkld.sapinterage.app.SAPInterTypeMenu].alias</alias>
+    <description>bizEnum[com.kingdee.eas.mkld.sapinterage.app.SAPInterTypeMenu].description</description>
+    <userDefined>true</userDefined>
+    <className>com.kingdee.eas.mkld.sapinterage.app.SAPInterTypeMenu</className>
+    <enumDataType>STRING</enumDataType>
+    <enumValues>
+        <enumValue>
+            <name>FICO_I012</name>
+            <alias>bizEnum[com.kingdee.eas.mkld.sapinterage.app.SAPInterTypeMenu].enumValues.enumValue[FICO_I012].alias</alias>
+            <userDefined>true</userDefined>
+            <value>FI012</value>
+        </enumValue>
+        <enumValue>
+            <name>FICO_I013</name>
+            <alias>bizEnum[com.kingdee.eas.mkld.sapinterage.app.SAPInterTypeMenu].enumValues.enumValue[FICO_I013].alias</alias>
+            <userDefined>true</userDefined>
+            <value>FI013</value>
+        </enumValue>
+        <enumValue>
+            <name>FICO_I049</name>
+            <alias>bizEnum[com.kingdee.eas.mkld.sapinterage.app.SAPInterTypeMenu].enumValues.enumValue[FICO_I049].alias</alias>
+            <userDefined>true</userDefined>
+            <value>FI049</value>
+        </enumValue>
+    </enumValues>
+    <resource>
+        <rs key="bizEnum[com.kingdee.eas.mkld.sapinterage.app.SAPInterTypeMenu].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="SAP接口类型枚举" />
+            <lang locale="zh_TW" value="SAP介面類型枚舉" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.mkld.sapinterage.app.SAPInterTypeMenu].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.mkld.sapinterage.app.SAPInterTypeMenu].enumValues.enumValue[FICO_I012].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收款认领结果" />
+            <lang locale="zh_TW" value="收款認領結果" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.mkld.sapinterage.app.SAPInterTypeMenu].enumValues.enumValue[FICO_I013].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="月末未认领清单" />
+            <lang locale="zh_TW" value="月末未認領清單" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.mkld.sapinterage.app.SAPInterTypeMenu].enumValues.enumValue[FICO_I049].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="银行回单号传SAP" />
+            <lang locale="zh_TW" value="銀行回單號傳SAP" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.mkld.sapinterage.app.SAPInterTypeMenu].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</bizEnum>
+

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bizEnum xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.mkld.sapinterage.app</package>
+    <name>InterResultMenu</name>
+    <alias>bizEnum[com.kingdee.eas.mkld.sapinterage.app.InterResultMenu].alias</alias>
+    <description>bizEnum[com.kingdee.eas.mkld.sapinterage.app.InterResultMenu].description</description>
+    <userDefined>true</userDefined>
+    <className>com.kingdee.eas.mkld.sapinterage.app.InterResultMenu</className>
+    <enumDataType>STRING</enumDataType>
+    <enumValues>
+        <enumValue>
+            <name>SUCCESS</name>
+            <alias>bizEnum[com.kingdee.eas.mkld.sapinterage.app.InterResultMenu].enumValues.enumValue[SUCCESS].alias</alias>
+            <userDefined>true</userDefined>
+            <value>S</value>
+        </enumValue>
+        <enumValue>
+            <name>FAIL</name>
+            <alias>bizEnum[com.kingdee.eas.mkld.sapinterage.app.InterResultMenu].enumValues.enumValue[FAIL].alias</alias>
+            <userDefined>true</userDefined>
+            <value>F</value>
+        </enumValue>
+    </enumValues>
+    <resource>
+        <rs key="bizEnum[com.kingdee.eas.mkld.sapinterage.app.InterResultMenu].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="接口结果枚举" />
+            <lang locale="zh_HK" value="介面結果枚舉" />
+            <lang locale="zh_TW" value="介面結果枚舉" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.mkld.sapinterage.app.InterResultMenu].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.mkld.sapinterage.app.InterResultMenu].enumValues.enumValue[FAIL].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="失败" />
+            <lang locale="zh_HK" value="失敗" />
+            <lang locale="zh_TW" value="失敗" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.mkld.sapinterage.app.InterResultMenu].enumValues.enumValue[SUCCESS].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="成功" />
+            <lang locale="zh_HK" value="成功" />
+            <lang locale="zh_TW" value="成功" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.mkld.sapinterage.app.InterResultMenu].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</bizEnum>
+

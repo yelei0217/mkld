@@ -1392,11 +1392,11 @@
             </query>
         </queryField>
         <queryField>
-            <name>CurrRequest</name>
+            <name>PayerName</name>
             <userDefined>true</userDefined>
             <formulaString>#0</formulaString>
             <constString />
-            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[CurrRequest].displayName</displayName>
+            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[PayerName].displayName</displayName>
             <groupType />
             <isSelector>true</isSelector>
             <isFilter>true</isFilter>
@@ -1405,15 +1405,15 @@
             <returnType>String</returnType>
             <propertyRefs>
                 <propertyRef>
-                    <key>80d11e39-d9e1-4b01-a40b-79ee320cf02b</key>
+                    <key>1e008e47-3b49-4ec2-bedb-5fa932136874</key>
                     <parentUnit>
-                        <key name="name" value="CurrRequest" />
+                        <key name="name" value="PayerName" />
                     </parentUnit>
                     <subEntity>
                         <key name="name" value="ReceClaimRecord" />
                     </subEntity>
                     <refProperty>
-                        <key name="name" value="CurrRequest" />
+                        <key name="name" value="PayerName" />
                     </refProperty>
                 </propertyRef>
             </propertyRefs>
@@ -1423,11 +1423,11 @@
             </query>
         </queryField>
         <queryField>
-            <name>CurrRespond</name>
+            <name>SendSentFlag</name>
             <userDefined>true</userDefined>
             <formulaString>#0</formulaString>
             <constString />
-            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[CurrRespond].displayName</displayName>
+            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[SendSentFlag].displayName</displayName>
             <groupType />
             <isSelector>true</isSelector>
             <isFilter>true</isFilter>
@@ -1436,15 +1436,15 @@
             <returnType>String</returnType>
             <propertyRefs>
                 <propertyRef>
-                    <key>439aa40c-abe4-4cc0-8351-2fe527403eb7</key>
+                    <key>be686cec-3d1f-4f28-ab58-2d8da8cab1bf</key>
                     <parentUnit>
-                        <key name="name" value="CurrRespond" />
+                        <key name="name" value="SendSentFlag" />
                     </parentUnit>
                     <subEntity>
                         <key name="name" value="ReceClaimRecord" />
                     </subEntity>
                     <refProperty>
-                        <key name="name" value="CurrRespond" />
+                        <key name="name" value="SendSentFlag" />
                     </refProperty>
                 </propertyRef>
             </propertyRefs>
@@ -1454,11 +1454,11 @@
             </query>
         </queryField>
         <queryField>
-            <name>NextRequest</name>
+            <name>FirstSentFlag</name>
             <userDefined>true</userDefined>
             <formulaString>#0</formulaString>
             <constString />
-            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[NextRequest].displayName</displayName>
+            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[FirstSentFlag].displayName</displayName>
             <groupType />
             <isSelector>true</isSelector>
             <isFilter>true</isFilter>
@@ -1467,15 +1467,15 @@
             <returnType>String</returnType>
             <propertyRefs>
                 <propertyRef>
-                    <key>96ba072a-1be5-4c24-92ab-b8a63367fa22</key>
+                    <key>6b17454d-1fab-4487-b476-d45c3fbe69ab</key>
                     <parentUnit>
-                        <key name="name" value="NextRequest" />
+                        <key name="name" value="FirstSentFlag" />
                     </parentUnit>
                     <subEntity>
                         <key name="name" value="ReceClaimRecord" />
                     </subEntity>
                     <refProperty>
-                        <key name="name" value="NextRequest" />
+                        <key name="name" value="FirstSentFlag" />
                     </refProperty>
                 </propertyRef>
             </propertyRefs>
@@ -1485,11 +1485,11 @@
             </query>
         </queryField>
         <queryField>
-            <name>NextRespond</name>
+            <name>CurrencyNo</name>
             <userDefined>true</userDefined>
             <formulaString>#0</formulaString>
             <constString />
-            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[NextRespond].displayName</displayName>
+            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[CurrencyNo].displayName</displayName>
             <groupType />
             <isSelector>true</isSelector>
             <isFilter>true</isFilter>
@@ -1498,139 +1498,15 @@
             <returnType>String</returnType>
             <propertyRefs>
                 <propertyRef>
-                    <key>885bdde9-7628-4e1f-b42d-e8fd8e9ee36f</key>
+                    <key>8ea7d392-cb90-4cba-b416-9c6255f64210</key>
                     <parentUnit>
-                        <key name="name" value="NextRespond" />
+                        <key name="name" value="CurrencyNo" />
                     </parentUnit>
                     <subEntity>
                         <key name="name" value="ReceClaimRecord" />
                     </subEntity>
                     <refProperty>
-                        <key name="name" value="NextRespond" />
-                    </refProperty>
-                </propertyRef>
-            </propertyRefs>
-            <query>
-                <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ReceClaimRecordQuery" />
-            </query>
-        </queryField>
-        <queryField>
-            <name>CurrSentStatus</name>
-            <userDefined>true</userDefined>
-            <formulaString>#0</formulaString>
-            <constString />
-            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[CurrSentStatus].displayName</displayName>
-            <groupType />
-            <isSelector>true</isSelector>
-            <isFilter>true</isFilter>
-            <isSorter>true</isSorter>
-            <isParameter>false</isParameter>
-            <returnType>String</returnType>
-            <propertyRefs>
-                <propertyRef>
-                    <key>ce1ad39e-632d-47eb-afc2-81e65e432313</key>
-                    <parentUnit>
-                        <key name="name" value="CurrSentStatus" />
-                    </parentUnit>
-                    <subEntity>
-                        <key name="name" value="ReceClaimRecord" />
-                    </subEntity>
-                    <refProperty>
-                        <key name="name" value="CurrSentStatus" />
-                    </refProperty>
-                </propertyRef>
-            </propertyRefs>
-            <query>
-                <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ReceClaimRecordQuery" />
-            </query>
-        </queryField>
-        <queryField>
-            <name>NextSentStatus</name>
-            <userDefined>true</userDefined>
-            <formulaString>#0</formulaString>
-            <constString />
-            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[NextSentStatus].displayName</displayName>
-            <groupType />
-            <isSelector>true</isSelector>
-            <isFilter>true</isFilter>
-            <isSorter>true</isSorter>
-            <isParameter>false</isParameter>
-            <returnType>String</returnType>
-            <propertyRefs>
-                <propertyRef>
-                    <key>3fcdb07f-7d61-4b64-97a4-de9e5fd3f906</key>
-                    <parentUnit>
-                        <key name="name" value="NextSentStatus" />
-                    </parentUnit>
-                    <subEntity>
-                        <key name="name" value="ReceClaimRecord" />
-                    </subEntity>
-                    <refProperty>
-                        <key name="name" value="NextSentStatus" />
-                    </refProperty>
-                </propertyRef>
-            </propertyRefs>
-            <query>
-                <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ReceClaimRecordQuery" />
-            </query>
-        </queryField>
-        <queryField>
-            <name>CurrSentTime</name>
-            <userDefined>true</userDefined>
-            <formulaString>#0</formulaString>
-            <constString />
-            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[CurrSentTime].displayName</displayName>
-            <groupType />
-            <isSelector>true</isSelector>
-            <isFilter>true</isFilter>
-            <isSorter>true</isSorter>
-            <isParameter>false</isParameter>
-            <returnType>Date</returnType>
-            <propertyRefs>
-                <propertyRef>
-                    <key>6faf7c64-acc1-47e6-8f85-328c75331b6b</key>
-                    <parentUnit>
-                        <key name="name" value="CurrSentTime" />
-                    </parentUnit>
-                    <subEntity>
-                        <key name="name" value="ReceClaimRecord" />
-                    </subEntity>
-                    <refProperty>
-                        <key name="name" value="CurrSentTime" />
-                    </refProperty>
-                </propertyRef>
-            </propertyRefs>
-            <query>
-                <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ReceClaimRecordQuery" />
-            </query>
-        </queryField>
-        <queryField>
-            <name>NextSentTime</name>
-            <userDefined>true</userDefined>
-            <formulaString>#0</formulaString>
-            <constString />
-            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[NextSentTime].displayName</displayName>
-            <groupType />
-            <isSelector>true</isSelector>
-            <isFilter>true</isFilter>
-            <isSorter>true</isSorter>
-            <isParameter>false</isParameter>
-            <returnType>Date</returnType>
-            <propertyRefs>
-                <propertyRef>
-                    <key>e224e3ee-9a68-4201-a3e6-dc395dd7944f</key>
-                    <parentUnit>
-                        <key name="name" value="NextSentTime" />
-                    </parentUnit>
-                    <subEntity>
-                        <key name="name" value="ReceClaimRecord" />
-                    </subEntity>
-                    <refProperty>
-                        <key name="name" value="NextSentTime" />
+                        <key name="name" value="CurrencyNo" />
                     </refProperty>
                 </propertyRef>
             </propertyRefs>
@@ -2039,66 +1915,18 @@
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[CurrRequest].displayName">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[CurrencyNo].displayName">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="当月认领请求" />
-            <lang locale="zh_HK" value="當月認領請求" />
-            <lang locale="zh_TW" value="當月認領請求" />
+            <lang locale="zh_CN" value="币种编码" />
+            <lang locale="zh_HK" value="幣種編碼" />
+            <lang locale="zh_TW" value="幣種編碼" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[CurrRequest].extendedProperty.isCommonQueryFilter">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[CurrencyNo].extendedProperty.isCommonQueryFilter">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[CurrRequest].extendedProperty.isCommonQuerySorter">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[CurrRespond].displayName">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="当月认领相应" />
-            <lang locale="zh_HK" value="當月認領相應" />
-            <lang locale="zh_TW" value="當月認領相應" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[CurrRespond].extendedProperty.isCommonQueryFilter">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[CurrRespond].extendedProperty.isCommonQuerySorter">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[CurrSentStatus].displayName">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="本月发送状态" />
-            <lang locale="zh_HK" value="本月發送狀態" />
-            <lang locale="zh_TW" value="本月發送狀態" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[CurrSentStatus].extendedProperty.isCommonQueryFilter">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[CurrSentStatus].extendedProperty.isCommonQuerySorter">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[CurrSentTime].displayName">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="本月发送时间" />
-            <lang locale="zh_HK" value="本月發送時間" />
-            <lang locale="zh_TW" value="本月發送時間" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[CurrSentTime].extendedProperty.isCommonQueryFilter">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[CurrSentTime].extendedProperty.isCommonQuerySorter">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[CurrencyNo].extendedProperty.isCommonQuerySorter">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
@@ -2156,6 +1984,22 @@
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[FirstSentFlag].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="一次发送状态" />
+            <lang locale="zh_HK" value="一次發送狀態" />
+            <lang locale="zh_TW" value="一次發送狀態" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[FirstSentFlag].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[FirstSentFlag].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
         <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[Fivouchered].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="是否生成凭证" />
@@ -2204,66 +2048,18 @@
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[NextRequest].displayName">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[PayerName].displayName">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="次月认领请求" />
-            <lang locale="zh_HK" value="次月認領請求" />
-            <lang locale="zh_TW" value="次月認領請求" />
+            <lang locale="zh_CN" value="往来户姓名" />
+            <lang locale="zh_HK" value="往來戶姓名" />
+            <lang locale="zh_TW" value="往來戶姓名" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[NextRequest].extendedProperty.isCommonQueryFilter">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[PayerName].extendedProperty.isCommonQueryFilter">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[NextRequest].extendedProperty.isCommonQuerySorter">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[NextRespond].displayName">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="次月认领相应" />
-            <lang locale="zh_HK" value="次月認領相應" />
-            <lang locale="zh_TW" value="次月認領相應" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[NextRespond].extendedProperty.isCommonQueryFilter">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[NextRespond].extendedProperty.isCommonQuerySorter">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[NextSentStatus].displayName">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="次月发送状态" />
-            <lang locale="zh_HK" value="次月發送狀態" />
-            <lang locale="zh_TW" value="次月發送狀態" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[NextSentStatus].extendedProperty.isCommonQueryFilter">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[NextSentStatus].extendedProperty.isCommonQuerySorter">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[NextSentTime].displayName">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="次月发送时间" />
-            <lang locale="zh_HK" value="次月發送時間" />
-            <lang locale="zh_TW" value="次月發送時間" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[NextSentTime].extendedProperty.isCommonQueryFilter">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[NextSentTime].extendedProperty.isCommonQuerySorter">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[PayerName].extendedProperty.isCommonQuerySorter">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
@@ -2316,6 +2112,22 @@
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[SendSentFlag].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="二次发送状态" />
+            <lang locale="zh_HK" value="二次發送狀態" />
+            <lang locale="zh_TW" value="二次發送狀態" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[SendSentFlag].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[SendSentFlag].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
         <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[auditor.name].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="别名" />
@@ -2356,9 +2168,9 @@
             <lang locale="zh_TW" value="true" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[createTime].extendedProperty.isCommonQuerySorter">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[creator.name].displayName">
             <lang locale="en_US" value="null" />

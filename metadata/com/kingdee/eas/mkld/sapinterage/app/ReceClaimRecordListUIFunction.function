@@ -43,6 +43,78 @@
                 <key name="name" value="ReceClaimRecord" />
             </entityObjectRef>
         </operation>
+        <operation>
+            <name>sentReceClaim</name>
+            <alias>functionObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordListUIFunction].operations.operation[sentReceClaim].alias</alias>
+            <description>functionObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordListUIFunction].operations.operation[sentReceClaim].description</description>
+            <reverseOperation />
+            <eventMethod>a857be1a-bdd5-4b9b-92d8-2346622b9ad9</eventMethod>
+            <event>sentReceClaimEvent</event>
+            <userDefined>true</userDefined>
+            <uiActionRef>
+                <id>ac6b0922-1736-4af2-b406-52bbb782ce65uiaf</id>
+                <uiStatus />
+                <webUIStatus />
+                <userDefined>true</userDefined>
+                <uiObjectRef>
+                    <key name="package" value="com.kingdee.eas.mkld.sapinterage.client" />
+                    <key name="name" value="ReceClaimRecordListUI" />
+                </uiObjectRef>
+                <actionRefName>ActionSentReceClaim</actionRefName>
+                <webActionRefName />
+                <parameters>
+                    <parameter>
+                        <name>billID</name>
+                        <alias>functionObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordListUIFunction].operations.operation[sentReceClaim].uiActionRef.parameters.parameter[billID].alias</alias>
+                        <description>functionObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordListUIFunction].operations.operation[sentReceClaim].uiActionRef.parameters.parameter[billID].description</description>
+                        <direction>in</direction>
+                        <dataType>BOSUuid</dataType>
+                        <metadataRef />
+                        <userDefined>true</userDefined>
+                    </parameter>
+                </parameters>
+            </uiActionRef>
+            <entityObjectRef>
+                <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
+                <key name="name" value="ReceClaimRecord" />
+            </entityObjectRef>
+        </operation>
+        <operation>
+            <name>sentNoClaimMonthEnd</name>
+            <alias>functionObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordListUIFunction].operations.operation[sentNoClaimMonthEnd].alias</alias>
+            <description>functionObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordListUIFunction].operations.operation[sentNoClaimMonthEnd].description</description>
+            <reverseOperation />
+            <eventMethod>0f20d94e-9d7f-44cb-bf0a-584cad62d23f</eventMethod>
+            <event>sentNoClaimMonthEndEvent</event>
+            <userDefined>true</userDefined>
+            <uiActionRef>
+                <id>61d43492-1214-4442-832e-4adf8f991847uiaf</id>
+                <uiStatus />
+                <webUIStatus />
+                <userDefined>true</userDefined>
+                <uiObjectRef>
+                    <key name="package" value="com.kingdee.eas.mkld.sapinterage.client" />
+                    <key name="name" value="ReceClaimRecordListUI" />
+                </uiObjectRef>
+                <actionRefName>ActionSentNoClaimMonthEnd</actionRefName>
+                <webActionRefName />
+                <parameters>
+                    <parameter>
+                        <name>billID</name>
+                        <alias>functionObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordListUIFunction].operations.operation[sentNoClaimMonthEnd].uiActionRef.parameters.parameter[billID].alias</alias>
+                        <description>functionObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordListUIFunction].operations.operation[sentNoClaimMonthEnd].uiActionRef.parameters.parameter[billID].description</description>
+                        <direction>in</direction>
+                        <dataType>BOSUuid</dataType>
+                        <metadataRef />
+                        <userDefined>true</userDefined>
+                    </parameter>
+                </parameters>
+            </uiActionRef>
+            <entityObjectRef>
+                <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
+                <key name="name" value="ReceClaimRecord" />
+            </entityObjectRef>
+        </operation>
     </operations>
     <resource>
         <rs key="functionObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordListUIFunction].alias">
@@ -81,6 +153,64 @@
             <lang locale="zh_TW" value="單據內碼" />
         </rs>
         <rs key="functionObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordListUIFunction].operations.operation[ActionRemove].uiActionRef.parameters.parameter[billid].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据内码" />
+            <lang locale="zh_HK" value="單據內碼" />
+            <lang locale="zh_TW" value="單據內碼" />
+        </rs>
+        <rs key="functionObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordListUIFunction].operations.operation[sentNoClaimMonthEnd].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="发送月末未认领" />
+            <lang locale="zh_HK" value="發送月末未認領" />
+            <lang locale="zh_TW" value="發送月末未認領" />
+        </rs>
+        <rs key="functionObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordListUIFunction].operations.operation[sentNoClaimMonthEnd].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="functionObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordListUIFunction].operations.operation[sentNoClaimMonthEnd].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="functionObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordListUIFunction].operations.operation[sentNoClaimMonthEnd].uiActionRef.parameters.parameter[billID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据内码" />
+            <lang locale="zh_HK" value="單據內碼" />
+            <lang locale="zh_TW" value="單據內碼" />
+        </rs>
+        <rs key="functionObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordListUIFunction].operations.operation[sentNoClaimMonthEnd].uiActionRef.parameters.parameter[billID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据内码" />
+            <lang locale="zh_HK" value="單據內碼" />
+            <lang locale="zh_TW" value="單據內碼" />
+        </rs>
+        <rs key="functionObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordListUIFunction].operations.operation[sentReceClaim].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="发送收款认领结果" />
+            <lang locale="zh_HK" value="發送收款認領結果" />
+            <lang locale="zh_TW" value="發送收款認領結果" />
+        </rs>
+        <rs key="functionObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordListUIFunction].operations.operation[sentReceClaim].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="functionObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordListUIFunction].operations.operation[sentReceClaim].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="functionObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordListUIFunction].operations.operation[sentReceClaim].uiActionRef.parameters.parameter[billID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="单据内码" />
+            <lang locale="zh_HK" value="單據內碼" />
+            <lang locale="zh_TW" value="單據內碼" />
+        </rs>
+        <rs key="functionObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordListUIFunction].operations.operation[sentReceClaim].uiActionRef.parameters.parameter[billID].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="单据内码" />
             <lang locale="zh_HK" value="單據內碼" />

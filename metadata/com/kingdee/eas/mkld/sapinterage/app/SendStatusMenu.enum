@@ -9,8 +9,8 @@
     <enumDataType>STRING</enumDataType>
     <enumValues>
         <enumValue>
-            <name>Sent</name>
-            <alias>bizEnum[com.kingdee.eas.mkld.sapinterage.app.SendStatusMenu].enumValues.enumValue[Sent].alias</alias>
+            <name>SentS</name>
+            <alias>bizEnum[com.kingdee.eas.mkld.sapinterage.app.SendStatusMenu].enumValues.enumValue[SentS].alias</alias>
             <userDefined>true</userDefined>
             <value>1</value>
         </enumValue>
@@ -19,6 +19,12 @@
             <alias>bizEnum[com.kingdee.eas.mkld.sapinterage.app.SendStatusMenu].enumValues.enumValue[UnSent].alias</alias>
             <userDefined>true</userDefined>
             <value>0</value>
+        </enumValue>
+        <enumValue>
+            <name>SentF</name>
+            <alias>bizEnum[com.kingdee.eas.mkld.sapinterage.app.SendStatusMenu].enumValues.enumValue[SentF].alias</alias>
+            <userDefined>true</userDefined>
+            <value>2</value>
         </enumValue>
     </enumValues>
     <resource>
@@ -34,11 +40,17 @@
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
-        <rs key="bizEnum[com.kingdee.eas.mkld.sapinterage.app.SendStatusMenu].enumValues.enumValue[Sent].alias">
+        <rs key="bizEnum[com.kingdee.eas.mkld.sapinterage.app.SendStatusMenu].enumValues.enumValue[SentF].alias">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="已发送" />
-            <lang locale="zh_HK" value="已發送" />
-            <lang locale="zh_TW" value="已發送" />
+            <lang locale="zh_CN" value="已发送接收失败" />
+            <lang locale="zh_HK" value="已發送接收失敗" />
+            <lang locale="zh_TW" value="已發送接收失敗" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.mkld.sapinterage.app.SendStatusMenu].enumValues.enumValue[SentS].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="已发送接收成功" />
+            <lang locale="zh_HK" value="已發送接收成功" />
+            <lang locale="zh_TW" value="已發送接收成功" />
         </rs>
         <rs key="bizEnum[com.kingdee.eas.mkld.sapinterage.app.SendStatusMenu].enumValues.enumValue[UnSent].alias">
             <lang locale="en_US" value="null" />

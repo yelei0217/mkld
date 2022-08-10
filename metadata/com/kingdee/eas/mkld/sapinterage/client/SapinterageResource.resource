@@ -32,6 +32,11 @@
             <value>i18nResource[com.kingdee.eas.mkld.sapinterage.client.SapinterageResource].resourceItems.resourceItem[ReceClaimRecordQueryF7WindowTitle].value</value>
             <userDefined>true</userDefined>
         </resourceItem>
+        <resourceItem>
+            <name>SAPInterfaceLogQueryF7WindowTitle</name>
+            <value>i18nResource[com.kingdee.eas.mkld.sapinterage.client.SapinterageResource].resourceItems.resourceItem[SAPInterfaceLogQueryF7WindowTitle].value</value>
+            <userDefined>true</userDefined>
+        </resourceItem>
     </resourceItems>
     <resource>
         <rs key="i18nResource[com.kingdee.eas.mkld.sapinterage.client.SapinterageResource].alias">
@@ -57,6 +62,12 @@
             <lang locale="zh_CN" value="SAP集成日志" />
             <lang locale="zh_HK" value="SAP集成日誌" />
             <lang locale="zh_TW" value="SAP集成日誌" />
+        </rs>
+        <rs key="i18nResource[com.kingdee.eas.mkld.sapinterage.client.SapinterageResource].resourceItems.resourceItem[SAPInterfaceLogQueryF7WindowTitle].value">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="SAP接口调用日志" />
+            <lang locale="zh_HK" value="SAP介面調用日誌" />
+            <lang locale="zh_TW" value="SAP介面調用日誌" />
         </rs>
         <rs key="i18nResource[com.kingdee.eas.mkld.sapinterage.client.SapinterageResource].resourceItems.resourceItem[SAPVoucherIntegrateLogQueryF7WindowTitle].value">
             <lang locale="en_US" value="null" />

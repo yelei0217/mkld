@@ -166,6 +166,58 @@
             </parameters>
             <configured>false</configured>
         </method>
+        <method>
+            <name>sentReceClaim</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].methods.method[sentReceClaim].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].methods.method[sentReceClaim].description</description>
+            <innerID>a857be1a-bdd5-4b9b-92d8-2346622b9ad9</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>model</name>
+                    <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].methods.method[sentReceClaim].parameters.parameter[model].alias</alias>
+                    <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].methods.method[sentReceClaim].parameters.parameter[model].description</description>
+                    <direction>in</direction>
+                    <dataType>ObjectValue</dataType>
+                    <metadataRef>com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord</metadataRef>
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>sentNoClaimMonthEnd</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].methods.method[sentNoClaimMonthEnd].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].methods.method[sentNoClaimMonthEnd].description</description>
+            <innerID>0f20d94e-9d7f-44cb-bf0a-584cad62d23f</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>model</name>
+                    <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].methods.method[sentNoClaimMonthEnd].parameters.parameter[model].alias</alias>
+                    <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].methods.method[sentNoClaimMonthEnd].parameters.parameter[model].description</description>
+                    <direction>in</direction>
+                    <dataType>ObjectValue</dataType>
+                    <metadataRef>com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord</metadataRef>
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
     </methods>
     <isAbstract>false</isAbstract>
     <bizUnitPK>com.kingdee.eas.mkld.sapinterage.ReceClaimRecord</bizUnitPK>
@@ -533,9 +585,9 @@
             </mappingField>
         </ownProperty>
         <ownProperty>
-            <name>CurrRequest</name>
-            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrRequest].alias</alias>
-            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrRequest].description</description>
+            <name>PayerName</name>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[PayerName].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[PayerName].description</description>
             <userDefined>true</userDefined>
             <configured>false</configured>
             <dataType>String</dataType>
@@ -543,79 +595,19 @@
             <isMultilingual>false</isMultilingual>
             <isNullable>false</isNullable>
             <formula />
-            <length>255</length>
+            <length>200</length>
             <precision>0</precision>
             <decimalDigits>0</decimalDigits>
-            <defaultValue>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrRequest].defaultValue</defaultValue>
+            <defaultValue>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[PayerName].defaultValue</defaultValue>
             <displayFormat />
             <mappingField>
-                <key name="name" value="CFCurrRequest" />
+                <key name="name" value="CFPayerName" />
             </mappingField>
         </ownProperty>
         <ownProperty>
-            <name>CurrRespond</name>
-            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrRespond].alias</alias>
-            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrRespond].description</description>
-            <userDefined>true</userDefined>
-            <configured>false</configured>
-            <dataType>String</dataType>
-            <metadataRef />
-            <isMultilingual>false</isMultilingual>
-            <isNullable>false</isNullable>
-            <formula />
-            <length>255</length>
-            <precision>0</precision>
-            <decimalDigits>0</decimalDigits>
-            <defaultValue>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrRespond].defaultValue</defaultValue>
-            <displayFormat />
-            <mappingField>
-                <key name="name" value="CFCurrRespond" />
-            </mappingField>
-        </ownProperty>
-        <ownProperty>
-            <name>NextRequest</name>
-            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextRequest].alias</alias>
-            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextRequest].description</description>
-            <userDefined>true</userDefined>
-            <configured>false</configured>
-            <dataType>String</dataType>
-            <metadataRef />
-            <isMultilingual>false</isMultilingual>
-            <isNullable>false</isNullable>
-            <formula />
-            <length>255</length>
-            <precision>0</precision>
-            <decimalDigits>0</decimalDigits>
-            <defaultValue>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextRequest].defaultValue</defaultValue>
-            <displayFormat />
-            <mappingField>
-                <key name="name" value="CFNextRequest" />
-            </mappingField>
-        </ownProperty>
-        <ownProperty>
-            <name>NextRespond</name>
-            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextRespond].alias</alias>
-            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextRespond].description</description>
-            <userDefined>true</userDefined>
-            <configured>false</configured>
-            <dataType>String</dataType>
-            <metadataRef />
-            <isMultilingual>false</isMultilingual>
-            <isNullable>false</isNullable>
-            <formula />
-            <length>255</length>
-            <precision>0</precision>
-            <decimalDigits>0</decimalDigits>
-            <defaultValue>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextRespond].defaultValue</defaultValue>
-            <displayFormat />
-            <mappingField>
-                <key name="name" value="CFNextRespond" />
-            </mappingField>
-        </ownProperty>
-        <ownProperty>
-            <name>CurrSentStatus</name>
-            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrSentStatus].alias</alias>
-            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrSentStatus].description</description>
+            <name>SendSentFlag</name>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[SendSentFlag].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[SendSentFlag].description</description>
             <userDefined>true</userDefined>
             <configured>false</configured>
             <dataType>Enum</dataType>
@@ -626,16 +618,16 @@
             <length>80</length>
             <precision>0</precision>
             <decimalDigits>0</decimalDigits>
-            <defaultValue>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrSentStatus].defaultValue</defaultValue>
+            <defaultValue>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[SendSentFlag].defaultValue</defaultValue>
             <displayFormat />
             <mappingField>
-                <key name="name" value="CFCurrSentStatus" />
+                <key name="name" value="CFSendSentFlag" />
             </mappingField>
         </ownProperty>
         <ownProperty>
-            <name>NextSentStatus</name>
-            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextSentStatus].alias</alias>
-            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextSentStatus].description</description>
+            <name>FirstSentFlag</name>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[FirstSentFlag].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[FirstSentFlag].description</description>
             <userDefined>true</userDefined>
             <configured>false</configured>
             <dataType>Enum</dataType>
@@ -646,50 +638,30 @@
             <length>80</length>
             <precision>0</precision>
             <decimalDigits>0</decimalDigits>
-            <defaultValue>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextSentStatus].defaultValue</defaultValue>
+            <defaultValue>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[FirstSentFlag].defaultValue</defaultValue>
             <displayFormat />
             <mappingField>
-                <key name="name" value="CFNextSentStatus" />
+                <key name="name" value="CFFirstSentFlag" />
             </mappingField>
         </ownProperty>
         <ownProperty>
-            <name>CurrSentTime</name>
-            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrSentTime].alias</alias>
-            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrSentTime].description</description>
+            <name>CurrencyNo</name>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrencyNo].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrencyNo].description</description>
             <userDefined>true</userDefined>
             <configured>false</configured>
-            <dataType>Date</dataType>
+            <dataType>String</dataType>
             <metadataRef />
             <isMultilingual>false</isMultilingual>
             <isNullable>false</isNullable>
             <formula />
-            <length>8</length>
+            <length>100</length>
             <precision>0</precision>
             <decimalDigits>0</decimalDigits>
-            <defaultValue>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrSentTime].defaultValue</defaultValue>
+            <defaultValue>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrencyNo].defaultValue</defaultValue>
             <displayFormat />
             <mappingField>
-                <key name="name" value="CFCurrSentTime" />
-            </mappingField>
-        </ownProperty>
-        <ownProperty>
-            <name>NextSentTime</name>
-            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextSentTime].alias</alias>
-            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextSentTime].description</description>
-            <userDefined>true</userDefined>
-            <configured>false</configured>
-            <dataType>Date</dataType>
-            <metadataRef />
-            <isMultilingual>false</isMultilingual>
-            <isNullable>false</isNullable>
-            <formula />
-            <length>8</length>
-            <precision>0</precision>
-            <decimalDigits>0</decimalDigits>
-            <defaultValue>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextSentTime].defaultValue</defaultValue>
-            <displayFormat />
-            <mappingField>
-                <key name="name" value="CFNextSentTime" />
+                <key name="name" value="CFCurrencyNo" />
             </mappingField>
         </ownProperty>
     </properties>
@@ -916,6 +888,90 @@
                 </formalParameter>
             </formalParameters>
         </event>
+        <event>
+            <name>sentReceClaimEvent</name>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].events.event[sentReceClaimEvent].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].events.event[sentReceClaimEvent].description</description>
+            <userDefined>true</userDefined>
+            <eventMethods>
+                <eventMethod>
+                    <name>a857be1a-bdd5-4b9b-92d8-2346622b9ad9</name>
+                    <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].events.event[sentReceClaimEvent].eventMethods.eventMethod[a857be1a-bdd5-4b9b-92d8-2346622b9ad9].alias</alias>
+                    <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].events.event[sentReceClaimEvent].eventMethods.eventMethod[a857be1a-bdd5-4b9b-92d8-2346622b9ad9].description</description>
+                    <entityMethodRef>
+                        <key name="name" value="sentReceClaim" />
+                        <key name="innerID" value="a857be1a-bdd5-4b9b-92d8-2346622b9ad9" />
+                    </entityMethodRef>
+                    <parameterMappings>
+                        <parameterMapping>
+                            <name />
+                            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].events.event[sentReceClaimEvent].eventMethods.eventMethod[a857be1a-bdd5-4b9b-92d8-2346622b9ad9].parameterMappings.parameterMappingalias</alias>
+                            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].events.event[sentReceClaimEvent].eventMethods.eventMethod[a857be1a-bdd5-4b9b-92d8-2346622b9ad9].parameterMappings.parameterMappingdescription</description>
+                            <formalParameterInnerID>6eb9524e-09cd-48b4-9ba3-4e7cc9b885f5evfp</formalParameterInnerID>
+                            <actualParameterIndex>0</actualParameterIndex>
+                            <isBOPK>true</isBOPK>
+                        </parameterMapping>
+                    </parameterMappings>
+                </eventMethod>
+            </eventMethods>
+            <formalParameters>
+                <formalParameter>
+                    <innerID>6eb9524e-09cd-48b4-9ba3-4e7cc9b885f5evfp</innerID>
+                    <userDefined>true</userDefined>
+                    <parameter>
+                        <name>model</name>
+                        <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].events.event[sentReceClaimEvent].formalParameters.formalParameter.parameter[model].alias</alias>
+                        <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].events.event[sentReceClaimEvent].formalParameters.formalParameter.parameter[model].description</description>
+                        <direction>in</direction>
+                        <dataType>ObjectValue</dataType>
+                        <metadataRef>com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord</metadataRef>
+                        <userDefined>true</userDefined>
+                    </parameter>
+                </formalParameter>
+            </formalParameters>
+        </event>
+        <event>
+            <name>sentNoClaimMonthEndEvent</name>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].events.event[sentNoClaimMonthEndEvent].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].events.event[sentNoClaimMonthEndEvent].description</description>
+            <userDefined>true</userDefined>
+            <eventMethods>
+                <eventMethod>
+                    <name>0f20d94e-9d7f-44cb-bf0a-584cad62d23f</name>
+                    <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].events.event[sentNoClaimMonthEndEvent].eventMethods.eventMethod[0f20d94e-9d7f-44cb-bf0a-584cad62d23f].alias</alias>
+                    <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].events.event[sentNoClaimMonthEndEvent].eventMethods.eventMethod[0f20d94e-9d7f-44cb-bf0a-584cad62d23f].description</description>
+                    <entityMethodRef>
+                        <key name="name" value="sentNoClaimMonthEnd" />
+                        <key name="innerID" value="0f20d94e-9d7f-44cb-bf0a-584cad62d23f" />
+                    </entityMethodRef>
+                    <parameterMappings>
+                        <parameterMapping>
+                            <name />
+                            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].events.event[sentNoClaimMonthEndEvent].eventMethods.eventMethod[0f20d94e-9d7f-44cb-bf0a-584cad62d23f].parameterMappings.parameterMappingalias</alias>
+                            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].events.event[sentNoClaimMonthEndEvent].eventMethods.eventMethod[0f20d94e-9d7f-44cb-bf0a-584cad62d23f].parameterMappings.parameterMappingdescription</description>
+                            <formalParameterInnerID>5c95d940-b6e3-4f45-abce-146395815558evfp</formalParameterInnerID>
+                            <actualParameterIndex>0</actualParameterIndex>
+                            <isBOPK>true</isBOPK>
+                        </parameterMapping>
+                    </parameterMappings>
+                </eventMethod>
+            </eventMethods>
+            <formalParameters>
+                <formalParameter>
+                    <innerID>5c95d940-b6e3-4f45-abce-146395815558evfp</innerID>
+                    <userDefined>true</userDefined>
+                    <parameter>
+                        <name>model</name>
+                        <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].events.event[sentNoClaimMonthEndEvent].formalParameters.formalParameter.parameter[model].alias</alias>
+                        <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].events.event[sentNoClaimMonthEndEvent].formalParameters.formalParameter.parameter[model].description</description>
+                        <direction>in</direction>
+                        <dataType>ObjectValue</dataType>
+                        <metadataRef>com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord</metadataRef>
+                        <userDefined>true</userDefined>
+                    </parameter>
+                </formalParameter>
+            </formalParameters>
+        </event>
     </events>
     <defaultView>
         <name />
@@ -1067,6 +1123,102 @@
             <lang locale="zh_HK" value="對象主鍵" />
             <lang locale="zh_TW" value="對象主鍵" />
         </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].events.event[sentNoClaimMonthEndEvent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="发送月末未认领事件" />
+            <lang locale="zh_HK" value="發送月末未認領事件" />
+            <lang locale="zh_TW" value="發送月末未認領事件" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].events.event[sentNoClaimMonthEndEvent].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].events.event[sentNoClaimMonthEndEvent].eventMethods.eventMethod[0f20d94e-9d7f-44cb-bf0a-584cad62d23f].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].events.event[sentNoClaimMonthEndEvent].eventMethods.eventMethod[0f20d94e-9d7f-44cb-bf0a-584cad62d23f].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].events.event[sentNoClaimMonthEndEvent].eventMethods.eventMethod[0f20d94e-9d7f-44cb-bf0a-584cad62d23f].parameterMappings.parameterMappingalias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].events.event[sentNoClaimMonthEndEvent].eventMethods.eventMethod[0f20d94e-9d7f-44cb-bf0a-584cad62d23f].parameterMappings.parameterMappingdescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].events.event[sentNoClaimMonthEndEvent].formalParameters.formalParameter.parameter[model].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].events.event[sentNoClaimMonthEndEvent].formalParameters.formalParameter.parameter[model].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].events.event[sentReceClaimEvent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="发送收款认领结果事件" />
+            <lang locale="zh_HK" value="發送收款認領結果事件" />
+            <lang locale="zh_TW" value="發送收款認領結果事件" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].events.event[sentReceClaimEvent].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].events.event[sentReceClaimEvent].eventMethods.eventMethod[a857be1a-bdd5-4b9b-92d8-2346622b9ad9].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].events.event[sentReceClaimEvent].eventMethods.eventMethod[a857be1a-bdd5-4b9b-92d8-2346622b9ad9].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].events.event[sentReceClaimEvent].eventMethods.eventMethod[a857be1a-bdd5-4b9b-92d8-2346622b9ad9].parameterMappings.parameterMappingalias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].events.event[sentReceClaimEvent].eventMethods.eventMethod[a857be1a-bdd5-4b9b-92d8-2346622b9ad9].parameterMappings.parameterMappingdescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].events.event[sentReceClaimEvent].formalParameters.formalParameter.parameter[model].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].events.event[sentReceClaimEvent].formalParameters.formalParameter.parameter[model].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
         <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].events.event[submitEvent].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="提交" />
@@ -1188,6 +1340,11 @@
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].extendedProperty.controllerBeanEx">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordControllerBeanEx" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordControllerBeanEx" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordControllerBeanEx" />
         </rs>
         <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].extendedProperty.defaultDisplayField">
             <lang locale="en_US" value="" />
@@ -1315,6 +1472,54 @@
             <lang locale="zh_TW" value="取值" />
         </rs>
         <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].methods.method[getValue].parameters.parameter[selector].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].methods.method[sentNoClaimMonthEnd].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="发送月末未认领" />
+            <lang locale="zh_HK" value="發送月末未認領" />
+            <lang locale="zh_TW" value="發送月末未認領" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].methods.method[sentNoClaimMonthEnd].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].methods.method[sentNoClaimMonthEnd].parameters.parameter[model].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].methods.method[sentNoClaimMonthEnd].parameters.parameter[model].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].methods.method[sentReceClaim].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="发送收款认领结果" />
+            <lang locale="zh_HK" value="發送收款認領結果" />
+            <lang locale="zh_TW" value="發送收款認領結果" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].methods.method[sentReceClaim].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].methods.method[sentReceClaim].parameters.parameter[model].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].methods.method[sentReceClaim].parameters.parameter[model].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
@@ -1697,259 +1902,65 @@
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrRequest].alias">
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrencyNo].alias">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="当月认领请求" />
-            <lang locale="zh_HK" value="當月認領請求" />
-            <lang locale="zh_TW" value="當月認領請求" />
+            <lang locale="zh_CN" value="币种编码" />
+            <lang locale="zh_HK" value="幣種編碼" />
+            <lang locale="zh_TW" value="幣種編碼" />
         </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrRequest].defaultValue">
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrencyNo].defaultValue">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrRequest].description">
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrencyNo].description">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="当月认领请求" />
-            <lang locale="zh_HK" value="當月認領請求" />
-            <lang locale="zh_TW" value="當月認領請求" />
+            <lang locale="zh_CN" value="币种编码" />
+            <lang locale="zh_HK" value="幣種編碼" />
+            <lang locale="zh_TW" value="幣種編碼" />
         </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrRequest].extendedProperty.ColWidthInKDTable">
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrencyNo].extendedProperty.ColWidthInKDTable">
             <lang locale="en_US" value="50" />
             <lang locale="zh_CN" value="50" />
             <lang locale="zh_TW" value="50" />
         </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrRequest].extendedProperty.bizDataType">
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrencyNo].extendedProperty.bizDataType">
             <lang locale="en_US" value="STRING" />
             <lang locale="zh_CN" value="STRING" />
             <lang locale="zh_TW" value="STRING" />
         </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrRequest].extendedProperty.enableFieldPermission">
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrencyNo].extendedProperty.enableFieldPermission">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrRequest].extendedProperty.isForGrouping">
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrencyNo].extendedProperty.isForGrouping">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrRequest].extendedProperty.isForMapping">
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrencyNo].extendedProperty.isForMapping">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrRequest].extendedProperty.isForMatching">
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrencyNo].extendedProperty.isForMatching">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrRequest].extendedProperty.isForWrittenBack">
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrencyNo].extendedProperty.isForWrittenBack">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrRequest].extendedProperty.isInCode">
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrencyNo].extendedProperty.isInCode">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrRequest].extendedProperty.isVisibleForKDTable">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrRespond].alias">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="当月认领响应" />
-            <lang locale="zh_HK" value="當月認領回應" />
-            <lang locale="zh_TW" value="當月認領回應" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrRespond].defaultValue">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_HK" value="null" />
-            <lang locale="zh_TW" value="null" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrRespond].description">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="当月认领请求" />
-            <lang locale="zh_HK" value="當月認領請求" />
-            <lang locale="zh_TW" value="當月認領請求" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrRespond].extendedProperty.ColWidthInKDTable">
-            <lang locale="en_US" value="50" />
-            <lang locale="zh_CN" value="50" />
-            <lang locale="zh_TW" value="50" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrRespond].extendedProperty.bizDataType">
-            <lang locale="en_US" value="STRING" />
-            <lang locale="zh_CN" value="STRING" />
-            <lang locale="zh_TW" value="STRING" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrRespond].extendedProperty.enableFieldPermission">
-            <lang locale="en_US" value="false" />
-            <lang locale="zh_CN" value="false" />
-            <lang locale="zh_TW" value="false" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrRespond].extendedProperty.isForGrouping">
-            <lang locale="en_US" value="false" />
-            <lang locale="zh_CN" value="false" />
-            <lang locale="zh_TW" value="false" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrRespond].extendedProperty.isForMapping">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrRespond].extendedProperty.isForMatching">
-            <lang locale="en_US" value="false" />
-            <lang locale="zh_CN" value="false" />
-            <lang locale="zh_TW" value="false" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrRespond].extendedProperty.isForWrittenBack">
-            <lang locale="en_US" value="false" />
-            <lang locale="zh_CN" value="false" />
-            <lang locale="zh_TW" value="false" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrRespond].extendedProperty.isInCode">
-            <lang locale="en_US" value="false" />
-            <lang locale="zh_CN" value="false" />
-            <lang locale="zh_TW" value="false" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrRespond].extendedProperty.isVisibleForKDTable">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrSentStatus].alias">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="本月发送状态" />
-            <lang locale="zh_HK" value="本月發送狀態" />
-            <lang locale="zh_TW" value="本月發送狀態" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrSentStatus].defaultValue">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="Sent" />
-            <lang locale="zh_HK" value="Sent" />
-            <lang locale="zh_TW" value="Sent" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrSentStatus].description">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="本月发送状态" />
-            <lang locale="zh_HK" value="本月發送狀態" />
-            <lang locale="zh_TW" value="本月發送狀態" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrSentStatus].extendedProperty.ColWidthInKDTable">
-            <lang locale="en_US" value="50" />
-            <lang locale="zh_CN" value="50" />
-            <lang locale="zh_TW" value="50" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrSentStatus].extendedProperty.bizDataType">
-            <lang locale="en_US" value="ENUM" />
-            <lang locale="zh_CN" value="ENUM" />
-            <lang locale="zh_TW" value="ENUM" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrSentStatus].extendedProperty.defaultValue">
-            <lang locale="en_US" value="Sent" />
-            <lang locale="zh_CN" value="Sent" />
-            <lang locale="zh_TW" value="Sent" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrSentStatus].extendedProperty.enableFieldPermission">
-            <lang locale="en_US" value="false" />
-            <lang locale="zh_CN" value="false" />
-            <lang locale="zh_TW" value="false" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrSentStatus].extendedProperty.isForGrouping">
-            <lang locale="en_US" value="false" />
-            <lang locale="zh_CN" value="false" />
-            <lang locale="zh_TW" value="false" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrSentStatus].extendedProperty.isForMapping">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrSentStatus].extendedProperty.isForMatching">
-            <lang locale="en_US" value="false" />
-            <lang locale="zh_CN" value="false" />
-            <lang locale="zh_TW" value="false" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrSentStatus].extendedProperty.isForWrittenBack">
-            <lang locale="en_US" value="false" />
-            <lang locale="zh_CN" value="false" />
-            <lang locale="zh_TW" value="false" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrSentStatus].extendedProperty.isInCode">
-            <lang locale="en_US" value="false" />
-            <lang locale="zh_CN" value="false" />
-            <lang locale="zh_TW" value="false" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrSentStatus].extendedProperty.isVisibleForKDTable">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrSentTime].alias">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="本月发送时间" />
-            <lang locale="zh_HK" value="本月發送時間" />
-            <lang locale="zh_TW" value="本月發送時間" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrSentTime].defaultValue">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_HK" value="null" />
-            <lang locale="zh_TW" value="null" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrSentTime].description">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="本月发送时间" />
-            <lang locale="zh_HK" value="本月發送時間" />
-            <lang locale="zh_TW" value="本月發送時間" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrSentTime].extendedProperty.ColWidthInKDTable">
-            <lang locale="en_US" value="50" />
-            <lang locale="zh_CN" value="50" />
-            <lang locale="zh_TW" value="50" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrSentTime].extendedProperty.bizDataType">
-            <lang locale="en_US" value="DATE" />
-            <lang locale="zh_CN" value="DATE" />
-            <lang locale="zh_TW" value="DATE" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrSentTime].extendedProperty.enableFieldPermission">
-            <lang locale="en_US" value="false" />
-            <lang locale="zh_CN" value="false" />
-            <lang locale="zh_TW" value="false" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrSentTime].extendedProperty.isForGrouping">
-            <lang locale="en_US" value="false" />
-            <lang locale="zh_CN" value="false" />
-            <lang locale="zh_TW" value="false" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrSentTime].extendedProperty.isForMapping">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrSentTime].extendedProperty.isForMatching">
-            <lang locale="en_US" value="false" />
-            <lang locale="zh_CN" value="false" />
-            <lang locale="zh_TW" value="false" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrSentTime].extendedProperty.isForWrittenBack">
-            <lang locale="en_US" value="false" />
-            <lang locale="zh_CN" value="false" />
-            <lang locale="zh_TW" value="false" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrSentTime].extendedProperty.isInCode">
-            <lang locale="en_US" value="false" />
-            <lang locale="zh_CN" value="false" />
-            <lang locale="zh_TW" value="false" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrSentTime].extendedProperty.isVisibleForKDTable">
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[CurrencyNo].extendedProperty.isVisibleForKDTable">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
@@ -2076,6 +2087,74 @@
             <lang locale="zh_TW" value="false" />
         </rs>
         <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[Deposit].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[FirstSentFlag].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="一次发送状态" />
+            <lang locale="zh_HK" value="一次發送狀態" />
+            <lang locale="zh_TW" value="一次發送狀態" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[FirstSentFlag].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="Sent-S" />
+            <lang locale="zh_HK" value="Sent-S" />
+            <lang locale="zh_TW" value="Sent-S" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[FirstSentFlag].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="第一次发送SAP状态" />
+            <lang locale="zh_HK" value="第一次發送SAP狀態" />
+            <lang locale="zh_TW" value="第一次發送SAP狀態" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[FirstSentFlag].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[FirstSentFlag].extendedProperty.bizDataType">
+            <lang locale="en_US" value="ENUM" />
+            <lang locale="zh_CN" value="ENUM" />
+            <lang locale="zh_TW" value="ENUM" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[FirstSentFlag].extendedProperty.defaultValue">
+            <lang locale="en_US" value="Sent-S" />
+            <lang locale="zh_CN" value="Sent-S" />
+            <lang locale="zh_TW" value="Sent-S" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[FirstSentFlag].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[FirstSentFlag].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[FirstSentFlag].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[FirstSentFlag].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[FirstSentFlag].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[FirstSentFlag].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[FirstSentFlag].extendedProperty.isVisibleForKDTable">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
@@ -2269,259 +2348,65 @@
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextRequest].alias">
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[PayerName].alias">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="次月认领请求" />
-            <lang locale="zh_HK" value="次月認領請求" />
-            <lang locale="zh_TW" value="次月認領請求" />
+            <lang locale="zh_CN" value="往来户姓名" />
+            <lang locale="zh_HK" value="往來戶姓名" />
+            <lang locale="zh_TW" value="往來戶姓名" />
         </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextRequest].defaultValue">
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[PayerName].defaultValue">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextRequest].description">
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[PayerName].description">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="当月认领请求" />
-            <lang locale="zh_HK" value="當月認領請求" />
-            <lang locale="zh_TW" value="當月認領請求" />
+            <lang locale="zh_CN" value="往来户姓名" />
+            <lang locale="zh_HK" value="往來戶姓名" />
+            <lang locale="zh_TW" value="往來戶姓名" />
         </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextRequest].extendedProperty.ColWidthInKDTable">
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[PayerName].extendedProperty.ColWidthInKDTable">
             <lang locale="en_US" value="50" />
             <lang locale="zh_CN" value="50" />
             <lang locale="zh_TW" value="50" />
         </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextRequest].extendedProperty.bizDataType">
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[PayerName].extendedProperty.bizDataType">
             <lang locale="en_US" value="STRING" />
             <lang locale="zh_CN" value="STRING" />
             <lang locale="zh_TW" value="STRING" />
         </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextRequest].extendedProperty.enableFieldPermission">
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[PayerName].extendedProperty.enableFieldPermission">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextRequest].extendedProperty.isForGrouping">
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[PayerName].extendedProperty.isForGrouping">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextRequest].extendedProperty.isForMapping">
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[PayerName].extendedProperty.isForMapping">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextRequest].extendedProperty.isForMatching">
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[PayerName].extendedProperty.isForMatching">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextRequest].extendedProperty.isForWrittenBack">
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[PayerName].extendedProperty.isForWrittenBack">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextRequest].extendedProperty.isInCode">
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[PayerName].extendedProperty.isInCode">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextRequest].extendedProperty.isVisibleForKDTable">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextRespond].alias">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="次月认领响应" />
-            <lang locale="zh_HK" value="次月認領回應" />
-            <lang locale="zh_TW" value="次月認領回應" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextRespond].defaultValue">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_HK" value="null" />
-            <lang locale="zh_TW" value="null" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextRespond].description">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="当月认领请求" />
-            <lang locale="zh_HK" value="當月認領請求" />
-            <lang locale="zh_TW" value="當月認領請求" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextRespond].extendedProperty.ColWidthInKDTable">
-            <lang locale="en_US" value="50" />
-            <lang locale="zh_CN" value="50" />
-            <lang locale="zh_TW" value="50" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextRespond].extendedProperty.bizDataType">
-            <lang locale="en_US" value="STRING" />
-            <lang locale="zh_CN" value="STRING" />
-            <lang locale="zh_TW" value="STRING" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextRespond].extendedProperty.enableFieldPermission">
-            <lang locale="en_US" value="false" />
-            <lang locale="zh_CN" value="false" />
-            <lang locale="zh_TW" value="false" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextRespond].extendedProperty.isForGrouping">
-            <lang locale="en_US" value="false" />
-            <lang locale="zh_CN" value="false" />
-            <lang locale="zh_TW" value="false" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextRespond].extendedProperty.isForMapping">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextRespond].extendedProperty.isForMatching">
-            <lang locale="en_US" value="false" />
-            <lang locale="zh_CN" value="false" />
-            <lang locale="zh_TW" value="false" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextRespond].extendedProperty.isForWrittenBack">
-            <lang locale="en_US" value="false" />
-            <lang locale="zh_CN" value="false" />
-            <lang locale="zh_TW" value="false" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextRespond].extendedProperty.isInCode">
-            <lang locale="en_US" value="false" />
-            <lang locale="zh_CN" value="false" />
-            <lang locale="zh_TW" value="false" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextRespond].extendedProperty.isVisibleForKDTable">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextSentStatus].alias">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="次月发送状态" />
-            <lang locale="zh_HK" value="次月發送狀態" />
-            <lang locale="zh_TW" value="次月發送狀態" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextSentStatus].defaultValue">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="Sent" />
-            <lang locale="zh_HK" value="Sent" />
-            <lang locale="zh_TW" value="Sent" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextSentStatus].description">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="次月发送状态" />
-            <lang locale="zh_HK" value="次月發送狀態" />
-            <lang locale="zh_TW" value="次月發送狀態" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextSentStatus].extendedProperty.ColWidthInKDTable">
-            <lang locale="en_US" value="50" />
-            <lang locale="zh_CN" value="50" />
-            <lang locale="zh_TW" value="50" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextSentStatus].extendedProperty.bizDataType">
-            <lang locale="en_US" value="ENUM" />
-            <lang locale="zh_CN" value="ENUM" />
-            <lang locale="zh_TW" value="ENUM" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextSentStatus].extendedProperty.defaultValue">
-            <lang locale="en_US" value="Sent" />
-            <lang locale="zh_CN" value="Sent" />
-            <lang locale="zh_TW" value="Sent" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextSentStatus].extendedProperty.enableFieldPermission">
-            <lang locale="en_US" value="false" />
-            <lang locale="zh_CN" value="false" />
-            <lang locale="zh_TW" value="false" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextSentStatus].extendedProperty.isForGrouping">
-            <lang locale="en_US" value="false" />
-            <lang locale="zh_CN" value="false" />
-            <lang locale="zh_TW" value="false" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextSentStatus].extendedProperty.isForMapping">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextSentStatus].extendedProperty.isForMatching">
-            <lang locale="en_US" value="false" />
-            <lang locale="zh_CN" value="false" />
-            <lang locale="zh_TW" value="false" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextSentStatus].extendedProperty.isForWrittenBack">
-            <lang locale="en_US" value="false" />
-            <lang locale="zh_CN" value="false" />
-            <lang locale="zh_TW" value="false" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextSentStatus].extendedProperty.isInCode">
-            <lang locale="en_US" value="false" />
-            <lang locale="zh_CN" value="false" />
-            <lang locale="zh_TW" value="false" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextSentStatus].extendedProperty.isVisibleForKDTable">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextSentTime].alias">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="次月发送时间" />
-            <lang locale="zh_HK" value="次月發送時間" />
-            <lang locale="zh_TW" value="次月發送時間" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextSentTime].defaultValue">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_HK" value="null" />
-            <lang locale="zh_TW" value="null" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextSentTime].description">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="次月发送时间" />
-            <lang locale="zh_HK" value="次月發送時間" />
-            <lang locale="zh_TW" value="次月發送時間" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextSentTime].extendedProperty.ColWidthInKDTable">
-            <lang locale="en_US" value="50" />
-            <lang locale="zh_CN" value="50" />
-            <lang locale="zh_TW" value="50" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextSentTime].extendedProperty.bizDataType">
-            <lang locale="en_US" value="DATE" />
-            <lang locale="zh_CN" value="DATE" />
-            <lang locale="zh_TW" value="DATE" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextSentTime].extendedProperty.enableFieldPermission">
-            <lang locale="en_US" value="false" />
-            <lang locale="zh_CN" value="false" />
-            <lang locale="zh_TW" value="false" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextSentTime].extendedProperty.isForGrouping">
-            <lang locale="en_US" value="false" />
-            <lang locale="zh_CN" value="false" />
-            <lang locale="zh_TW" value="false" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextSentTime].extendedProperty.isForMapping">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextSentTime].extendedProperty.isForMatching">
-            <lang locale="en_US" value="false" />
-            <lang locale="zh_CN" value="false" />
-            <lang locale="zh_TW" value="false" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextSentTime].extendedProperty.isForWrittenBack">
-            <lang locale="en_US" value="false" />
-            <lang locale="zh_CN" value="false" />
-            <lang locale="zh_TW" value="false" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextSentTime].extendedProperty.isInCode">
-            <lang locale="en_US" value="false" />
-            <lang locale="zh_CN" value="false" />
-            <lang locale="zh_TW" value="false" />
-        </rs>
-        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[NextSentTime].extendedProperty.isVisibleForKDTable">
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[PayerName].extendedProperty.isVisibleForKDTable">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
@@ -2715,6 +2600,74 @@
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[SendSentFlag].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="二次发送状态" />
+            <lang locale="zh_HK" value="二次發送狀態" />
+            <lang locale="zh_TW" value="二次發送狀態" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[SendSentFlag].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="Sent-S" />
+            <lang locale="zh_HK" value="Sent-S" />
+            <lang locale="zh_TW" value="Sent-S" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[SendSentFlag].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="二次发送状态" />
+            <lang locale="zh_HK" value="二次發送狀態" />
+            <lang locale="zh_TW" value="二次發送狀態" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[SendSentFlag].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[SendSentFlag].extendedProperty.bizDataType">
+            <lang locale="en_US" value="ENUM" />
+            <lang locale="zh_CN" value="ENUM" />
+            <lang locale="zh_TW" value="ENUM" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[SendSentFlag].extendedProperty.defaultValue">
+            <lang locale="en_US" value="Sent-S" />
+            <lang locale="zh_CN" value="Sent-S" />
+            <lang locale="zh_TW" value="Sent-S" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[SendSentFlag].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[SendSentFlag].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[SendSentFlag].extendedProperty.isForMapping">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[SendSentFlag].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[SendSentFlag].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[SendSentFlag].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[SendSentFlag].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
         <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[month].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="月份" />
@@ -2843,9 +2796,9 @@
         </rs>
         <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[trsreq].alias">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="EAS流水码" />
-            <lang locale="zh_HK" value="EAS流水碼" />
-            <lang locale="zh_TW" value="EAS流水碼" />
+            <lang locale="zh_CN" value="流水号" />
+            <lang locale="zh_HK" value="流水號" />
+            <lang locale="zh_TW" value="流水號" />
         </rs>
         <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[trsreq].defaultValue">
             <lang locale="en_US" value="null" />
@@ -2855,9 +2808,9 @@
         </rs>
         <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[trsreq].description">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="EAS流水码" />
-            <lang locale="zh_HK" value="EAS流水碼" />
-            <lang locale="zh_TW" value="EAS流水碼" />
+            <lang locale="zh_CN" value="流水号" />
+            <lang locale="zh_HK" value="流水號" />
+            <lang locale="zh_TW" value="流水號" />
         </rs>
         <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecord].properties.ownProperty[trsreq].extendedProperty.ColWidthInKDTable">
             <lang locale="en_US" value="50" />
