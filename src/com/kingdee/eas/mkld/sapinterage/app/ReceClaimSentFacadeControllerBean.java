@@ -1,13 +1,18 @@
 package com.kingdee.eas.mkld.sapinterage.app;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
+import org.apache.commons.lang.StringEscapeUtils;
 import org.apache.log4j.Logger;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.kingdee.bos.BOSException;
 import com.kingdee.bos.Context;
 import com.kingdee.bos.metadata.entity.EntityViewInfo;
@@ -23,6 +28,7 @@ import com.kingdee.eas.mkld.sapinterage.SAPInterfaceLogFactory;
 import com.kingdee.eas.mkld.sapinterage.SAPInterfaceLogInfo;
 import com.kingdee.eas.mkld.sapinterage.app.dto.ReceClaimDTO;
 import com.kingdee.eas.mkld.sapinterage.app.util.ReceClaimRecordUtil;
+import com.kingdee.eas.mkld.sapinterage.app.util.SAPInterfaceUtil;
 
 public class ReceClaimSentFacadeControllerBean extends AbstractReceClaimSentFacadeControllerBean
 {
@@ -40,8 +46,8 @@ public class ReceClaimSentFacadeControllerBean extends AbstractReceClaimSentFaca
 	 */
 	@Override
 	protected String _sentReceClaim(Context ctx) throws BOSException {
-		ReceClaimRecordUtil.savaRecordBill(ctx, "0NSPa37+RFy5hP2g3xBY5/pE/Vs="); // 客户
-		ReceClaimRecordUtil.savaRecordBill(ctx, "HMWXYdhdTCWiXxi9LcqJ8fpE/Vs="); //其他
+//		ReceClaimRecordUtil.savaRecordBill(ctx, "0NSPa37+RFy5hP2g3xBY5/pE/Vs="); // 客户
+//		ReceClaimRecordUtil.savaRecordBill(ctx, "HMWXYdhdTCWiXxi9LcqJ8fpE/Vs="); //其他
 		
 		//获取已认领，一次未发送的记录数据
         IReceClaimRecord ibiz = ReceClaimRecordFactory.getLocalInstance(ctx);
@@ -64,7 +70,7 @@ public class ReceClaimSentFacadeControllerBean extends AbstractReceClaimSentFaca
         		dto.setZTYPE(ClaimTypeMenu.CURRMONTH_VALUE);//    认领类型
         		dto.setBUKRS(rInfo.getFICompany().getNumber());//   公司代码
         		dto.setBANKN(rInfo.getBankAccount());//   收款银行账号
-        		dto.setBUDAT(rInfo.getReceDate());//   收款日期
+        		dto.setBUDAT(new SimpleDateFormat("yyyyMMdd").format(rInfo.getReceDate()));//   收款日期
         		//dto.setBUDAT2();//  再次认领日期
         		dto.setWAERS(rInfo.getCurrencyNo());
         		dto.setKUNNR(rInfo.getCustomerNo());//   客户编码
@@ -74,36 +80,40 @@ public class ReceClaimSentFacadeControllerBean extends AbstractReceClaimSentFaca
         		dto.setDMBTR_YJ(rInfo.getDeposit());//  其中押金金额
         		dto.setSGTXT(rInfo.getAbstract());//    摘要        		
         		lists.add(dto);
-        	}
-     
+        	} 
+        	
         //1、根据封装的 list 拼接发送信息
-        
-        //2、发送SAP请求
-        	
-        //3、接收响应信息
-        	
-        //4、解析返回信息， 修改每个记录 发送状态
-        	
-        	
-        //5、记录发送和响应日志信息   			
-        	
-        
-        //根据返回信息修改 每个记录单 发送状态
         Gson gson = new Gson();
-        String str  = gson.toJson(lists);
-        System.out.println(str);
+        Map dataMp = new HashMap();
+        dataMp.put("ITEMS", lists);
+        String dataStr  = gson.toJson(dataMp);
+        System.out.println(dataStr);
+        System.out.println(dataMp.toString());
+        dataStr = org.apache.commons.lang.StringEscapeUtils.escapeJava(dataStr);  //添加转义符
+        System.out.println(dataStr);
+
+        String msgId = ReceClaimRecordUtil.getCurrentTimeStrS()+(int)(Math.random()*10000);
         
+        //2、发送SAP请求-- 接收响应信息
+        
+        String sendStr = SAPInterfaceUtil.createSendReqStr(msgId,"FICO_I012", dataStr);
+ 
+        
+        //4、解析返回信息， 修改每个记录 发送状态
+    	
+        
+    	
+        //5、记录发送和响应日志信息   	
+        SAPInterfaceUtil.sendSapRequest(sendStr);
         SAPInterfaceLogInfo logInfo = new SAPInterfaceLogInfo();
-        
-        logInfo.setNumber(ReceClaimRecordUtil.getCurrentTimeStrS()+(int)(Math.random()*10000));
+        logInfo.setNumber(msgId);
         logInfo.setBizDate(currentDate);
         logInfo.setInterType(SAPInterTypeMenu.FICO_I012);
         logInfo.setClaimType(ClaimTypeMenu.CurrMonth);
         logInfo.setInterResult(InterResultMenu.SUCCESS);
         logInfo.setReqTime(currentDate);
-        logInfo.setRequest(str);
-        logInfo.setRespond(str);
-        
+        logInfo.setRequest(dataStr);
+        logInfo.setRespond(dataStr);
 	        try {
 				SAPInterfaceLogFactory.getLocalInstance(ctx).addnew(logInfo);
 			} catch (EASBizException e) {

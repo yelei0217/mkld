@@ -16,8 +16,8 @@ public class ReceClaimDTO  implements Serializable{
 	private String BUKRS;	//公司代码
 	private String BANKN;	//收款银行账号
 	private String WAERS;	//币种 
-	private Date BUDAT;	//收款日期
-	private Date BUDAT2;//	再次认领日期
+	private String BUDAT;	//收款日期
+	private String BUDAT2;//	再次认领日期
 	private String KUNNR;	//客户编码
 	private BigDecimal DMBTR;	//收款金额
 	private BigDecimal DMBTR_HK;//	其中货款金额
@@ -44,16 +44,17 @@ public class ReceClaimDTO  implements Serializable{
 	public void setBANKN(String bankn) {
 		BANKN = bankn;
 	}
-	public Date getBUDAT() {
+ 
+	public String getBUDAT() {
 		return BUDAT;
 	}
-	public void setBUDAT(Date budat) {
+	public void setBUDAT(String budat) {
 		BUDAT = budat;
 	}
-	public Date getBUDAT2() {
+	public String getBUDAT2() {
 		return BUDAT2;
 	}
-	public void setBUDAT2(Date budat2) {
+	public void setBUDAT2(String budat2) {
 		BUDAT2 = budat2;
 	}
 	public String getKUNNR() {

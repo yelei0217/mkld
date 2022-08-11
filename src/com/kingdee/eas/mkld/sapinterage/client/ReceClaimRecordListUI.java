@@ -36,7 +36,7 @@ public class ReceClaimRecordListUI extends AbstractReceClaimRecordListUI
     
     @Override
     public void actionHelp_actionPerformed(ActionEvent e) throws Exception {
-     	super.actionHelp_actionPerformed(e);
+     	//super.actionHelp_actionPerformed(e);
     	ReceClaimSentFacadeFactory.getRemoteInstance().sentReceClaim();
     }
 
