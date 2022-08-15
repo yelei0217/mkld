@@ -1515,6 +1515,37 @@
                 <key name="name" value="ReceClaimRecordQuery" />
             </query>
         </queryField>
+        <queryField>
+            <name>companyNumber</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[companyNumber].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>29e20255-564e-4043-912f-8c7eabd99aff</key>
+                    <parentUnit>
+                        <key name="name" value="companyNumber" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="ReceClaimRecord" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="companyNumber" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
+                <key name="name" value="ReceClaimRecordQuery" />
+            </query>
+        </queryField>
     </units>
     <defaultFilter>
         <name>defaultFilter</name>
@@ -2152,6 +2183,22 @@
             <lang locale="zh_TW" value="true" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[bizDate].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[companyNumber].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司编码" />
+            <lang locale="zh_HK" value="公司編碼" />
+            <lang locale="zh_TW" value="公司編碼" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[companyNumber].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[companyNumber].extendedProperty.isCommonQuerySorter">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />

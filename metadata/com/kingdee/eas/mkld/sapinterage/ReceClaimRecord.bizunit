@@ -116,9 +116,9 @@
             <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.client.ReceClaimRecordListUI" />
         </rs>
         <rs key="bizUnit[com.kingdee.eas.mkld.sapinterage.ReceClaimRecord].extendedProperty.maxFieldIndex">
-            <lang locale="en_US" value="29" />
-            <lang locale="zh_CN" value="29" />
-            <lang locale="zh_TW" value="29" />
+            <lang locale="en_US" value="30" />
+            <lang locale="zh_CN" value="30" />
+            <lang locale="zh_TW" value="30" />
         </rs>
         <rs key="bizUnit[com.kingdee.eas.mkld.sapinterage.ReceClaimRecord].extendedProperty.useTableEditUI">
             <lang locale="en_US" value="false" />

@@ -75,6 +75,7 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contSendSentFlag;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contFirstSentFlag;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contCurrencyNo;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contcompanyNumber;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtCreator;
     protected com.kingdee.bos.ctrl.swing.KDDatePicker kDDateCreateTime;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtLastUpdateUser;
@@ -104,6 +105,7 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
     protected com.kingdee.bos.ctrl.swing.KDComboBox SendSentFlag;
     protected com.kingdee.bos.ctrl.swing.KDComboBox FirstSentFlag;
     protected com.kingdee.bos.ctrl.swing.KDTextField txtCurrencyNo;
+    protected com.kingdee.bos.ctrl.swing.KDTextField txtcompanyNumber;
     protected com.kingdee.eas.mkld.sapinterage.ReceClaimRecordInfo editData = null;
     protected ActionSentReceClaim actionSentReceClaim = null;
     protected ActionSentNoClaimMonthEnd actionSentNoClaimMonthEnd = null;
@@ -215,6 +217,7 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
         this.contSendSentFlag = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contFirstSentFlag = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contCurrencyNo = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contcompanyNumber = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.prmtCreator = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
         this.kDDateCreateTime = new com.kingdee.bos.ctrl.swing.KDDatePicker();
         this.prmtLastUpdateUser = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
@@ -244,6 +247,7 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
         this.SendSentFlag = new com.kingdee.bos.ctrl.swing.KDComboBox();
         this.FirstSentFlag = new com.kingdee.bos.ctrl.swing.KDComboBox();
         this.txtCurrencyNo = new com.kingdee.bos.ctrl.swing.KDTextField();
+        this.txtcompanyNumber = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.contCreator.setName("contCreator");
         this.contCreateTime.setName("contCreateTime");
         this.contLastUpdateUser.setName("contLastUpdateUser");
@@ -273,6 +277,7 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
         this.contSendSentFlag.setName("contSendSentFlag");
         this.contFirstSentFlag.setName("contFirstSentFlag");
         this.contCurrencyNo.setName("contCurrencyNo");
+        this.contcompanyNumber.setName("contcompanyNumber");
         this.prmtCreator.setName("prmtCreator");
         this.kDDateCreateTime.setName("kDDateCreateTime");
         this.prmtLastUpdateUser.setName("prmtLastUpdateUser");
@@ -302,6 +307,7 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
         this.SendSentFlag.setName("SendSentFlag");
         this.FirstSentFlag.setName("FirstSentFlag");
         this.txtCurrencyNo.setName("txtCurrencyNo");
+        this.txtcompanyNumber.setName("txtcompanyNumber");
         // CoreUI		
         this.btnTraceUp.setVisible(false);		
         this.btnTraceDown.setVisible(false);		
@@ -472,6 +478,11 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
         this.contCurrencyNo.setBoundLabelLength(100);		
         this.contCurrencyNo.setBoundLabelUnderline(true);		
         this.contCurrencyNo.setVisible(true);
+        // contcompanyNumber		
+        this.contcompanyNumber.setBoundLabelText(resHelper.getString("contcompanyNumber.boundLabelText"));		
+        this.contcompanyNumber.setBoundLabelLength(100);		
+        this.contcompanyNumber.setBoundLabelUnderline(true);		
+        this.contcompanyNumber.setVisible(true);
         // prmtCreator		
         this.prmtCreator.setEnabled(false);		
         this.prmtCreator.setVisible(false);
@@ -594,7 +605,12 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
         this.txtCurrencyNo.setHorizontalAlignment(2);		
         this.txtCurrencyNo.setMaxLength(100);		
         this.txtCurrencyNo.setRequired(false);
-        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {prmtFICompany,txtNumber,pkBizDate,txtDescription,prmtAuditor,prmtCreator,kDDateCreateTime,prmtLastUpdateUser,kDDateLastUpdateTime,txtPaymentId,txtpaymentNo,txttrsreq,txtyear,txtmonth,txtBankAccount,pkReceDate,txtReceAmount,txtLoans,txtMargin,txtDeposit,txtAbstract,pkAgainClaimDate,txtCustomerNo,ClaimType,ClaimStatus,txtPayerName,FirstSentFlag,SendSentFlag,txtCurrencyNo}));
+        // txtcompanyNumber		
+        this.txtcompanyNumber.setVisible(true);		
+        this.txtcompanyNumber.setHorizontalAlignment(2);		
+        this.txtcompanyNumber.setMaxLength(100);		
+        this.txtcompanyNumber.setRequired(false);
+        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {prmtFICompany,txtNumber,pkBizDate,txtDescription,prmtAuditor,prmtCreator,kDDateCreateTime,prmtLastUpdateUser,kDDateLastUpdateTime,txtPaymentId,txtpaymentNo,txttrsreq,txtyear,txtmonth,txtBankAccount,pkReceDate,txtReceAmount,txtLoans,txtMargin,txtDeposit,txtAbstract,pkAgainClaimDate,txtCustomerNo,ClaimType,ClaimStatus,txtPayerName,FirstSentFlag,SendSentFlag,txtCurrencyNo,txtcompanyNumber}));
         this.setFocusCycleRoot(true);
 		//Register control's property binding
 		registerBindings();
@@ -681,6 +697,8 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
         this.add(contFirstSentFlag, new KDLayout.Constraints(28, 232, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contCurrencyNo.setBounds(new Rectangle(681, 232, 270, 19));
         this.add(contCurrencyNo, new KDLayout.Constraints(681, 232, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contcompanyNumber.setBounds(new Rectangle(28, 312, 270, 19));
+        this.add(contcompanyNumber, new KDLayout.Constraints(28, 312, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         //contCreator
         contCreator.setBoundEditor(prmtCreator);
         //contCreateTime
@@ -739,6 +757,8 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
         contFirstSentFlag.setBoundEditor(FirstSentFlag);
         //contCurrencyNo
         contCurrencyNo.setBoundEditor(txtCurrencyNo);
+        //contcompanyNumber
+        contcompanyNumber.setBoundEditor(txtcompanyNumber);
 
     }
 
@@ -943,7 +963,8 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
 		dataBinder.registerBinding("PayerName", String.class, this.txtPayerName, "text");
 		dataBinder.registerBinding("SendSentFlag", com.kingdee.eas.mkld.sapinterage.app.SendStatusMenu.class, this.SendSentFlag, "selectedItem");
 		dataBinder.registerBinding("FirstSentFlag", com.kingdee.eas.mkld.sapinterage.app.SendStatusMenu.class, this.FirstSentFlag, "selectedItem");
-		dataBinder.registerBinding("CurrencyNo", String.class, this.txtCurrencyNo, "text");		
+		dataBinder.registerBinding("CurrencyNo", String.class, this.txtCurrencyNo, "text");
+		dataBinder.registerBinding("companyNumber", String.class, this.txtcompanyNumber, "text");		
 	}
 	//Regiester UI State
 	private void registerUIState(){		
@@ -1114,7 +1135,8 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
 		getValidateHelper().registerBindProperty("PayerName", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("SendSentFlag", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("FirstSentFlag", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("CurrencyNo", ValidateHelper.ON_SAVE);    		
+		getValidateHelper().registerBindProperty("CurrencyNo", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("companyNumber", ValidateHelper.ON_SAVE);    		
 	}
 
 
@@ -1203,6 +1225,7 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
         sic.add(new SelectorItemInfo("SendSentFlag"));
         sic.add(new SelectorItemInfo("FirstSentFlag"));
         sic.add(new SelectorItemInfo("CurrencyNo"));
+        sic.add(new SelectorItemInfo("companyNumber"));
         return sic;
     }        
     	

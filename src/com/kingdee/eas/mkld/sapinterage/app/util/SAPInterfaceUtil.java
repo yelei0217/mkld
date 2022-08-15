@@ -10,17 +10,21 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
+
+import org.apache.commons.codec.binary.Base64;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
-import org.apache.commons.codec.binary.Base64;
+
+import com.google.gson.Gson;
+import com.kingdee.eas.mkld.sapinterage.app.dto.SapReceRspDTO;
 
 public class SAPInterfaceUtil {
-
 	
 	  private static String getBasicAuth()
 	  {
+		  
 	    byte[] encodedAuth = (byte[])null;
 	    String userName = SapInterfaceResource.userid;
 	    String password = SapInterfaceResource.password;
@@ -91,6 +95,29 @@ public class SAPInterfaceUtil {
 	  }
 
 
+		public static SapReceRspDTO parseSapReceRespond(String respond){
+			SapReceRspDTO rsqdto = null;
+			try {
+				Document document = DocumentHelper.parseText(respond);
+				Element root = document.getRootElement();
+				Iterator itChild = root.elementIterator();
+				String outputStr = null ;
+				while(itChild.hasNext()){
+					Element levelOne = (Element)itChild.next();
+					if("OUTPUT".equals(levelOne.getName())){
+						outputStr = levelOne.getStringValue();
+					}
+				}
+				if(outputStr!=null && !"".equals(outputStr))
+					rsqdto =  new Gson().fromJson(outputStr, SapReceRspDTO.class);
+			} catch (DocumentException e) {
+	 			e.printStackTrace();
+			}
+			
+			return rsqdto;
+		}	  
+	  
+	  
 	  private static String getSapVoucherNum(String sapVoucherRsp)
 	  {
 	    String sapVoucherNum = null;

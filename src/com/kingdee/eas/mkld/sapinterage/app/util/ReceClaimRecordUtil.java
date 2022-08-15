@@ -1,11 +1,8 @@
 package com.kingdee.eas.mkld.sapinterage.app.util;
 
 import java.math.BigDecimal;
-import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
 
 import com.kingdee.bos.BOSException;
 import com.kingdee.bos.Context;
@@ -15,8 +12,12 @@ import com.kingdee.bos.metadata.entity.FilterInfo;
 import com.kingdee.bos.metadata.entity.FilterItemInfo;
 import com.kingdee.bos.metadata.query.util.CompareType;
 import com.kingdee.bos.util.BOSUuid;
+import com.kingdee.eas.basedata.assistant.AccountBankFactory;
+import com.kingdee.eas.basedata.assistant.AccountBankInfo;
 import com.kingdee.eas.basedata.assistant.CurrencyFactory;
 import com.kingdee.eas.basedata.assistant.CurrencyInfo;
+import com.kingdee.eas.basedata.org.CompanyOrgUnitFactory;
+import com.kingdee.eas.basedata.org.CompanyOrgUnitInfo;
 import com.kingdee.eas.common.EASBizException;
 import com.kingdee.eas.fi.cas.ReceivingBillFactory;
 import com.kingdee.eas.fi.cas.ReceivingBillInfo;
@@ -29,8 +30,6 @@ import com.kingdee.eas.mkld.sapinterage.app.AmtCateMenu;
 import com.kingdee.eas.mkld.sapinterage.app.ClaimStatusMenu;
 import com.kingdee.eas.mkld.sapinterage.app.ClaimTypeMenu;
 import com.kingdee.eas.mkld.sapinterage.app.SendStatusMenu;
-import com.kingdee.eas.util.app.DbUtil;
-import com.kingdee.jdbc.rowset.IRowSet;
 import com.kingdee.util.UuidException;
 
 public class ReceClaimRecordUtil {
@@ -66,7 +65,10 @@ public class ReceClaimRecordUtil {
 	                if(!ibiz.exists(filter)){
 	                	ReceClaimRecordInfo rInfo = new ReceClaimRecordInfo();
 						rInfo.setNumber(getCurrentTimeStrS()+tdInfo.getNumber());
+						
+						CompanyOrgUnitInfo company = CompanyOrgUnitFactory.getLocalInstance(ctx).getCompanyOrgUnitInfo(new ObjectUuidPK(bInfo.getCompany().getId()));
 						rInfo.setFICompany(bInfo.getCompany());
+						rInfo.setCompanyNumber(company.getNumber());
 						rInfo.setBizDate(bInfo.getBizDate());
 						//往来户类型
 						//rInfo.setCustomerNo("999999");
@@ -83,7 +85,7 @@ public class ReceClaimRecordUtil {
 						rInfo.setPayerName(tdInfo.getOppUnit());
 						rInfo.setDescription(tdInfo.getNumber());
 						rInfo.setAbstract(bInfo.getDescription());
-						
+						 
 						rInfo.setPaymentId(rId);
 						rInfo.setPaymentNo(bInfo.getNumber());
 						rInfo.setTrsreq(tdInfo.getTranPackageID());
@@ -91,7 +93,8 @@ public class ReceClaimRecordUtil {
 						String bizdateStr = format.format(bInfo.getBizDate());
 						rInfo.setYear(Integer.parseInt(bizdateStr.substring(0, 4)));
 						rInfo.setMonth(Integer.parseInt(bizdateStr.substring(5, 7)));
-						rInfo.setBankAccount(bInfo.getPayeeAccountBank().getBankAccountNumber());
+						AccountBankInfo accountInfo = AccountBankFactory.getLocalInstance(ctx).getAccountBankInfo(new ObjectUuidPK(bInfo.getPayeeAccountBank().getId()));
+						rInfo.setBankAccount(accountInfo.getBankAccountNumber());
 						rInfo.setReceDate(bInfo.getRecDate());
 						rInfo.setReceAmount(bInfo.getActRecAmt());
 						rInfo.setLoans(BigDecimal.ZERO);//贷款
@@ -126,4 +129,5 @@ public class ReceClaimRecordUtil {
 		} 
 	}
 	
+
 }

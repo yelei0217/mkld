@@ -511,6 +511,20 @@
             <scale>0</scale>
             <precision>0</precision>
         </column>
+        <column>
+            <name>CFCompanyNumber</name>
+            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFCompanyNumber].alias</alias>
+            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFCompanyNumber].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>100</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
     </columns>
     <primaryKey>
         <name>CPK_SIG_ReceCRIoi9</name>
@@ -707,6 +721,18 @@
             <lang locale="zh_CN" value="认领类型" />
             <lang locale="zh_HK" value="認領類型" />
             <lang locale="zh_TW" value="認領類型" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFCompanyNumber].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司编码" />
+            <lang locale="zh_HK" value="公司編碼" />
+            <lang locale="zh_TW" value="公司編碼" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFCompanyNumber].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司编码" />
+            <lang locale="zh_HK" value="公司編碼" />
+            <lang locale="zh_TW" value="公司編碼" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceClaimRecord].columns.column[CFCurrencyNo].alias">
             <lang locale="en_US" value="null" />

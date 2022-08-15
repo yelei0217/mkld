@@ -267,6 +267,17 @@ public class AbstractReceClaimRecordInfo extends com.kingdee.eas.framework.CoreB
     {
         setString("CurrencyNo", item);
     }
+    /**
+     * Object:收款认领记录's 公司编码property 
+     */
+    public String getCompanyNumber()
+    {
+        return getString("companyNumber");
+    }
+    public void setCompanyNumber(String item)
+    {
+        setString("companyNumber", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("841A1C2F");

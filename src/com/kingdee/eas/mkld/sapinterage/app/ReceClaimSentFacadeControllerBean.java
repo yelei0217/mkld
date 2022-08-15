@@ -63,12 +63,13 @@ public class ReceClaimSentFacadeControllerBean extends AbstractReceClaimSentFaca
         	Iterator it = rcoll.iterator();
         	lists = new ArrayList<ReceClaimDTO>();
         	Date currentDate = new Date();
+        	
         	while(it.hasNext()){
         		ReceClaimRecordInfo rInfo = (ReceClaimRecordInfo) it.next();
         		ReceClaimDTO dto = new  ReceClaimDTO();
         		dto.setEASID(rInfo.getPaymentId());//  收款单ID
         		dto.setZTYPE(ClaimTypeMenu.CURRMONTH_VALUE);//    认领类型
-        		dto.setBUKRS(rInfo.getFICompany().getNumber());//   公司代码
+        		dto.setBUKRS(rInfo.getCompanyNumber());//   公司代码
         		dto.setBANKN(rInfo.getBankAccount());//   收款银行账号
         		dto.setBUDAT(new SimpleDateFormat("yyyyMMdd").format(rInfo.getReceDate()));//   收款日期
         		//dto.setBUDAT2();//  再次认领日期
@@ -96,15 +97,16 @@ public class ReceClaimSentFacadeControllerBean extends AbstractReceClaimSentFaca
         
         //2、发送SAP请求-- 接收响应信息
         
-        String sendStr = SAPInterfaceUtil.createSendReqStr(msgId,"FICO_I012", dataStr);
- 
+        String sapReceReq = SAPInterfaceUtil.createSendReqStr(msgId,"FICO_I012", dataStr);
+        System.out.println("sapReceReq:"+sapReceReq);
         
         //4、解析返回信息， 修改每个记录 发送状态
     	
-        
-    	
         //5、记录发送和响应日志信息   	
-        SAPInterfaceUtil.sendSapRequest(sendStr);
+       String sapReceRsp = SAPInterfaceUtil.sendSapRequest(sapReceReq);
+       	
+       System.out.println("sapReceRsp:"+sapReceRsp);
+       
         SAPInterfaceLogInfo logInfo = new SAPInterfaceLogInfo();
         logInfo.setNumber(msgId);
         logInfo.setBizDate(currentDate);
