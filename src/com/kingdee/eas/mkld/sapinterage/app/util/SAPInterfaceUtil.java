@@ -2,6 +2,11 @@ package com.kingdee.eas.mkld.sapinterage.app.util;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.net.Authenticator;
+import java.net.MalformedURLException;
+import java.net.PasswordAuthentication;
+import java.net.URL;
+import java.rmi.RemoteException;
 import java.util.Iterator;
 import java.util.concurrent.TimeUnit;
 
@@ -11,6 +16,7 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
+import org.apache.axis.AxisFault;
 import org.apache.commons.codec.binary.Base64;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
@@ -19,6 +25,10 @@ import org.dom4j.Element;
 
 import com.google.gson.Gson;
 import com.kingdee.eas.mkld.sapinterage.app.dto.SapReceRspDTO;
+import com.kingdee.eas.mkld.sapinterage.common.DT_ALL2ERP_DATA_RECV;
+import com.kingdee.eas.mkld.sapinterage.common.DT_ALL2ERP_DATA_SEND;
+import com.kingdee.eas.mkld.sapinterage.common.SI_ALL2ERP_DATA_OUTBindingStub;
+import com.kingdee.eas.mkld.sapinterage.common.SI_ALL2ERP_DATA_OUTServiceLocator;
 
 public class SAPInterfaceUtil {
 	
@@ -53,7 +63,7 @@ public class SAPInterfaceUtil {
 	    MediaType mediaType = MediaType.parse("text/xml");
 	    RequestBody body = RequestBody.create(mediaType, receStr);
 	    Request request = new Request.Builder()
-	      .url(SapInterfaceResource.base_url+ SapInterfaceResource.rece_claim_uri)
+	      .url(SapInterfaceResource.base_url)
 	      .get()
 	      .put(body)
 	      .addHeader("Content-Type", "application/x-www-form-urlencoded")
@@ -71,6 +81,44 @@ public class SAPInterfaceUtil {
 	      e.printStackTrace();
 	    }
 	    return responseString;
+	  }
+	  
+	  public static String sendSapSoap(String jsonData){
+			String result = "";
+			try {
+				SI_ALL2ERP_DATA_OUTServiceLocator locator = new SI_ALL2ERP_DATA_OUTServiceLocator();
+				URL url = new URL(SapInterfaceResource.base_url); 
+				Authenticator.setDefault(new Authenticator() {
+				    protected PasswordAuthentication getPasswordAuthentication() {
+				        return new PasswordAuthentication(SapInterfaceResource.userid,SapInterfaceResource.password.toCharArray());
+				    }
+				});
+				SI_ALL2ERP_DATA_OUTBindingStub stub = new SI_ALL2ERP_DATA_OUTBindingStub(url,locator);
+				stub.setUsername(SapInterfaceResource.userid);
+				stub.setPassword(SapInterfaceResource.password);
+				stub._setProperty("Authorization Type", "Global HTTP Settings");
+				DT_ALL2ERP_DATA_SEND sendData  = new DT_ALL2ERP_DATA_SEND();
+				sendData.setIF_TYPE("FICO_I012");
+				sendData.setIF_TRANSACTION_ID("20220812173650123");
+				sendData.setSEQUENCE("1");
+				sendData.setIF_FINISHED_FLAG("true");
+				sendData.setSYS_SRC("EAS");
+				sendData.setTIMESTAMP_SRC("20220812173650");
+				sendData.setSYS_TAR("SAP");
+				//String jsonData ="{\"ITEMS\":[{\"EASID\":\"0NSPa37+RFy5hP2g3xBY5/pE/Vs\\\\\\\\u003d\",\"ZTYPE\":\"A\",\"BUKRS\":\"1100\",\"BANKN\":\"123\",\"WAERS\":\"CNY\",\"BUDAT\":\"20220815\",\"KUNNR\":\"801607\",\"DMBTR\":100,\"DMBTR_HK\":100,\"DMBTR_BZJ\":0,\"DMBTR_YJ\":0,\"SGTXT\":\"\"},{\"EASID\":\"FSSPa37+RFy5hP2g3xBY5/pE/Vs\\\\\\\\u003d\",\"ZTYPE\":\"A\",\"BUKRS\":\"1100\",\"BANKN\":\"303290000770\",\"WAERS\":\"CNY\",\"BUDAT\":\"20220815\",\"KUNNR\":\"801611\",\"DMBTR\":110,\"DMBTR_HK\":0,\"DMBTR_BZJ\":110,\"DMBTR_YJ\":0,\"SGTXT\":\"\"}]}";
+				sendData.setIF_JSON_DATA(jsonData);
+				System.out.println("sendData.toString:"+ sendData.toString());
+				DT_ALL2ERP_DATA_RECV rsq =  stub.SI_ALL2ERP_DATA_OUT(sendData);
+				System.out.println("getOUTPUT:"+ rsq.getOUTPUT());
+				result = rsq.getOUTPUT();
+			} catch (AxisFault e) {
+ 				e.printStackTrace();
+			} catch (MalformedURLException e) {
+ 				e.printStackTrace();
+			} catch (RemoteException e) {
+ 				e.printStackTrace();
+			}
+			return result;
 	  }
 	  
 	  public static String createSendReqStr(String sentId ,String senType,String items){

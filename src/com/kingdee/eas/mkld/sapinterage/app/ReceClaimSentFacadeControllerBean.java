@@ -49,8 +49,8 @@ public class ReceClaimSentFacadeControllerBean extends AbstractReceClaimSentFaca
 	 */
 	@Override
 	protected String _sentReceClaim(Context ctx) throws BOSException {
-		ReceClaimRecordUtil.savaRecordBill(ctx, "0NSPa37+RFy5hP2g3xBY5/pE/Vs="); // 客户
-		ReceClaimRecordUtil.savaRecordBill(ctx, "HMWXYdhdTCWiXxi9LcqJ8fpE/Vs="); //其他
+//		ReceClaimRecordUtil.savaRecordBill(ctx, "0NSPa37+RFy5hP2g3xBY5/pE/Vs="); // 客户
+//		ReceClaimRecordUtil.savaRecordBill(ctx, "HMWXYdhdTCWiXxi9LcqJ8fpE/Vs="); //其他
 		
 		//获取已认领，一次未发送的记录数据
         IReceClaimRecord ibiz = ReceClaimRecordFactory.getLocalInstance(ctx);
@@ -118,7 +118,7 @@ public class ReceClaimSentFacadeControllerBean extends AbstractReceClaimSentFaca
 //	    "   </SOAP:Body>"+
 //	    "</SOAP:Envelope>";
     	   
-       String sapReceRsp = SAPInterfaceUtil.sendSapRequest(sapReceReq);
+       String sapReceRsp = SAPInterfaceUtil.sendSapSoap(sapReceReq);
        	
        System.out.println("sapReceRsp:"+sapReceRsp);
        InterResultMenu resultemnu = InterResultMenu.FAIL;
