@@ -10,6 +10,7 @@ import com.kingdee.bos.ui.face.CoreUIObject;
 import com.kingdee.bos.dao.IObjectValue;
 import com.kingdee.eas.framework.*;
 import com.kingdee.eas.mkld.sapinterage.ReceClaimSentFacadeFactory;
+import com.kingdee.eas.util.client.MsgBox;
 
 /**
  * output class name
@@ -36,11 +37,24 @@ public class ReceClaimRecordListUI extends AbstractReceClaimRecordListUI
     
     @Override
     public void actionHelp_actionPerformed(ActionEvent e) throws Exception {
-     	//super.actionHelp_actionPerformed(e);
-    	ReceClaimSentFacadeFactory.getRemoteInstance().sentReceClaim();
+     	super.actionHelp_actionPerformed(e);
     }
 
-    /**
+    @Override
+	public void actionSentNoClaimMonthEnd_actionPerformed(ActionEvent e)
+			throws Exception {
+ //		super.actionSentNoClaimMonthEnd_actionPerformed(e);
+    	MsgBox.showInfo("功能开发中，敬请期待。");
+	}
+
+	@Override
+	public void actionSentReceClaim_actionPerformed(ActionEvent e)
+			throws Exception {
+		ReceClaimSentFacadeFactory.getRemoteInstance().sentReceClaim();
+		MsgBox.showInfo("EAS收款认领结果传SAP--操作已完成");
+	}
+
+	/**
      * output getBizInterface method
      */
     protected com.kingdee.eas.framework.ICoreBase getBizInterface() throws Exception

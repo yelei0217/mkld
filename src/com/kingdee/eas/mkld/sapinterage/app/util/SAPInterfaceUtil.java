@@ -100,12 +100,33 @@ public class SAPInterfaceUtil {
 			try {
 				Document document = DocumentHelper.parseText(respond);
 				Element root = document.getRootElement();
+				Element levelOne =null;
+			    Element levelTwo = null;
+			    Element levelThree = null;
+			    Element levelFour = null;
 				Iterator itChild = root.elementIterator();
+				Iterator itLevelTwo = null;
+			    Iterator itLevelThree = null;
+			    Iterator itLevelFour = null;
 				String outputStr = null ;
 				while(itChild.hasNext()){
-					Element levelOne = (Element)itChild.next();
-					if("OUTPUT".equals(levelOne.getName())){
-						outputStr = levelOne.getStringValue();
+					 levelOne = (Element)itChild.next();
+					if("Body".equals(levelOne.getName())){
+						 itLevelTwo = levelOne.elementIterator();
+						 while (itLevelTwo.hasNext()) {
+							 levelTwo = (Element)itLevelTwo.next();
+							 if ("MT_ALL2ERP_DATA_RECV".equals(levelTwo.getName())){
+								  	  itLevelThree = levelTwo.elementIterator();
+						              while (itLevelThree.hasNext())
+						              {
+						            	  levelThree = (Element)itLevelThree.next();
+						            	  if ("OUTPUT".equals(levelThree.getName()))
+						                  {
+						            		  outputStr = levelThree.getStringValue();
+						                  }
+						              }
+					            }
+				          }
 					}
 				}
 				if(outputStr!=null && !"".equals(outputStr))
@@ -117,120 +138,4 @@ public class SAPInterfaceUtil {
 			return rsqdto;
 		}	  
 	  
-	  
-	  private static String getSapVoucherNum(String sapVoucherRsp)
-	  {
-	    String sapVoucherNum = null;
-	    String maximumLogItemSeverityCode = null;
-	    String sapNote = null;
-	    StringBuffer logBuf = new StringBuffer();
-	    try
-	    {
-	      Document document = DocumentHelper.parseText(sapVoucherRsp);
-	      Element root = document.getRootElement();
-	      Element levelOne = null;
-	      Element levelTwo = null;
-	      Element levelThree = null;
-	      Element levelFour = null;
-	      Element lasPro = null;
-	      Element logItem = null;
-	      Iterator itChild = root.elementIterator();
-	      Iterator itLevelTwo = null;
-	      Iterator itLevelThree = null;
-	      Iterator itLevelFour = null;
-	      Iterator itLevelFive = null;
-	      Iterator itLogItem = null;
-	      while (itChild.hasNext())
-	      {
-	        levelOne = (Element)itChild.next();
-	        if ("Body".equals(levelOne.getName()))
-	        {
-	          itLevelTwo = levelOne.elementIterator();
-	          while (itLevelTwo.hasNext())
-	          {
-	            levelTwo = (Element)itLevelTwo.next();
-	            if ("JournalEntryBulkCreateConfirmation".equals(levelTwo.getName()))
-	            {
-	              itLevelThree = levelTwo.elementIterator();
-	              while (itLevelThree.hasNext())
-	              {
-	                levelThree = (Element)itLevelThree.next();
-	                if ("JournalEntryCreateConfirmation".equals(levelThree.getName()))
-	                {
-	                  itLevelFour = levelThree.elementIterator();
-	                  while (itLevelFour.hasNext())
-	                  {
-	                    levelFour = (Element)itLevelFour.next();
-	                    if ("JournalEntryCreateConfirmation".equals(levelFour.getName()))
-	                    {
-	                      itLevelFive = levelFour.elementIterator();
-	                      while (itLevelFive.hasNext())
-	                      {
-	                        lasPro = (Element)itLevelFive.next();
-	                        if ("AccountingDocument".equals(lasPro.getName()))
-	                        {
-	                          sapVoucherNum = lasPro.getStringValue();
- 	                          break;
-	                        }
-	                      }
-	                    }
-	                    else if ("Log".equals(levelFour.getName()))
-	                    {
-	                      itLevelFive = levelFour.elementIterator();
-	                      while (itLevelFive.hasNext())
-	                      {
-	                        lasPro = (Element)itLevelFive.next();
-	                        if ("MaximumLogItemSeverityCode".equals(lasPro.getName()))
-	                        {
-	                          maximumLogItemSeverityCode = lasPro.getStringValue();
- 	                        }
-	                        else if ("Item".equals(lasPro.getName()))
-	                        {
-	                          itLogItem = lasPro.elementIterator();
-	                          while (itLogItem.hasNext())
-	                          {
-	                            logItem = (Element)itLogItem.next();
-	                            if ("Note".equals(logItem.getName()))
-	                            {
-	                              sapNote = logItem.getStringValue();
-	                              logBuf.append(sapNote).append(";");
-	                            }
-	                          }
-	                        }
-	                      }
-	                    }
-	                  }
-	                }
-	              }
-	            }
-	            else if ("Fault".equals(levelTwo.getName()))
-	            {
-	              itLevelThree = levelTwo.elementIterator();
-	              while (itLevelThree.hasNext())
-	              {
-	                levelThree = (Element)itLevelThree.next();
-	                if ("faultstring".equals(levelThree.getName())) {
-	                  logBuf.append(levelThree.getStringValue());
-	                }
-	              }
-	            }
-	          }
-	        }
-	      }
-	    }
-	    catch (DocumentException e)
-	    {
-	      e.printStackTrace();
-	      logBuf.append(e.getMessage());
-	    }
-//	    logInfo.setSapMaxLogNum(maximumLogItemSeverityCode);
-//	    if (!"1".equals(maximumLogItemSeverityCode)) {
-//	      logInfo.setDescription(logInfo.getDescription() + logBuf.toString());
-//	    }
-//	    System.out.println("SAP + logBuf.toString());
-	    if ((sapVoucherNum != null) && (!"".equals(sapVoucherNum))) {
-	      sapVoucherNum = sapVoucherNum.trim();
-	    }
-	    return sapVoucherNum;
-	  }
 }

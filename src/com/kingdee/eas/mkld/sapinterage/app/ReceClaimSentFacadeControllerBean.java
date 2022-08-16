@@ -4,9 +4,11 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.apache.commons.lang.StringEscapeUtils;
 import org.apache.log4j.Logger;
@@ -27,6 +29,7 @@ import com.kingdee.eas.mkld.sapinterage.ReceClaimRecordInfo;
 import com.kingdee.eas.mkld.sapinterage.SAPInterfaceLogFactory;
 import com.kingdee.eas.mkld.sapinterage.SAPInterfaceLogInfo;
 import com.kingdee.eas.mkld.sapinterage.app.dto.ReceClaimDTO;
+import com.kingdee.eas.mkld.sapinterage.app.dto.SapReceRspDTO;
 import com.kingdee.eas.mkld.sapinterage.app.util.ReceClaimRecordUtil;
 import com.kingdee.eas.mkld.sapinterage.app.util.SAPInterfaceUtil;
 
@@ -46,8 +49,8 @@ public class ReceClaimSentFacadeControllerBean extends AbstractReceClaimSentFaca
 	 */
 	@Override
 	protected String _sentReceClaim(Context ctx) throws BOSException {
-//		ReceClaimRecordUtil.savaRecordBill(ctx, "0NSPa37+RFy5hP2g3xBY5/pE/Vs="); // 客户
-//		ReceClaimRecordUtil.savaRecordBill(ctx, "HMWXYdhdTCWiXxi9LcqJ8fpE/Vs="); //其他
+		ReceClaimRecordUtil.savaRecordBill(ctx, "0NSPa37+RFy5hP2g3xBY5/pE/Vs="); // 客户
+		ReceClaimRecordUtil.savaRecordBill(ctx, "HMWXYdhdTCWiXxi9LcqJ8fpE/Vs="); //其他
 		
 		//获取已认领，一次未发送的记录数据
         IReceClaimRecord ibiz = ReceClaimRecordFactory.getLocalInstance(ctx);
@@ -56,6 +59,8 @@ public class ReceClaimSentFacadeControllerBean extends AbstractReceClaimSentFaca
         filter.getFilterItems().add(new FilterItemInfo("ClaimType",ClaimTypeMenu.CurrMonth,CompareType.EQUALS));//认领类型：本月认领
         filter.getFilterItems().add(new FilterItemInfo("ClaimStatus",ClaimStatusMenu.Yes,CompareType.EQUALS));//认领状态：已认领
         filter.getFilterItems().add(new FilterItemInfo("FirstSentFlag",SendStatusMenu.UnSent,CompareType.EQUALS));//第一次发送SAP状态:未发送
+        filter.getFilterItems().add(new FilterItemInfo("FirstSentFlag",SendStatusMenu.SentF,CompareType.EQUALS));//第一次发送SAP状态:未发送
+        filter.setMaskString("#0 and #1 and (#2 or #3)");
         viewInfo.setFilter(filter);
         ReceClaimRecordCollection rcoll = ibiz.getReceClaimRecordCollection(viewInfo);
         List<ReceClaimDTO> lists = null ;
@@ -63,7 +68,7 @@ public class ReceClaimSentFacadeControllerBean extends AbstractReceClaimSentFaca
         	Iterator it = rcoll.iterator();
         	lists = new ArrayList<ReceClaimDTO>();
         	Date currentDate = new Date();
-        	
+        	Set rIds = new HashSet();
         	while(it.hasNext()){
         		ReceClaimRecordInfo rInfo = (ReceClaimRecordInfo) it.next();
         		ReceClaimDTO dto = new  ReceClaimDTO();
@@ -79,7 +84,8 @@ public class ReceClaimSentFacadeControllerBean extends AbstractReceClaimSentFaca
         		dto.setDMBTR_HK(rInfo.getLoans());//  其中货款金额
         		dto.setDMBTR_BZJ(rInfo.getMargin());//  其中保证金金额
         		dto.setDMBTR_YJ(rInfo.getDeposit());//  其中押金金额
-        		dto.setSGTXT(rInfo.getAbstract());//    摘要        		
+        		dto.setSGTXT(rInfo.getAbstract());//    摘要    
+        		rIds.add(rInfo.getId().toString());
         		lists.add(dto);
         	} 
         	
@@ -90,8 +96,8 @@ public class ReceClaimSentFacadeControllerBean extends AbstractReceClaimSentFaca
         String dataStr  = gson.toJson(dataMp);
         System.out.println(dataStr);
         System.out.println(dataMp.toString());
-        dataStr = org.apache.commons.lang.StringEscapeUtils.escapeJava(dataStr);  //添加转义符
-        System.out.println(dataStr);
+      //  dataStr = org.apache.commons.lang.StringEscapeUtils.escapeJava(dataStr);  //添加转义符
+      //  System.out.println(dataStr);
 
         String msgId = ReceClaimRecordUtil.getCurrentTimeStrS()+(int)(Math.random()*10000);
         
@@ -103,26 +109,42 @@ public class ReceClaimSentFacadeControllerBean extends AbstractReceClaimSentFaca
         //4、解析返回信息， 修改每个记录 发送状态
     	
         //5、记录发送和响应日志信息   	
+//       String sapReceRsp = "<SOAP:Envelope xmlns:SOAP=\"http://schemas.xmlsoap.org/soap/envelope/\">"+
+//	    "   <SOAP:Header/>"+
+//	    "   <SOAP:Body xmlns:mil=\"http://www.milkground.cn\">"+
+//	    "      <ns0:MT_ALL2ERP_DATA_RECV xmlns:ns0=\"http://www.milkground.cn\">"+
+//	    "         <OUTPUT>{\"TRANSACTION_ID\":\"20220812173650123\",\"SAP_DOC_ID\":\"\",\"DATE\":\"2022-08-16\",\"TIME\":\"10:31:30\",\"FLAG\":\"F\",\"MESSAGE\":\"再次认领日期必输\"}</OUTPUT>"+
+//	    "      </ns0:MT_ALL2ERP_DATA_RECV>"+
+//	    "   </SOAP:Body>"+
+//	    "</SOAP:Envelope>";
+    	   
        String sapReceRsp = SAPInterfaceUtil.sendSapRequest(sapReceReq);
        	
        System.out.println("sapReceRsp:"+sapReceRsp);
-       
+       InterResultMenu resultemnu = InterResultMenu.FAIL;
+       SapReceRspDTO rsqdto = SAPInterfaceUtil.parseSapReceRespond(sapReceRsp);
+       if(rsqdto != null && rsqdto.getFLAG() !=null && "S".equals(rsqdto.getFLAG() ))
+    	   resultemnu = InterResultMenu.SUCCESS;
         SAPInterfaceLogInfo logInfo = new SAPInterfaceLogInfo();
         logInfo.setNumber(msgId);
         logInfo.setBizDate(currentDate);
         logInfo.setInterType(SAPInterTypeMenu.FICO_I012);
         logInfo.setClaimType(ClaimTypeMenu.CurrMonth);
-        logInfo.setInterResult(InterResultMenu.SUCCESS);
+        logInfo.setInterResult(resultemnu);
         logInfo.setReqTime(currentDate);
         logInfo.setRequest(dataStr);
-        logInfo.setRespond(dataStr);
+        logInfo.setRespond(sapReceRsp);
 	        try {
 				SAPInterfaceLogFactory.getLocalInstance(ctx).addnew(logInfo);
 			} catch (EASBizException e) {
-	 			e.printStackTrace();
-			}
+				e.printStackTrace();
+			 }
+			
+		     if(rIds !=null && rIds.size() >0 && InterResultMenu.SUCCESS_VALUE.equals(resultemnu.getValue())) 
+		    	 ReceClaimRecordUtil.updateRecordSendSta(ctx, rIds,InterResultMenu.SUCCESS_VALUE);
+		     else
+		    	 ReceClaimRecordUtil.updateRecordSendSta(ctx, rIds,InterResultMenu.FAIL_VALUE);
         } 
-        
 		return super._sentReceClaim(ctx);
 	}
 	
@@ -137,8 +159,6 @@ public class ReceClaimSentFacadeControllerBean extends AbstractReceClaimSentFaca
 	protected String _sentReceNoClaim(Context ctx) throws BOSException {
 		return super._sentReceNoClaim(ctx);
 	
-	}
-
-
+	} 
 	
 }

@@ -3,6 +3,8 @@ package com.kingdee.eas.mkld.sapinterage.app.util;
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Iterator;
+import java.util.Set;
 
 import com.kingdee.bos.BOSException;
 import com.kingdee.bos.Context;
@@ -29,7 +31,9 @@ import com.kingdee.eas.mkld.sapinterage.ReceClaimRecordInfo;
 import com.kingdee.eas.mkld.sapinterage.app.AmtCateMenu;
 import com.kingdee.eas.mkld.sapinterage.app.ClaimStatusMenu;
 import com.kingdee.eas.mkld.sapinterage.app.ClaimTypeMenu;
+import com.kingdee.eas.mkld.sapinterage.app.InterResultMenu;
 import com.kingdee.eas.mkld.sapinterage.app.SendStatusMenu;
+import com.kingdee.eas.util.app.DbUtil;
 import com.kingdee.util.UuidException;
 
 public class ReceClaimRecordUtil {
@@ -112,6 +116,11 @@ public class ReceClaimRecordUtil {
 								rInfo.setDeposit(bInfo.getActRecAmt());
 							}
 						}
+						if(rInfo.getLoans().compareTo(BigDecimal.ZERO)==0 &&
+								rInfo.getMargin().compareTo(BigDecimal.ZERO)==0 &&
+								rInfo.getDeposit().compareTo(BigDecimal.ZERO)==0 )
+							rInfo.setLoans(bInfo.getActRecAmt());
+						
  						rInfo.setFirstSentFlag(SendStatusMenu.UnSent);
 						rInfo.setSendSentFlag(SendStatusMenu.UnSent);
 						CurrencyInfo currInfo =CurrencyFactory.getLocalInstance(ctx).getCurrencyInfo(new ObjectUuidPK(bInfo.getCurrency().getId()));
@@ -129,5 +138,34 @@ public class ReceClaimRecordUtil {
 		} 
 	}
 	
-
+	public static void updateRecordSendSta(Context ctx,Set rIds,String oper){
+	 if(rIds !=null && rIds.size() > 0 && oper !=null &&!"".equals(oper)){
+		StringBuffer sbr = new StringBuffer();
+		Iterator it = rIds.iterator();
+	    String fid = "";
+	      while (it.hasNext())
+	      {
+	        fid = (String)it.next();
+	        sbr.append("'").append(fid).append("'").append(",");
+	      }
+	      String ids = "";
+	      
+	      	int sendFlag = 0;
+	      if(InterResultMenu.FAIL_VALUE.equals(oper))
+	    	  sendFlag = 2;
+	      else if(InterResultMenu.SUCCESS_VALUE.equals(oper)) 
+	    	  sendFlag = 1;
+	      if (sbr.length() > 0)
+	      {
+	    	  ids = sbr.substring(0, sbr.length() - 1);
+	    	  String sql ="update CT_SIG_ReceClaimRecord set CFFirstSentFlag = "+sendFlag+" where fid in ("+ids+")";
+	    	  try {
+					DbUtil.execute(ctx, sql);
+				} catch (BOSException e) {
+		 			e.printStackTrace();
+				}
+	      }
+	
+	 	}
+	}
 }
