@@ -35,7 +35,7 @@ import com.kingdee.eas.mkld.sapinterage.app.InterResultMenu;
 import com.kingdee.eas.mkld.sapinterage.app.SendStatusMenu;
 import com.kingdee.eas.util.app.DbUtil;
 import com.kingdee.util.UuidException;
-
+ 
 public class ReceClaimRecordUtil {
 
 	/**
@@ -99,7 +99,7 @@ public class ReceClaimRecordUtil {
 						rInfo.setMonth(Integer.parseInt(bizdateStr.substring(5, 7)));
 						AccountBankInfo accountInfo = AccountBankFactory.getLocalInstance(ctx).getAccountBankInfo(new ObjectUuidPK(bInfo.getPayeeAccountBank().getId()));
 						rInfo.setBankAccount(accountInfo.getBankAccountNumber());
-						rInfo.setReceDate(bInfo.getRecDate());
+						rInfo.setReceDate(bInfo.getBizDate());
 						rInfo.setReceAmount(bInfo.getActRecAmt());
 						rInfo.setLoans(BigDecimal.ZERO);//贷款
 						rInfo.setMargin(BigDecimal.ZERO);//保证金
@@ -124,7 +124,7 @@ public class ReceClaimRecordUtil {
  						rInfo.setFirstSentFlag(SendStatusMenu.UnSent);
 						rInfo.setSendSentFlag(SendStatusMenu.UnSent);
 						CurrencyInfo currInfo =CurrencyFactory.getLocalInstance(ctx).getCurrencyInfo(new ObjectUuidPK(bInfo.getCurrency().getId()));
-						rInfo.setCurrencyNo(currInfo.getNumber());
+						rInfo.setCurrencyNo(currInfo.getIsoCode());
 						ibiz.addnew(rInfo);
 	                }
 				}
@@ -138,8 +138,8 @@ public class ReceClaimRecordUtil {
 		} 
 	}
 	
-	public static void updateRecordSendSta(Context ctx,Set rIds,String oper){
-	 if(rIds !=null && rIds.size() > 0 && oper !=null &&!"".equals(oper)){
+	public static void updateRecordSendSta(Context ctx,Set rIds,String type,String oper){
+	 if(rIds !=null && rIds.size() > 0 && oper !=null &&!"".equals(oper)&& type !=null &&!"".equals(type)){
 		StringBuffer sbr = new StringBuffer();
 		Iterator it = rIds.iterator();
 	    String fid = "";
@@ -150,15 +150,22 @@ public class ReceClaimRecordUtil {
 	      }
 	      String ids = "";
 	      
+	      
 	      	int sendFlag = 0;
 	      if(InterResultMenu.FAIL_VALUE.equals(oper))
 	    	  sendFlag = 2;
 	      else if(InterResultMenu.SUCCESS_VALUE.equals(oper)) 
 	    	  sendFlag = 1;
+	      
 	      if (sbr.length() > 0)
 	      {
 	    	  ids = sbr.substring(0, sbr.length() - 1);
-	    	  String sql ="update CT_SIG_ReceClaimRecord set CFFirstSentFlag = "+sendFlag+" where fid in ("+ids+")";
+	    	  String field = "CFFirstSentFlag";
+	    	  if("3".equals(type))
+	    		   field = "CFSendSentFlag";
+	    	 
+	    		  
+	    	  String sql ="update CT_SIG_ReceClaimRecord set "+field+" = "+sendFlag+" where fid in ("+ids+")";
 	    	  try {
 					DbUtil.execute(ctx, sql);
 				} catch (BOSException e) {
@@ -168,4 +175,7 @@ public class ReceClaimRecordUtil {
 	
 	 	}
 	}
+	
+	
+	
 }

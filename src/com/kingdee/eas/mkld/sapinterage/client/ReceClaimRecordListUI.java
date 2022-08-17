@@ -44,7 +44,8 @@ public class ReceClaimRecordListUI extends AbstractReceClaimRecordListUI
 	public void actionSentNoClaimMonthEnd_actionPerformed(ActionEvent e)
 			throws Exception {
  //		super.actionSentNoClaimMonthEnd_actionPerformed(e);
-    	MsgBox.showInfo("功能开发中，敬请期待。");
+    	ReceClaimSentFacadeFactory.getRemoteInstance().sentReceNoClaim();
+    	MsgBox.showInfo("EAS月末未认领银行流水传SAP--操作已完成");
 	}
 
 	@Override

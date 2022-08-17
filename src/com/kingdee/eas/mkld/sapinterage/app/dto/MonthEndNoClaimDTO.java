@@ -17,7 +17,7 @@ public class MonthEndNoClaimDTO  implements Serializable{
 	private String MONAT ; 	//月份
 	private String WAERS;	//币种 
 	private String BANKN ; 	//收款银行账号
-	private Date BUDAT ; 	//收款日期
+	private String BUDAT ; 	//收款日期
 	private BigDecimal DMBTR ; 	//收款金额
 	private String SGTXT ; 	//摘要
 	 
@@ -45,10 +45,10 @@ public class MonthEndNoClaimDTO  implements Serializable{
 	public void setBANKN(String bankn) {
 		BANKN = bankn;
 	}
-	public Date getBUDAT() {
+	public String getBUDAT() {
 		return BUDAT;
 	}
-	public void setBUDAT(Date budat) {
+	public void setBUDAT(String budat) {
 		BUDAT = budat;
 	}
 	public BigDecimal getDMBTR() {
