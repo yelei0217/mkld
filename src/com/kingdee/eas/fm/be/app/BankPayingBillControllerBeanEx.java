@@ -21,6 +21,7 @@ public class BankPayingBillControllerBeanEx extends BankPayingBillControllerBean
 			BankPayingBillStateEnum state) throws BOSException, EASBizException {
 		Map result =  super._updateState(ctx, pks, state);
 		for (IObjectPK objectPK : pks) {
+			//判断oa 是否符合传递条件
 			BankPayingResultSynUtil.synPayMentBill(ctx, objectPK.toString());
 		}
  		return result;

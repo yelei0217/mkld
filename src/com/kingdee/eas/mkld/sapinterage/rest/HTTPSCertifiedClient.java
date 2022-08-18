@@ -10,7 +10,7 @@ import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
 import org.apache.http.conn.ssl.TrustSelfSignedStrategy;
 import org.apache.http.ssl.SSLContexts;
 
-import com.kingdee.eas.mkld.sapinterage.common.SapInterfaceResource;
+import com.kingdee.eas.mkld.sapinterage.common.InterfaceResource;
 
 public class HTTPSCertifiedClient extends HTTPSClient {
 
@@ -23,10 +23,10 @@ public class HTTPSCertifiedClient extends HTTPSClient {
         // 获得密匙库
         KeyStore trustStore = KeyStore.getInstance(KeyStore.getDefaultType());
         FileInputStream instream = new FileInputStream(
-                new File(SapInterfaceResource.sap_Certificate_path));//证书路径
+                new File(InterfaceResource.sap_Certificate_path));//证书路径
          try {
             // 密匙库的密码
-            trustStore.load(instream, SapInterfaceResource.sap_Certificate_pwd.toCharArray());
+            trustStore.load(instream, InterfaceResource.sap_Certificate_pwd.toCharArray());
         } finally {
             instream.close();
         }

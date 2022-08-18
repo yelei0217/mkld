@@ -20,8 +20,8 @@ public class SAPInterfaceUtil {
 	  public static String getBasicAuth()
 	  {
 	    byte[] encodedAuth = (byte[])null;
-	    String userName = SapInterfaceResource.sap_userid;
-	    String password = SapInterfaceResource.sap_password;
+	    String userName = InterfaceResource.sap_userid;
+	    String password = InterfaceResource.sap_password;
 	    String auth = null;
 	    try
 	    {
@@ -70,7 +70,7 @@ public class SAPInterfaceUtil {
 		  try {
 			HttpClient httpClient = new HTTPSTrustClient().init();
 		//	String strJson = createSendReqStr(sentId,senType,jsonData);
-		    result = HTTPSClientUtil.doPostJson(httpClient, SapInterfaceResource.sap_base_url, strJson);
+		    result = HTTPSClientUtil.doPostJson(httpClient, InterfaceResource.sap_base_url, strJson);
 		} catch (Exception e) {
  			e.printStackTrace();
 		}

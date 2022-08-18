@@ -55,7 +55,9 @@ public class BankPayingResultSynUtil {
 	   * @param payTime
 	   */
 	  public static void invokMethod(Context ctx,String billId,String status,String payInfo,String payTime){
-		 
+		 //封装对象
+		  
+		  //调用请求接口
 	  }
 	  
 	  private static String getSendData(Context ctx,String paymentId,String status,String errorMsg,String paymentDate,String payerBankAccountNum,String bankFirstCode, String cbsBatchNo,String paybankno){

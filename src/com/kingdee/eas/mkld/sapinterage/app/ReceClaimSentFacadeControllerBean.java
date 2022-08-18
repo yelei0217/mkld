@@ -34,7 +34,7 @@ import com.kingdee.eas.mkld.sapinterage.app.dto.ReceClaimDTO;
 import com.kingdee.eas.mkld.sapinterage.app.dto.SapReceRspDTO;
 import com.kingdee.eas.mkld.sapinterage.app.util.ReceClaimRecordUtil;
 import com.kingdee.eas.mkld.sapinterage.common.SAPInterfaceUtil;
-import com.kingdee.eas.mkld.sapinterage.common.SapInterfaceResource;
+import com.kingdee.eas.mkld.sapinterage.common.InterfaceResource;
 import com.kingdee.eas.mkld.sapinterage.rest.HTTPSClientUtil;
 import com.kingdee.eas.mkld.sapinterage.rest.HTTPSTrustClient;
 
