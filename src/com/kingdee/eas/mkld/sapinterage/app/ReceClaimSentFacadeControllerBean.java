@@ -139,9 +139,9 @@ public class ReceClaimSentFacadeControllerBean extends AbstractReceClaimSentFaca
 			 }
 			
 		     if(rIds !=null && rIds.size() >0 && InterResultMenu.SUCCESS_VALUE.equals(resultemnu.getValue())) 
-		    	 ReceClaimRecordUtil.updateRecordSendSta(ctx, rIds,InterResultMenu.SUCCESS_VALUE);
+		    	 ReceClaimRecordUtil.updateRecordSendSta(ctx, rIds,"",InterResultMenu.SUCCESS_VALUE);
 		     else
-		    	 ReceClaimRecordUtil.updateRecordSendSta(ctx, rIds,InterResultMenu.FAIL_VALUE);
+		    	 ReceClaimRecordUtil.updateRecordSendSta(ctx, rIds,"",InterResultMenu.FAIL_VALUE);
         }
 	}
 	
@@ -300,9 +300,9 @@ public class ReceClaimSentFacadeControllerBean extends AbstractReceClaimSentFaca
 			 }
 			
 		     if(rIds !=null && rIds.size() >0 && InterResultMenu.SUCCESS_VALUE.equals(resultemnu.getValue())) 
-		    	 ReceClaimRecordUtil.updateRecordSendSta(ctx, rIds,InterResultMenu.SUCCESS_VALUE);
+		    	 ReceClaimRecordUtil.updateRecordSendSta(ctx, rIds,"",InterResultMenu.SUCCESS_VALUE);
 		     else
-		    	 ReceClaimRecordUtil.updateRecordSendSta(ctx, rIds,InterResultMenu.FAIL_VALUE);
+		    	 ReceClaimRecordUtil.updateRecordSendSta(ctx, rIds,"",InterResultMenu.FAIL_VALUE);
         } 
 		return super._sentReceNoClaim(ctx);
 	
