@@ -79,8 +79,7 @@ public class BankPayingResultSynUtil {
 	  }
 	  	  
 		 private static String sendSuppMsg(Context ctx,String fid,String  paymentId,String data){
-//			  String url = "http://172.24.30.154/sys/interface-internal/ipefspaymentPrj/receivePayResult";  //测试地址
-		 		String url = "http://fssc.staff.xdf.cn/sys/interface-internal/ipefspaymentPrj/receivePayResult"; //生产地址
+		 		String url = "http://test/sys/interface-internal/ipefspaymentPrj/receivePayResult"; //生产地址
 		 		String result = sendPost(ctx,url,fid,paymentId, data);
 		 		//LogUtil.insertLog(ctx,DateBaseproecssType.Update,DateBaseType.FA_Cat_Clear, paymentId, paymentId,result,data);
 		 	 return result ;
