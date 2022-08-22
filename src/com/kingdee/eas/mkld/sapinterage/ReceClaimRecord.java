@@ -151,4 +151,17 @@ public class ReceClaimRecord extends CoreBillBase implements IReceClaimRecord
             throw new EJBRemoteException(err);
         }
     }
+    /**
+     *认领二次发送-User defined method
+     *@param model model
+     */
+    public void sentClaimAgain(ReceClaimRecordInfo model) throws BOSException
+    {
+        try {
+            getController().sentClaimAgain(getContext(), model);
+        }
+        catch(RemoteException err) {
+            throw new EJBRemoteException(err);
+        }
+    }
 }

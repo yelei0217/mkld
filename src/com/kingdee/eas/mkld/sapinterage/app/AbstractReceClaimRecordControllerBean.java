@@ -230,6 +230,26 @@ public abstract class AbstractReceClaimRecordControllerBean extends CoreBillBase
         return;
     }
 
+    public void sentClaimAgain(Context ctx, ReceClaimRecordInfo model) throws BOSException
+    {
+        try {
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("373e0a85-abaa-47b5-8eb3-1ef79b7f30e6"), new Object[]{ctx, model});
+            invokeServiceBefore(svcCtx);
+              if(!svcCtx.invokeBreak()) {
+            _sentClaimAgain(ctx, model);
+            }
+            invokeServiceAfter(svcCtx);
+        } catch (BOSException ex) {
+            throw ex;
+        } finally {
+            super.cleanUpServiceState();
+        }
+    }
+    protected void _sentClaimAgain(Context ctx, IObjectValue model) throws BOSException
+    {    	
+        return;
+    }
+
 					protected com.kingdee.eas.basedata.org.OrgUnitInfo getMainBizOrgUnit(Context ctx,com.kingdee.eas.framework.CoreBillBaseInfo model) {
 			Object obj = model.get("FICompany");
 			if (obj != null && obj instanceof com.kingdee.eas.basedata.org.OrgUnitInfo)

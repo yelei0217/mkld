@@ -278,6 +278,30 @@ public class AbstractReceClaimRecordInfo extends com.kingdee.eas.framework.CoreB
     {
         setString("companyNumber", item);
     }
+    /**
+     * Object:收款认领记录's 再次认领客户编码property 
+     */
+    public String getAgainClaimCusNo()
+    {
+        return getString("AgainClaimCusNo");
+    }
+    public void setAgainClaimCusNo(String item)
+    {
+        setString("AgainClaimCusNo", item);
+    }
+    /**
+     * Object:收款认领记录's DMS发送状态property 
+     */
+    public com.kingdee.eas.mkld.sapinterage.app.SendStatusMenu getDmsSendStatus()
+    {
+        return com.kingdee.eas.mkld.sapinterage.app.SendStatusMenu.getEnum(getString("dmsSendStatus"));
+    }
+    public void setDmsSendStatus(com.kingdee.eas.mkld.sapinterage.app.SendStatusMenu item)
+    {
+		if (item != null) {
+        setString("dmsSendStatus", item.getValue());
+		}
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("841A1C2F");

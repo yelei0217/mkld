@@ -34,4 +34,9 @@ public abstract class AbstractReceClaimRecordListUIHandler extends com.kingdee.e
 	}
 	protected void _handleActionSentNoClaimMonthEnd(RequestContext request,ResponseContext response, Context context) throws Exception {
 	}
+	public void handleActionSentClaimAgain(RequestContext request,ResponseContext response, Context context) throws Exception {
+		_handleActionSentClaimAgain(request,response,context);
+	}
+	protected void _handleActionSentClaimAgain(RequestContext request,ResponseContext response, Context context) throws Exception {
+	}
 }

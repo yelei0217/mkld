@@ -19,4 +19,5 @@ public interface ReceClaimSentFacadeController extends BizController
 {
     public String sentReceClaim(Context ctx) throws BOSException, RemoteException;
     public String sentReceNoClaim(Context ctx) throws BOSException, RemoteException;
+    public String sentClaimAgain(Context ctx) throws BOSException, RemoteException;
 }

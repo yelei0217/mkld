@@ -79,4 +79,26 @@ public abstract class AbstractReceClaimSentFacadeControllerBean extends Abstract
         return null;
     }
 
+    public String sentClaimAgain(Context ctx) throws BOSException
+    {
+        try {
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("d3c36f3b-5887-45ec-8561-91998c16cd04"), new Object[]{ctx});
+            invokeServiceBefore(svcCtx);
+            if(!svcCtx.invokeBreak()) {
+            String retValue = (String)_sentClaimAgain(ctx);
+            svcCtx.setMethodReturnValue(retValue);
+            }
+            invokeServiceAfter(svcCtx);
+            return (String)svcCtx.getMethodReturnValue();
+        } catch (BOSException ex) {
+            throw ex;
+        } finally {
+            super.cleanUpServiceState();
+        }
+    }
+    protected String _sentClaimAgain(Context ctx) throws BOSException
+    {    	
+        return null;
+    }
+
 }

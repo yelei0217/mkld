@@ -34,4 +34,5 @@ public interface ReceClaimRecordController extends CoreBillBaseController
     public ReceClaimRecordInfo getReceClaimRecordInfo(Context ctx, String oql) throws BOSException, EASBizException, RemoteException;
     public void sentReceClaim(Context ctx, ReceClaimRecordInfo model) throws BOSException, RemoteException;
     public void sentNoClaimMonthEnd(Context ctx, ReceClaimRecordInfo model) throws BOSException, RemoteException;
+    public void sentClaimAgain(Context ctx, ReceClaimRecordInfo model) throws BOSException, RemoteException;
 }

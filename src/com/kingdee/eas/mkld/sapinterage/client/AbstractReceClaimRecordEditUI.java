@@ -76,6 +76,8 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contFirstSentFlag;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contCurrencyNo;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contcompanyNumber;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contAgainClaimCusNo;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contdmsSendStatus;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtCreator;
     protected com.kingdee.bos.ctrl.swing.KDDatePicker kDDateCreateTime;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtLastUpdateUser;
@@ -106,9 +108,12 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
     protected com.kingdee.bos.ctrl.swing.KDComboBox FirstSentFlag;
     protected com.kingdee.bos.ctrl.swing.KDTextField txtCurrencyNo;
     protected com.kingdee.bos.ctrl.swing.KDTextField txtcompanyNumber;
+    protected com.kingdee.bos.ctrl.swing.KDTextField txtAgainClaimCusNo;
+    protected com.kingdee.bos.ctrl.swing.KDComboBox dmsSendStatus;
     protected com.kingdee.eas.mkld.sapinterage.ReceClaimRecordInfo editData = null;
     protected ActionSentReceClaim actionSentReceClaim = null;
     protected ActionSentNoClaimMonthEnd actionSentNoClaimMonthEnd = null;
+    protected ActionSentClaimAgain actionSentClaimAgain = null;
     /**
      * output class constructor
      */
@@ -188,6 +193,14 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
         this.actionSentNoClaimMonthEnd.setExtendProperty("isObjectUpdateLock", "false");
          this.actionSentNoClaimMonthEnd.addService(new com.kingdee.eas.framework.client.service.PermissionService());
          this.actionSentNoClaimMonthEnd.addService(new com.kingdee.eas.framework.client.service.ForewarnService());
+        //actionSentClaimAgain
+        this.actionSentClaimAgain = new ActionSentClaimAgain(this);
+        getActionManager().registerAction("actionSentClaimAgain", actionSentClaimAgain);
+        this.actionSentClaimAgain.setExtendProperty("canForewarn", "true");
+        this.actionSentClaimAgain.setExtendProperty("userDefined", "true");
+        this.actionSentClaimAgain.setExtendProperty("isObjectUpdateLock", "false");
+         this.actionSentClaimAgain.addService(new com.kingdee.eas.framework.client.service.PermissionService());
+         this.actionSentClaimAgain.addService(new com.kingdee.eas.framework.client.service.ForewarnService());
         this.contCreator = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contCreateTime = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contLastUpdateUser = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
@@ -218,6 +231,8 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
         this.contFirstSentFlag = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contCurrencyNo = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contcompanyNumber = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contAgainClaimCusNo = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contdmsSendStatus = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.prmtCreator = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
         this.kDDateCreateTime = new com.kingdee.bos.ctrl.swing.KDDatePicker();
         this.prmtLastUpdateUser = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
@@ -248,6 +263,8 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
         this.FirstSentFlag = new com.kingdee.bos.ctrl.swing.KDComboBox();
         this.txtCurrencyNo = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.txtcompanyNumber = new com.kingdee.bos.ctrl.swing.KDTextField();
+        this.txtAgainClaimCusNo = new com.kingdee.bos.ctrl.swing.KDTextField();
+        this.dmsSendStatus = new com.kingdee.bos.ctrl.swing.KDComboBox();
         this.contCreator.setName("contCreator");
         this.contCreateTime.setName("contCreateTime");
         this.contLastUpdateUser.setName("contLastUpdateUser");
@@ -278,6 +295,8 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
         this.contFirstSentFlag.setName("contFirstSentFlag");
         this.contCurrencyNo.setName("contCurrencyNo");
         this.contcompanyNumber.setName("contcompanyNumber");
+        this.contAgainClaimCusNo.setName("contAgainClaimCusNo");
+        this.contdmsSendStatus.setName("contdmsSendStatus");
         this.prmtCreator.setName("prmtCreator");
         this.kDDateCreateTime.setName("kDDateCreateTime");
         this.prmtLastUpdateUser.setName("prmtLastUpdateUser");
@@ -308,6 +327,8 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
         this.FirstSentFlag.setName("FirstSentFlag");
         this.txtCurrencyNo.setName("txtCurrencyNo");
         this.txtcompanyNumber.setName("txtcompanyNumber");
+        this.txtAgainClaimCusNo.setName("txtAgainClaimCusNo");
+        this.dmsSendStatus.setName("dmsSendStatus");
         // CoreUI		
         this.btnTraceUp.setVisible(false);		
         this.btnTraceDown.setVisible(false);		
@@ -483,6 +504,16 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
         this.contcompanyNumber.setBoundLabelLength(100);		
         this.contcompanyNumber.setBoundLabelUnderline(true);		
         this.contcompanyNumber.setVisible(true);
+        // contAgainClaimCusNo		
+        this.contAgainClaimCusNo.setBoundLabelText(resHelper.getString("contAgainClaimCusNo.boundLabelText"));		
+        this.contAgainClaimCusNo.setBoundLabelLength(100);		
+        this.contAgainClaimCusNo.setBoundLabelUnderline(true);		
+        this.contAgainClaimCusNo.setVisible(true);
+        // contdmsSendStatus		
+        this.contdmsSendStatus.setBoundLabelText(resHelper.getString("contdmsSendStatus.boundLabelText"));		
+        this.contdmsSendStatus.setBoundLabelLength(100);		
+        this.contdmsSendStatus.setBoundLabelUnderline(true);		
+        this.contdmsSendStatus.setVisible(true);
         // prmtCreator		
         this.prmtCreator.setEnabled(false);		
         this.prmtCreator.setVisible(false);
@@ -610,7 +641,16 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
         this.txtcompanyNumber.setHorizontalAlignment(2);		
         this.txtcompanyNumber.setMaxLength(100);		
         this.txtcompanyNumber.setRequired(false);
-        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {prmtFICompany,txtNumber,pkBizDate,txtDescription,prmtAuditor,prmtCreator,kDDateCreateTime,prmtLastUpdateUser,kDDateLastUpdateTime,txtPaymentId,txtpaymentNo,txttrsreq,txtyear,txtmonth,txtBankAccount,pkReceDate,txtReceAmount,txtLoans,txtMargin,txtDeposit,txtAbstract,pkAgainClaimDate,txtCustomerNo,ClaimType,ClaimStatus,txtPayerName,FirstSentFlag,SendSentFlag,txtCurrencyNo,txtcompanyNumber}));
+        // txtAgainClaimCusNo		
+        this.txtAgainClaimCusNo.setVisible(true);		
+        this.txtAgainClaimCusNo.setHorizontalAlignment(2);		
+        this.txtAgainClaimCusNo.setMaxLength(100);		
+        this.txtAgainClaimCusNo.setRequired(false);
+        // dmsSendStatus		
+        this.dmsSendStatus.setVisible(true);		
+        this.dmsSendStatus.addItems(EnumUtils.getEnumList("com.kingdee.eas.mkld.sapinterage.app.SendStatusMenu").toArray());		
+        this.dmsSendStatus.setRequired(false);
+        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {prmtFICompany,txtNumber,pkBizDate,txtDescription,prmtAuditor,prmtCreator,kDDateCreateTime,prmtLastUpdateUser,kDDateLastUpdateTime,txtPaymentId,txtpaymentNo,txttrsreq,txtyear,txtmonth,txtBankAccount,pkReceDate,txtReceAmount,txtLoans,txtMargin,txtDeposit,txtAbstract,pkAgainClaimDate,txtCustomerNo,ClaimType,ClaimStatus,txtPayerName,FirstSentFlag,SendSentFlag,txtCurrencyNo,txtcompanyNumber,txtAgainClaimCusNo,dmsSendStatus}));
         this.setFocusCycleRoot(true);
 		//Register control's property binding
 		registerBindings();
@@ -636,47 +676,47 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
      */
     public void initUIContentLayout()
     {
-        this.setBounds(new Rectangle(0, 0, 992, 393));
+        this.setBounds(new Rectangle(0, 0, 992, 441));
         this.setLayout(new KDLayout());
-        this.putClientProperty("OriginalBounds", new Rectangle(0, 0, 992, 393));
-        contCreator.setBounds(new Rectangle(344, 344, 270, 19));
-        this.add(contCreator, new KDLayout.Constraints(344, 344, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contCreateTime.setBounds(new Rectangle(344, 312, 270, 19));
-        this.add(contCreateTime, new KDLayout.Constraints(344, 312, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contLastUpdateUser.setBounds(new Rectangle(681, 344, 270, 19));
-        this.add(contLastUpdateUser, new KDLayout.Constraints(681, 344, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        contLastUpdateTime.setBounds(new Rectangle(681, 312, 270, 19));
-        this.add(contLastUpdateTime, new KDLayout.Constraints(681, 312, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        this.putClientProperty("OriginalBounds", new Rectangle(0, 0, 992, 441));
+        contCreator.setBounds(new Rectangle(344, 404, 270, 19));
+        this.add(contCreator, new KDLayout.Constraints(344, 404, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contCreateTime.setBounds(new Rectangle(344, 372, 270, 19));
+        this.add(contCreateTime, new KDLayout.Constraints(344, 372, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contLastUpdateUser.setBounds(new Rectangle(681, 404, 270, 19));
+        this.add(contLastUpdateUser, new KDLayout.Constraints(681, 404, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contLastUpdateTime.setBounds(new Rectangle(681, 372, 270, 19));
+        this.add(contLastUpdateTime, new KDLayout.Constraints(681, 372, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         contNumber.setBounds(new Rectangle(28, 22, 270, 19));
         this.add(contNumber, new KDLayout.Constraints(28, 22, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contBizDate.setBounds(new Rectangle(681, 22, 270, 19));
-        this.add(contBizDate, new KDLayout.Constraints(681, 22, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        contDescription.setBounds(new Rectangle(681, 53, 270, 19));
-        this.add(contDescription, new KDLayout.Constraints(681, 53, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        contAuditor.setBounds(new Rectangle(28, 346, 270, 19));
-        this.add(contAuditor, new KDLayout.Constraints(28, 346, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contFICompany.setBounds(new Rectangle(344, 22, 270, 19));
-        this.add(contFICompany, new KDLayout.Constraints(344, 22, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contBizDate.setBounds(new Rectangle(358, 264, 270, 19));
+        this.add(contBizDate, new KDLayout.Constraints(358, 264, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contDescription.setBounds(new Rectangle(681, 264, 270, 19));
+        this.add(contDescription, new KDLayout.Constraints(681, 264, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contAuditor.setBounds(new Rectangle(28, 406, 270, 19));
+        this.add(contAuditor, new KDLayout.Constraints(28, 406, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contFICompany.setBounds(new Rectangle(358, 22, 270, 19));
+        this.add(contFICompany, new KDLayout.Constraints(358, 22, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contPaymentId.setBounds(new Rectangle(28, 112, 270, 19));
         this.add(contPaymentId, new KDLayout.Constraints(28, 112, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contpaymentNo.setBounds(new Rectangle(344, 112, 270, 19));
-        this.add(contpaymentNo, new KDLayout.Constraints(344, 112, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contpaymentNo.setBounds(new Rectangle(358, 112, 270, 19));
+        this.add(contpaymentNo, new KDLayout.Constraints(358, 112, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         conttrsreq.setBounds(new Rectangle(681, 112, 270, 19));
         this.add(conttrsreq, new KDLayout.Constraints(681, 112, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         contyear.setBounds(new Rectangle(28, 142, 270, 19));
         this.add(contyear, new KDLayout.Constraints(28, 142, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contmonth.setBounds(new Rectangle(344, 142, 270, 19));
-        this.add(contmonth, new KDLayout.Constraints(344, 142, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contmonth.setBounds(new Rectangle(358, 142, 270, 19));
+        this.add(contmonth, new KDLayout.Constraints(358, 142, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contBankAccount.setBounds(new Rectangle(28, 172, 270, 19));
         this.add(contBankAccount, new KDLayout.Constraints(28, 172, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contReceDate.setBounds(new Rectangle(344, 172, 270, 19));
-        this.add(contReceDate, new KDLayout.Constraints(344, 172, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contReceDate.setBounds(new Rectangle(358, 172, 270, 19));
+        this.add(contReceDate, new KDLayout.Constraints(358, 172, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contReceAmount.setBounds(new Rectangle(681, 172, 270, 19));
         this.add(contReceAmount, new KDLayout.Constraints(681, 172, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         contLoans.setBounds(new Rectangle(28, 202, 270, 19));
         this.add(contLoans, new KDLayout.Constraints(28, 202, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contMargin.setBounds(new Rectangle(344, 202, 270, 19));
-        this.add(contMargin, new KDLayout.Constraints(344, 202, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contMargin.setBounds(new Rectangle(358, 202, 270, 19));
+        this.add(contMargin, new KDLayout.Constraints(358, 202, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contDeposit.setBounds(new Rectangle(681, 202, 270, 19));
         this.add(contDeposit, new KDLayout.Constraints(681, 202, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         contAbstract.setBounds(new Rectangle(28, 82, 268, 19));
@@ -685,20 +725,24 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
         this.add(contAgainClaimDate, new KDLayout.Constraints(681, 142, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         contCustomerNo.setBounds(new Rectangle(28, 52, 270, 19));
         this.add(contCustomerNo, new KDLayout.Constraints(28, 52, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contClaimType.setBounds(new Rectangle(344, 82, 270, 19));
-        this.add(contClaimType, new KDLayout.Constraints(344, 82, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contClaimType.setBounds(new Rectangle(358, 82, 270, 19));
+        this.add(contClaimType, new KDLayout.Constraints(358, 82, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contClaimStatus.setBounds(new Rectangle(681, 82, 270, 19));
         this.add(contClaimStatus, new KDLayout.Constraints(681, 82, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        contPayerName.setBounds(new Rectangle(344, 52, 270, 19));
-        this.add(contPayerName, new KDLayout.Constraints(344, 52, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
-        contSendSentFlag.setBounds(new Rectangle(344, 232, 270, 19));
-        this.add(contSendSentFlag, new KDLayout.Constraints(344, 232, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contPayerName.setBounds(new Rectangle(358, 52, 270, 19));
+        this.add(contPayerName, new KDLayout.Constraints(358, 52, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contSendSentFlag.setBounds(new Rectangle(358, 232, 270, 19));
+        this.add(contSendSentFlag, new KDLayout.Constraints(358, 232, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contFirstSentFlag.setBounds(new Rectangle(28, 232, 270, 19));
         this.add(contFirstSentFlag, new KDLayout.Constraints(28, 232, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         contCurrencyNo.setBounds(new Rectangle(681, 232, 270, 19));
         this.add(contCurrencyNo, new KDLayout.Constraints(681, 232, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
-        contcompanyNumber.setBounds(new Rectangle(28, 312, 270, 19));
-        this.add(contcompanyNumber, new KDLayout.Constraints(28, 312, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contcompanyNumber.setBounds(new Rectangle(681, 20, 270, 19));
+        this.add(contcompanyNumber, new KDLayout.Constraints(681, 20, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contAgainClaimCusNo.setBounds(new Rectangle(681, 52, 270, 19));
+        this.add(contAgainClaimCusNo, new KDLayout.Constraints(681, 52, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
+        contdmsSendStatus.setBounds(new Rectangle(28, 264, 270, 19));
+        this.add(contdmsSendStatus, new KDLayout.Constraints(28, 264, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         //contCreator
         contCreator.setBoundEditor(prmtCreator);
         //contCreateTime
@@ -759,6 +803,10 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
         contCurrencyNo.setBoundEditor(txtCurrencyNo);
         //contcompanyNumber
         contcompanyNumber.setBoundEditor(txtcompanyNumber);
+        //contAgainClaimCusNo
+        contAgainClaimCusNo.setBoundEditor(txtAgainClaimCusNo);
+        //contdmsSendStatus
+        contdmsSendStatus.setBoundEditor(dmsSendStatus);
 
     }
 
@@ -964,7 +1012,9 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
 		dataBinder.registerBinding("SendSentFlag", com.kingdee.eas.mkld.sapinterage.app.SendStatusMenu.class, this.SendSentFlag, "selectedItem");
 		dataBinder.registerBinding("FirstSentFlag", com.kingdee.eas.mkld.sapinterage.app.SendStatusMenu.class, this.FirstSentFlag, "selectedItem");
 		dataBinder.registerBinding("CurrencyNo", String.class, this.txtCurrencyNo, "text");
-		dataBinder.registerBinding("companyNumber", String.class, this.txtcompanyNumber, "text");		
+		dataBinder.registerBinding("companyNumber", String.class, this.txtcompanyNumber, "text");
+		dataBinder.registerBinding("AgainClaimCusNo", String.class, this.txtAgainClaimCusNo, "text");
+		dataBinder.registerBinding("dmsSendStatus", com.kingdee.eas.mkld.sapinterage.app.SendStatusMenu.class, this.dmsSendStatus, "selectedItem");		
 	}
 	//Regiester UI State
 	private void registerUIState(){		
@@ -1136,7 +1186,9 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
 		getValidateHelper().registerBindProperty("SendSentFlag", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("FirstSentFlag", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("CurrencyNo", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("companyNumber", ValidateHelper.ON_SAVE);    		
+		getValidateHelper().registerBindProperty("companyNumber", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("AgainClaimCusNo", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("dmsSendStatus", ValidateHelper.ON_SAVE);    		
 	}
 
 
@@ -1226,6 +1278,8 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
         sic.add(new SelectorItemInfo("FirstSentFlag"));
         sic.add(new SelectorItemInfo("CurrencyNo"));
         sic.add(new SelectorItemInfo("companyNumber"));
+        sic.add(new SelectorItemInfo("AgainClaimCusNo"));
+        sic.add(new SelectorItemInfo("dmsSendStatus"));
         return sic;
     }        
     	
@@ -1289,6 +1343,15 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
     {
         com.kingdee.eas.mkld.sapinterage.ReceClaimRecordFactory.getRemoteInstance().sentNoClaimMonthEnd(editData);
     }
+    	
+
+    /**
+     * output actionSentClaimAgain_actionPerformed method
+     */
+    public void actionSentClaimAgain_actionPerformed(ActionEvent e) throws Exception
+    {
+        com.kingdee.eas.mkld.sapinterage.ReceClaimRecordFactory.getRemoteInstance().sentClaimAgain(editData);
+    }
 	public RequestContext prepareActionSubmit(IItemAction itemAction) throws Exception {
 			RequestContext request = super.prepareActionSubmit(itemAction);		
 		if (request != null) {
@@ -1342,6 +1405,17 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
     }
 	
 	public boolean isPrepareActionSentNoClaimMonthEnd() {
+    	return false;
+    }
+	public RequestContext prepareActionSentClaimAgain(IItemAction itemAction) throws Exception {
+			RequestContext request = new RequestContext();		
+		if (request != null) {
+    		request.setClassName(getUIHandlerClassName());
+		}
+		return request;
+    }
+	
+	public boolean isPrepareActionSentClaimAgain() {
     	return false;
     }
 
@@ -1402,6 +1476,36 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
         {
         	getUIContext().put("ORG.PK", getOrgPK(this));
             innerActionPerformed("eas", AbstractReceClaimRecordEditUI.this, "ActionSentNoClaimMonthEnd", "actionSentNoClaimMonthEnd_actionPerformed", e);
+        }
+    }
+
+    /**
+     * output ActionSentClaimAgain class
+     */     
+    protected class ActionSentClaimAgain extends ItemAction {     
+    
+        public ActionSentClaimAgain()
+        {
+            this(null);
+        }
+
+        public ActionSentClaimAgain(IUIObject uiObject)
+        {     
+		super(uiObject);     
+        
+            String _tempStr = null;
+            _tempStr = resHelper.getString("ActionSentClaimAgain.SHORT_DESCRIPTION");
+            this.putValue(ItemAction.SHORT_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionSentClaimAgain.LONG_DESCRIPTION");
+            this.putValue(ItemAction.LONG_DESCRIPTION, _tempStr);
+            _tempStr = resHelper.getString("ActionSentClaimAgain.NAME");
+            this.putValue(ItemAction.NAME, _tempStr);
+        }
+
+        public void actionPerformed(ActionEvent e)
+        {
+        	getUIContext().put("ORG.PK", getOrgPK(this));
+            innerActionPerformed("eas", AbstractReceClaimRecordEditUI.this, "ActionSentClaimAgain", "actionSentClaimAgain_actionPerformed", e);
         }
     }
 
@@ -1470,6 +1574,7 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
     protected void applyDefaultValue(IObjectValue vo) {        
 		vo.put("ClaimType","A");
 vo.put("ClaimStatus","1");
+vo.put("dmsSendStatus","1");
         
     }        
 	protected void setFieldsNull(com.kingdee.bos.dao.AbstractObjectValue arg0) {

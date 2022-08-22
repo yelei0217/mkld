@@ -1546,6 +1546,68 @@
                 <key name="name" value="ReceClaimRecordQuery" />
             </query>
         </queryField>
+        <queryField>
+            <name>AgainClaimCusNo</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[AgainClaimCusNo].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>f6e5f67e-a783-4532-b89a-8b130d620c10</key>
+                    <parentUnit>
+                        <key name="name" value="AgainClaimCusNo" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="ReceClaimRecord" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="AgainClaimCusNo" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
+                <key name="name" value="ReceClaimRecordQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>dmsSendStatus</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[dmsSendStatus].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>b1e472f4-2b74-45a8-a2e2-8f8bfbaf3964</key>
+                    <parentUnit>
+                        <key name="name" value="dmsSendStatus" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="ReceClaimRecord" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="dmsSendStatus" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
+                <key name="name" value="ReceClaimRecordQuery" />
+            </query>
+        </queryField>
     </units>
     <defaultFilter>
         <name>defaultFilter</name>
@@ -1878,6 +1940,22 @@
             <lang locale="zh_TW" value="true" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[Abstract].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[AgainClaimCusNo].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="再次认领客户编码" />
+            <lang locale="zh_HK" value="再次認領客戶編碼" />
+            <lang locale="zh_TW" value="再次認領客戶編碼" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[AgainClaimCusNo].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[AgainClaimCusNo].extendedProperty.isCommonQuerySorter">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
@@ -2243,6 +2321,22 @@
             <lang locale="zh_TW" value="true" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[description].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[dmsSendStatus].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="DMS发送状态" />
+            <lang locale="zh_HK" value="DMS發送狀態" />
+            <lang locale="zh_TW" value="DMS發送狀態" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[dmsSendStatus].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[dmsSendStatus].extendedProperty.isCommonQuerySorter">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />

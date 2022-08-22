@@ -43,7 +43,6 @@ public class ReceClaimRecordListUI extends AbstractReceClaimRecordListUI
     @Override
 	public void actionSentNoClaimMonthEnd_actionPerformed(ActionEvent e)
 			throws Exception {
- //		super.actionSentNoClaimMonthEnd_actionPerformed(e);
     	ReceClaimSentFacadeFactory.getRemoteInstance().sentReceNoClaim();
     	MsgBox.showInfo("EAS月末未认领银行流水传SAP--操作已完成");
 	}
@@ -53,6 +52,13 @@ public class ReceClaimRecordListUI extends AbstractReceClaimRecordListUI
 			throws Exception {
 		ReceClaimSentFacadeFactory.getRemoteInstance().sentReceClaim();
 		MsgBox.showInfo("EAS收款认领结果传SAP--操作已完成");
+	}
+
+	@Override
+	public void actionSentClaimAgain_actionPerformed(ActionEvent e)
+			throws Exception {
+		ReceClaimSentFacadeFactory.getRemoteInstance().sentClaimAgain();
+		MsgBox.showInfo("EAS收款认领结果二次传输SAP--操作已完成");
 	}
 
 	/**

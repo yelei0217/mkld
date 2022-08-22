@@ -59,4 +59,17 @@ public class ReceClaimSentFacade extends AbstractBizCtrl implements IReceClaimSe
             throw new EJBRemoteException(err);
         }
     }
+    /**
+     *二次发送认领结果-User defined method
+     *@return
+     */
+    public String sentClaimAgain() throws BOSException
+    {
+        try {
+            return getController().sentClaimAgain(getContext());
+        }
+        catch(RemoteException err) {
+            throw new EJBRemoteException(err);
+        }
+    }
 }

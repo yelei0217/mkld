@@ -29,4 +29,5 @@ public interface IReceClaimRecord extends ICoreBillBase
     public ReceClaimRecordInfo getReceClaimRecordInfo(String oql) throws BOSException, EASBizException;
     public void sentReceClaim(ReceClaimRecordInfo model) throws BOSException;
     public void sentNoClaimMonthEnd(ReceClaimRecordInfo model) throws BOSException;
+    public void sentClaimAgain(ReceClaimRecordInfo model) throws BOSException;
 }

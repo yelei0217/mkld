@@ -16,4 +16,5 @@ public interface IReceClaimSentFacade extends IBizCtrl
 {
     public String sentReceClaim() throws BOSException;
     public String sentReceNoClaim() throws BOSException;
+    public String sentClaimAgain() throws BOSException;
 }

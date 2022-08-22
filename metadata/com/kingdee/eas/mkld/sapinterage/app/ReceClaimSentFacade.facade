@@ -42,6 +42,21 @@
             <userDefinedLogic />
             <configured>false</configured>
         </method>
+        <method>
+            <name>sentClaimAgain</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.mkld.sapinterage.app.ReceClaimSentFacade].methods.method[sentClaimAgain].alias</alias>
+            <description>facade[com.kingdee.eas.mkld.sapinterage.app.ReceClaimSentFacade].methods.method[sentClaimAgain].description</description>
+            <innerID>d3c36f3b-5887-45ec-8561-91998c16cd04</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>String</returnValueType>
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <configured>false</configured>
+        </method>
     </methods>
     <resource>
         <rs key="facade[com.kingdee.eas.mkld.sapinterage.app.ReceClaimSentFacade].alias">
@@ -60,6 +75,18 @@
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.mkld.sapinterage.app.ReceClaimSentFacade].methods.method[sentClaimAgain].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="二次发送认领结果" />
+            <lang locale="zh_HK" value="二次發送認領結果" />
+            <lang locale="zh_TW" value="二次發送認領結果" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.mkld.sapinterage.app.ReceClaimSentFacade].methods.method[sentClaimAgain].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="二次发送认领结果" />
+            <lang locale="zh_HK" value="二次發送認領結果" />
+            <lang locale="zh_TW" value="二次發送認領結果" />
         </rs>
         <rs key="facade[com.kingdee.eas.mkld.sapinterage.app.ReceClaimSentFacade].methods.method[sentReceClaim].alias">
             <lang locale="en_US" value="null" />
