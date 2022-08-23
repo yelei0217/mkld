@@ -94,7 +94,7 @@ public class ReceClaimRecordUtil {
 						rInfo.setCompanyNumber(company.getNumber());
 						rInfo.setBizDate(bInfo.getBizDate());
 						//往来户类型
-						rInfo.setCustomerNo("999999");
+						rInfo.setCustomerNo("800000");
 						rInfo.setClaimType(ClaimTypeMenu.CurrMonth);
 						rInfo.setClaimStatus(ClaimStatusMenu.No);
 						if(bInfo.getPayerType()!=null && bInfo.getPayerType().getId() != null && !"".equals( bInfo.getPayerType().getId().toString())){
@@ -301,7 +301,7 @@ public class ReceClaimRecordUtil {
         filter.getFilterItems().add(new FilterItemInfo("FirstSentFlag",SendStatusMenu.SentS,CompareType.EQUALS));//第一次发送SAP状态:发送成功
         filter.getFilterItems().add(new FilterItemInfo("SendSentFlag",SendStatusMenu.UnSent,CompareType.EQUALS));//第二次发送SAP状态:未发送
         filter.getFilterItems().add(new FilterItemInfo("SendSentFlag",SendStatusMenu.SentF,CompareType.EQUALS));//第二次发送SAP状态:发送失败
-        filter.getFilterItems().add(new FilterItemInfo("AgainClaimCusNo","999999",CompareType.EQUALS));//客户编码： 一次性客户编码 999999
+        filter.getFilterItems().add(new FilterItemInfo("AgainClaimCusNo","800000",CompareType.EQUALS));//客户编码： 一次性客户编码 800000
         
         filter.setMaskString("#0 and #1 and #2 and (#3 or #4) and #5");
         viewInfo.setFilter(filter);
@@ -385,7 +385,7 @@ public class ReceClaimRecordUtil {
         filter.getFilterItems().add(new FilterItemInfo("ClaimStatus",ClaimStatusMenu.No,CompareType.EQUALS));//认领状态：未认领
         filter.getFilterItems().add(new FilterItemInfo("FirstSentFlag",SendStatusMenu.UnSent,CompareType.EQUALS));//第一次发送SAP状态:未发送
         filter.getFilterItems().add(new FilterItemInfo("FirstSentFlag",SendStatusMenu.SentF,CompareType.EQUALS));//第一次发送SAP状态:未发送
-        filter.getFilterItems().add(new FilterItemInfo("AgainClaimCusNo","999999",CompareType.EQUALS));//客户编码： 一次性客户编码 999999
+        filter.getFilterItems().add(new FilterItemInfo("AgainClaimCusNo","800000",CompareType.EQUALS));//客户编码： 一次性客户编码 800000
         filter.setMaskString("#0 and #1 and (#2 or #3) and #4");
         viewInfo.setFilter(filter);
         ReceClaimRecordCollection rcoll = ibiz.getReceClaimRecordCollection(viewInfo);
