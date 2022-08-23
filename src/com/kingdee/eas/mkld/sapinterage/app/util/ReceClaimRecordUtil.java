@@ -229,7 +229,7 @@ public class ReceClaimRecordUtil {
         	while(it.hasNext()){
         		ReceClaimRecordInfo rInfo = (ReceClaimRecordInfo) it.next();
         		ReceClaimDTO dto = new  ReceClaimDTO();
-        		dto.setEASID(rInfo.getPaymentId());//  收款单ID
+        		dto.setEASID(rInfo.getPaymentNo());//  收款单单号
         		dto.setZTYPE(ClaimTypeMenu.CURRMONTH_VALUE);//    认领类型
         		dto.setBUKRS(rInfo.getCompanyNumber());//   公司代码
         		dto.setBANKN(rInfo.getBankAccount());//   收款银行账号
@@ -315,7 +315,7 @@ public class ReceClaimRecordUtil {
         	while(it.hasNext()){
         		ReceClaimRecordInfo rInfo = (ReceClaimRecordInfo) it.next();
         		ReceClaimDTO dto = new  ReceClaimDTO();
-        		dto.setEASID(rInfo.getPaymentId());//  收款单ID
+        		dto.setEASID(rInfo.getPaymentNo());//  收款单单号
         		dto.setZTYPE(ClaimTypeMenu.NEXTMONTH_VALUE);//    认领类型
         		dto.setBUKRS(rInfo.getCompanyNumber());//   公司代码
         		dto.setBANKN(rInfo.getBankAccount());//   收款银行账号
@@ -398,7 +398,7 @@ public class ReceClaimRecordUtil {
         	while(it.hasNext()){
         		ReceClaimRecordInfo rInfo = (ReceClaimRecordInfo) it.next();
         		MonthEndNoClaimDTO dto = new  MonthEndNoClaimDTO();
-        		dto.setEASID(rInfo.getPaymentId());//  收款单ID
+        		dto.setEASID(rInfo.getPaymentNo());//  收款单单号
          		dto.setBUKRS(rInfo.getCompanyNumber());//   公司代码
          		dto.setGJAHR(rInfo.getYear()+"");
          		dto.setMONAT(rInfo.getMonth()+"");
