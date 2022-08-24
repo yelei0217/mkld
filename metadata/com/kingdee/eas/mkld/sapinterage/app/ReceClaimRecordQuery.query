@@ -1608,68 +1608,6 @@
                 <key name="name" value="ReceClaimRecordQuery" />
             </query>
         </queryField>
-        <queryField>
-            <name>ReceiptSentSta</name>
-            <userDefined>true</userDefined>
-            <formulaString>#0</formulaString>
-            <constString />
-            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[ReceiptSentSta].displayName</displayName>
-            <groupType />
-            <isSelector>true</isSelector>
-            <isFilter>true</isFilter>
-            <isSorter>true</isSorter>
-            <isParameter>false</isParameter>
-            <returnType>String</returnType>
-            <propertyRefs>
-                <propertyRef>
-                    <key>d3a3f2c9-3028-414e-ac5f-520a8cbe67a8</key>
-                    <parentUnit>
-                        <key name="name" value="ReceiptSentSta" />
-                    </parentUnit>
-                    <subEntity>
-                        <key name="name" value="ReceClaimRecord" />
-                    </subEntity>
-                    <refProperty>
-                        <key name="name" value="ReceiptSentSta" />
-                    </refProperty>
-                </propertyRef>
-            </propertyRefs>
-            <query>
-                <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ReceClaimRecordQuery" />
-            </query>
-        </queryField>
-        <queryField>
-            <name>ReceiptNo</name>
-            <userDefined>true</userDefined>
-            <formulaString>#0</formulaString>
-            <constString />
-            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[ReceiptNo].displayName</displayName>
-            <groupType />
-            <isSelector>true</isSelector>
-            <isFilter>true</isFilter>
-            <isSorter>true</isSorter>
-            <isParameter>false</isParameter>
-            <returnType>String</returnType>
-            <propertyRefs>
-                <propertyRef>
-                    <key>515a8f6e-27f2-4fa9-bafe-124c24cbad44</key>
-                    <parentUnit>
-                        <key name="name" value="ReceiptNo" />
-                    </parentUnit>
-                    <subEntity>
-                        <key name="name" value="ReceClaimRecord" />
-                    </subEntity>
-                    <refProperty>
-                        <key name="name" value="ReceiptNo" />
-                    </refProperty>
-                </propertyRef>
-            </propertyRefs>
-            <query>
-                <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ReceClaimRecordQuery" />
-            </query>
-        </queryField>
     </units>
     <defaultFilter>
         <name>defaultFilter</name>
@@ -2279,38 +2217,6 @@
             <lang locale="zh_TW" value="true" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[ReceDate].extendedProperty.isCommonQuerySorter">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[ReceiptNo].displayName">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="电子回单关联标记" />
-            <lang locale="zh_HK" value="電子回單關聯標記" />
-            <lang locale="zh_TW" value="電子回單關聯標記" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[ReceiptNo].extendedProperty.isCommonQueryFilter">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[ReceiptNo].extendedProperty.isCommonQuerySorter">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[ReceiptSentSta].displayName">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="回单传递状态" />
-            <lang locale="zh_HK" value="回單傳遞狀態" />
-            <lang locale="zh_TW" value="回單傳遞狀態" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[ReceiptSentSta].extendedProperty.isCommonQueryFilter">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceClaimRecordQuery].units.queryField[ReceiptSentSta].extendedProperty.isCommonQuerySorter">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
