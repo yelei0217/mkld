@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<facade xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.mkld.sapinterage.app</package>
+    <name>SyncDBCusFacade</name>
+    <alias>facade[com.kingdee.eas.mkld.sapinterage.app.SyncDBCusFacade].alias</alias>
+    <description>facade[com.kingdee.eas.mkld.sapinterage.app.SyncDBCusFacade].description</description>
+    <userDefined>true</userDefined>
+    <bosType>DB9B2779</bosType>
+    <stereoType>false</stereoType>
+    <businessImplName>com.kingdee.eas.mkld.sapinterage.SyncDBCusFacade</businessImplName>
+    <businessControllerName>com.kingdee.eas.mkld.sapinterage.app.SyncDBCusFacadeController</businessControllerName>
+    <accessLevel>public</accessLevel>
+    <subClassingMode>normal</subClassingMode>
+    <methods>
+        <method>
+            <name>SyncCustomer</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.mkld.sapinterage.app.SyncDBCusFacade].methods.method[SyncCustomer].alias</alias>
+            <description>facade[com.kingdee.eas.mkld.sapinterage.app.SyncDBCusFacade].methods.method[SyncCustomer].description</description>
+            <innerID>7f139960-56ee-43fb-b5c8-33aee4df18be</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>data</name>
+                    <alias>facade[com.kingdee.eas.mkld.sapinterage.app.SyncDBCusFacade].methods.method[SyncCustomer].parameters.parameter[data].alias</alias>
+                    <description>facade[com.kingdee.eas.mkld.sapinterage.app.SyncDBCusFacade].methods.method[SyncCustomer].parameters.parameter[data].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+    </methods>
+    <resource>
+        <rs key="facade[com.kingdee.eas.mkld.sapinterage.app.SyncDBCusFacade].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="同步中台客户" />
+            <lang locale="zh_HK" value="同步中台客戶" />
+            <lang locale="zh_TW" value="同步中台客戶" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.mkld.sapinterage.app.SyncDBCusFacade].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.mkld.sapinterage.app.SyncDBCusFacade].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.mkld.sapinterage.app.SyncDBCusFacade].methods.method[SyncCustomer].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.mkld.sapinterage.app.SyncDBCusFacade].methods.method[SyncCustomer].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.mkld.sapinterage.app.SyncDBCusFacade].methods.method[SyncCustomer].parameters.parameter[data].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.mkld.sapinterage.app.SyncDBCusFacade].methods.method[SyncCustomer].parameters.parameter[data].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+    </resource>
+</facade>
+

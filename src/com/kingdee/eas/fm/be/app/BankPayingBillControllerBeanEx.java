@@ -7,7 +7,8 @@ import com.kingdee.bos.Context;
 import com.kingdee.bos.dao.IObjectPK;
 import com.kingdee.eas.common.EASBizException;
 import com.kingdee.eas.fm.be.BankPayingBillStateEnum;
-import com.kingdee.eas.fm.be.app.bankpay.BankPayingResultSynUtil;
+import com.kingdee.eas.fm.be.app.bankpay.BankPayingResultSynToOAUtil;
+import com.kingdee.eas.mkld.sapinterage.common.InterfaceResource;
 
 public class BankPayingBillControllerBeanEx extends BankPayingBillControllerBean {
 
@@ -20,10 +21,12 @@ public class BankPayingBillControllerBeanEx extends BankPayingBillControllerBean
 	protected Map _updateState(Context ctx, IObjectPK[] pks,
 			BankPayingBillStateEnum state) throws BOSException, EASBizException {
 		Map result =  super._updateState(ctx, pks, state);
-		for (IObjectPK objectPK : pks) {
-			//判断oa 是否符合传递条件
-			BankPayingResultSynUtil.synPayMentBill(ctx, objectPK.toString());
-		}
+		 if(InterfaceResource.MKLD_DB_ID.equals(ctx.getAIS())){
+			for (IObjectPK objectPK : pks) {
+				//判断oa 是否符合传递条件
+				BankPayingResultSynToOAUtil.synPayMentBill(ctx, objectPK.toString());
+			}
+		 }
  		return result;
 	}
 

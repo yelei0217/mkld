@@ -20,6 +20,7 @@ import com.kingdee.eas.mkld.sapinterage.ReceClaimRecord;
 import com.kingdee.eas.mkld.sapinterage.ReceClaimRecordFactory;
 import com.kingdee.eas.mkld.sapinterage.ReceClaimRecordInfo;
 import com.kingdee.eas.mkld.sapinterage.app.util.ReceClaimRecordUtil;
+import com.kingdee.eas.mkld.sapinterage.common.InterfaceResource;
 
 public class ReceivingBillControllerBeanPIEx extends ReceivingBillControllerBean {
 
@@ -32,7 +33,7 @@ public class ReceivingBillControllerBeanPIEx extends ReceivingBillControllerBean
 	protected IObjectPK _addnew(Context ctx, IObjectValue model)
 			throws BOSException, EASBizException {
  		IObjectPK pk = super._addnew(ctx, model);
- 		 if("mkldTest".equals(ctx.getAIS()))
+ 		 if(InterfaceResource.MKLD_DB_ID.equals(ctx.getAIS()))
  			 ReceClaimRecordUtil.savaRecordBill(ctx, pk.toString());
 		return pk;
 	}
