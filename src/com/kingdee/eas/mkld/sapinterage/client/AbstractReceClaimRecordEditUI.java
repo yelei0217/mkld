@@ -738,7 +738,7 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
         contCurrencyNo.setBounds(new Rectangle(681, 232, 270, 19));
         this.add(contCurrencyNo, new KDLayout.Constraints(681, 232, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         contcompanyNumber.setBounds(new Rectangle(681, 20, 270, 19));
-        this.add(contcompanyNumber, new KDLayout.Constraints(681, 20, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        this.add(contcompanyNumber, new KDLayout.Constraints(681, 20, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         contAgainClaimCusNo.setBounds(new Rectangle(681, 52, 270, 19));
         this.add(contAgainClaimCusNo, new KDLayout.Constraints(681, 52, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         contdmsSendStatus.setBounds(new Rectangle(28, 264, 270, 19));

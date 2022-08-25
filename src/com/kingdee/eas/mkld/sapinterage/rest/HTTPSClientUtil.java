@@ -56,7 +56,7 @@ public class HTTPSClientUtil {
         HttpPost httpPost = new HttpPost(url);
         httpPost.addHeader(HTTP.CONTENT_TYPE, "application/json"); 
         httpPost.addHeader("Authorization", SAPInterfaceUtil.getBasicAuth()); 
-    	StringEntity entity = new StringEntity(strJson);
+    	StringEntity entity = new StringEntity(strJson,DEFAULT_CHARSET);
         httpPost.setEntity(entity);
         HttpResponse response = httpClient.execute(httpPost);
         if (response != null) {
@@ -65,7 +65,6 @@ public class HTTPSClientUtil {
                 result = EntityUtils.toString(resEntity, charset);
             }
         }
- 
         return result;
     }
     

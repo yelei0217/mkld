@@ -85,7 +85,7 @@ public class ReceClaimRecordUtil {
 	                FilterInfo filter = new FilterInfo();
 	                filter.getFilterItems().add(new FilterItemInfo("PaymentId",rId,CompareType.EQUALS));
 		            IReceClaimRecord ibiz = ReceClaimRecordFactory.getLocalInstance(ctx);
-	                if(!ibiz.exists(filter)){
+	                if(!ibiz.exists(filter) && tdInfo.getBizType() == com.kingdee.eas.fm.be.BizTypeEnum.normal){
 	                	ReceClaimRecordInfo rInfo = new ReceClaimRecordInfo();
 						rInfo.setNumber(getCurrentTimeStrS()+tdInfo.getNumber());
 						
@@ -97,12 +97,15 @@ public class ReceClaimRecordUtil {
 						rInfo.setCustomerNo("800000");
 						rInfo.setClaimType(ClaimTypeMenu.CurrMonth);
 						rInfo.setClaimStatus(ClaimStatusMenu.No);
+						rInfo.setDmsSendStatus(SendStatusMenu.UnSent);
+
 						if(bInfo.getPayerType()!=null && bInfo.getPayerType().getId() != null && !"".equals( bInfo.getPayerType().getId().toString())){
 							if("YW3xsAEJEADgAAUWwKgTB0c4VZA=".equals(bInfo.getPayerType().getId().toString()))//客户
 							{
 								rInfo.setCustomerNo(bInfo.getPayerNumber());
 							//	rInfo.setClaimType(ClaimTypeMenu.CurrMonth);
 								rInfo.setClaimStatus(ClaimStatusMenu.Yes);
+								rInfo.setDmsSendStatus(SendStatusMenu.SentS);
 							}
 						}
 						rInfo.setPayerName(tdInfo.getOppUnit());
@@ -190,6 +193,7 @@ public class ReceClaimRecordUtil {
 	    		   field = "CFSendSentFlag";
 	    		  
 	    	  String sql ="update CT_SIG_ReceClaimRecord set "+field+" = "+sendFlag+" where fid in ("+ids+")";
+//	    	  System.out.println("SQL:"+sql);
 	    	  try {
 					DbUtil.execute(ctx, sql);
 				} catch (BOSException e) {
@@ -278,9 +282,9 @@ public class ReceClaimRecordUtil {
 			 }
 			
 		     if(rIds !=null && rIds.size() >0 && InterResultMenu.SUCCESS_VALUE.equals(resultemnu.getValue())) 
-		    	 updateRecordSendSta(ctx, rIds,"",InterResultMenu.SUCCESS_VALUE);
+		    	 updateRecordSendSta(ctx, rIds,"1",InterResultMenu.SUCCESS_VALUE);
 		     else
-		    	 updateRecordSendSta(ctx, rIds,"",InterResultMenu.FAIL_VALUE);
+		    	 updateRecordSendSta(ctx, rIds,"1",InterResultMenu.FAIL_VALUE);
         }
 	}
 	
@@ -301,7 +305,7 @@ public class ReceClaimRecordUtil {
         filter.getFilterItems().add(new FilterItemInfo("FirstSentFlag",SendStatusMenu.SentS,CompareType.EQUALS));//第一次发送SAP状态:发送成功
         filter.getFilterItems().add(new FilterItemInfo("SendSentFlag",SendStatusMenu.UnSent,CompareType.EQUALS));//第二次发送SAP状态:未发送
         filter.getFilterItems().add(new FilterItemInfo("SendSentFlag",SendStatusMenu.SentF,CompareType.EQUALS));//第二次发送SAP状态:发送失败
-        filter.getFilterItems().add(new FilterItemInfo("AgainClaimCusNo","800000",CompareType.EQUALS));//客户编码： 一次性客户编码 800000
+        filter.getFilterItems().add(new FilterItemInfo("CustomerNo","800000",CompareType.EQUALS));//客户编码： 一次性客户编码 800000
         
         filter.setMaskString("#0 and #1 and #2 and (#3 or #4) and #5");
         viewInfo.setFilter(filter);
@@ -351,7 +355,7 @@ public class ReceClaimRecordUtil {
         logInfo.setNumber(msgId);
         logInfo.setBizDate(currentDate);
         logInfo.setInterType(SAPInterTypeMenu.FICO_I012);
-        logInfo.setClaimType(ClaimTypeMenu.CurrMonth);
+        logInfo.setClaimType(ClaimTypeMenu.NextMonth);
         logInfo.setInterResult(resultemnu);
         logInfo.setReqTime(currentDate);
         logInfo.setRequest(dataStr);
@@ -385,7 +389,7 @@ public class ReceClaimRecordUtil {
         filter.getFilterItems().add(new FilterItemInfo("ClaimStatus",ClaimStatusMenu.No,CompareType.EQUALS));//认领状态：未认领
         filter.getFilterItems().add(new FilterItemInfo("FirstSentFlag",SendStatusMenu.UnSent,CompareType.EQUALS));//第一次发送SAP状态:未发送
         filter.getFilterItems().add(new FilterItemInfo("FirstSentFlag",SendStatusMenu.SentF,CompareType.EQUALS));//第一次发送SAP状态:未发送
-        filter.getFilterItems().add(new FilterItemInfo("AgainClaimCusNo","800000",CompareType.EQUALS));//客户编码： 一次性客户编码 800000
+        filter.getFilterItems().add(new FilterItemInfo("CustomerNo","800000",CompareType.EQUALS));//客户编码： 一次性客户编码 800000
         filter.setMaskString("#0 and #1 and (#2 or #3) and #4");
         viewInfo.setFilter(filter);
         ReceClaimRecordCollection rcoll = ibiz.getReceClaimRecordCollection(viewInfo);
@@ -443,9 +447,9 @@ public class ReceClaimRecordUtil {
 			 }
 			
 		     if(rIds !=null && rIds.size() >0 && InterResultMenu.SUCCESS_VALUE.equals(resultemnu.getValue())) 
-		    	 updateRecordSendSta(ctx, rIds,"",InterResultMenu.SUCCESS_VALUE);
+		    	 updateRecordSendSta(ctx, rIds,"2",InterResultMenu.SUCCESS_VALUE);
 		     else
-		    	 updateRecordSendSta(ctx, rIds,"",InterResultMenu.FAIL_VALUE);
+		    	 updateRecordSendSta(ctx, rIds,"2",InterResultMenu.FAIL_VALUE);
         } 
 	}
 }
