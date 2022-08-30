@@ -19,6 +19,20 @@ public class ReceClaimRecordListUI extends AbstractReceClaimRecordListUI
 {
     private static final Logger logger = CoreUIObject.getLogger(ReceClaimRecordListUI.class);
     
+    @Override
+    public void onLoad() throws Exception { 
+    	super.onLoad();
+     	this.btnAddNew.setVisible(false);
+     	//this.btnEdit.setVisible(false);
+     	this.btnRemove.setVisible(false);
+     	this.btnCreateTo.setVisible(false);
+
+     	this.menuItemAddNew.setVisible(false);
+     	//this.menuItemEdit.setVisible(false);
+     	this.menuItemRemove.setVisible(false);
+     	this.menuItemCreateTo.setVisible(false);
+    }
+    
     /**
      * output class constructor
      */

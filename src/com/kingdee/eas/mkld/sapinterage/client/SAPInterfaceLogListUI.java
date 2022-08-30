@@ -13,7 +13,21 @@ import com.kingdee.bos.ui.face.CoreUIObject;
 public class SAPInterfaceLogListUI extends AbstractSAPInterfaceLogListUI
 {
     private static final Logger logger = CoreUIObject.getLogger(SAPInterfaceLogListUI.class);
-    
+   
+    @Override
+    public void onLoad() throws Exception {
+     	super.onLoad();
+     	
+     	this.btnAddNew.setVisible(false);
+     	this.btnEdit.setVisible(false);
+     	this.btnRemove.setVisible(false);
+     	this.btnCreateTo.setVisible(false);
+
+     	this.menuItemAddNew.setVisible(false);
+     	this.menuItemEdit.setVisible(false);
+     	this.menuItemRemove.setVisible(false);
+     	this.menuItemCreateTo.setVisible(false);
+    }
     /**
      * output class constructor
      */

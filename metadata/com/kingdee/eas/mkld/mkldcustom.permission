@@ -1,0 +1,3254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<permission xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.mkld</package>
+    <name>mkldcustom</name>
+    <alias>permission[com.kingdee.eas.mkld.mkldcustom].alias</alias>
+    <description>permission[com.kingdee.eas.mkld.mkldcustom].description</description>
+    <userDefined>true</userDefined>
+    <permissionItems>
+        <permissionItem>
+            <innerID>9358c7e7-747a-4d57-a5b0-fe442769da8dPERMITEM</innerID>
+            <name>SAP凭证集成日志_界面显示</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP凭证集成日志_界面显示].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP凭证集成日志_界面显示].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldsapinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP凭证集成日志_界面显示].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>C94D9568</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.sapinterage.app</package>
+                    <name>SAPVoucherIntegrateLog</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>d8870cc4-1eb5-4f40-a269-95360d8c2706</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>SAPVoucherIntegrateLogEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionOnLoad</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>b2738d77-19bc-4b09-8e2d-6971e2269641</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>SAPVoucherIntegrateLogListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionOnLoad</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>8769cbc5-fd86-4257-9349-420fdac8782dPERMITEM</innerID>
+            <name>SAP凭证集成日志_查看</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP凭证集成日志_查看].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP凭证集成日志_查看].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldsapinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP凭证集成日志_查看].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>C94D9568</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.sapinterage.app</package>
+                    <name>SAPVoucherIntegrateLog</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>a059914a-3491-4a4e-91ad-b4864dbbb923</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>SAPVoucherIntegrateLogListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionView</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>e69f7a5d-9dab-442f-aea8-2affb9af6779PERMITEM</innerID>
+            <name>传递SAP凭证组织维护_界面显示</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_界面显示].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_界面显示].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldsapinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_界面显示].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>37FD88DA</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.sapinterage.app</package>
+                    <name>SAPVoucherOrgMaintain</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>7c9ff4c8-f97f-404a-83da-d3fdac5d02e0</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>SAPVoucherOrgMaintainEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionOnLoad</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>9f4e0794-2e69-46cd-8104-d9c9bce5dbf9</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>SAPVoucherOrgMaintainListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionOnLoad</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>0a499b45-6d72-472a-af51-69b7cbb50672PERMITEM</innerID>
+            <name>传递SAP凭证组织维护_修改</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_修改].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_修改].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldsapinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_修改].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>37FD88DA</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.sapinterage.app</package>
+                    <name>SAPVoucherOrgMaintain</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>b390438b-152b-4997-91bc-238d41b7c985</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>SAPVoucherOrgMaintainEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionEdit</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>a13aff11-a94d-4e47-b295-bcc1320eb40b</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>SAPVoucherOrgMaintainListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionEdit</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>f43d68f4-5b74-4c88-9f55-1ecdedb4e0c5PERMITEM</innerID>
+            <name>传递SAP凭证组织维护_删除</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_删除].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_删除].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldsapinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_删除].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>37FD88DA</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.sapinterage.app</package>
+                    <name>SAPVoucherOrgMaintain</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>b1c80609-6cc0-4575-a194-3bed62bba353</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>SAPVoucherOrgMaintainEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionRemove</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>18c7436e-a285-44fc-9bfe-c4281410e287</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>SAPVoucherOrgMaintainListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionRemove</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>ca7b398d-fc35-4f27-879e-9863718d0a81PERMITEM</innerID>
+            <name>传递SAP凭证组织维护_查看</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_查看].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_查看].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldsapinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_查看].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>37FD88DA</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.sapinterage.app</package>
+                    <name>SAPVoucherOrgMaintain</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>dcc24d10-6b3d-4de1-a387-cec16ec5d4d9</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>SAPVoucherOrgMaintainListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionView</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>2a94e90b-51db-4e42-9278-c475ee28ecdbPERMITEM</innerID>
+            <name>SAP连接配置参数_集合保存</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP连接配置参数_集合保存].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP连接配置参数_集合保存].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldsapinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP连接配置参数_集合保存].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>826F1E67</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.sapinterage.app</package>
+                    <name>SapConnConfig</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>7f08b18d-48f7-4f02-9e91-44fe67a762d8</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>SapConnConfigEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionSave</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>6ddeb799-064f-4d1c-bbc8-fd348de6030bPERMITEM</innerID>
+            <name>SAP连接配置参数_界面显示</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP连接配置参数_界面显示].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP连接配置参数_界面显示].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldsapinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP连接配置参数_界面显示].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>826F1E67</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.sapinterage.app</package>
+                    <name>SapConnConfig</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>2ae9b663-cb31-4e06-bc5e-a7ba02779436</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>SapConnConfigEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionOnLoad</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>41c4d3e2-ab5e-4a30-9f69-ef136a04da51PERMITEM</innerID>
+            <name>SAP连接配置参数_修改</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP连接配置参数_修改].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP连接配置参数_修改].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldsapinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP连接配置参数_修改].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>826F1E67</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.sapinterage.app</package>
+                    <name>SapConnConfig</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>141ed91f-d720-42f7-990e-4f9b50707322</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>SapConnConfigEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionEdit</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>8ea8bfc7-11ee-44ef-bc84-fb6bb1b39407PERMITEM</innerID>
+            <name>付款接口日志_界面显示</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[付款接口日志_界面显示].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[付款接口日志_界面显示].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldpaybillinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[付款接口日志_界面显示].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>CD4306DC</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.paybillintegrate.app</package>
+                    <name>PaybillIntegrateLog</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>f3789bca-7fc9-464a-ac30-cf135f581dd5</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.paybillintegrate.client</package>
+                        <name>PaybillIntegrateLogEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionOnLoad</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>5bf4c93c-cb4a-43bc-b866-f77f7fdb3ceb</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.paybillintegrate.client</package>
+                        <name>PaybillIntegrateLogListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionOnLoad</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>faf9dc9a-c6bf-4f62-8617-cdfa9fcd45c7PERMITEM</innerID>
+            <name>付款接口日志_查看</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[付款接口日志_查看].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[付款接口日志_查看].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldpaybillinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[付款接口日志_查看].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>CD4306DC</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.paybillintegrate.app</package>
+                    <name>PaybillIntegrateLog</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>15860c5f-31a7-418b-b092-2a24bd74dbc7</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.paybillintegrate.client</package>
+                        <name>PaybillIntegrateLogListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionView</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>2756515e-e419-44b3-b6ea-4bb780ab029ePERMITEM</innerID>
+            <name>OA付款单配置表_集合新增</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_集合新增].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_集合新增].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldpaybillinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_集合新增].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>EBEA1E52</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.paybillintegrate.app</package>
+                    <name>PaymentBillConfigForOA</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>e58c5ea3-a34d-430d-97d8-46faf5cb2c10</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.paybillintegrate.client</package>
+                        <name>PaymentBillConfigForOAEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionAddNew</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>dc31df4d-9f09-4db4-b41c-e7783d74e9a6</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.paybillintegrate.client</package>
+                        <name>PaymentBillConfigForOAListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionAddNew</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>24a758e3-5f94-48f3-a34d-f00b7fc18620PERMITEM</innerID>
+            <name>OA付款单配置表_集合保存</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_集合保存].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_集合保存].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldpaybillinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_集合保存].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>EBEA1E52</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.paybillintegrate.app</package>
+                    <name>PaymentBillConfigForOA</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>0b7a5e5e-eee9-4048-89f5-4514b9f69f98</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.paybillintegrate.client</package>
+                        <name>PaymentBillConfigForOAEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionSave</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>06921173-e3cb-41ea-86e7-e036a7e099c3PERMITEM</innerID>
+            <name>OA付款单配置表_界面显示</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_界面显示].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_界面显示].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldpaybillinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_界面显示].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>EBEA1E52</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.paybillintegrate.app</package>
+                    <name>PaymentBillConfigForOA</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>0da00861-6ffe-4202-b2cc-b28159822fbd</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.paybillintegrate.client</package>
+                        <name>PaymentBillConfigForOAEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionOnLoad</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>0c39670c-72b2-4373-9b24-6a3a8d839851</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.paybillintegrate.client</package>
+                        <name>PaymentBillConfigForOAListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionOnLoad</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>85b25d66-ca5a-4fa3-ae20-38c4bad488c7PERMITEM</innerID>
+            <name>OA付款单配置表_修改</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_修改].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_修改].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldpaybillinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_修改].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>EBEA1E52</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.paybillintegrate.app</package>
+                    <name>PaymentBillConfigForOA</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>aa0ff748-b0a3-436a-8ce5-ee5736eb26b7</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.paybillintegrate.client</package>
+                        <name>PaymentBillConfigForOAEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionEdit</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>e928a243-fb1c-4e8d-93fe-33f133e30271</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.paybillintegrate.client</package>
+                        <name>PaymentBillConfigForOAListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionEdit</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>bc6c9aac-4302-4d62-9eb4-d98908747084PERMITEM</innerID>
+            <name>OA付款单配置表_查看</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_查看].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_查看].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldpaybillinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_查看].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>EBEA1E52</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.paybillintegrate.app</package>
+                    <name>PaymentBillConfigForOA</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>1a827ca3-519e-47f1-a26e-e5576ed571c0</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.paybillintegrate.client</package>
+                        <name>PaymentBillConfigForOAListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionView</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>ea073d79-8d97-49c6-94af-a8803746579ePERMITEM</innerID>
+            <name>U8连接配置参数_集合新增</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_集合新增].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_集合新增].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldu8inte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_集合新增].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>700E5B85</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.u8voucher.app</package>
+                    <name>U8ConfigParam</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>a251ad7a-0b43-4d40-8edd-1bd82fa59d5e</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.u8voucher.client</package>
+                        <name>U8ConfigParamEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionAddNew</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>6ea9a226-74b5-4127-8a9e-96b17a59cf36</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.u8voucher.client</package>
+                        <name>U8ConfigParamListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionAddNew</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>3aad607c-16c4-4204-83db-1881c3742bc8PERMITEM</innerID>
+            <name>U8连接配置参数_界面显示</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_界面显示].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_界面显示].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldu8inte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_界面显示].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>700E5B85</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.u8voucher.app</package>
+                    <name>U8ConfigParam</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>3861996a-e232-40e5-b45a-1c755a33f3ec</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.u8voucher.client</package>
+                        <name>U8ConfigParamEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionOnLoad</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>7c9ffb42-56d9-408b-bc90-203f6a99394e</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.u8voucher.client</package>
+                        <name>U8ConfigParamListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionOnLoad</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>0eb8dd82-94b9-4b22-8f28-9b73a6cc6afbPERMITEM</innerID>
+            <name>U8连接配置参数_修改</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_修改].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_修改].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldu8inte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_修改].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>700E5B85</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.u8voucher.app</package>
+                    <name>U8ConfigParam</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>ca9208c0-acb0-47fd-8097-13aca70a3761</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.u8voucher.client</package>
+                        <name>U8ConfigParamEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionEdit</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>3caf96a0-e6a2-42e0-b845-99d65f025431</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.u8voucher.client</package>
+                        <name>U8ConfigParamListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionEdit</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>0951620b-2985-4767-9d49-b921a53b3972PERMITEM</innerID>
+            <name>U8连接配置参数_删除</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_删除].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_删除].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldu8inte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_删除].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>700E5B85</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.u8voucher.app</package>
+                    <name>U8ConfigParam</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>6d843901-9e18-48d1-bdb1-dc6e7a5df756</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.u8voucher.client</package>
+                        <name>U8ConfigParamEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionRemove</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>d09f4ffc-66fc-40bc-8a85-df69ddbf786a</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.u8voucher.client</package>
+                        <name>U8ConfigParamListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionRemove</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>9c9324ef-eca5-4761-b8f3-ae94b594a357PERMITEM</innerID>
+            <name>U8集成组织维护_集合新增</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_集合新增].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_集合新增].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldu8inte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_集合新增].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>DF838494</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.u8voucher.app</package>
+                    <name>U8IntegrateOrgMainain</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>fdea9d63-aa65-46c0-8628-6b8311f03a8d</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.u8voucher.client</package>
+                        <name>U8IntegrateOrgMainainEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionAddNew</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>2b5fb8de-47ac-4f52-a442-64dbc03c293a</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.u8voucher.client</package>
+                        <name>U8IntegrateOrgMainainListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionAddNew</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>9f106255-b79c-478c-affd-0f051becbeb4PERMITEM</innerID>
+            <name>U8集成组织维护_界面显示</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_界面显示].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_界面显示].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldu8inte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_界面显示].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>DF838494</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.u8voucher.app</package>
+                    <name>U8IntegrateOrgMainain</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>4c283425-b8fe-41b1-8d94-60540f83d5ec</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.u8voucher.client</package>
+                        <name>U8IntegrateOrgMainainEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionOnLoad</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>f908fc04-f46f-4392-a136-94674fdda90d</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.u8voucher.client</package>
+                        <name>U8IntegrateOrgMainainListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionOnLoad</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>7ebb0158-e70f-469c-a27e-c906f6cc993cPERMITEM</innerID>
+            <name>U8集成组织维护_修改</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_修改].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_修改].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldu8inte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_修改].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>DF838494</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.u8voucher.app</package>
+                    <name>U8IntegrateOrgMainain</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>572ef95c-4543-45f7-8e52-ba60e73b5f5d</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.u8voucher.client</package>
+                        <name>U8IntegrateOrgMainainEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionEdit</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>3c944956-29bf-4483-9bfa-4f6c579fa7fc</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.u8voucher.client</package>
+                        <name>U8IntegrateOrgMainainListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionEdit</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>f5d79d9e-570b-42d6-b79c-1fa5af6257a6PERMITEM</innerID>
+            <name>U8集成组织维护_删除</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_删除].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_删除].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldu8inte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_删除].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>DF838494</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.u8voucher.app</package>
+                    <name>U8IntegrateOrgMainain</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>f8957935-cae2-4e9a-a145-f4504c461399</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.u8voucher.client</package>
+                        <name>U8IntegrateOrgMainainEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionRemove</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>6302177a-97db-450f-9655-210006f81a2e</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.u8voucher.client</package>
+                        <name>U8IntegrateOrgMainainListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionRemove</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>592cf3dd-c90b-4c9a-b2a3-07ee43d8e186PERMITEM</innerID>
+            <name>U8集成组织维护_查看</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_查看].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_查看].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldu8inte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_查看].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>DF838494</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.u8voucher.app</package>
+                    <name>U8IntegrateOrgMainain</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>89c64892-a863-4f00-8c77-5ca8f46f931f</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.u8voucher.client</package>
+                        <name>U8IntegrateOrgMainainListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionView</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>5f5ec697-331b-4501-9b94-2d84d4dad9d4PERMITEM</innerID>
+            <name>收款认领记录_集合新增</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_集合新增].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_集合新增].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldsapinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_集合新增].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>841A1C2F</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.sapinterage.app</package>
+                    <name>ReceClaimRecord</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>5e944af7-e0bd-4448-b8e5-366c1c4884f6</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>ReceClaimRecordEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionAddNew</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>72fb9c2a-0cd5-4794-a5b1-1e8f2a25ab27</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>ReceClaimRecordListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionAddNew</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>6c9fa1ba-8862-4fd3-9f64-6636ad6aacd3PERMITEM</innerID>
+            <name>收款认领记录_集合保存</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_集合保存].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_集合保存].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldsapinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_集合保存].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>841A1C2F</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.sapinterage.app</package>
+                    <name>ReceClaimRecord</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>329d0dc9-26e0-47be-abc7-8edfa4f9d2f1</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>ReceClaimRecordEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionSave</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>1bd84a77-274e-4feb-bfc3-f5c640304cd8PERMITEM</innerID>
+            <name>收款认领记录_界面显示</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_界面显示].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_界面显示].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldsapinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_界面显示].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>841A1C2F</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.sapinterage.app</package>
+                    <name>ReceClaimRecord</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>c3f5f437-864d-4034-90a9-318f4ef80d7e</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>ReceClaimRecordEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionOnLoad</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>d12afefd-af17-44c3-b9fb-9f0e17b0870a</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>ReceClaimRecordListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionOnLoad</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>a1545538-d05a-45fa-9717-fd309236bd33PERMITEM</innerID>
+            <name>收款认领记录_导出到Excel</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_导出到Excel].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_导出到Excel].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldsapinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_导出到Excel].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>841A1C2F</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.sapinterage.app</package>
+                    <name>ReceClaimRecord</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>d243d25d-95e8-424e-b4bd-3a3a9855a5c3</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>ReceClaimRecordEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionExport</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>be2c7b90-aa4b-49c1-9f26-fff0671110d4</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>ReceClaimRecordListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionExport</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>2c33f79f-9860-4d3f-be0c-0236a4aa8fdfPERMITEM</innerID>
+            <name>收款认领记录_修改</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_修改].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_修改].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldsapinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_修改].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>841A1C2F</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.sapinterage.app</package>
+                    <name>ReceClaimRecord</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>29498690-63b6-4281-9bfd-fe3030c7bcd3</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>ReceClaimRecordEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionEdit</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>e1777cc6-568d-4b4b-96d1-8d1df9b540f8</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>ReceClaimRecordListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionEdit</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>96b7930c-1c7d-464c-8940-1c530bbb443fPERMITEM</innerID>
+            <name>收款认领记录_删除</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_删除].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_删除].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldsapinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_删除].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>841A1C2F</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.sapinterage.app</package>
+                    <name>ReceClaimRecord</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>81ccd4d8-4acb-41b0-bfd7-de55d5d46786</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>ReceClaimRecordEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionRemove</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>e3559f92-6b75-4c51-af85-5e05575b6ac0</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>ReceClaimRecordListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionRemove</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>56ef981d-4b9c-4579-9e7a-4671e66503acPERMITEM</innerID>
+            <name>收款认领记录_查看</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_查看].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_查看].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldsapinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_查看].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>841A1C2F</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.sapinterage.app</package>
+                    <name>ReceClaimRecord</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>c429ee54-3c59-4bba-8baf-484d36acb72b</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>ReceClaimRecordListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionView</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>f4af713a-07a5-405e-b872-0470b44234a4PERMITEM</innerID>
+            <name>收款认领记录_刷新</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_刷新].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_刷新].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldsapinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_刷新].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>841A1C2F</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.sapinterage.app</package>
+                    <name>ReceClaimRecord</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>648b3034-4850-4469-afdc-b950d08d82d0</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>ReceClaimRecordListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionRefresh</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>ce33a1a8-6a59-4236-8f56-023fafdac900PERMITEM</innerID>
+            <name>收款认领记录_查询</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_查询].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_查询].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldsapinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_查询].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>841A1C2F</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.sapinterage.app</package>
+                    <name>ReceClaimRecord</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>826c56f2-1148-4a18-960c-8b6148e4e7a6</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>ReceClaimRecordListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionQuery</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>1cbb248c-e862-42f9-9955-f16fa37b0577PERMITEM</innerID>
+            <name>SAP接口调用日志_界面显示</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_界面显示].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_界面显示].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldsapinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_界面显示].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>D380C1E4</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.sapinterage.app</package>
+                    <name>SAPInterfaceLog</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>68a39713-6abf-489a-8527-359d5c487459</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>SAPInterfaceLogEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionOnLoad</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>53ad225d-3546-4f3f-80f9-ed4f24703357</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>SAPInterfaceLogListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionOnLoad</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>8f0d61ed-0ed8-4b1c-b199-0443f12ffeafPERMITEM</innerID>
+            <name>SAP接口调用日志_查看</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_查看].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_查看].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldsapinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_查看].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>D380C1E4</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.sapinterage.app</package>
+                    <name>SAPInterfaceLog</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>825f2f1a-750c-4f72-b058-5c86b20d87b1</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>SAPInterfaceLogListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionView</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>7f0abdd7-4cb9-4f95-89e6-4f4141033341PERMITEM</innerID>
+            <name>SAP接口调用日志_刷新</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_刷新].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_刷新].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldsapinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_刷新].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>D380C1E4</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.sapinterage.app</package>
+                    <name>SAPInterfaceLog</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>6086a163-0e0e-4c10-b3c1-2858308e4110</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>SAPInterfaceLogListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionRefresh</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>cbc7118e-31c5-423e-afdf-9f14f0b91509PERMITEM</innerID>
+            <name>SAP接口调用日志_查询</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_查询].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_查询].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldsapinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_查询].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>D380C1E4</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.sapinterage.app</package>
+                    <name>SAPInterfaceLog</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>b085e2a0-cbac-4b4f-90e6-cba7cd5203db</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>SAPInterfaceLogListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionQuery</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>ffa77c8c-a0b6-4698-ac90-0d107c8ecaa2PERMITEM</innerID>
+            <name>OA付款单配置表_删除</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_删除].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_删除].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldpaybillinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_删除].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>EBEA1E52</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.paybillintegrate.app</package>
+                    <name>PaymentBillConfigForOA</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>ad24c135-d1f3-4dac-89ed-cd48f608b49a</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.paybillintegrate.client</package>
+                        <name>PaymentBillConfigForOAEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionRemove</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>5c4f1eb2-41e4-4023-983f-155e4c4ac2f2</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.paybillintegrate.client</package>
+                        <name>PaymentBillConfigForOAListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionRemove</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+    </permissionItems>
+    <dependences>
+        <dependence>
+            <id>06921173-e3cb-41ea-86e7-e036a7e099c3PERMITEM</id>
+            <referedItem>
+                <key name="innerID" value="06921173-e3cb-41ea-86e7-e036a7e099c3PERMITEM" />
+            </referedItem>
+        </dependence>
+        <dependence>
+            <id>ffa77c8c-a0b6-4698-ac90-0d107c8ecaa2PERMITEM</id>
+            <referedItem>
+                <key name="innerID" value="ffa77c8c-a0b6-4698-ac90-0d107c8ecaa2PERMITEM" />
+            </referedItem>
+        </dependence>
+        <dependence>
+            <id>cbc7118e-31c5-423e-afdf-9f14f0b91509PERMITEM</id>
+            <referedItem>
+                <key name="innerID" value="cbc7118e-31c5-423e-afdf-9f14f0b91509PERMITEM" />
+            </referedItem>
+        </dependence>
+        <dependence>
+            <id>7f0abdd7-4cb9-4f95-89e6-4f4141033341PERMITEM</id>
+            <referedItem>
+                <key name="innerID" value="7f0abdd7-4cb9-4f95-89e6-4f4141033341PERMITEM" />
+            </referedItem>
+        </dependence>
+        <dependence>
+            <id>1cbb248c-e862-42f9-9955-f16fa37b0577PERMITEM</id>
+            <referedItem>
+                <key name="innerID" value="1cbb248c-e862-42f9-9955-f16fa37b0577PERMITEM" />
+            </referedItem>
+        </dependence>
+    </dependences>
+    <resource>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="妙可蓝多二开功能权限" />
+            <lang locale="zh_HK" value="妙可藍多二開功能許可權" />
+            <lang locale="zh_TW" value="妙可藍多二開功能許可權" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].extendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_修改].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="OA付款单配置表_修改" />
+            <lang locale="zh_HK" value="OA付款單配置表_修改" />
+            <lang locale="zh_TW" value="OA付款單配置表_修改" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_修改].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_修改].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.paybillintegrate.PaymentBillConfigForOA" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.paybillintegrate.PaymentBillConfigForOA" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.paybillintegrate.PaymentBillConfigForOA" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_修改].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_修改].extendedProperty.orgRelation">
+            <lang locale="en_US" value="Company" />
+            <lang locale="zh_CN" value="Company" />
+            <lang locale="zh_TW" value="Company" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_修改].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_修改].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.付款集成对接配置" />
+            <lang locale="zh_HK" value="系統.妙可藍多.付款集成對接配置" />
+            <lang locale="zh_TW" value="系統.妙可藍多.付款集成對接配置" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_删除].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="OA付款单配置表_删除" />
+            <lang locale="zh_HK" value="OA付款單配置表_刪除" />
+            <lang locale="zh_TW" value="OA付款單配置表_刪除" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_删除].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_删除].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.paybillintegrate.PaymentBillConfigForOA" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.paybillintegrate.PaymentBillConfigForOA" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.paybillintegrate.PaymentBillConfigForOA" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_删除].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_删除].extendedProperty.orgRelation">
+            <lang locale="en_US" value="Company" />
+            <lang locale="zh_CN" value="Company" />
+            <lang locale="zh_TW" value="Company" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_删除].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_删除].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="EAS系统.mkld.mkldpaybillinte" />
+            <lang locale="zh_HK" value="EAS系統.mkld.mkldpaybillinte" />
+            <lang locale="zh_TW" value="EAS系統.mkld.mkldpaybillinte" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_查看].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="OA付款单配置表_查看" />
+            <lang locale="zh_HK" value="OA付款單配置表_查看" />
+            <lang locale="zh_TW" value="OA付款單配置表_查看" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_查看].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_查看].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.paybillintegrate.PaymentBillConfigForOA" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.paybillintegrate.PaymentBillConfigForOA" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.paybillintegrate.PaymentBillConfigForOA" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_查看].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_查看].extendedProperty.orgRelation">
+            <lang locale="en_US" value="Company" />
+            <lang locale="zh_CN" value="Company" />
+            <lang locale="zh_TW" value="Company" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_查看].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_查看].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.付款集成对接配置" />
+            <lang locale="zh_HK" value="系統.妙可藍多.付款集成對接配置" />
+            <lang locale="zh_TW" value="系統.妙可藍多.付款集成對接配置" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_界面显示].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="OA付款单配置表_界面显示" />
+            <lang locale="zh_HK" value="OA付款單配置表_介面顯示" />
+            <lang locale="zh_TW" value="OA付款單配置表_介面顯示" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_界面显示].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_界面显示].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.paybillintegrate.PaymentBillConfigForOA" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.paybillintegrate.PaymentBillConfigForOA" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.paybillintegrate.PaymentBillConfigForOA" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_界面显示].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_界面显示].extendedProperty.orgRelation">
+            <lang locale="en_US" value="Company" />
+            <lang locale="zh_CN" value="Company" />
+            <lang locale="zh_TW" value="Company" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_界面显示].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_界面显示].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.付款集成对接配置" />
+            <lang locale="zh_HK" value="系統.妙可藍多.付款集成對接配置" />
+            <lang locale="zh_TW" value="系統.妙可藍多.付款集成對接配置" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_集合保存].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="OA付款单配置表_集合保存" />
+            <lang locale="zh_HK" value="OA付款單配置表_集合保存" />
+            <lang locale="zh_TW" value="OA付款單配置表_集合保存" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_集合保存].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_集合保存].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.paybillintegrate.PaymentBillConfigForOA" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.paybillintegrate.PaymentBillConfigForOA" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.paybillintegrate.PaymentBillConfigForOA" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_集合保存].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_集合保存].extendedProperty.orgRelation">
+            <lang locale="en_US" value="Company" />
+            <lang locale="zh_CN" value="Company" />
+            <lang locale="zh_TW" value="Company" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_集合保存].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_集合保存].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.付款集成对接配置" />
+            <lang locale="zh_HK" value="系統.妙可藍多.付款集成對接配置" />
+            <lang locale="zh_TW" value="系統.妙可藍多.付款集成對接配置" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_集合新增].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="OA付款单配置表_集合新增" />
+            <lang locale="zh_HK" value="OA付款單配置表_集合新增" />
+            <lang locale="zh_TW" value="OA付款單配置表_集合新增" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_集合新增].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_集合新增].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.paybillintegrate.PaymentBillConfigForOA" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.paybillintegrate.PaymentBillConfigForOA" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.paybillintegrate.PaymentBillConfigForOA" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_集合新增].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_集合新增].extendedProperty.orgRelation">
+            <lang locale="en_US" value="Company" />
+            <lang locale="zh_CN" value="Company" />
+            <lang locale="zh_TW" value="Company" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_集合新增].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[OA付款单配置表_集合新增].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.付款集成对接配置" />
+            <lang locale="zh_HK" value="系統.妙可藍多.付款集成對接配置" />
+            <lang locale="zh_TW" value="系統.妙可藍多.付款集成對接配置" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP凭证集成日志_查看].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="SAP凭证集成日志_查看" />
+            <lang locale="zh_HK" value="SAP憑證集成日誌_查看" />
+            <lang locale="zh_TW" value="SAP憑證集成日誌_查看" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP凭证集成日志_查看].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP凭证集成日志_查看].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.SAPVoucherIntegrateLog" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.SAPVoucherIntegrateLog" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.SAPVoucherIntegrateLog" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP凭证集成日志_查看].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP凭证集成日志_查看].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP凭证集成日志_查看].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP凭证集成日志_查看].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.SAP对接配置" />
+            <lang locale="zh_HK" value="系統.妙可藍多.SAP對接配置" />
+            <lang locale="zh_TW" value="系統.妙可藍多.SAP對接配置" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP凭证集成日志_界面显示].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="SAP凭证集成日志_界面显示" />
+            <lang locale="zh_HK" value="SAP憑證集成日誌_介面顯示" />
+            <lang locale="zh_TW" value="SAP憑證集成日誌_介面顯示" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP凭证集成日志_界面显示].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP凭证集成日志_界面显示].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.SAPVoucherIntegrateLog" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.SAPVoucherIntegrateLog" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.SAPVoucherIntegrateLog" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP凭证集成日志_界面显示].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP凭证集成日志_界面显示].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP凭证集成日志_界面显示].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP凭证集成日志_界面显示].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.SAP对接配置" />
+            <lang locale="zh_HK" value="系統.妙可藍多.SAP對接配置" />
+            <lang locale="zh_TW" value="系統.妙可藍多.SAP對接配置" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_刷新].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="SAP接口调用日志_刷新" />
+            <lang locale="zh_HK" value="SAP介面調用日誌_刷新" />
+            <lang locale="zh_TW" value="SAP介面調用日誌_刷新" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_刷新].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_刷新].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.SAPInterfaceLog" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.SAPInterfaceLog" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.SAPInterfaceLog" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_刷新].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_刷新].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_刷新].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_刷新].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.SAP对接配置" />
+            <lang locale="zh_HK" value="系統.妙可藍多.SAP對接配置" />
+            <lang locale="zh_TW" value="系統.妙可藍多.SAP對接配置" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_查看].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="SAP接口调用日志_查看" />
+            <lang locale="zh_HK" value="SAP介面調用日誌_查看" />
+            <lang locale="zh_TW" value="SAP介面調用日誌_查看" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_查看].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_查看].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.SAPInterfaceLog" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.SAPInterfaceLog" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.SAPInterfaceLog" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_查看].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_查看].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_查看].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_查看].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.SAP对接配置" />
+            <lang locale="zh_HK" value="系統.妙可藍多.SAP對接配置" />
+            <lang locale="zh_TW" value="系統.妙可藍多.SAP對接配置" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_查询].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="SAP接口调用日志_查询" />
+            <lang locale="zh_HK" value="SAP介面調用日誌_查詢" />
+            <lang locale="zh_TW" value="SAP介面調用日誌_查詢" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_查询].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_查询].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.SAPInterfaceLog" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.SAPInterfaceLog" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.SAPInterfaceLog" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_查询].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_查询].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_查询].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_查询].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.SAP对接配置" />
+            <lang locale="zh_HK" value="系統.妙可藍多.SAP對接配置" />
+            <lang locale="zh_TW" value="系統.妙可藍多.SAP對接配置" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_界面显示].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="SAP接口调用日志_界面显示" />
+            <lang locale="zh_HK" value="SAP介面調用日誌_介面顯示" />
+            <lang locale="zh_TW" value="SAP介面調用日誌_介面顯示" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_界面显示].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_界面显示].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.SAPInterfaceLog" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.SAPInterfaceLog" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.SAPInterfaceLog" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_界面显示].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_界面显示].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_界面显示].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP接口调用日志_界面显示].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.SAP对接配置" />
+            <lang locale="zh_HK" value="系統.妙可藍多.SAP對接配置" />
+            <lang locale="zh_TW" value="系統.妙可藍多.SAP對接配置" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP连接配置参数_修改].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="SAP连接配置参数_修改" />
+            <lang locale="zh_HK" value="SAP連接配置參數_修改" />
+            <lang locale="zh_TW" value="SAP連接配置參數_修改" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP连接配置参数_修改].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP连接配置参数_修改].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.SapConnConfig" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.SapConnConfig" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.SapConnConfig" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP连接配置参数_修改].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP连接配置参数_修改].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP连接配置参数_修改].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP连接配置参数_修改].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.SAP对接配置" />
+            <lang locale="zh_HK" value="系統.妙可藍多.SAP對接配置" />
+            <lang locale="zh_TW" value="系統.妙可藍多.SAP對接配置" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP连接配置参数_界面显示].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="SAP连接配置参数_界面显示" />
+            <lang locale="zh_HK" value="SAP連接配置參數_介面顯示" />
+            <lang locale="zh_TW" value="SAP連接配置參數_介面顯示" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP连接配置参数_界面显示].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP连接配置参数_界面显示].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.SapConnConfig" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.SapConnConfig" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.SapConnConfig" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP连接配置参数_界面显示].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP连接配置参数_界面显示].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP连接配置参数_界面显示].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP连接配置参数_界面显示].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.SAP对接配置" />
+            <lang locale="zh_HK" value="系統.妙可藍多.SAP對接配置" />
+            <lang locale="zh_TW" value="系統.妙可藍多.SAP對接配置" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP连接配置参数_集合保存].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="SAP连接配置参数_集合保存" />
+            <lang locale="zh_HK" value="SAP連接配置參數_集合保存" />
+            <lang locale="zh_TW" value="SAP連接配置參數_集合保存" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP连接配置参数_集合保存].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP连接配置参数_集合保存].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.SapConnConfig" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.SapConnConfig" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.SapConnConfig" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP连接配置参数_集合保存].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP连接配置参数_集合保存].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP连接配置参数_集合保存].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[SAP连接配置参数_集合保存].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.SAP对接配置" />
+            <lang locale="zh_HK" value="系統.妙可藍多.SAP對接配置" />
+            <lang locale="zh_TW" value="系統.妙可藍多.SAP對接配置" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_修改].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="U8连接配置参数_修改" />
+            <lang locale="zh_HK" value="U8連接配置參數_修改" />
+            <lang locale="zh_TW" value="U8連接配置參數_修改" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_修改].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_修改].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.u8voucher.U8ConfigParam" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.u8voucher.U8ConfigParam" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.u8voucher.U8ConfigParam" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_修改].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_修改].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_修改].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_修改].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.u8集成对接" />
+            <lang locale="zh_HK" value="系統.妙可藍多.u8集成對接" />
+            <lang locale="zh_TW" value="系統.妙可藍多.u8集成對接" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_删除].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="U8连接配置参数_删除" />
+            <lang locale="zh_HK" value="U8連接配置參數_刪除" />
+            <lang locale="zh_TW" value="U8連接配置參數_刪除" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_删除].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_删除].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.u8voucher.U8ConfigParam" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.u8voucher.U8ConfigParam" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.u8voucher.U8ConfigParam" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_删除].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_删除].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_删除].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_删除].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.u8集成对接" />
+            <lang locale="zh_HK" value="系統.妙可藍多.u8集成對接" />
+            <lang locale="zh_TW" value="系統.妙可藍多.u8集成對接" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_界面显示].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="U8连接配置参数_界面显示" />
+            <lang locale="zh_HK" value="U8連接配置參數_介面顯示" />
+            <lang locale="zh_TW" value="U8連接配置參數_介面顯示" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_界面显示].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_界面显示].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.u8voucher.U8ConfigParam" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.u8voucher.U8ConfigParam" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.u8voucher.U8ConfigParam" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_界面显示].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_界面显示].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_界面显示].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_界面显示].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.u8集成对接" />
+            <lang locale="zh_HK" value="系統.妙可藍多.u8集成對接" />
+            <lang locale="zh_TW" value="系統.妙可藍多.u8集成對接" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_集合新增].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="U8连接配置参数_集合新增" />
+            <lang locale="zh_HK" value="U8連接配置參數_集合新增" />
+            <lang locale="zh_TW" value="U8連接配置參數_集合新增" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_集合新增].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_集合新增].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.u8voucher.U8ConfigParam" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.u8voucher.U8ConfigParam" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.u8voucher.U8ConfigParam" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_集合新增].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_集合新增].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_集合新增].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8连接配置参数_集合新增].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.u8集成对接" />
+            <lang locale="zh_HK" value="系統.妙可藍多.u8集成對接" />
+            <lang locale="zh_TW" value="系統.妙可藍多.u8集成對接" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_修改].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="U8集成组织维护_修改" />
+            <lang locale="zh_HK" value="U8集成組織維護_修改" />
+            <lang locale="zh_TW" value="U8集成組織維護_修改" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_修改].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_修改].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.u8voucher.U8IntegrateOrgMainain" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.u8voucher.U8IntegrateOrgMainain" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.u8voucher.U8IntegrateOrgMainain" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_修改].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_修改].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_修改].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_修改].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.u8集成对接" />
+            <lang locale="zh_HK" value="系統.妙可藍多.u8集成對接" />
+            <lang locale="zh_TW" value="系統.妙可藍多.u8集成對接" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_删除].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="U8集成组织维护_删除" />
+            <lang locale="zh_HK" value="U8集成組織維護_刪除" />
+            <lang locale="zh_TW" value="U8集成組織維護_刪除" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_删除].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_删除].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.u8voucher.U8IntegrateOrgMainain" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.u8voucher.U8IntegrateOrgMainain" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.u8voucher.U8IntegrateOrgMainain" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_删除].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_删除].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_删除].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_删除].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.u8集成对接" />
+            <lang locale="zh_HK" value="系統.妙可藍多.u8集成對接" />
+            <lang locale="zh_TW" value="系統.妙可藍多.u8集成對接" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_查看].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="U8集成组织维护_查看" />
+            <lang locale="zh_HK" value="U8集成組織維護_查看" />
+            <lang locale="zh_TW" value="U8集成組織維護_查看" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_查看].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_查看].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.u8voucher.U8IntegrateOrgMainain" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.u8voucher.U8IntegrateOrgMainain" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.u8voucher.U8IntegrateOrgMainain" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_查看].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_查看].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_查看].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_查看].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.u8集成对接" />
+            <lang locale="zh_HK" value="系統.妙可藍多.u8集成對接" />
+            <lang locale="zh_TW" value="系統.妙可藍多.u8集成對接" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_界面显示].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="U8集成组织维护_界面显示" />
+            <lang locale="zh_HK" value="U8集成組織維護_介面顯示" />
+            <lang locale="zh_TW" value="U8集成組織維護_介面顯示" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_界面显示].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_界面显示].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.u8voucher.U8IntegrateOrgMainain" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.u8voucher.U8IntegrateOrgMainain" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.u8voucher.U8IntegrateOrgMainain" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_界面显示].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_界面显示].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_界面显示].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_界面显示].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.u8集成对接" />
+            <lang locale="zh_HK" value="系統.妙可藍多.u8集成對接" />
+            <lang locale="zh_TW" value="系統.妙可藍多.u8集成對接" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_集合新增].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="U8集成组织维护_集合新增" />
+            <lang locale="zh_HK" value="U8集成組織維護_集合新增" />
+            <lang locale="zh_TW" value="U8集成組織維護_集合新增" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_集合新增].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_集合新增].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.u8voucher.U8IntegrateOrgMainain" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.u8voucher.U8IntegrateOrgMainain" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.u8voucher.U8IntegrateOrgMainain" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_集合新增].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_集合新增].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_集合新增].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[U8集成组织维护_集合新增].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.u8集成对接" />
+            <lang locale="zh_HK" value="系統.妙可藍多.u8集成對接" />
+            <lang locale="zh_TW" value="系統.妙可藍多.u8集成對接" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[付款接口日志_查看].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="付款接口日志_查看" />
+            <lang locale="zh_HK" value="付款介面日誌_查看" />
+            <lang locale="zh_TW" value="付款介面日誌_查看" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[付款接口日志_查看].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[付款接口日志_查看].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.paybillintegrate.PaybillIntegrateLog" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.paybillintegrate.PaybillIntegrateLog" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.paybillintegrate.PaybillIntegrateLog" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[付款接口日志_查看].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[付款接口日志_查看].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[付款接口日志_查看].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[付款接口日志_查看].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.付款集成对接配置" />
+            <lang locale="zh_HK" value="系統.妙可藍多.付款集成對接配置" />
+            <lang locale="zh_TW" value="系統.妙可藍多.付款集成對接配置" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[付款接口日志_界面显示].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="付款接口日志_界面显示" />
+            <lang locale="zh_HK" value="付款介面日誌_介面顯示" />
+            <lang locale="zh_TW" value="付款介面日誌_介面顯示" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[付款接口日志_界面显示].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[付款接口日志_界面显示].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.paybillintegrate.PaybillIntegrateLog" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.paybillintegrate.PaybillIntegrateLog" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.paybillintegrate.PaybillIntegrateLog" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[付款接口日志_界面显示].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[付款接口日志_界面显示].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[付款接口日志_界面显示].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[付款接口日志_界面显示].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.付款集成对接配置" />
+            <lang locale="zh_HK" value="系統.妙可藍多.付款集成對接配置" />
+            <lang locale="zh_TW" value="系統.妙可藍多.付款集成對接配置" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_修改].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="传递SAP凭证组织维护_修改" />
+            <lang locale="zh_HK" value="傳遞SAP憑證組織維護_修改" />
+            <lang locale="zh_TW" value="傳遞SAP憑證組織維護_修改" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_修改].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_修改].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.SAPVoucherOrgMaintain" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.SAPVoucherOrgMaintain" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.SAPVoucherOrgMaintain" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_修改].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_修改].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_修改].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_修改].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.SAP对接配置" />
+            <lang locale="zh_HK" value="系統.妙可藍多.SAP對接配置" />
+            <lang locale="zh_TW" value="系統.妙可藍多.SAP對接配置" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_删除].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="传递SAP凭证组织维护_删除" />
+            <lang locale="zh_HK" value="傳遞SAP憑證組織維護_刪除" />
+            <lang locale="zh_TW" value="傳遞SAP憑證組織維護_刪除" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_删除].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_删除].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.SAPVoucherOrgMaintain" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.SAPVoucherOrgMaintain" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.SAPVoucherOrgMaintain" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_删除].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_删除].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_删除].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_删除].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.SAP对接配置" />
+            <lang locale="zh_HK" value="系統.妙可藍多.SAP對接配置" />
+            <lang locale="zh_TW" value="系統.妙可藍多.SAP對接配置" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_查看].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="传递SAP凭证组织维护_查看" />
+            <lang locale="zh_HK" value="傳遞SAP憑證組織維護_查看" />
+            <lang locale="zh_TW" value="傳遞SAP憑證組織維護_查看" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_查看].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_查看].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.SAPVoucherOrgMaintain" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.SAPVoucherOrgMaintain" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.SAPVoucherOrgMaintain" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_查看].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_查看].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_查看].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_查看].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.SAP对接配置" />
+            <lang locale="zh_HK" value="系統.妙可藍多.SAP對接配置" />
+            <lang locale="zh_TW" value="系統.妙可藍多.SAP對接配置" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_界面显示].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="传递SAP凭证组织维护_界面显示" />
+            <lang locale="zh_HK" value="傳遞SAP憑證組織維護_介面顯示" />
+            <lang locale="zh_TW" value="傳遞SAP憑證組織維護_介面顯示" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_界面显示].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_界面显示].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.SAPVoucherOrgMaintain" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.SAPVoucherOrgMaintain" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.SAPVoucherOrgMaintain" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_界面显示].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_界面显示].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_界面显示].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[传递SAP凭证组织维护_界面显示].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.SAP对接配置" />
+            <lang locale="zh_HK" value="系統.妙可藍多.SAP對接配置" />
+            <lang locale="zh_TW" value="系統.妙可藍多.SAP對接配置" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_修改].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收款认领记录_修改" />
+            <lang locale="zh_HK" value="收款認領記錄_修改" />
+            <lang locale="zh_TW" value="收款認領記錄_修改" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_修改].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_修改].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.ReceClaimRecord" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.ReceClaimRecord" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.ReceClaimRecord" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_修改].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_修改].extendedProperty.orgRelation">
+            <lang locale="en_US" value="Company" />
+            <lang locale="zh_CN" value="Company" />
+            <lang locale="zh_TW" value="Company" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_修改].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_修改].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.SAP对接配置" />
+            <lang locale="zh_HK" value="系統.妙可藍多.SAP對接配置" />
+            <lang locale="zh_TW" value="系統.妙可藍多.SAP對接配置" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_删除].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收款认领记录_删除" />
+            <lang locale="zh_HK" value="收款認領記錄_刪除" />
+            <lang locale="zh_TW" value="收款認領記錄_刪除" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_删除].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_删除].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.ReceClaimRecord" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.ReceClaimRecord" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.ReceClaimRecord" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_删除].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_删除].extendedProperty.orgRelation">
+            <lang locale="en_US" value="Company" />
+            <lang locale="zh_CN" value="Company" />
+            <lang locale="zh_TW" value="Company" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_删除].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_删除].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.SAP对接配置" />
+            <lang locale="zh_HK" value="系統.妙可藍多.SAP對接配置" />
+            <lang locale="zh_TW" value="系統.妙可藍多.SAP對接配置" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_刷新].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收款认领记录_刷新" />
+            <lang locale="zh_HK" value="收款認領記錄_刷新" />
+            <lang locale="zh_TW" value="收款認領記錄_刷新" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_刷新].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_刷新].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.ReceClaimRecord" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.ReceClaimRecord" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.ReceClaimRecord" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_刷新].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_刷新].extendedProperty.orgRelation">
+            <lang locale="en_US" value="Company" />
+            <lang locale="zh_CN" value="Company" />
+            <lang locale="zh_TW" value="Company" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_刷新].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_刷新].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.SAP对接配置" />
+            <lang locale="zh_HK" value="系統.妙可藍多.SAP對接配置" />
+            <lang locale="zh_TW" value="系統.妙可藍多.SAP對接配置" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_导出到Excel].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收款认领记录_导出到Excel" />
+            <lang locale="zh_HK" value="收款認領記錄_導出到Excel" />
+            <lang locale="zh_TW" value="收款認領記錄_導出到Excel" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_导出到Excel].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_导出到Excel].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.ReceClaimRecord" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.ReceClaimRecord" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.ReceClaimRecord" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_导出到Excel].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_导出到Excel].extendedProperty.orgRelation">
+            <lang locale="en_US" value="Company" />
+            <lang locale="zh_CN" value="Company" />
+            <lang locale="zh_TW" value="Company" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_导出到Excel].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_导出到Excel].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.SAP对接配置" />
+            <lang locale="zh_HK" value="系統.妙可藍多.SAP對接配置" />
+            <lang locale="zh_TW" value="系統.妙可藍多.SAP對接配置" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_查看].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收款认领记录_查看" />
+            <lang locale="zh_HK" value="收款認領記錄_查看" />
+            <lang locale="zh_TW" value="收款認領記錄_查看" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_查看].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_查看].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.ReceClaimRecord" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.ReceClaimRecord" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.ReceClaimRecord" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_查看].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_查看].extendedProperty.orgRelation">
+            <lang locale="en_US" value="Company" />
+            <lang locale="zh_CN" value="Company" />
+            <lang locale="zh_TW" value="Company" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_查看].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_查看].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.SAP对接配置" />
+            <lang locale="zh_HK" value="系統.妙可藍多.SAP對接配置" />
+            <lang locale="zh_TW" value="系統.妙可藍多.SAP對接配置" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_查询].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收款认领记录_查询" />
+            <lang locale="zh_HK" value="收款認領記錄_查詢" />
+            <lang locale="zh_TW" value="收款認領記錄_查詢" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_查询].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_查询].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.ReceClaimRecord" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.ReceClaimRecord" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.ReceClaimRecord" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_查询].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_查询].extendedProperty.orgRelation">
+            <lang locale="en_US" value="Company" />
+            <lang locale="zh_CN" value="Company" />
+            <lang locale="zh_TW" value="Company" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_查询].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_查询].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.SAP对接配置" />
+            <lang locale="zh_HK" value="系統.妙可藍多.SAP對接配置" />
+            <lang locale="zh_TW" value="系統.妙可藍多.SAP對接配置" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_界面显示].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收款认领记录_界面显示" />
+            <lang locale="zh_HK" value="收款認領記錄_介面顯示" />
+            <lang locale="zh_TW" value="收款認領記錄_介面顯示" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_界面显示].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_界面显示].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.ReceClaimRecord" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.ReceClaimRecord" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.ReceClaimRecord" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_界面显示].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_界面显示].extendedProperty.orgRelation">
+            <lang locale="en_US" value="Company" />
+            <lang locale="zh_CN" value="Company" />
+            <lang locale="zh_TW" value="Company" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_界面显示].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_界面显示].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.SAP对接配置" />
+            <lang locale="zh_HK" value="系統.妙可藍多.SAP對接配置" />
+            <lang locale="zh_TW" value="系統.妙可藍多.SAP對接配置" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_集合保存].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收款认领记录_集合保存" />
+            <lang locale="zh_HK" value="收款認領記錄_集合保存" />
+            <lang locale="zh_TW" value="收款認領記錄_集合保存" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_集合保存].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_集合保存].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.ReceClaimRecord" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.ReceClaimRecord" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.ReceClaimRecord" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_集合保存].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_集合保存].extendedProperty.orgRelation">
+            <lang locale="en_US" value="Company" />
+            <lang locale="zh_CN" value="Company" />
+            <lang locale="zh_TW" value="Company" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_集合保存].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_集合保存].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.SAP对接配置" />
+            <lang locale="zh_HK" value="系統.妙可藍多.SAP對接配置" />
+            <lang locale="zh_TW" value="系統.妙可藍多.SAP對接配置" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_集合新增].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收款认领记录_集合新增" />
+            <lang locale="zh_HK" value="收款認領記錄_集合新增" />
+            <lang locale="zh_TW" value="收款認領記錄_集合新增" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_集合新增].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_集合新增].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.ReceClaimRecord" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.ReceClaimRecord" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.ReceClaimRecord" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_集合新增].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_集合新增].extendedProperty.orgRelation">
+            <lang locale="en_US" value="Company" />
+            <lang locale="zh_CN" value="Company" />
+            <lang locale="zh_TW" value="Company" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_集合新增].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_集合新增].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.SAP对接配置" />
+            <lang locale="zh_HK" value="系統.妙可藍多.SAP對接配置" />
+            <lang locale="zh_TW" value="系統.妙可藍多.SAP對接配置" />
+        </rs>
+    </resource>
+</permission>
+

@@ -16,6 +16,26 @@ public class SAPInterfaceLogEditUI extends AbstractSAPInterfaceLogEditUI
 {
     private static final Logger logger = CoreUIObject.getLogger(SAPInterfaceLogEditUI.class);
     
+    @Override
+    public void onLoad() throws Exception {
+     	super.onLoad();
+     	
+     	this.btnAddNew.setVisible(false);
+     	this.btnEdit.setVisible(false);
+     	this.btnRemove.setVisible(false);
+     	this.btnCopy.setVisible(false);
+     	this.btnCreateFrom.setVisible(false);
+     	this.btnCreateTo.setVisible(false);
+     	this.btnAddLine.setVisible(false);
+     	
+     	this.menuItemAddNew.setVisible(false);
+     	this.menuItemEdit.setVisible(false);
+     	this.menuItemRemove.setVisible(false);
+     	this.menuItemCopy.setVisible(false);
+     	this.menuItemCreateFrom.setVisible(false);
+     	this.menuItemCreateTo.setVisible(false);
+     	
+    }
     /**
      * output class constructor
      */
