@@ -12,10 +12,12 @@ import com.kingdee.bos.metadata.entity.FilterItemInfo;
 import com.kingdee.bos.metadata.query.util.CompareType;
 import com.kingdee.bos.ui.face.CoreUIObject;
 import com.kingdee.bos.dao.IObjectValue;
+import com.kingdee.eas.common.client.SysContext;
 import com.kingdee.eas.fi.cas.IPaymentBill;
 import com.kingdee.eas.fi.cas.PaymentBillCollection;
 import com.kingdee.eas.fi.cas.PaymentBillFactory;
 import com.kingdee.eas.fi.cas.PaymentBillInfo;
+import com.kingdee.eas.fm.be.app.bankpay.BankPayingResultSynToOAUtil;
 import com.kingdee.eas.framework.*;
 import com.kingdee.eas.mkld.sapinterage.ReceClaimRecordFactory;
 import com.kingdee.eas.mkld.sapinterage.ReceClaimRecordInfo;
@@ -56,10 +58,14 @@ public class PaymentSendUI extends AbstractPaymentSendUI
         if(this.txtPaymentNo.getText() !=null && !"".equals(this.txtPaymentNo.getText() )){
         	ReceClaimRecordInfo receClaimInfo = new ReceClaimRecordInfo();
 			receClaimInfo.setNumber(this.txtPaymentNo.getText());
-			//receClaimInfo.setAgainClaimCusNo(info.getId().toString());
-			ReceClaimRecordFactory.getRemoteInstance().sentNoClaimMonthEnd(receClaimInfo);
-			MsgBox.showInfo("付款单同步OA完成");
-        }else
+   			try {
+				ReceClaimRecordFactory.getRemoteInstance().sentNoClaimMonthEnd(receClaimInfo);
+				MsgBox.showInfo("付款单同步OA完成");
+			} catch (Exception e1) {
+				MsgBox.showError(e1.getMessage());
+ 				e1.printStackTrace();
+			}
+         }else
         	MsgBox.showError("请输入付款单号");
     }
 

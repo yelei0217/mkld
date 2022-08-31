@@ -112,7 +112,7 @@ public class BankPayingResultSynToOAUtil {
 	    try {
 			IRowSet rs = DbUtil.executeQuery(ctx, sbr.toString());
 			if (rs.next() &&  rs.getObject("C") != null && !"".equals(rs.getObject("C").toString()) && 
-			  Integer.valueOf(rs.getObject("C").toString()).compareTo(Integer.valueOf(1)) > 0) {
+			  Integer.valueOf(rs.getObject("C").toString()).compareTo(Integer.valueOf(0)) > 0) {
 			  flag = true;
 			}
 		} catch (NumberFormatException e) {
@@ -130,7 +130,7 @@ public class BankPayingResultSynToOAUtil {
 			sbr.append(" bank.fname_l2 BANKNAME,p.CFOaBillID OAID , p.CFSourceSystem  TYPE,accou.FBANKACCOUNTNUMBER ZBANKN1,p.fnumber ZEASNUM from T_CAS_PaymentBill p ");
 			sbr.append(" inner join T_BE_BankPayingBill ep on ep.FSOURCEBILLID  = p.FID ");
 			sbr.append(" inner join  T_BD_AccountBanks  accou on  accou.fid = p.FPAYERACCOUNTBANKID ");
-			sbr.append(" inner  join  T_BD_Bank  bank on  bank.fid = accou.FBANK ");
+			sbr.append(" inner join  T_BD_Bank  bank on  bank.fid = accou.FBANK ");
 			sbr.append(" where ep.FSTATE =6 ");
 			if("p".equals(oper))// ¸¶¿îµ¥ºÅ
 				sbr.append("  and p.FNUMBER  ='").append(billId).append("'");

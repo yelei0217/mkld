@@ -58,39 +58,14 @@ public class ReceClaimRecordControllerBeanEx extends com.kingdee.eas.mkld.sapint
     	ReceClaimRecordInfo info = (ReceClaimRecordInfo)model;
 	     if(info.getNumber()!=null && !"".equals(info.getNumber()) ){
 	    	 String paymentNo = info.getNumber();
-//	    	 try {
-//	    		  IPaymentBill ibiz = PaymentBillFactory.getLocalInstance(ctx);
-//			  	  EntityViewInfo viewInfo = new EntityViewInfo();
-//			        FilterInfo filter = new FilterInfo();
-//			        filter.getFilterItems().add(new FilterItemInfo("number",paymentNo,CompareType.EQUALS));//付款单号
-//			        viewInfo.setFilter(filter);
-//			        if(ibiz.exists(filter)){
-//			     		PaymentBillCollection coll = ibiz.getPaymentBillCollection(viewInfo);
-//		        		if(coll !=null && coll.size() > 0){
-//		        			PaymentBillInfo pInfo = coll.get(0);
-//		        			BankPayingResultSynToOAUtil.synPayMentBill(ctx, pInfo.getId().toString());
-//		        		}else {
-//						     String str = String.format("付款单单号:%s不存在", new Object[] { paymentNo });
-//						     throw new EASBizException(new NumericExceptionSubItem(str, str));
-//				        }
-//			        }else {
-//					     String str = String.format("付款单单号:%s不存在", new Object[] { paymentNo });
-//					     throw new EASBizException(new NumericExceptionSubItem(str, str));
-//			        }
-//			} catch (EASBizException e) {
-// 				e.printStackTrace();
-//			} 
 	    	 
-	    	try {
 				if( BankPayingResultSynToOAUtil.judgePayMentExists(ctx,"p",paymentNo)){
 					BankPayingResultSynToOAUtil.synPayMentBillByBillNo(ctx,"p",paymentNo);
 				}else{
 				     String str = String.format("付款单单号:%s不存在", new Object[] { paymentNo });
-				     throw new EASBizException(new NumericExceptionSubItem(str, str));
+ 				    throw new BOSException("付款单发送异常【"+str+"】");
 				}
-			} catch (EASBizException e) {
- 				e.printStackTrace();
-			}
+			 
 	    		
 	     }
 	    	 
