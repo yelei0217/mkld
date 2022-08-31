@@ -7,7 +7,13 @@ import java.awt.event.*;
 
 import org.apache.log4j.Logger;
 import com.kingdee.bos.ui.face.CoreUIObject;
+import com.kingdee.bos.ui.face.IUIWindow;
+import com.kingdee.bos.ui.face.UIException;
+import com.kingdee.bos.ui.face.UIFactory;
+import com.kingdee.bos.ctrl.swing.KDWorkButton;
 import com.kingdee.bos.dao.IObjectValue;
+import com.kingdee.eas.common.client.OprtState;
+import com.kingdee.eas.common.client.UIContext;
 import com.kingdee.eas.framework.*;
 import com.kingdee.eas.mkld.sapinterage.ReceClaimSentFacadeFactory;
 import com.kingdee.eas.util.client.MsgBox;
@@ -31,6 +37,40 @@ public class ReceClaimRecordListUI extends AbstractReceClaimRecordListUI
      	//this.menuItemEdit.setVisible(false);
      	this.menuItemRemove.setVisible(false);
      	this.menuItemCreateTo.setVisible(false);
+     	
+    	KDWorkButton btnSend2OA = new KDWorkButton();
+		btnSend2OA.setText("付款单发送OA测试");// 设置按钮名称
+		btnSend2OA.setIcon(com.kingdee.eas.util.client.EASResource.getIcon("imgTbtn_time"));// 图标
+		toolBar.add(btnSend2OA);// 添加到工具栏
+		btnSend2OA.setVisible(true);// 设置可见
+		btnSend2OA.setEnabled(true);// 设置可用
+		btnSend2OA.addActionListener(new ActionListener() {// 添加点击事件
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				ShowPayMentSendWind();
+			}
+		 });
+    }
+    
+    private void ShowPayMentSendWind()
+    {
+        UIContext context = new UIContext(this);
+        try
+        {
+          String path = "com.kingdee.eas.mkld.sapinterage.client.PaymentSendUI";
+          IUIWindow window = UIFactory.createUIFactory("com.kingdee.eas.base.uiframe.client.UIModelDialogFactory").create(path, context, null, OprtState.VIEW);
+          window.show();
+          refreshList();
+        }
+        catch (UIException e)
+        {
+          e.printStackTrace();
+        }
+        catch (Exception e)
+        {
+          e.printStackTrace();
+        }
+    
     }
     
     /**

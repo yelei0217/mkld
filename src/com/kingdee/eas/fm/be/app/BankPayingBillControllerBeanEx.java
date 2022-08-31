@@ -24,7 +24,10 @@ public class BankPayingBillControllerBeanEx extends BankPayingBillControllerBean
 		 if(InterfaceResource.MKLD_DB_ID.equals(ctx.getAIS())){
 			for (IObjectPK objectPK : pks) {
 				//判断oa 是否符合传递条件
-				BankPayingResultSynToOAUtil.synPayMentBill(ctx, objectPK.toString());
+				//BankPayingResultSynToOAUtil.synPayMentBill(ctx, objectPK.toString());
+				
+				if(BankPayingResultSynToOAUtil.judgePayMentExists(ctx, "ep", objectPK.toString()))
+					BankPayingResultSynToOAUtil.synPayMentBillByBillNo(ctx, "ep", objectPK.toString());
 			}
 		 }
  		return result;
