@@ -5,6 +5,7 @@ import org.apache.log4j.Logger;
 import com.kingdee.bos.BOSException;
 import com.kingdee.bos.Context;
 import com.kingdee.eas.fm.be.app.bankpay.BankPayingResultSynToOAUtil;
+import com.kingdee.eas.mkld.sapinterage.app.util.CustmerUtil;
 
 public class SyncDBCusFacadeControllerBean extends AbstractSyncDBCusFacadeControllerBean
 {
@@ -15,7 +16,9 @@ public class SyncDBCusFacadeControllerBean extends AbstractSyncDBCusFacadeContro
 	protected void _SyncCustomer(Context ctx, String data) throws BOSException {
 		// TODO Auto-generated method stub
 		super._SyncCustomer(ctx, data);
-		BankPayingResultSynToOAUtil.synPayMentBill(ctx, "");
+		//BankPayingResultSynToOAUtil.synPayMentBill(ctx, "");
+		CustmerUtil custutil = new CustmerUtil();
+		custutil.DoCustomer(ctx, data);
 	}
     
     

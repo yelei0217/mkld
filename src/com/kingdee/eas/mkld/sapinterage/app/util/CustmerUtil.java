@@ -57,7 +57,7 @@ import com.kingdee.jdbc.rowset.IRowSet;
 
 public class CustmerUtil {
 	
-	private static String  url = "D:/org/";
+	private static String  url = "/customer";
 	private static void clearFiles(String workspaceRootPath){
     	File file = new File(workspaceRootPath);
     	if(file.exists()){ 
@@ -69,9 +69,12 @@ public class CustmerUtil {
         if (!dirFile.exists()) {//判断目录是否存在，不存在创建
             dirFile.mkdir();
         } 
+        
+        dirFile.setWritable(true, false);    //设置写权限，windows下不用此语句
+        dirFile.setReadable(true);//设置可读权限  
         try {
             //new FileWriter(path + "config.log", true)  设置true 在不覆盖以前文件的基础上继续写
-            BufferedWriter writer = new BufferedWriter(new FileWriter(path  +""+dateStr+".txt", true));
+            BufferedWriter writer = new BufferedWriter(new FileWriter(path  +"/"+dateStr+".txt", true));
             writer.write(content+"\r\n");//写入文件
             writer.flush();//清空缓冲区数据
             writer.close();//关闭读写流 
@@ -81,14 +84,19 @@ public class CustmerUtil {
     }
 	
 	public   String DoCustomer(Context ctx,String param) {
-		Date today = new Date(); 
-		Calendar c = Calendar.getInstance();
-		c.setTime(today);
-		c.add(Calendar.DAY_OF_MONTH, -1);
-		Date yesterday = c.getTime();//这是昨天
-	     
-		SimpleDateFormat forma = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-		String dateStr = forma.format(yesterday); 
+		String dateStr = "";
+		if(param.length() > 0){
+			Date today = new Date(); 
+			Calendar c = Calendar.getInstance();
+			c.setTime(today);
+			c.add(Calendar.DAY_OF_MONTH, -1);
+			Date yesterday = c.getTime();//这是昨天
+		     
+			SimpleDateFormat forma = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+			dateStr = forma.format(yesterday); 
+		}else{
+			dateStr = param;
+		}
 		
 		int num = 100;
 		int i = 1;
@@ -97,7 +105,7 @@ public class CustmerUtil {
 		Date date = new Date(); // this object contains the current date value 
 	  	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");  
 	  	String dateStrNow = formatter.format(date);
-	    clearFiles(url+dateStrNow+".txt");
+	    clearFiles(url+"/"+dateStrNow+".txt");
 	    
 		
 		SAPInterfaceLogInfo sAPInterfaceLogInfo= new SAPInterfaceLogInfo();
@@ -452,6 +460,5 @@ public class CustmerUtil {
 	 
 		return list;
 	}	
-	
 	
 }
