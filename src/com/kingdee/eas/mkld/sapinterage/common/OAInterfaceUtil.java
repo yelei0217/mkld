@@ -49,7 +49,6 @@ public class OAInterfaceUtil {
 	  }
 	  
 
-
 		public static String sendBankPayMessageToOAPost(String param,int oper) {
 			OutputStreamWriter out = null;
 	        BufferedReader in = null;
@@ -69,10 +68,11 @@ public class OAInterfaceUtil {
 	   	            //conn.setRequestProperty("connection", "Keep-Alive");
 	   	            //conn.setRequestProperty("user-agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1;SV1)");
 	   	          	conn.setRequestProperty("Content-Type", "application/json");
+	   	          	conn.setRequestProperty("Charset", "UTF-8");
 	   	          	conn.setRequestProperty("appid",InterfaceResource.oa_appid);
 	   	            conn.connect();
 	   	            // 获取URLConnection对象对应的输出流
-	   	            out = new OutputStreamWriter(conn.getOutputStream(), "GBK");
+	   	            out = new OutputStreamWriter(conn.getOutputStream(), "UTF-8");
 	   	            // 发送请求参数
 	   	            out.write(param);
 	   	            System.out.println("param------------------------"+param);
