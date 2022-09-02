@@ -65,8 +65,6 @@ public class ReceClaimRecordControllerBeanEx extends com.kingdee.eas.mkld.sapint
 				     String str = String.format("付款单单号:%s不存在", new Object[] { paymentNo });
  				    throw new BOSException("付款单发送异常【"+str+"】");
 				}
-			 
-	    		
 	     }
 	    	 
     }

@@ -24,6 +24,7 @@ import com.kingdee.eas.mkld.sapinterage.ReceClaimRecordInfo;
 import com.kingdee.eas.mkld.sapinterage.app.ClaimStatusMenu;
 import com.kingdee.eas.mkld.sapinterage.app.ClaimTypeMenu;
 import com.kingdee.eas.mkld.sapinterage.app.SendStatusMenu;
+import com.kingdee.eas.mkld.sapinterage.common.DMSInterfaceUtil;
 import com.kingdee.eas.util.client.MsgBox;
 
 /**
@@ -75,7 +76,9 @@ public class PaymentSendUI extends AbstractPaymentSendUI
     protected void btnCancel_actionPerformed(java.awt.event.ActionEvent e) throws Exception
     {
       //  super.btnCancel_actionPerformed(e);
-        this.disposeUIWindow();
+    	String result= DMSInterfaceUtil.sendCustomer2dms(this.txtPaymentNo.getText());
+    	MsgBox.showError("result:"+result);
+     //   this.disposeUIWindow();
     }
 
 
