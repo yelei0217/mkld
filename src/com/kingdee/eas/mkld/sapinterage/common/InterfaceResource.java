@@ -24,7 +24,7 @@ public class InterfaceResource {
 	public static final String oa_base_path ="http://180.169.95.237:9080";
 	
 	 /**OA 接口 路径  **/
-	public static final String oa_inteface_path ="/api/mkld/workflow/submitRequest";
+	public static final String oa_inteface_path ="/api/EASToOA/accountworkflow/submitRequest";
 	
 	 /**OA 接口 路径  **/
 	public static final String oa_appid ="AC41FDE9-5B3B-2CF9-FF02-84F0D1915A4F";
