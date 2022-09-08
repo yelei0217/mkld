@@ -1,5 +1,8 @@
 package com.kingdee.eas.mkld.sapinterage.common;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class InterfaceResource {
 	
 	 /**数据中心ID **/
@@ -56,5 +59,13 @@ public class InterfaceResource {
 	
 	/** DMS dms_base_path **/
 	public static String dms_base_path ="http://116.63.82.155:7000";
+	
+
+    public final static Map<String, String> Account_Business_Rale = new HashMap<String, String>() {
+        {
+            put("ORGUNIT","1");
+            put("POSITION","2");
+        }
+    };
 	
 }

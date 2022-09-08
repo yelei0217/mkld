@@ -76,9 +76,9 @@ public class PaymentSendUI extends AbstractPaymentSendUI
     protected void btnCancel_actionPerformed(java.awt.event.ActionEvent e) throws Exception
     {
       //  super.btnCancel_actionPerformed(e);
-    	String result= DMSInterfaceUtil.sendCustomer2dms(this.txtPaymentNo.getText());
-    	MsgBox.showError("result:"+result);
-     //   this.disposeUIWindow();
+//    	String result= DMSInterfaceUtil.sendCustomer2dms(this.txtPaymentNo.getText());
+//    	MsgBox.showError("result:"+result);
+        this.disposeUIWindow();
     }
 
 

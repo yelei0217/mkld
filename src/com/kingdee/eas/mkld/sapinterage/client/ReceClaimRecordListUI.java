@@ -50,6 +50,21 @@ public class ReceClaimRecordListUI extends AbstractReceClaimRecordListUI
 				ShowPayMentSendWind();
 			}
 		 });
+		
+		
+		KDWorkButton btnSend2DMS = new KDWorkButton();
+		btnSend2DMS.setText("客户发送DMS测试");// 设置按钮名称
+		btnSend2DMS.setIcon(com.kingdee.eas.util.client.EASResource.getIcon("imgTbtn_time"));// 图标
+		toolBar.add(btnSend2DMS);// 添加到工具栏
+		btnSend2DMS.setVisible(true);// 设置可见
+		btnSend2DMS.setEnabled(true);// 设置可用
+		btnSend2DMS.addActionListener(new ActionListener() {// 添加点击事件
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				ShowDMSSendWind();
+			}
+		 });
+		
     }
     
     private void ShowPayMentSendWind()
@@ -58,6 +73,28 @@ public class ReceClaimRecordListUI extends AbstractReceClaimRecordListUI
         try
         {
           String path = "com.kingdee.eas.mkld.sapinterage.client.PaymentSendUI";
+          IUIWindow window = UIFactory.createUIFactory("com.kingdee.eas.base.uiframe.client.UIModelDialogFactory").create(path, context, null, OprtState.VIEW);
+          window.show();
+          refreshList();
+        }
+        catch (UIException e)
+        {
+          e.printStackTrace();
+        }
+        catch (Exception e)
+        {
+          e.printStackTrace();
+        }
+    
+    }
+    
+    
+    private void ShowDMSSendWind()
+    {
+        UIContext context = new UIContext(this);
+        try
+        {
+          String path = "com.kingdee.eas.mkld.sapinterage.client.DmsSendUI";
           IUIWindow window = UIFactory.createUIFactory("com.kingdee.eas.base.uiframe.client.UIModelDialogFactory").create(path, context, null, OprtState.VIEW);
           window.show();
           refreshList();

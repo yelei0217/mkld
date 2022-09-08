@@ -35,7 +35,7 @@ public class DMSInterfaceUtil {
 		String result ="同步成功";
  		String toekn = loginGetToken();
 		if(toekn != null && !"".equals(toekn)){
-			result= sendPost(InterfaceResource.dms_base_path+"/api/teapi/dy-biz/1332196536108585058/1338657770815230044/",body,toekn);
+			result= sendPost(InterfaceResource.dms_base_path+"/api/teapi/dy-biz/948118654552248390/1566595601381068896",body,toekn);
 		}
 		return result;
 	}
