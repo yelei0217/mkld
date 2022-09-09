@@ -46,6 +46,7 @@ import com.kingdee.eas.mkld.sapinterage.app.SAPInterTypeMenu;
 import com.kingdee.eas.mkld.sapinterage.app.SendStatusMenu;
 import com.kingdee.eas.mkld.sapinterage.app.dto.MonthEndNoClaimDTO;
 import com.kingdee.eas.mkld.sapinterage.app.dto.ReceClaimDTO;
+import com.kingdee.eas.mkld.sapinterage.common.InterfaceResource;
 import com.kingdee.eas.mkld.sapinterage.common.SAPInterfaceUtil;
 import com.kingdee.eas.util.app.DbUtil;
 import com.kingdee.util.UuidException;
@@ -69,14 +70,16 @@ public class ReceClaimRecordUtil {
 	}
 	
 	/**
-	 *  付款申请单保存时 新增付款认领记录单
+	 *  收款单申请单保存时 新增付款认领记录单
 	 * @param ctx
 	 * @param rId 付款单ID
 	 */
 	public static void savaRecordBill(Context ctx,String rId){
 		try {
 			ReceivingBillInfo bInfo = ReceivingBillFactory.getLocalInstance(ctx).getReceivingBillInfo(new ObjectStringPK(rId));
-			if (bInfo.getSourceBillId() != null && !"".equals(bInfo.getSourceBillId())) {
+			//收款单-财务组织ID在   收款公司id集合
+			if (InterfaceResource.Rece_Company_Id_Sets.contains(bInfo.getCompany().getId().toString()) &&
+					bInfo.getSourceBillId() != null && !"".equals(bInfo.getSourceBillId())) {
 				String sId = bInfo.getSourceBillId();
 				String stype = BOSUuid.read(sId).getType().toString();
 				//交易明细
@@ -97,17 +100,20 @@ public class ReceClaimRecordUtil {
 						rInfo.setCustomerNo("800000");
 						rInfo.setClaimType(ClaimTypeMenu.CurrMonth);
 						rInfo.setClaimStatus(ClaimStatusMenu.No);
-						rInfo.setDmsSendStatus(SendStatusMenu.UnSent);
-
+						
+						boolean isCustoemr = false ;
 						if(bInfo.getPayerType()!=null && bInfo.getPayerType().getId() != null && !"".equals( bInfo.getPayerType().getId().toString())){
 							if("YW3xsAEJEADgAAUWwKgTB0c4VZA=".equals(bInfo.getPayerType().getId().toString()))//客户
 							{
 								rInfo.setCustomerNo(bInfo.getPayerNumber());
 							//	rInfo.setClaimType(ClaimTypeMenu.CurrMonth);
 								rInfo.setClaimStatus(ClaimStatusMenu.Yes);
-								rInfo.setDmsSendStatus(SendStatusMenu.SentS);
+								
+								isCustoemr = true;
 							}
-						}
+						} 
+						
+						
 						rInfo.setPayerName(tdInfo.getOppUnit());
 						rInfo.setDescription(tdInfo.getNumber());
 						rInfo.setAbstract(bInfo.getDescription());
@@ -120,7 +126,20 @@ public class ReceClaimRecordUtil {
 						rInfo.setYear(Integer.parseInt(bizdateStr.substring(0, 4)));
 						rInfo.setMonth(Integer.parseInt(bizdateStr.substring(5, 7)));
 						AccountBankInfo accountInfo = AccountBankFactory.getLocalInstance(ctx).getAccountBankInfo(new ObjectUuidPK(bInfo.getPayeeAccountBank().getId()));
-						rInfo.setBankAccount(accountInfo.getBankAccountNumber());
+						String bankAccount = accountInfo.getBankAccountNumber();
+						rInfo.setBankAccount(bankAccount);
+						
+						//根据收款银行账号获取事业部
+						if(InterfaceResource.Account_Business_Rale.get(bankAccount) !=null && "".equals(InterfaceResource.Account_Business_Rale.get(bankAccount))){
+							if(isCustoemr)
+								rInfo.setDmsSendStatus(SendStatusMenu.SentS);
+							else
+								rInfo.setDmsSendStatus(SendStatusMenu.UnSent);
+							
+						}else
+							rInfo.setDmsSendStatus(SendStatusMenu.SentS);
+						
+						
 						rInfo.setReceDate(bInfo.getBizDate());
 						rInfo.setReceAmount(bInfo.getActRecAmt());
 						rInfo.setLoans(BigDecimal.ZERO);//贷款

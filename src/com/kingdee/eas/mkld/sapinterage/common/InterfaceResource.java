@@ -1,7 +1,9 @@
 package com.kingdee.eas.mkld.sapinterage.common;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public class InterfaceResource {
 	
@@ -61,11 +63,32 @@ public class InterfaceResource {
 	public static String dms_base_path ="http://116.63.82.155:7000";
 	
 
+	/**
+	 *  银行账号 与事业部 对应关系
+	 */
     public final static Map<String, String> Account_Business_Rale = new HashMap<String, String>() {
         {
-            put("ORGUNIT","1");
-            put("POSITION","2");
+        	put("36770188000135700",	"北区（新）");
+        	put("310069192018800000000",	"南区（新）");
+        	put("216120100100138000",	"餐饮事业部");
+        	put("531902005810101",	"餐饮事业部");
+        	put("453382354794",	"电商事业部");
+        	put("3343210040038780",	"国际业务部");
+        	put("158809983345",	"北区事业部");
+        	put("22050147030000000000",	"北区事业部");
         }
     };
-	
+    
+     
+    /**
+     * 收款单 获取 公司id集合
+     */
+    public final static HashSet<String> Rece_Company_Id_Sets = new HashSet<String>(){
+    	{
+    		 add("M2MAAAAABA3M567U");//1100		上海妙可蓝多食品科技股份有限公司
+    		 add("M2MAAAAFzGHM567U");//1110		广泽乳业有限公司	  
+    		 add("M2MAAAAFzJvM567U");//1220		海南新芝仕食品科技有限公司
+    	}
+    };
+     	
 }

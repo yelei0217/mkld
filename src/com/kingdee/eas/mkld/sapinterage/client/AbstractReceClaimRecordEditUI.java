@@ -78,6 +78,7 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contcompanyNumber;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contAgainClaimCusNo;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contdmsSendStatus;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contBusDeptName;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtCreator;
     protected com.kingdee.bos.ctrl.swing.KDDatePicker kDDateCreateTime;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtLastUpdateUser;
@@ -110,6 +111,7 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
     protected com.kingdee.bos.ctrl.swing.KDTextField txtcompanyNumber;
     protected com.kingdee.bos.ctrl.swing.KDTextField txtAgainClaimCusNo;
     protected com.kingdee.bos.ctrl.swing.KDComboBox dmsSendStatus;
+    protected com.kingdee.bos.ctrl.swing.KDTextField txtBusDeptName;
     protected com.kingdee.eas.mkld.sapinterage.ReceClaimRecordInfo editData = null;
     protected ActionSentReceClaim actionSentReceClaim = null;
     protected ActionSentNoClaimMonthEnd actionSentNoClaimMonthEnd = null;
@@ -233,6 +235,7 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
         this.contcompanyNumber = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contAgainClaimCusNo = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contdmsSendStatus = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contBusDeptName = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.prmtCreator = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
         this.kDDateCreateTime = new com.kingdee.bos.ctrl.swing.KDDatePicker();
         this.prmtLastUpdateUser = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
@@ -265,6 +268,7 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
         this.txtcompanyNumber = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.txtAgainClaimCusNo = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.dmsSendStatus = new com.kingdee.bos.ctrl.swing.KDComboBox();
+        this.txtBusDeptName = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.contCreator.setName("contCreator");
         this.contCreateTime.setName("contCreateTime");
         this.contLastUpdateUser.setName("contLastUpdateUser");
@@ -297,6 +301,7 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
         this.contcompanyNumber.setName("contcompanyNumber");
         this.contAgainClaimCusNo.setName("contAgainClaimCusNo");
         this.contdmsSendStatus.setName("contdmsSendStatus");
+        this.contBusDeptName.setName("contBusDeptName");
         this.prmtCreator.setName("prmtCreator");
         this.kDDateCreateTime.setName("kDDateCreateTime");
         this.prmtLastUpdateUser.setName("prmtLastUpdateUser");
@@ -329,6 +334,7 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
         this.txtcompanyNumber.setName("txtcompanyNumber");
         this.txtAgainClaimCusNo.setName("txtAgainClaimCusNo");
         this.dmsSendStatus.setName("dmsSendStatus");
+        this.txtBusDeptName.setName("txtBusDeptName");
         // CoreUI		
         this.btnTraceUp.setVisible(false);		
         this.btnTraceDown.setVisible(false);		
@@ -514,6 +520,11 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
         this.contdmsSendStatus.setBoundLabelLength(100);		
         this.contdmsSendStatus.setBoundLabelUnderline(true);		
         this.contdmsSendStatus.setVisible(true);
+        // contBusDeptName		
+        this.contBusDeptName.setBoundLabelText(resHelper.getString("contBusDeptName.boundLabelText"));		
+        this.contBusDeptName.setBoundLabelLength(100);		
+        this.contBusDeptName.setBoundLabelUnderline(true);		
+        this.contBusDeptName.setVisible(true);
         // prmtCreator		
         this.prmtCreator.setEnabled(false);		
         this.prmtCreator.setVisible(false);
@@ -650,7 +661,12 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
         this.dmsSendStatus.setVisible(true);		
         this.dmsSendStatus.addItems(EnumUtils.getEnumList("com.kingdee.eas.mkld.sapinterage.app.SendStatusMenu").toArray());		
         this.dmsSendStatus.setRequired(false);
-        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {prmtFICompany,txtNumber,pkBizDate,txtDescription,prmtAuditor,prmtCreator,kDDateCreateTime,prmtLastUpdateUser,kDDateLastUpdateTime,txtPaymentId,txtpaymentNo,txttrsreq,txtyear,txtmonth,txtBankAccount,pkReceDate,txtReceAmount,txtLoans,txtMargin,txtDeposit,txtAbstract,pkAgainClaimDate,txtCustomerNo,ClaimType,ClaimStatus,txtPayerName,FirstSentFlag,SendSentFlag,txtCurrencyNo,txtcompanyNumber,txtAgainClaimCusNo,dmsSendStatus}));
+        // txtBusDeptName		
+        this.txtBusDeptName.setVisible(true);		
+        this.txtBusDeptName.setHorizontalAlignment(2);		
+        this.txtBusDeptName.setMaxLength(100);		
+        this.txtBusDeptName.setRequired(false);
+        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {prmtFICompany,txtNumber,pkBizDate,txtDescription,prmtAuditor,prmtCreator,kDDateCreateTime,prmtLastUpdateUser,kDDateLastUpdateTime,txtPaymentId,txtpaymentNo,txttrsreq,txtyear,txtmonth,txtBankAccount,pkReceDate,txtReceAmount,txtLoans,txtMargin,txtDeposit,txtAbstract,pkAgainClaimDate,txtCustomerNo,ClaimType,ClaimStatus,txtPayerName,FirstSentFlag,SendSentFlag,txtCurrencyNo,txtcompanyNumber,txtAgainClaimCusNo,dmsSendStatus,txtBusDeptName}));
         this.setFocusCycleRoot(true);
 		//Register control's property binding
 		registerBindings();
@@ -743,6 +759,8 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
         this.add(contAgainClaimCusNo, new KDLayout.Constraints(681, 52, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT_SCALE | KDLayout.Constraints.ANCHOR_RIGHT));
         contdmsSendStatus.setBounds(new Rectangle(28, 264, 270, 19));
         this.add(contdmsSendStatus, new KDLayout.Constraints(28, 264, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
+        contBusDeptName.setBounds(new Rectangle(28, 298, 270, 19));
+        this.add(contBusDeptName, new KDLayout.Constraints(28, 298, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT_SCALE));
         //contCreator
         contCreator.setBoundEditor(prmtCreator);
         //contCreateTime
@@ -807,6 +825,8 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
         contAgainClaimCusNo.setBoundEditor(txtAgainClaimCusNo);
         //contdmsSendStatus
         contdmsSendStatus.setBoundEditor(dmsSendStatus);
+        //contBusDeptName
+        contBusDeptName.setBoundEditor(txtBusDeptName);
 
     }
 
@@ -1014,7 +1034,8 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
 		dataBinder.registerBinding("CurrencyNo", String.class, this.txtCurrencyNo, "text");
 		dataBinder.registerBinding("companyNumber", String.class, this.txtcompanyNumber, "text");
 		dataBinder.registerBinding("AgainClaimCusNo", String.class, this.txtAgainClaimCusNo, "text");
-		dataBinder.registerBinding("dmsSendStatus", com.kingdee.eas.mkld.sapinterage.app.SendStatusMenu.class, this.dmsSendStatus, "selectedItem");		
+		dataBinder.registerBinding("dmsSendStatus", com.kingdee.eas.mkld.sapinterage.app.SendStatusMenu.class, this.dmsSendStatus, "selectedItem");
+		dataBinder.registerBinding("BusDeptName", String.class, this.txtBusDeptName, "text");		
 	}
 	//Regiester UI State
 	private void registerUIState(){		
@@ -1188,7 +1209,8 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
 		getValidateHelper().registerBindProperty("CurrencyNo", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("companyNumber", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("AgainClaimCusNo", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("dmsSendStatus", ValidateHelper.ON_SAVE);    		
+		getValidateHelper().registerBindProperty("dmsSendStatus", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("BusDeptName", ValidateHelper.ON_SAVE);    		
 	}
 
 
@@ -1280,6 +1302,7 @@ public abstract class AbstractReceClaimRecordEditUI extends com.kingdee.eas.fram
         sic.add(new SelectorItemInfo("companyNumber"));
         sic.add(new SelectorItemInfo("AgainClaimCusNo"));
         sic.add(new SelectorItemInfo("dmsSendStatus"));
+        sic.add(new SelectorItemInfo("BusDeptName"));
         return sic;
     }        
     	

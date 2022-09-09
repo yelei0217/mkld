@@ -37,6 +37,11 @@
             <value>i18nResource[com.kingdee.eas.mkld.sapinterage.client.SapinterageResource].resourceItems.resourceItem[SAPInterfaceLogQueryF7WindowTitle].value</value>
             <userDefined>true</userDefined>
         </resourceItem>
+        <resourceItem>
+            <name>ReceiptSentRecordQueryF7WindowTitle</name>
+            <value>i18nResource[com.kingdee.eas.mkld.sapinterage.client.SapinterageResource].resourceItems.resourceItem[ReceiptSentRecordQueryF7WindowTitle].value</value>
+            <userDefined>true</userDefined>
+        </resourceItem>
     </resourceItems>
     <resource>
         <rs key="i18nResource[com.kingdee.eas.mkld.sapinterage.client.SapinterageResource].alias">
@@ -56,6 +61,12 @@
             <lang locale="zh_CN" value="收款认领记录" />
             <lang locale="zh_HK" value="收款認領記錄" />
             <lang locale="zh_TW" value="收款認領記錄" />
+        </rs>
+        <rs key="i18nResource[com.kingdee.eas.mkld.sapinterage.client.SapinterageResource].resourceItems.resourceItem[ReceiptSentRecordQueryF7WindowTitle].value">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="回单发送记录" />
+            <lang locale="zh_HK" value="回單發送記錄" />
+            <lang locale="zh_TW" value="回單發送記錄" />
         </rs>
         <rs key="i18nResource[com.kingdee.eas.mkld.sapinterage.client.SapinterageResource].resourceItems.resourceItem[SAPIntegrateLogQueryF7WindowTitle].value">
             <lang locale="en_US" value="null" />

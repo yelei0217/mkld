@@ -302,6 +302,17 @@ public class AbstractReceClaimRecordInfo extends com.kingdee.eas.framework.CoreB
         setString("dmsSendStatus", item.getValue());
 		}
     }
+    /**
+     * Object:收款认领记录's 业务部名称property 
+     */
+    public String getBusDeptName()
+    {
+        return getString("BusDeptName");
+    }
+    public void setBusDeptName(String item)
+    {
+        setString("BusDeptName", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("841A1C2F");
