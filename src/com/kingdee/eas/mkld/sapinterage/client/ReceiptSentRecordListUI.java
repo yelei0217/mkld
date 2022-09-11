@@ -116,7 +116,7 @@ public class ReceiptSentRecordListUI extends AbstractReceiptSentRecordListUI
     private void doSentCustomer2DMS()
     {
      	try {
-			ReceClaimSentFacadeFactory.getRemoteInstance().SentReceiptRecord();
+			ReceClaimSentFacadeFactory.getRemoteInstance().sentCustomer2DMS();
 		} catch (BOSException e) {
  			e.printStackTrace();
 		}
