@@ -43,6 +43,39 @@ public class AbstractReceiptSentRecordInfo extends com.kingdee.eas.framework.Dat
         setString("SentFlag", item.getValue());
 		}
     }
+    /**
+     * Object:回单发送记录's 关联标记property 
+     */
+    public String getReceiptNo()
+    {
+        return getString("ReceiptNo");
+    }
+    public void setReceiptNo(String item)
+    {
+        setString("ReceiptNo", item);
+    }
+    /**
+     * Object:回单发送记录's 流水号property 
+     */
+    public String getTranPackageID()
+    {
+        return getString("TranPackageID");
+    }
+    public void setTranPackageID(String item)
+    {
+        setString("TranPackageID", item);
+    }
+    /**
+     * Object: 回单发送记录 's 公司 property 
+     */
+    public com.kingdee.eas.basedata.org.CompanyOrgUnitInfo getCompany()
+    {
+        return (com.kingdee.eas.basedata.org.CompanyOrgUnitInfo)get("Company");
+    }
+    public void setCompany(com.kingdee.eas.basedata.org.CompanyOrgUnitInfo item)
+    {
+        put("Company", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("314BE638");

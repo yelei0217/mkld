@@ -26,7 +26,7 @@
             <userDefined>false</userDefined>
             <classType>com.kingdee.bos.ctrl.swing.KDPanel</classType>
             <isContainer>true</isContainer>
-            <constraints>0,0,310,173</constraints>
+            <constraints>0,0,310,304</constraints>
             <tabIndex>0</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
@@ -84,7 +84,7 @@
             <userDefined>true</userDefined>
             <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
             <isContainer>true</isContainer>
-            <constraints>10,34,270,19,15</constraints>
+            <constraints>10,41,270,19,15</constraints>
             <tabIndex>0</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
@@ -126,7 +126,7 @@
             <userDefined>true</userDefined>
             <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
             <isContainer>true</isContainer>
-            <constraints>10,58,270,19,15</constraints>
+            <constraints>10,165,270,19,15</constraints>
             <tabIndex>0</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
@@ -168,7 +168,7 @@
             <userDefined>true</userDefined>
             <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
             <isContainer>true</isContainer>
-            <constraints>10,130,270,19,15</constraints>
+            <constraints>10,229,270,19,15</constraints>
             <tabIndex>0</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
@@ -224,7 +224,7 @@
             <userDefined>true</userDefined>
             <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
             <isContainer>true</isContainer>
-            <constraints>10,82,270,19,15</constraints>
+            <constraints>10,103,270,19,15</constraints>
             <tabIndex>0</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
@@ -273,7 +273,7 @@
             <userDefined>true</userDefined>
             <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
             <isContainer>true</isContainer>
-            <constraints>10,106,270,19,15</constraints>
+            <constraints>10,134,270,19,15</constraints>
             <tabIndex>0</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
@@ -308,6 +308,153 @@
                     <name>visible</name>
                     <type>boolean</type>
                     <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[contSentFlag].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="CoreUI" />
+            </parent>
+        </component>
+        <component>
+            <name>contReceiptNo</name>
+            <alias>uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[contReceiptNo].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
+            <isContainer>true</isContainer>
+            <constraints>10,72,270,19,15</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>LabelContainerLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>boundLabelText</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[contReceiptNo].properties.property[boundLabelText].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelLength</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[contReceiptNo].properties.property[boundLabelLength].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelUnderline</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[contReceiptNo].properties.property[boundLabelUnderline].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[contReceiptNo].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="CoreUI" />
+            </parent>
+        </component>
+        <component>
+            <name>contTranPackageID</name>
+            <alias>uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[contTranPackageID].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
+            <isContainer>true</isContainer>
+            <constraints>10,196,270,19,15</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>LabelContainerLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>boundLabelText</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[contTranPackageID].properties.property[boundLabelText].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelLength</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[contTranPackageID].properties.property[boundLabelLength].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelUnderline</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[contTranPackageID].properties.property[boundLabelUnderline].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[contTranPackageID].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="CoreUI" />
+            </parent>
+        </component>
+        <component>
+            <name>contCompany</name>
+            <alias>uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[contCompany].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
+            <isContainer>true</isContainer>
+            <constraints>10,263,270,19,15</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>LabelContainerLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>boundLabelText</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[contCompany].properties.property[boundLabelText].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelLength</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[contCompany].properties.property[boundLabelLength].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelUnderline</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[contCompany].properties.property[boundLabelUnderline].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[contCompany].properties.property[visible].value</value>
                     <isMultiLan>false</isMultiLan>
                     <userDefined>true</userDefined>
                 </property>
@@ -555,6 +702,198 @@
                     <bindingObject>editData</bindingObject>
                     <bindingField>SentFlag</bindingField>
                     <fieldType>com.kingdee.eas.mkld.sapinterage.app.SendStatusMenu</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>true</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
+            <name>txtReceiptNo</name>
+            <alias>uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[txtReceiptNo].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDTextField</classType>
+            <isContainer>false</isContainer>
+            <constraints>3</constraints>
+            <tabIndex>12</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[txtReceiptNo].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>horizontalAlignment</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[txtReceiptNo].properties.property[horizontalAlignment].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>maxLength</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[txtReceiptNo].properties.property[maxLength].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>required</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[txtReceiptNo].properties.property[required].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="contReceiptNo" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>text</propertyName>
+                    <propertyType>java.lang.String</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>ReceiptNo</bindingField>
+                    <fieldType>String</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>true</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
+            <name>txtTranPackageID</name>
+            <alias>uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[txtTranPackageID].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDTextField</classType>
+            <isContainer>false</isContainer>
+            <constraints>3</constraints>
+            <tabIndex>13</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[txtTranPackageID].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>horizontalAlignment</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[txtTranPackageID].properties.property[horizontalAlignment].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>maxLength</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[txtTranPackageID].properties.property[maxLength].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>required</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[txtTranPackageID].properties.property[required].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="contTranPackageID" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>text</propertyName>
+                    <propertyType>java.lang.String</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>TranPackageID</bindingField>
+                    <fieldType>String</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>true</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
+            <name>prmtCompany</name>
+            <alias>uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[prmtCompany].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox</classType>
+            <isContainer>false</isContainer>
+            <constraints>7</constraints>
+            <tabIndex>14</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <properties>
+                <property>
+                    <name>queryInfo</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[prmtCompany].properties.property[queryInfo].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[prmtCompany].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>editable</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[prmtCompany].properties.property[editable].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>displayFormat</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[prmtCompany].properties.property[displayFormat].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>editFormat</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[prmtCompany].properties.property[editFormat].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>commitFormat</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[prmtCompany].properties.property[commitFormat].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>required</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[prmtCompany].properties.property[required].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="contCompany" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>data</propertyName>
+                    <propertyType>java.lang.Object</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>Company</bindingField>
+                    <fieldType>com.kingdee.eas.basedata.org.CompanyOrgUnitInfo</fieldType>
                     <accessType>2</accessType>
                     <autoMode>false</autoMode>
                     <herited>false</herited>
@@ -832,6 +1171,66 @@
             <lang locale="zh_HK" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[contCompany].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[contCompany].properties.property[boundLabelLength].value">
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_CN" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[contCompany].properties.property[boundLabelText].value">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司" />
+            <lang locale="zh_HK" value="公司" />
+            <lang locale="zh_TW" value="公司" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[contCompany].properties.property[boundLabelUnderline].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[contCompany].properties.property[visible].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[contReceiptNo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[contReceiptNo].properties.property[boundLabelLength].value">
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_CN" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[contReceiptNo].properties.property[boundLabelText].value">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="关联标记" />
+            <lang locale="zh_HK" value="關聯標記" />
+            <lang locale="zh_TW" value="關聯標記" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[contReceiptNo].properties.property[boundLabelUnderline].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[contReceiptNo].properties.property[visible].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
         <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[contSentFlag].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
@@ -857,6 +1256,36 @@
             <lang locale="zh_TW" value="true" />
         </rs>
         <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[contSentFlag].properties.property[visible].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[contTranPackageID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[contTranPackageID].properties.property[boundLabelLength].value">
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_CN" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[contTranPackageID].properties.property[boundLabelText].value">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="流水号" />
+            <lang locale="zh_HK" value="流水號" />
+            <lang locale="zh_TW" value="流水號" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[contTranPackageID].properties.property[boundLabelUnderline].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[contTranPackageID].properties.property[visible].value">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_HK" value="true" />
@@ -954,9 +1383,9 @@
         </rs>
         <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[kDLabelContainer3].properties.property[boundLabelText].value">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="关联标记:" />
-            <lang locale="zh_HK" value="關聯標記:" />
-            <lang locale="zh_TW" value="關聯標記:" />
+            <lang locale="zh_CN" value="对账标识码:" />
+            <lang locale="zh_HK" value="對賬標識碼:" />
+            <lang locale="zh_TW" value="對賬標識碼:" />
         </rs>
         <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[kDLabelContainer3].properties.property[boundLabelUnderline].value">
             <lang locale="en_US" value="true" />
@@ -1024,6 +1453,54 @@
             <lang locale="zh_HK" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[prmtCompany].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司" />
+            <lang locale="zh_HK" value="公司" />
+            <lang locale="zh_TW" value="公司" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[prmtCompany].properties.property[commitFormat].value">
+            <lang locale="en_US" value="$number$" />
+            <lang locale="zh_CN" value="$number$" />
+            <lang locale="zh_HK" value="$number$" />
+            <lang locale="zh_TW" value="$number$" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[prmtCompany].properties.property[displayFormat].value">
+            <lang locale="en_US" value="$name$" />
+            <lang locale="zh_CN" value="$name$" />
+            <lang locale="zh_HK" value="$name$" />
+            <lang locale="zh_TW" value="$name$" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[prmtCompany].properties.property[editFormat].value">
+            <lang locale="en_US" value="$number$" />
+            <lang locale="zh_CN" value="$number$" />
+            <lang locale="zh_HK" value="$number$" />
+            <lang locale="zh_TW" value="$number$" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[prmtCompany].properties.property[editable].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[prmtCompany].properties.property[queryInfo].value">
+            <lang locale="en_US" value="com.kingdee.eas.basedata.org.app.CompanyOrgUnitQuery" />
+            <lang locale="zh_CN" value="com.kingdee.eas.basedata.org.app.CompanyOrgUnitQuery" />
+            <lang locale="zh_HK" value="com.kingdee.eas.basedata.org.app.CompanyOrgUnitQuery" />
+            <lang locale="zh_TW" value="com.kingdee.eas.basedata.org.app.CompanyOrgUnitQuery" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[prmtCompany].properties.property[required].value">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[prmtCompany].properties.property[visible].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
         <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[sourceType].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="来源类型" />
@@ -1072,6 +1549,36 @@
             <lang locale="zh_HK" value="80" />
             <lang locale="zh_TW" value="80" />
         </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[txtReceiptNo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="关联标记" />
+            <lang locale="zh_HK" value="關聯標記" />
+            <lang locale="zh_TW" value="關聯標記" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[txtReceiptNo].properties.property[horizontalAlignment].value">
+            <lang locale="en_US" value="2" />
+            <lang locale="zh_CN" value="2" />
+            <lang locale="zh_HK" value="2" />
+            <lang locale="zh_TW" value="2" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[txtReceiptNo].properties.property[maxLength].value">
+            <lang locale="en_US" value="255" />
+            <lang locale="zh_CN" value="255" />
+            <lang locale="zh_HK" value="255" />
+            <lang locale="zh_TW" value="255" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[txtReceiptNo].properties.property[required].value">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[txtReceiptNo].properties.property[visible].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
         <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[txtSimpleName].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="简称" />
@@ -1083,6 +1590,36 @@
             <lang locale="zh_CN" value="80" />
             <lang locale="zh_HK" value="80" />
             <lang locale="zh_TW" value="80" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[txtTranPackageID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="流水号" />
+            <lang locale="zh_HK" value="流水號" />
+            <lang locale="zh_TW" value="流水號" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[txtTranPackageID].properties.property[horizontalAlignment].value">
+            <lang locale="en_US" value="2" />
+            <lang locale="zh_CN" value="2" />
+            <lang locale="zh_HK" value="2" />
+            <lang locale="zh_TW" value="2" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[txtTranPackageID].properties.property[maxLength].value">
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_CN" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[txtTranPackageID].properties.property[required].value">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].components.component[txtTranPackageID].properties.property[visible].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
         </rs>
         <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI].description">
             <lang locale="en_US" value="null" />

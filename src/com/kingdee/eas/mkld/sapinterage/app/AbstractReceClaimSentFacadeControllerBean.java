@@ -101,4 +101,92 @@ public abstract class AbstractReceClaimSentFacadeControllerBean extends Abstract
         return null;
     }
 
+    public String genReceiptRecord(Context ctx) throws BOSException
+    {
+        try {
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("0a2b4024-51aa-46aa-936b-0b03bb5611e6"), new Object[]{ctx});
+            invokeServiceBefore(svcCtx);
+            if(!svcCtx.invokeBreak()) {
+            String retValue = (String)_genReceiptRecord(ctx);
+            svcCtx.setMethodReturnValue(retValue);
+            }
+            invokeServiceAfter(svcCtx);
+            return (String)svcCtx.getMethodReturnValue();
+        } catch (BOSException ex) {
+            throw ex;
+        } finally {
+            super.cleanUpServiceState();
+        }
+    }
+    protected String _genReceiptRecord(Context ctx) throws BOSException
+    {    	
+        return null;
+    }
+
+    public String SentReceiptRecord(Context ctx) throws BOSException
+    {
+        try {
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("accce457-4c6d-4fa7-a6a1-c5c51e80f479"), new Object[]{ctx});
+            invokeServiceBefore(svcCtx);
+            if(!svcCtx.invokeBreak()) {
+            String retValue = (String)_SentReceiptRecord(ctx);
+            svcCtx.setMethodReturnValue(retValue);
+            }
+            invokeServiceAfter(svcCtx);
+            return (String)svcCtx.getMethodReturnValue();
+        } catch (BOSException ex) {
+            throw ex;
+        } finally {
+            super.cleanUpServiceState();
+        }
+    }
+    protected String _SentReceiptRecord(Context ctx) throws BOSException
+    {    	
+        return null;
+    }
+
+    public String sentCustomer2DMS(Context ctx) throws BOSException
+    {
+        try {
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("d3fef3b8-d5b6-4cde-9df5-f2abd1275bfe"), new Object[]{ctx});
+            invokeServiceBefore(svcCtx);
+            if(!svcCtx.invokeBreak()) {
+            String retValue = (String)_sentCustomer2DMS(ctx);
+            svcCtx.setMethodReturnValue(retValue);
+            }
+            invokeServiceAfter(svcCtx);
+            return (String)svcCtx.getMethodReturnValue();
+        } catch (BOSException ex) {
+            throw ex;
+        } finally {
+            super.cleanUpServiceState();
+        }
+    }
+    protected String _sentCustomer2DMS(Context ctx) throws BOSException
+    {    	
+        return null;
+    }
+
+    public String updateClaimStaByCusName(Context ctx) throws BOSException
+    {
+        try {
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("c25d55ea-3263-436e-9049-1ae1854174f8"), new Object[]{ctx});
+            invokeServiceBefore(svcCtx);
+            if(!svcCtx.invokeBreak()) {
+            String retValue = (String)_updateClaimStaByCusName(ctx);
+            svcCtx.setMethodReturnValue(retValue);
+            }
+            invokeServiceAfter(svcCtx);
+            return (String)svcCtx.getMethodReturnValue();
+        } catch (BOSException ex) {
+            throw ex;
+        } finally {
+            super.cleanUpServiceState();
+        }
+    }
+    protected String _updateClaimStaByCusName(Context ctx) throws BOSException
+    {    	
+        return null;
+    }
+
 }

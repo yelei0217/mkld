@@ -175,6 +175,48 @@
             <scale>0</scale>
             <precision>0</precision>
         </column>
+        <column>
+            <name>CFReceiptNo</name>
+            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceiptSentRecord].columns.column[CFReceiptNo].alias</alias>
+            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceiptSentRecord].columns.column[CFReceiptNo].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>255</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFTranPackageID</name>
+            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceiptSentRecord].columns.column[CFTranPackageID].alias</alias>
+            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceiptSentRecord].columns.column[CFTranPackageID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>100</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFCompanyID</name>
+            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceiptSentRecord].columns.column[CFCompanyID].alias</alias>
+            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceiptSentRecord].columns.column[CFCompanyID].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
     </columns>
     <primaryKey>
         <name>CPK_SIG_RsptSRIo28</name>
@@ -247,6 +289,25 @@
                 </fkColumnPair>
             </fkColumnPairs>
         </foreignKey>
+        <foreignKey>
+            <name>CFK_SIG_SIGRSROm0t</name>
+            <userDefined>true</userDefined>
+            <refTable>
+                <key name="package" value="com.kingdee.eas.basedata.org" />
+                <key name="name" value="T_ORG_Company" />
+            </refTable>
+            <fkColumnPairs>
+                <fkColumnPair>
+                    <sequence>0</sequence>
+                    <refColumn>
+                        <key name="name" value="FID" />
+                    </refColumn>
+                    <fkColumn>
+                        <key name="name" value="CFCompanyID" />
+                    </fkColumn>
+                </fkColumnPair>
+            </fkColumnPairs>
+        </foreignKey>
     </foreignKeys>
     <resource>
         <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceiptSentRecord].alias">
@@ -254,6 +315,30 @@
             <lang locale="zh_CN" value="回单发送记录" />
             <lang locale="zh_HK" value="回單發送記錄" />
             <lang locale="zh_TW" value="回單發送記錄" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceiptSentRecord].columns.column[CFCompanyID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司" />
+            <lang locale="zh_HK" value="公司" />
+            <lang locale="zh_TW" value="公司" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceiptSentRecord].columns.column[CFCompanyID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司" />
+            <lang locale="zh_HK" value="公司" />
+            <lang locale="zh_TW" value="公司" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceiptSentRecord].columns.column[CFReceiptNo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="关联标记" />
+            <lang locale="zh_HK" value="關聯標記" />
+            <lang locale="zh_TW" value="關聯標記" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceiptSentRecord].columns.column[CFReceiptNo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="关联标记" />
+            <lang locale="zh_HK" value="關聯標記" />
+            <lang locale="zh_TW" value="關聯標記" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceiptSentRecord].columns.column[CFSentFlag].alias">
             <lang locale="en_US" value="null" />
@@ -278,6 +363,18 @@
             <lang locale="zh_CN" value="来源类型" />
             <lang locale="zh_HK" value="來源類型" />
             <lang locale="zh_TW" value="來源類型" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceiptSentRecord].columns.column[CFTranPackageID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="流水号" />
+            <lang locale="zh_HK" value="流水號" />
+            <lang locale="zh_TW" value="流水號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceiptSentRecord].columns.column[CFTranPackageID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="流水号" />
+            <lang locale="zh_HK" value="流水號" />
+            <lang locale="zh_TW" value="流水號" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceiptSentRecord].columns.column[FControlUnitID].alias">
             <lang locale="en_US" value="null" />
@@ -395,9 +492,9 @@
         </rs>
         <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceiptSentRecord].columns.column[FSimpleName].description">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="关联标记" />
-            <lang locale="zh_HK" value="關聯標記" />
-            <lang locale="zh_TW" value="關聯標記" />
+            <lang locale="zh_CN" value="对账标识码" />
+            <lang locale="zh_HK" value="對賬標識碼" />
+            <lang locale="zh_TW" value="對賬標識碼" />
         </rs>
         <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ReceiptSentRecord].description">
             <lang locale="en_US" value="null" />

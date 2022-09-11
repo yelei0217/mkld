@@ -48,6 +48,19 @@
                 <key name="name" value="User" />
             </entityRef>
         </subEntity>
+        <subEntity>
+            <name>Company</name>
+            <alias>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceiptSentRecordQuery].subObjects.subEntity[Company].alias</alias>
+            <userDefined>true</userDefined>
+            <query>
+                <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
+                <key name="name" value="ReceiptSentRecordQuery" />
+            </query>
+            <entityRef>
+                <key name="package" value="com.kingdee.eas.basedata.org.app" />
+                <key name="name" value="CompanyOrgUnit" />
+            </entityRef>
+        </subEntity>
     </subObjects>
     <units>
         <propertyUnit>
@@ -577,6 +590,161 @@
                 <key name="name" value="ReceiptSentRecordQuery" />
             </query>
         </queryField>
+        <queryField>
+            <name>ReceiptNo</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceiptSentRecordQuery].units.queryField[ReceiptNo].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>f3ff388b-1261-4ed6-b8d7-57f35f3790ae</key>
+                    <parentUnit>
+                        <key name="name" value="ReceiptNo" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="ReceiptSentRecord" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="ReceiptNo" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
+                <key name="name" value="ReceiptSentRecordQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>TranPackageID</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceiptSentRecordQuery].units.queryField[TranPackageID].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>79c89fba-66a6-492d-aab4-2b817fddc29f</key>
+                    <parentUnit>
+                        <key name="name" value="TranPackageID" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="ReceiptSentRecord" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="TranPackageID" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
+                <key name="name" value="ReceiptSentRecordQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>Company.name</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceiptSentRecordQuery].units.queryField[Company.name].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>String</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>88792e0a-b7d7-4bee-adf6-98d650c31dc8</key>
+                    <parentUnit>
+                        <key name="name" value="Company.name" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Company" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="name" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
+                <key name="name" value="ReceiptSentRecordQuery" />
+            </query>
+        </queryField>
+        <propertyUnit>
+            <name>0c4c59e3-af04-419c-9a29-7c020d3af9f0</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceiptSentRecordQuery].units.propertyUnit[0c4c59e3-af04-419c-9a29-7c020d3af9f0].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>a7aa42a6-48e0-406b-a246-7b54ef7ffd96</key>
+                    <parentUnit>
+                        <key name="name" value="0c4c59e3-af04-419c-9a29-7c020d3af9f0" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="ReceiptSentRecord" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="Company" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
+                <key name="name" value="ReceiptSentRecordQuery" />
+            </query>
+        </propertyUnit>
+        <propertyUnit>
+            <name>ac01fbc9-1277-418c-bbc8-727d0020496c</name>
+            <userDefined>true</userDefined>
+            <formulaString />
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceiptSentRecordQuery].units.propertyUnit[ac01fbc9-1277-418c-bbc8-727d0020496c].displayName</displayName>
+            <groupType />
+            <isSelector>false</isSelector>
+            <isFilter>false</isFilter>
+            <isSorter>false</isSorter>
+            <isParameter>false</isParameter>
+            <returnType />
+            <propertyRefs>
+                <propertyRef>
+                    <key>fb28d017-a312-4746-bfb2-6623d8f7179b</key>
+                    <parentUnit>
+                        <key name="name" value="ac01fbc9-1277-418c-bbc8-727d0020496c" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="Company" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="id" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
+                <key name="name" value="ReceiptSentRecordQuery" />
+            </query>
+        </propertyUnit>
     </units>
     <defaultFilter>
         <name>defaultFilter</name>
@@ -662,6 +830,36 @@
                     </rightField>
                     <join>
                         <key name="name" value="NewJoin0" />
+                    </join>
+                </joinItem>
+            </joinItems>
+            <query>
+                <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
+                <key name="name" value="ReceiptSentRecordQuery" />
+            </query>
+        </join>
+        <join>
+            <name>6283ef60-3d24-41ba-95eb-ae7808548b1c</name>
+            <formulaString>#0</formulaString>
+            <type>LEFT OUTER JOIN</type>
+            <leftObject>
+                <key name="name" value="ReceiptSentRecord" />
+            </leftObject>
+            <rightObject>
+                <key name="name" value="Company" />
+            </rightObject>
+            <joinItems>
+                <joinItem>
+                    <name>28ad2764-f55e-4fa7-b0a9-9a4d76473f68</name>
+                    <compareType>=</compareType>
+                    <leftField>
+                        <key name="name" value="0c4c59e3-af04-419c-9a29-7c020d3af9f0" />
+                    </leftField>
+                    <rightField>
+                        <key name="name" value="ac01fbc9-1277-418c-bbc8-727d0020496c" />
+                    </rightField>
+                    <join>
+                        <key name="name" value="6283ef60-3d24-41ba-95eb-ae7808548b1c" />
                     </join>
                 </joinItem>
             </joinItems>
@@ -756,6 +954,12 @@
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceiptSentRecordQuery].subObjects.subEntity[Company].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
         <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceiptSentRecordQuery].subObjects.subEntity[ReceiptSentRecord].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
@@ -769,6 +973,12 @@
             <lang locale="zh_TW" value="null" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceiptSentRecordQuery].subObjects.subEntity[lastUpdateUser].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceiptSentRecordQuery].units.propertyUnit[0c4c59e3-af04-419c-9a29-7c020d3af9f0].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
@@ -798,6 +1008,49 @@
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceiptSentRecordQuery].units.propertyUnit[ac01fbc9-1277-418c-bbc8-727d0020496c].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceiptSentRecordQuery].units.queryField[Company.name].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司" />
+            <lang locale="zh_HK" value="公司" />
+            <lang locale="zh_TW" value="公司" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceiptSentRecordQuery].units.queryField[Company.name].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceiptSentRecordQuery].units.queryField[Company.name].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceiptSentRecordQuery].units.queryField[Company.name].extendedProperty.isUsingF7">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceiptSentRecordQuery].units.queryField[ReceiptNo].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="关联标记" />
+            <lang locale="zh_HK" value="關聯標記" />
+            <lang locale="zh_TW" value="關聯標記" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceiptSentRecordQuery].units.queryField[ReceiptNo].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceiptSentRecordQuery].units.queryField[ReceiptNo].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
         <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceiptSentRecordQuery].units.queryField[SentFlag].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="发送状态" />
@@ -810,6 +1063,22 @@
             <lang locale="zh_TW" value="true" />
         </rs>
         <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceiptSentRecordQuery].units.queryField[SentFlag].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceiptSentRecordQuery].units.queryField[TranPackageID].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="流水号" />
+            <lang locale="zh_HK" value="流水號" />
+            <lang locale="zh_TW" value="流水號" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceiptSentRecordQuery].units.queryField[TranPackageID].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ReceiptSentRecordQuery].units.queryField[TranPackageID].extendedProperty.isCommonQuerySorter">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />

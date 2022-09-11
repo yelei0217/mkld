@@ -312,7 +312,7 @@ public class ReceClaimRecordUtil {
 	 * @throws BOSException
 	 * @author Lei.ye
 	 * 
-	 *  EAS收款认领结果传SAP-本月认领
+	 *  EAS收款认领结果传SAP-本月认领 二次发送
 	 */
 	public static void doSendClaimAgain(Context ctx) throws BOSException {
 		//获取已认领，一次未发送的记录数据
@@ -471,4 +471,46 @@ public class ReceClaimRecordUtil {
 		    	 updateRecordSendSta(ctx, rIds,"2",InterResultMenu.FAIL_VALUE);
         } 
 	}
+	
+	
+	/***
+	 * 修改认领记录单状态
+	 * @param ctx 上下文
+	 * @param cusNumber 客户编码
+	 * @param cusName   客户名称
+	 * @throws BOSException
+	 */
+	public static void doUpdateClaimStaByCusName(Context ctx,String cusNumber,String cusName) throws BOSException {
+	
+		if(cusName !=null && !"".equals(cusName) && cusNumber !=null && !"".equals(cusNumber)){
+			
+			// 如果没有发送第一次，或者第一次发送失败
+			String updateSql = "update CT_SIG_ReceClaimRecord set CFCustomerNo='"+cusNumber+"',CFClaimStatus=1,CFDmsSendStatus=1,CFClaimType='A' where CFCustomerNo ='800000' and CFPayerName ='"+cusName+"' and CFFirstSentFlag != 1 and CFSendSentFlag = 0 ";
+			DbUtil.execute(ctx,updateSql);
+		
+			// 已完成月底未认领发送
+			updateSql = "update CT_SIG_ReceClaimRecord set CFAgainClaimCusNo='"+cusNumber+"',CFClaimStatus=1,CFDmsSendStatus=1,CFClaimType='B' where CFCustomerNo ='800000' and CFPayerName ='"+cusName+"' and CFFirstSentFlag = 1 and CFSendSentFlag != 1 ";
+			DbUtil.execute(ctx,updateSql);
+		
+		}
+		
+	}
+	
+	
+	
+
+	/**
+	 * 	当付款单付完款-根据付款单上扩展字段“收款单编号”修改认领记录单状态【客户编码默认：999999】
+	 * @param ctx	上下文
+	 * @param number 认领记录单 编号
+	 * @throws BOSException
+	 */
+	public static void doUpdateClaimStaByNumber(Context ctx,String number) throws BOSException {
+		if(number !=null && !"".equals(number)){
+			String updateSql = "update CT_SIG_ReceClaimRecord set CFCustomerNo='999999',CFDmsSendStatus=1 where CFPaymentNo ='"+number+"' and CFFirstSentFlag != 1 and CFSendSentFlag = 0 ";
+			DbUtil.execute(ctx,updateSql);
+		}
+	}
+	
+	
 }

@@ -38,6 +38,30 @@
             <userDefined>true</userDefined>
             <value>CUSTOMER</value>
         </enumValue>
+        <enumValue>
+            <name>CUSTOMER_DMS</name>
+            <alias>bizEnum[com.kingdee.eas.mkld.sapinterage.app.SAPInterTypeMenu].enumValues.enumValue[CUSTOMER_DMS].alias</alias>
+            <userDefined>true</userDefined>
+            <value>6</value>
+        </enumValue>
+        <enumValue>
+            <name>Receipt_Gen</name>
+            <alias>bizEnum[com.kingdee.eas.mkld.sapinterage.app.SAPInterTypeMenu].enumValues.enumValue[Receipt_Gen].alias</alias>
+            <userDefined>true</userDefined>
+            <value>7</value>
+        </enumValue>
+        <enumValue>
+            <name>Receipt_Sent</name>
+            <alias>bizEnum[com.kingdee.eas.mkld.sapinterage.app.SAPInterTypeMenu].enumValues.enumValue[Receipt_Sent].alias</alias>
+            <userDefined>true</userDefined>
+            <value>8</value>
+        </enumValue>
+        <enumValue>
+            <name>Rece_Sta_U</name>
+            <alias>bizEnum[com.kingdee.eas.mkld.sapinterage.app.SAPInterTypeMenu].enumValues.enumValue[Rece_Sta_U].alias</alias>
+            <userDefined>true</userDefined>
+            <value>9</value>
+        </enumValue>
     </enumValues>
     <resource>
         <rs key="bizEnum[com.kingdee.eas.mkld.sapinterage.app.SAPInterTypeMenu].alias">
@@ -64,6 +88,12 @@
             <lang locale="zh_HK" value="客戶同步" />
             <lang locale="zh_TW" value="客戶同步" />
         </rs>
+        <rs key="bizEnum[com.kingdee.eas.mkld.sapinterage.app.SAPInterTypeMenu].enumValues.enumValue[CUSTOMER_DMS].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="客户名称同步至DMS" />
+            <lang locale="zh_HK" value="客戶名稱同步至DMS" />
+            <lang locale="zh_TW" value="客戶名稱同步至DMS" />
+        </rs>
         <rs key="bizEnum[com.kingdee.eas.mkld.sapinterage.app.SAPInterTypeMenu].enumValues.enumValue[FICO_I012].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="收款认领结果" />
@@ -81,6 +111,24 @@
             <lang locale="zh_CN" value="银行回单号传SAP" />
             <lang locale="zh_HK" value="銀行回單號傳SAP" />
             <lang locale="zh_TW" value="銀行回單號傳SAP" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.mkld.sapinterage.app.SAPInterTypeMenu].enumValues.enumValue[Rece_Sta_U].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="认领记录单状态修改" />
+            <lang locale="zh_HK" value="認領記錄單狀態修改" />
+            <lang locale="zh_TW" value="認領記錄單狀態修改" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.mkld.sapinterage.app.SAPInterTypeMenu].enumValues.enumValue[Receipt_Gen].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="回单记录-生成" />
+            <lang locale="zh_HK" value="回單記錄-生成" />
+            <lang locale="zh_TW" value="回單記錄-生成" />
+        </rs>
+        <rs key="bizEnum[com.kingdee.eas.mkld.sapinterage.app.SAPInterTypeMenu].enumValues.enumValue[Receipt_Sent].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="回单记录-同步至SAP" />
+            <lang locale="zh_HK" value="回單記錄-同步至SAP" />
+            <lang locale="zh_TW" value="回單記錄-同步至SAP" />
         </rs>
         <rs key="bizEnum[com.kingdee.eas.mkld.sapinterage.app.SAPInterTypeMenu].extendedProperty.userDefined">
             <lang locale="en_US" value="true" />

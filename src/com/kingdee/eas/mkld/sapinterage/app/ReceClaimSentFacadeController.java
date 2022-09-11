@@ -20,4 +20,8 @@ public interface ReceClaimSentFacadeController extends BizController
     public String sentReceClaim(Context ctx) throws BOSException, RemoteException;
     public String sentReceNoClaim(Context ctx) throws BOSException, RemoteException;
     public String sentClaimAgain(Context ctx) throws BOSException, RemoteException;
+    public String genReceiptRecord(Context ctx) throws BOSException, RemoteException;
+    public String SentReceiptRecord(Context ctx) throws BOSException, RemoteException;
+    public String sentCustomer2DMS(Context ctx) throws BOSException, RemoteException;
+    public String updateClaimStaByCusName(Context ctx) throws BOSException, RemoteException;
 }

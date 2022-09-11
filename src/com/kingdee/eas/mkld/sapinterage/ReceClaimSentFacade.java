@@ -72,4 +72,56 @@ public class ReceClaimSentFacade extends AbstractBizCtrl implements IReceClaimSe
             throw new EJBRemoteException(err);
         }
     }
+    /**
+     *生成回单发送记录-User defined method
+     *@return
+     */
+    public String genReceiptRecord() throws BOSException
+    {
+        try {
+            return getController().genReceiptRecord(getContext());
+        }
+        catch(RemoteException err) {
+            throw new EJBRemoteException(err);
+        }
+    }
+    /**
+     *发送电子回单-User defined method
+     *@return
+     */
+    public String SentReceiptRecord() throws BOSException
+    {
+        try {
+            return getController().SentReceiptRecord(getContext());
+        }
+        catch(RemoteException err) {
+            throw new EJBRemoteException(err);
+        }
+    }
+    /**
+     *发送收款单未匹配的客户名称至DMS-User defined method
+     *@return
+     */
+    public String sentCustomer2DMS() throws BOSException
+    {
+        try {
+            return getController().sentCustomer2DMS(getContext());
+        }
+        catch(RemoteException err) {
+            throw new EJBRemoteException(err);
+        }
+    }
+    /**
+     *修改认领记录单状态-User defined method
+     *@return
+     */
+    public String updateClaimStaByCusName() throws BOSException
+    {
+        try {
+            return getController().updateClaimStaByCusName(getContext());
+        }
+        catch(RemoteException err) {
+            throw new EJBRemoteException(err);
+        }
+    }
 }

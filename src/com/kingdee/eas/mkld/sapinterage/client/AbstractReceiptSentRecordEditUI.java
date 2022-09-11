@@ -52,12 +52,18 @@ public abstract class AbstractReceiptSentRecordEditUI extends com.kingdee.eas.fr
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer kDLabelContainer4;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contsourceType;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer contSentFlag;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contReceiptNo;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contTranPackageID;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contCompany;
     protected com.kingdee.bos.ctrl.swing.KDTextField txtNumber;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizMultiLangBox txtName;
     protected com.kingdee.bos.ctrl.swing.KDTextField txtSimpleName;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizMultiLangBox txtDescription;
     protected com.kingdee.bos.ctrl.swing.KDComboBox sourceType;
     protected com.kingdee.bos.ctrl.swing.KDComboBox SentFlag;
+    protected com.kingdee.bos.ctrl.swing.KDTextField txtReceiptNo;
+    protected com.kingdee.bos.ctrl.swing.KDTextField txtTranPackageID;
+    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtCompany;
     protected com.kingdee.eas.mkld.sapinterage.ReceiptSentRecordInfo editData = null;
     /**
      * output class constructor
@@ -84,24 +90,36 @@ public abstract class AbstractReceiptSentRecordEditUI extends com.kingdee.eas.fr
         this.kDLabelContainer4 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contsourceType = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.contSentFlag = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contReceiptNo = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contTranPackageID = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contCompany = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.txtNumber = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.txtName = new com.kingdee.bos.ctrl.extendcontrols.KDBizMultiLangBox();
         this.txtSimpleName = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.txtDescription = new com.kingdee.bos.ctrl.extendcontrols.KDBizMultiLangBox();
         this.sourceType = new com.kingdee.bos.ctrl.swing.KDComboBox();
         this.SentFlag = new com.kingdee.bos.ctrl.swing.KDComboBox();
+        this.txtReceiptNo = new com.kingdee.bos.ctrl.swing.KDTextField();
+        this.txtTranPackageID = new com.kingdee.bos.ctrl.swing.KDTextField();
+        this.prmtCompany = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
         this.kDLabelContainer1.setName("kDLabelContainer1");
         this.kDLabelContainer2.setName("kDLabelContainer2");
         this.kDLabelContainer3.setName("kDLabelContainer3");
         this.kDLabelContainer4.setName("kDLabelContainer4");
         this.contsourceType.setName("contsourceType");
         this.contSentFlag.setName("contSentFlag");
+        this.contReceiptNo.setName("contReceiptNo");
+        this.contTranPackageID.setName("contTranPackageID");
+        this.contCompany.setName("contCompany");
         this.txtNumber.setName("txtNumber");
         this.txtName.setName("txtName");
         this.txtSimpleName.setName("txtSimpleName");
         this.txtDescription.setName("txtDescription");
         this.sourceType.setName("sourceType");
         this.SentFlag.setName("SentFlag");
+        this.txtReceiptNo.setName("txtReceiptNo");
+        this.txtTranPackageID.setName("txtTranPackageID");
+        this.prmtCompany.setName("prmtCompany");
         // CoreUI		
         this.btnPrint.setVisible(false);		
         this.btnPrintPreview.setVisible(false);		
@@ -135,6 +153,21 @@ public abstract class AbstractReceiptSentRecordEditUI extends com.kingdee.eas.fr
         this.contSentFlag.setBoundLabelLength(100);		
         this.contSentFlag.setBoundLabelUnderline(true);		
         this.contSentFlag.setVisible(true);
+        // contReceiptNo		
+        this.contReceiptNo.setBoundLabelText(resHelper.getString("contReceiptNo.boundLabelText"));		
+        this.contReceiptNo.setBoundLabelLength(100);		
+        this.contReceiptNo.setBoundLabelUnderline(true);		
+        this.contReceiptNo.setVisible(true);
+        // contTranPackageID		
+        this.contTranPackageID.setBoundLabelText(resHelper.getString("contTranPackageID.boundLabelText"));		
+        this.contTranPackageID.setBoundLabelLength(100);		
+        this.contTranPackageID.setBoundLabelUnderline(true);		
+        this.contTranPackageID.setVisible(true);
+        // contCompany		
+        this.contCompany.setBoundLabelText(resHelper.getString("contCompany.boundLabelText"));		
+        this.contCompany.setBoundLabelLength(100);		
+        this.contCompany.setBoundLabelUnderline(true);		
+        this.contCompany.setVisible(true);
         // txtNumber		
         this.txtNumber.setMaxLength(80);
         // txtName
@@ -149,7 +182,25 @@ public abstract class AbstractReceiptSentRecordEditUI extends com.kingdee.eas.fr
         this.SentFlag.setVisible(true);		
         this.SentFlag.addItems(EnumUtils.getEnumList("com.kingdee.eas.mkld.sapinterage.app.SendStatusMenu").toArray());		
         this.SentFlag.setRequired(false);
-        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {sourceType,SentFlag}));
+        // txtReceiptNo		
+        this.txtReceiptNo.setVisible(true);		
+        this.txtReceiptNo.setHorizontalAlignment(2);		
+        this.txtReceiptNo.setMaxLength(255);		
+        this.txtReceiptNo.setRequired(false);
+        // txtTranPackageID		
+        this.txtTranPackageID.setVisible(true);		
+        this.txtTranPackageID.setHorizontalAlignment(2);		
+        this.txtTranPackageID.setMaxLength(100);		
+        this.txtTranPackageID.setRequired(false);
+        // prmtCompany		
+        this.prmtCompany.setQueryInfo("com.kingdee.eas.basedata.org.app.CompanyOrgUnitQuery");		
+        this.prmtCompany.setVisible(true);		
+        this.prmtCompany.setEditable(true);		
+        this.prmtCompany.setDisplayFormat("$name$");		
+        this.prmtCompany.setEditFormat("$number$");		
+        this.prmtCompany.setCommitFormat("$number$");		
+        this.prmtCompany.setRequired(false);
+        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {sourceType,SentFlag,txtReceiptNo,txtTranPackageID,prmtCompany}));
         this.setFocusCycleRoot(true);
 		//Register control's property binding
 		registerBindings();
@@ -175,21 +226,27 @@ public abstract class AbstractReceiptSentRecordEditUI extends com.kingdee.eas.fr
      */
     public void initUIContentLayout()
     {
-        this.setBounds(new Rectangle(0, 0, 310, 173));
+        this.setBounds(new Rectangle(0, 0, 310, 304));
         this.setLayout(new KDLayout());
-        this.putClientProperty("OriginalBounds", new Rectangle(0, 0, 310, 173));
+        this.putClientProperty("OriginalBounds", new Rectangle(0, 0, 310, 304));
         kDLabelContainer1.setBounds(new Rectangle(10, 10, 270, 19));
         this.add(kDLabelContainer1, new KDLayout.Constraints(10, 10, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
-        kDLabelContainer2.setBounds(new Rectangle(10, 34, 270, 19));
-        this.add(kDLabelContainer2, new KDLayout.Constraints(10, 34, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
-        kDLabelContainer3.setBounds(new Rectangle(10, 58, 270, 19));
-        this.add(kDLabelContainer3, new KDLayout.Constraints(10, 58, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
-        kDLabelContainer4.setBounds(new Rectangle(10, 130, 270, 19));
-        this.add(kDLabelContainer4, new KDLayout.Constraints(10, 130, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
-        contsourceType.setBounds(new Rectangle(10, 82, 270, 19));
-        this.add(contsourceType, new KDLayout.Constraints(10, 82, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
-        contSentFlag.setBounds(new Rectangle(10, 106, 270, 19));
-        this.add(contSentFlag, new KDLayout.Constraints(10, 106, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
+        kDLabelContainer2.setBounds(new Rectangle(10, 41, 270, 19));
+        this.add(kDLabelContainer2, new KDLayout.Constraints(10, 41, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
+        kDLabelContainer3.setBounds(new Rectangle(10, 165, 270, 19));
+        this.add(kDLabelContainer3, new KDLayout.Constraints(10, 165, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
+        kDLabelContainer4.setBounds(new Rectangle(10, 229, 270, 19));
+        this.add(kDLabelContainer4, new KDLayout.Constraints(10, 229, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
+        contsourceType.setBounds(new Rectangle(10, 103, 270, 19));
+        this.add(contsourceType, new KDLayout.Constraints(10, 103, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
+        contSentFlag.setBounds(new Rectangle(10, 134, 270, 19));
+        this.add(contSentFlag, new KDLayout.Constraints(10, 134, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
+        contReceiptNo.setBounds(new Rectangle(10, 72, 270, 19));
+        this.add(contReceiptNo, new KDLayout.Constraints(10, 72, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
+        contTranPackageID.setBounds(new Rectangle(10, 196, 270, 19));
+        this.add(contTranPackageID, new KDLayout.Constraints(10, 196, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
+        contCompany.setBounds(new Rectangle(10, 263, 270, 19));
+        this.add(contCompany, new KDLayout.Constraints(10, 263, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
         //kDLabelContainer1
         kDLabelContainer1.setBoundEditor(txtNumber);
         //kDLabelContainer2
@@ -202,6 +259,12 @@ public abstract class AbstractReceiptSentRecordEditUI extends com.kingdee.eas.fr
         contsourceType.setBoundEditor(sourceType);
         //contSentFlag
         contSentFlag.setBoundEditor(SentFlag);
+        //contReceiptNo
+        contReceiptNo.setBoundEditor(txtReceiptNo);
+        //contTranPackageID
+        contTranPackageID.setBoundEditor(txtTranPackageID);
+        //contCompany
+        contCompany.setBoundEditor(prmtCompany);
 
     }
 
@@ -317,7 +380,10 @@ public abstract class AbstractReceiptSentRecordEditUI extends com.kingdee.eas.fr
 		dataBinder.registerBinding("simpleName", String.class, this.txtSimpleName, "text");
 		dataBinder.registerBinding("description", String.class, this.txtDescription, "_multiLangItem");
 		dataBinder.registerBinding("sourceType", com.kingdee.eas.mkld.sapinterage.app.ReceiptSourceTypeMenu.class, this.sourceType, "selectedItem");
-		dataBinder.registerBinding("SentFlag", com.kingdee.eas.mkld.sapinterage.app.SendStatusMenu.class, this.SentFlag, "selectedItem");		
+		dataBinder.registerBinding("SentFlag", com.kingdee.eas.mkld.sapinterage.app.SendStatusMenu.class, this.SentFlag, "selectedItem");
+		dataBinder.registerBinding("ReceiptNo", String.class, this.txtReceiptNo, "text");
+		dataBinder.registerBinding("TranPackageID", String.class, this.txtTranPackageID, "text");
+		dataBinder.registerBinding("Company", com.kingdee.eas.basedata.org.CompanyOrgUnitInfo.class, this.prmtCompany, "data");		
 	}
 	//Regiester UI State
 	private void registerUIState(){
@@ -469,7 +535,10 @@ public abstract class AbstractReceiptSentRecordEditUI extends com.kingdee.eas.fr
 		getValidateHelper().registerBindProperty("simpleName", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("description", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("sourceType", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("SentFlag", ValidateHelper.ON_SAVE);    		
+		getValidateHelper().registerBindProperty("SentFlag", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("ReceiptNo", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("TranPackageID", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("Company", ValidateHelper.ON_SAVE);    		
 	}
 
 
@@ -514,6 +583,17 @@ public abstract class AbstractReceiptSentRecordEditUI extends com.kingdee.eas.fr
         sic.add(new SelectorItemInfo("description"));
         sic.add(new SelectorItemInfo("sourceType"));
         sic.add(new SelectorItemInfo("SentFlag"));
+        sic.add(new SelectorItemInfo("ReceiptNo"));
+        sic.add(new SelectorItemInfo("TranPackageID"));
+		if(selectorAll.equalsIgnoreCase("true"))
+		{
+			sic.add(new SelectorItemInfo("Company.*"));
+		}
+		else{
+        	sic.add(new SelectorItemInfo("Company.id"));
+        	sic.add(new SelectorItemInfo("Company.number"));
+        	sic.add(new SelectorItemInfo("Company.name"));
+		}
         return sic;
     }        
 
