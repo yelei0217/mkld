@@ -101,7 +101,7 @@ public class ReceiptSentRecordUtil {
 							 rs.getObject("CFSOURCETYPE") !=null && !"".equals(rs.getObject("CFSOURCETYPE").toString()) 
 					 ){
 							Map<String,String> mp = new HashMap<String,String>();
-							mp.put("KOSTL", rs.getObject("FName_l2").toString());
+							mp.put("EASID", rs.getObject("FName_l2").toString());
 							mp.put("BANKNO", rs.getObject("CFRECEIPTNO").toString());
 							//mp.put("", rs.getObject("CFSOURCETYPE").toString());
 							rIds.add(rs.getObject("FID").toString());
