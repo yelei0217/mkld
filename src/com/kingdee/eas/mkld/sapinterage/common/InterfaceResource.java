@@ -62,6 +62,10 @@ public class InterfaceResource {
 	public static String dms_base_path ="http://116.63.82.155:7000";
 	
 
+	public static String copyCtxUser ="virtualUser";  
+	
+	public static String  fileUrl = "/data/customer/";
+	
 	/**
 	 *  银行账号 与事业部 对应关系
 	 */

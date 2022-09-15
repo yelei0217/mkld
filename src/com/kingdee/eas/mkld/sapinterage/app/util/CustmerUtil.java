@@ -84,7 +84,7 @@ import com.kingdee.jdbc.rowset.IRowSet;
 
 public class CustmerUtil {
 	
-	private static String  url = "/data/customer/";
+	 
 	private static void clearFiles(String workspaceRootPath){
     	File file = new File(workspaceRootPath);
     	if(file.exists()){ 
@@ -135,7 +135,7 @@ public class CustmerUtil {
 		Context oldCTX = copyContext(ctx) ;
 		Context tempCTX = new Context() ;
 		try {
-			tempCTX =context(oldCTX, "virtualUser");
+			tempCTX =context(oldCTX, InterfaceResource.copyCtxUser);
 		} catch (Exception e1) {
  			e1.printStackTrace();
 		} 
@@ -147,7 +147,7 @@ public class CustmerUtil {
 		Date date = new Date(); // this object contains the current date value 
 	  	SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");  
 	  	String dateStrNow = formatter.format(date);
-	    clearFiles(url+""+dateStrNow+".txt");
+	    clearFiles( InterfaceResource.fileUrl +""+dateStrNow+".txt");
 	    
 	    System.out.println("########  dateStrNow ########"+dateStrNow); 
 		SAPInterfaceLogInfo sAPInterfaceLogInfo= new SAPInterfaceLogInfo();
@@ -194,7 +194,7 @@ public class CustmerUtil {
 					sAPInterfaceLogInfo.setInterType(SAPInterTypeMenu.CUSTOMER);
 					SAPInterfaceLogFactory.getLocalInstance(ctx).save(sAPInterfaceLogInfo);
 					
-					writerText(url, result,dateStrNow);
+					writerText(InterfaceResource.fileUrl, result,dateStrNow);
 					
 					JSONObject jo = JSONObject.parseObject(result);
 					if(null != jo.get("errCode") && "0".equals(jo.get("errCode").toString())){
@@ -398,6 +398,15 @@ public class CustmerUtil {
 				String id = CustomerCompanyInfoFactory.getLocalInstance(ctx).addnew(cusCompanyInfo).toString();*/
 				
 				//doDataBaseDAssign(ctx, pk.toString(), "cus"); 
+				
+				
+				
+				//修改认领记录单
+			    if(pk!=null && !"".equals(pk.toString())){
+			    	ReceClaimRecordUtil.doUpdateClaimStaByCusName(ctx, cusnumber, cusname);
+			    }
+			    
+			    
 				map.put("cusid", pk.toString());
 				map.put("msg", msg);
 				map.put("type", "1");
