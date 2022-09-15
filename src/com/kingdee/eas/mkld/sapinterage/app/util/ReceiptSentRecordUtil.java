@@ -32,6 +32,10 @@ public class ReceiptSentRecordUtil {
 	 * @throws BOSException
 	 */
 	public static void doGenReceiptRecord(Context ctx) throws BOSException {
+		//删除 7天之前的 数据
+		String delSql = "/*dialect*/ delete from CT_SIG_ReceiptSentRecord where FCREATETIME < to_date(to_char(sysdate-7,'yyyy/mm/dd'),'yyyy/mm/dd') ";
+		DbUtil.execute(ctx, delSql);
+		
 		StringBuffer sbr = new StringBuffer();
 		sbr.append("/*dialect*/insert into CT_SIG_ReceiptSentRecord ").append("\r\n");
 		sbr.append(" (FID,FNumber,FName_l2,CFRECEIPTNO,CFSOURCETYPE,CFSENTFLAG,FSIMPLENAME,CFTRANPACKAGEID,CFCOMPANYID,FCREATETIME,FLASTUPDATETIME )").append("\r\n");
@@ -40,8 +44,8 @@ public class ReceiptSentRecordUtil {
 		sbr.append(" where FBizType = 1 ").append("\r\n");// -- 业务类型 普通
 		sbr.append(" and FIsMatchEReceipt = 1 ").append("\r\n");// -- 是否跟电子回单匹配 是
 		sbr.append(" and FRECEDBILLTYPE='FA44FD5B' ").append("\r\n");// -- 接收单据类型 收款单
-		//sbr.append("--and FBIZTIME between to_date(to_char(sysdate-7,'yyyy/mm/dd'),'yyyy/mm/dd') and to_date(to_char(sysdate,'yyyy/mm/dd'),'yyyy/mm/dd')
-		sbr.append(" and to_char(FBIZTIME,'yyyy/mm/dd') ='2022/05/20' ").append("\r\n"); //测试固定时间
+		sbr.append(" and FBIZTIME between to_date(to_char(sysdate-4,'yyyy/mm/dd'),'yyyy/mm/dd') and to_date(to_char(sysdate-1,'yyyy/mm/dd'),'yyyy/mm/dd')").append("\r\n");
+		//sbr.append(" and to_char(FBIZTIME,'yyyy/mm/dd') ='2022/05/20' ").append("\r\n"); //测试固定时间
 		sbr.append(" and not exists (select * from CT_SIG_ReceiptSentRecord r where r.FNUMBER = T_BE_TransDetail.FID ) ").append("\r\n");
 		sbr.append(" order by  FBIZDATE desc  ");
 		DbUtil.execute(ctx, sbr.toString());
@@ -56,9 +60,9 @@ public class ReceiptSentRecordUtil {
 		sbr.append(" where a.FBizType = 1 ").append("\r\n"); //-- 业务类型 普通
 		sbr.append(" and a.FIsMatchEReceipt = 1").append("\r\n"); //-- 是否跟电子回单匹配 是
 		sbr.append(" and a.FIsKDRetFlag= 1 ").append("\r\n");  //-- 是否为EAS银企付款
-		sbr.append(" and to_char(FBIZTIME,'yyyy/mm/dd') ='2022/05/20'").append("\r\n");
+//		sbr.append(" and to_char(FBIZTIME,'yyyy/mm/dd') ='2022/05/20'").append("\r\n");
 		sbr.append(" and not exists (select * from CT_SIG_ReceiptSentRecord r where r.FNUMBER = a.FID )").append("\r\n");
-	//	sbr.append("--and a.FBIZTIME between to_date(to_char(sysdate-7,'yyyy/mm/dd'),'yyyy/mm/dd') and to_date(to_char(sysdate,'yyyy/mm/dd'),'yyyy/mm/dd')
+		sbr.append(" and a.FBIZTIME between to_date(to_char(sysdate-4,'yyyy/mm/dd'),'yyyy/mm/dd') and to_date(to_char(sysdate-1,'yyyy/mm/dd'),'yyyy/mm/dd')").append("\r\n");
 		sbr.append(" order by  a.FBIZDATE desc ");
 		DbUtil.execute(ctx, sbr.toString());
 		
@@ -98,7 +102,7 @@ public class ReceiptSentRecordUtil {
 				  while(rs.next()){
 					 if(rs.getObject("FName_l2") !=null && !"".equals(rs.getObject("FName_l2").toString()) && 
 							 rs.getObject("CFRECEIPTNO") !=null && !"".equals(rs.getObject("CFRECEIPTNO").toString()) &&
-							 rs.getObject("CFSOURCETYPE") !=null && !"".equals(rs.getObject("CFSOURCETYPE").toString()) 
+							 rs.getObject("FID") !=null && !"".equals(rs.getObject("FID").toString()) 
 					 ){
 							Map<String,String> mp = new HashMap<String,String>();
 							mp.put("EASID", rs.getObject("FName_l2").toString());

@@ -45,7 +45,6 @@ public class InterfaceResource {
 	
 	/** 数据中台 app-secret **/
 	public static String db_center_app_secret = "sap27b3b5b3e365343f64d154abb0b64563"; 
-
 	
 	/** DMS accountinfocode **/
 	public static String dms_account_info_code = "1457892711934857216"; 
@@ -68,14 +67,14 @@ public class InterfaceResource {
 	 */
     public final static Map<String, String> Account_Business_Rale = new HashMap<String, String>() {
         {
-        	put("36770188000135700",	"北区（新）");
-        	put("310069192018800000000",	"南区（新）");
-        	put("216120100100138000",	"餐饮事业部");
-        	put("531902005810101",	"餐饮事业部");
+        	put("36770188000135782",	"北区事业部");
+        	put("310069192018800015245",	"南区事业部");
+        	put("216120100100138853",	"餐饮事业部");
+        	put(" 531902005810101",	"餐饮事业部");
         	put("453382354794",	"电商事业部");
-        	put("3343210040038780",	"国际业务部");
+        	put("03343210040038787",	"国际业务部");
         	put("158809983345",	"北区事业部");
-        	put("22050147030000000000",	"北区事业部");
+        	put("22050147030000000697",	"北区事业部");
         }
     };
     

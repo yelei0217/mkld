@@ -159,20 +159,5 @@ public class ReceClaimSentFacadeControllerBean extends AbstractReceClaimSentFaca
 		} 
 		return super._sentCustomer2DMS(ctx);
 	}
- 
-	
-	/**
-	 * 
-	 * 修改认领记录单状态
-	 * 
-	 */
-	@Override
-	protected String _updateClaimStaByCusName(Context ctx) throws BOSException {
-		this.timer.reset(); 
-		
- 		System.out.println("修改认领记录单状态：" + this.timer.msValue());
-		return super._updateClaimStaByCusName(ctx);
-	} 
-	
 	
 }

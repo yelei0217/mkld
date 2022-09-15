@@ -11,6 +11,7 @@ import com.kingdee.eas.mkld.sapinterage.SAPInterfaceLogFactory;
 import com.kingdee.eas.mkld.sapinterage.SAPInterfaceLogInfo;
 import com.kingdee.eas.mkld.sapinterage.app.InterResultMenu;
 import com.kingdee.eas.mkld.sapinterage.app.SAPInterTypeMenu;
+import com.kingdee.eas.mkld.sapinterage.app.util.ReceClaimRecordUtil;
 import com.kingdee.eas.mkld.sapinterage.common.OAInterfaceUtil;
 import com.kingdee.eas.util.app.DbUtil;
 import com.kingdee.jdbc.rowset.IRowSet;
@@ -127,7 +128,7 @@ public class BankPayingResultSynToOAUtil {
      public static void synPayMentBillByBillNo(Context ctx,String oper,String billId) {
 			StringBuffer sbr = new StringBuffer();
 			sbr.append(" /*dialect*/select ep.fnumber BANKNUMBER ,ep.FState STATE,ep.FBANKRETURNINFO RETURNMSG, to_char( ep.FSUBMITTIME,'yyyy-mm-dd')  ZBUDAT1," );
-			sbr.append(" bank.fname_l2 BANKNAME,p.CFOaBillID OAID , p.CFSourceSystem  TYPE,accou.FBANKACCOUNTNUMBER ZBANKN1,p.fnumber ZEASNUM from T_CAS_PaymentBill p ");
+			sbr.append(" bank.fname_l2 BANKNAME,p.CFOaBillID OAID , p.CFSourceSystem  TYPE,accou.FBANKACCOUNTNUMBER ZBANKN1,p.fnumber ZEASNUM,p.CFRecBillNum from T_CAS_PaymentBill p ");
 			sbr.append(" inner join T_BE_BankPayingBill ep on ep.FSOURCEBILLID  = p.FID ");
 			sbr.append(" inner join  T_BD_AccountBanks  accou on  accou.fid = p.FPAYERACCOUNTBANKID ");
 			sbr.append(" inner join  T_BD_Bank  bank on  bank.fid = accou.FBANK ");
@@ -171,6 +172,12 @@ public class BankPayingResultSynToOAUtil {
 						System.out.println("########  body ########"+JSONObject.toJSONString(eMps));
 						sAPInterfaceLogInfo.setReqTime(new Date()); 
 						sAPInterfaceLogInfo.setRequest(JSONObject.toJSONString(eMps));
+						
+						//ÐÞ¸ÄÊÕ¿îÕJîI†Î  î‘B
+						if(rs.getObject("CFRecBillNum") !=null && !"".equals(rs.getObject("CFRecBillNum").toString())){
+							ReceClaimRecordUtil.doUpdateClaimStaByNumber(ctx, rs.getObject("CFRecBillNum").toString());
+						}
+						
 						String result =  OAInterfaceUtil.sendBankPayMessageToOAPost(JSONObject.toJSONString(eMps),1);
 						System.out.println("########  result ########"+result);
 						if(null!=result && !"".equals(result)){

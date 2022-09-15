@@ -97,7 +97,7 @@ public class ReceClaimRecordUtil {
 						rInfo.setCompanyNumber(company.getNumber());
 						rInfo.setBizDate(bInfo.getBizDate());
 						//往来户类型
-						rInfo.setCustomerNo("800000");
+						rInfo.setCustomerNo("E99999999");
 						rInfo.setClaimType(ClaimTypeMenu.CurrMonth);
 						rInfo.setClaimStatus(ClaimStatusMenu.No);
 						
@@ -207,18 +207,25 @@ public class ReceClaimRecordUtil {
 	      if (sbr.length() > 0)
 	      {
 	    	  ids = sbr.substring(0, sbr.length() - 1);
-	    	  String field = "CFFirstSentFlag";
+	    	 // String field = "CFFirstSentFlag";
+	    	  String updateSql = "";
 	    	  if("3".equals(type))
-	    		   field = "CFSendSentFlag";
-	    		  
-	    	  String sql ="update CT_SIG_ReceClaimRecord set "+field+" = "+sendFlag+" where fid in ("+ids+")";
+	    		//   field = "CFSendSentFlag";
+	    		  updateSql=" CFSendSentFlag ="+sendFlag +" ";
+	    	  else if("2".equals(type))
+		    		//   field = "CFSendSentFlag";
+	    		  updateSql=" CFFirstSentFlag ="+sendFlag +",CFClaimType = 'B' ";
+	    	  else
+	    		  updateSql=" CFFirstSentFlag ="+sendFlag +" ";
+	    	  
+	    	  String sql ="update CT_SIG_ReceClaimRecord set "+updateSql+" where fid in ("+ids+")";
 //	    	  System.out.println("SQL:"+sql);
 	    	  try {
 					DbUtil.execute(ctx, sql);
 				} catch (BOSException e) {
 		 			e.printStackTrace();
 				}
-	      }
+	      	}
 	
 	 	}
 	}
@@ -324,8 +331,9 @@ public class ReceClaimRecordUtil {
         filter.getFilterItems().add(new FilterItemInfo("FirstSentFlag",SendStatusMenu.SentS,CompareType.EQUALS));//第一次发送SAP状态:发送成功
         filter.getFilterItems().add(new FilterItemInfo("SendSentFlag",SendStatusMenu.UnSent,CompareType.EQUALS));//第二次发送SAP状态:未发送
         filter.getFilterItems().add(new FilterItemInfo("SendSentFlag",SendStatusMenu.SentF,CompareType.EQUALS));//第二次发送SAP状态:发送失败
-        filter.getFilterItems().add(new FilterItemInfo("CustomerNo","800000",CompareType.EQUALS));//客户编码： 一次性客户编码 800000
-        
+//        filter.getFilterItems().add(new FilterItemInfo("CustomerNo","800000",CompareType.EQUALS));//客户编码： 一次性客户编码 800000
+        filter.getFilterItems().add(new FilterItemInfo("CustomerNo","E99999999",CompareType.EQUALS));//客户编码：未匹配到客户 E99999999
+ 
         filter.setMaskString("#0 and #1 and #2 and (#3 or #4) and #5");
         viewInfo.setFilter(filter);
         ReceClaimRecordCollection rcoll = ibiz.getReceClaimRecordCollection(viewInfo);
@@ -408,7 +416,8 @@ public class ReceClaimRecordUtil {
         filter.getFilterItems().add(new FilterItemInfo("ClaimStatus",ClaimStatusMenu.No,CompareType.EQUALS));//认领状态：未认领
         filter.getFilterItems().add(new FilterItemInfo("FirstSentFlag",SendStatusMenu.UnSent,CompareType.EQUALS));//第一次发送SAP状态:未发送
         filter.getFilterItems().add(new FilterItemInfo("FirstSentFlag",SendStatusMenu.SentF,CompareType.EQUALS));//第一次发送SAP状态:未发送
-        filter.getFilterItems().add(new FilterItemInfo("CustomerNo","800000",CompareType.EQUALS));//客户编码： 一次性客户编码 800000
+//        filter.getFilterItems().add(new FilterItemInfo("CustomerNo","800000",CompareType.EQUALS));//客户编码： 一次性客户编码 800000
+        filter.getFilterItems().add(new FilterItemInfo("CustomerNo","E99999999",CompareType.EQUALS));//客户编码： 未匹配到客户编码 E99999999
         filter.setMaskString("#0 and #1 and (#2 or #3) and #4");
         viewInfo.setFilter(filter);
         ReceClaimRecordCollection rcoll = ibiz.getReceClaimRecordCollection(viewInfo);
@@ -481,36 +490,29 @@ public class ReceClaimRecordUtil {
 	 * @throws BOSException
 	 */
 	public static void doUpdateClaimStaByCusName(Context ctx,String cusNumber,String cusName) throws BOSException {
-	
 		if(cusName !=null && !"".equals(cusName) && cusNumber !=null && !"".equals(cusNumber)){
-			
 			// 如果没有发送第一次，或者第一次发送失败
-			String updateSql = "update CT_SIG_ReceClaimRecord set CFCustomerNo='"+cusNumber+"',CFClaimStatus=1,CFDmsSendStatus=1,CFClaimType='A' where CFCustomerNo ='800000' and CFPayerName ='"+cusName+"' and CFFirstSentFlag != 1 and CFSendSentFlag = 0 ";
+			String updateSql = "update CT_SIG_ReceClaimRecord set CFCustomerNo='"+cusNumber+"',CFClaimStatus=1,CFDmsSendStatus=1,CFClaimType='A' where CFCustomerNo ='E99999999' and CFPayerName ='"+cusName+"' and CFFirstSentFlag != 1 and CFSendSentFlag = 0 ";
 			DbUtil.execute(ctx,updateSql);
 		
 			// 已完成月底未认领发送
-			updateSql = "update CT_SIG_ReceClaimRecord set CFAgainClaimCusNo='"+cusNumber+"',CFClaimStatus=1,CFDmsSendStatus=1,CFClaimType='B' where CFCustomerNo ='800000' and CFPayerName ='"+cusName+"' and CFFirstSentFlag = 1 and CFSendSentFlag != 1 ";
+			updateSql = "update CT_SIG_ReceClaimRecord set CFAgainClaimCusNo='"+cusNumber+"',CFClaimStatus=1,CFDmsSendStatus=1,CFClaimType='B' where CFCustomerNo ='E99999999' and CFPayerName ='"+cusName+"' and CFFirstSentFlag = 1 and CFSendSentFlag != 1 ";
 			DbUtil.execute(ctx,updateSql);
-		
 		}
-		
 	}
-	
-	
 	
 
 	/**
-	 * 	当付款单付完款-根据付款单上扩展字段“收款单编号”修改认领记录单状态【客户编码默认：999999】
+	 * 	当付款单付完款-根据付款单上扩展字段“收款单编号”修改认领记录单状态【客户编码默认：800000】
 	 * @param ctx	上下文
-	 * @param number 认领记录单 编号
+	 * @param number EAS收款单编号
 	 * @throws BOSException
 	 */
 	public static void doUpdateClaimStaByNumber(Context ctx,String number) throws BOSException {
 		if(number !=null && !"".equals(number)){
-			String updateSql = "update CT_SIG_ReceClaimRecord set CFCustomerNo='999999',CFDmsSendStatus=1 where CFPaymentNo ='"+number+"' and CFFirstSentFlag != 1 and CFSendSentFlag = 0 ";
+			String updateSql = "update CT_SIG_ReceClaimRecord set CFCustomerNo='800000',CFClaimStatus=1,CFDmsSendStatus=1 where CFCustomerNo='E99999999' and CFClaimStatus = 0 and CFPaymentNo ='"+number+"' and CFFirstSentFlag != 1 and CFSendSentFlag = 0 ";
 			DbUtil.execute(ctx,updateSql);
 		}
 	}
-	
 	
 }

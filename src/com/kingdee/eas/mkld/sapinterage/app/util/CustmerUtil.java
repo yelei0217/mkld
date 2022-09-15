@@ -402,6 +402,7 @@ public class CustmerUtil {
 				map.put("msg", msg);
 				map.put("type", "1");
 				map.put("code", "success");
+				
 				return map;
 			} else { 
 				//ICustomer iCustomer = CustomerFactory.getLocalInstance(ctx);
