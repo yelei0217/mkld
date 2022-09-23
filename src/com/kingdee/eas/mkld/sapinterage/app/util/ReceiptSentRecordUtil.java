@@ -42,7 +42,7 @@ public class ReceiptSentRecordUtil {
 		sbr.append(" select  newbosid('314BE638'),FID,FRECEDBILLNUMBER, FRECEIPTNO,1,0,FBANKCHECKFLAG,FTRANPACKAGEID,FCOMPANYID, sysdate,FBIZTIME  ").append("\r\n");
 		sbr.append(" from T_BE_TransDetail ").append("\r\n");
 		sbr.append(" where FBizType = 1 ").append("\r\n");// -- 业务类型 普通
-		sbr.append(" and FIsMatchEReceipt = 1 ").append("\r\n");// -- 是否跟电子回单匹配 是
+		sbr.append(" and FRECEIPTNO  is not null ").append("\r\n");// -- 是否跟电子回单匹配 是
 		sbr.append(" and FRECEDBILLTYPE='FA44FD5B' ").append("\r\n");// -- 接收单据类型 收款单
 		sbr.append(" and FBIZTIME between to_date(to_char(sysdate-4,'yyyy/mm/dd'),'yyyy/mm/dd') and to_date(to_char(sysdate-1,'yyyy/mm/dd'),'yyyy/mm/dd')").append("\r\n");
 		//sbr.append(" and to_char(FBIZTIME,'yyyy/mm/dd') ='2022/05/20' ").append("\r\n"); //测试固定时间
@@ -58,7 +58,7 @@ public class ReceiptSentRecordUtil {
 		sbr.append(" inner join T_BE_BankPayingBill b on a.FBANKCHECKFLAG = b.FBANKCHECKFLAG ").append("\r\n");
 		sbr.append(" inner join T_CAS_PaymentBill c on  b.FSOURCEBILLID = c.FID ").append("\r\n");
 		sbr.append(" where a.FBizType = 1 ").append("\r\n"); //-- 业务类型 普通
-		sbr.append(" and a.FIsMatchEReceipt = 1").append("\r\n"); //-- 是否跟电子回单匹配 是
+		sbr.append(" and  a.FRECEIPTNO  is not null ").append("\r\n"); //-- 是否跟电子回单匹配 是
 		sbr.append(" and a.FIsKDRetFlag= 1 ").append("\r\n");  //-- 是否为EAS银企付款
 //		sbr.append(" and to_char(FBIZTIME,'yyyy/mm/dd') ='2022/05/20'").append("\r\n");
 		sbr.append(" and not exists (select * from CT_SIG_ReceiptSentRecord r where r.FNUMBER = a.FID )").append("\r\n");
