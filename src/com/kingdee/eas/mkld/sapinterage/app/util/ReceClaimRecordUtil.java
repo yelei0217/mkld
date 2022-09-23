@@ -510,7 +510,7 @@ public class ReceClaimRecordUtil {
 	 */
 	public static void doUpdateClaimStaByNumber(Context ctx,String number) throws BOSException {
 		if(number !=null && !"".equals(number)){
-			String updateSql = "update CT_SIG_ReceClaimRecord set CFCustomerNo='800000',CFClaimStatus=1,CFDmsSendStatus=1 where CFCustomerNo='E99999999' and CFClaimStatus = 0 and CFPaymentNo ='"+number+"' and CFFirstSentFlag != 1 and CFSendSentFlag = 0 ";
+			String updateSql = "update CT_SIG_ReceClaimRecord set CFCustomerNo='"+InterfaceResource.DEFAULT_CUSTOMER_NO+"',CFClaimStatus=1,CFDmsSendStatus=1 where CFCustomerNo='E99999999' and CFClaimStatus = 0 and CFPaymentNo ='"+number+"' and CFFirstSentFlag != 1 and CFSendSentFlag = 0 ";
 			DbUtil.execute(ctx,updateSql);
 		}
 	}
