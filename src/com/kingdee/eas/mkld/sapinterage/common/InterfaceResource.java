@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Set;
 
 public class InterfaceResource {
-//	    //生产系统配置 
+//	  测试系统配置 
 	
 	 /** 默认客户 **/
 	public static final String DEFAULT_CUSTOMER_NO = "9000011";
@@ -65,7 +65,7 @@ public class InterfaceResource {
 	public static String dms_base_path ="http://116.63.82.155:7000";
 	
 
-	public static String copyCtxUser ="virtualUser";  
+	public static String copyCtxUser ="EAS-AUTO";  
 	
 	public static String  fileUrl = "/data/customer/";
 	
@@ -156,7 +156,7 @@ public class InterfaceResource {
 //	/** DMS dms_base_path **/
 //	public static String dms_base_path ="http://47.102.138.30:7000";
 //	
-//	public static String copyCtxUser ="virtualUser";  
+//	public static String copyCtxUser ="EAS-AUTO";  
 //	
 //	public static String  fileUrl = "/data/customer/";
 //	

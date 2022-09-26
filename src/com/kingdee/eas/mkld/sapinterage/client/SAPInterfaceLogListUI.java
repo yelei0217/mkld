@@ -3,9 +3,12 @@
  */
 package com.kingdee.eas.mkld.sapinterage.client;
 
+import java.awt.event.ActionEvent;
+
 import org.apache.log4j.Logger;
 
 import com.kingdee.bos.ui.face.CoreUIObject;
+import com.kingdee.eas.mkld.sapinterage.SyncDBCusFacadeFactory;
 
 /**
  * output class name
@@ -44,6 +47,12 @@ public class SAPInterfaceLogListUI extends AbstractSAPInterfaceLogListUI
         super.storeFields();
     }
 
+    @Override
+    public void actionHelp_actionPerformed(ActionEvent e) throws Exception {
+    	// TODO Auto-generated method stub
+//    	super.actionHelp_actionPerformed(e);
+    	SyncDBCusFacadeFactory.getRemoteInstance().SyncCustomer("");
+    }
 
     /**
      * output getBizInterface method

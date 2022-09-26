@@ -226,7 +226,13 @@ public class CustmerUtil {
 									if(business.size()>0){
 										for(int w = 0 ; w < business.size(); w++ ){
 											JSONObject bussJSOb =  business.getJSONObject(w); 
-											if( null != bussJSOb.get("LOEVM")  && "1".equals(bussJSOb.getString("LOEVM"))){
+											/*if( null != bussJSOb.get("LOEVM")  && "1".equals(bussJSOb.getString("LOEVM"))){
+												
+											}else{
+												
+											}*/
+											
+											if( null != bussJSOb.get("VKORG")  && !"".equals(bussJSOb.getString("VKORG")) ){
 												String  conNumber = bussJSOb.getString("VKORG"); 
 												numS = numS+"'"+conNumber+"',";
 											}
@@ -415,39 +421,46 @@ public class CustmerUtil {
 				return map;
 			} else { 
 				//ICustomer iCustomer = CustomerFactory.getLocalInstance(ctx);
-				DbUtil.execute(ctx,"update T_BD_CUSTOMER set FUsedStatus = 0 where  fnumber ='"+cusnumber+"' "); 
+				
 				CustomerInfo cusInfo = iCustomer.getCustomerCollection(" where  number ='"+cusnumber+"'  ").get(0);
 				
 				System.out.println("########  address ########cusnumber"+cusnumber);
 				String cusInfoname = cusInfo.getName();
 				if(!cusname.equals(cusInfoname)){
-				
-					if (cusInfo.getUsedStatus() == UsedStatusEnum.APPROVED) { 
-						DbUtil.execute(ctx,"update T_BD_CUSTOMER set FUsedStatus = 1 where  fnumber ='"+cusnumber+"' "); 
- 
-						cusInfo.setName(cusname);
-						if(cusInfo.getCU().getId().toString().equals("00000000-0000-0000-0000-000000000000CCE7AED4")){
-							CustomerFactory.getLocalInstance(tempCTX).update(new ObjectUuidPK(cusInfo.getId()), cusInfo);
-						}else{
+					cusInfo.setName(cusname); 
+					if (cusInfo.getUsedStatus() == UsedStatusEnum.APPROVED) {   //核准
+						DbUtil.execute(ctx,"update T_BD_CUSTOMER set FUsedStatus = 0 where  fnumber ='"+cusnumber+"' "); 
+						try{
 							CustomerFactory.getLocalInstance(ctx).update(new ObjectUuidPK(cusInfo.getId()), cusInfo);
-						}
-						
-						DbUtil.execute(ctx,"update T_BD_CUSTOMER set FUsedStatus = 1 where  fnumber ='"+cusnumber+"' "); 
-					 
-					} else if (cusInfo.getUsedStatus() == UsedStatusEnum.UNAPPROVE) {  
-						cusInfo.setName(cusname);
-						
-						if(cusInfo.getCU().getId().toString().equals("00000000-0000-0000-0000-000000000000CCE7AED4")){
+						}catch (Exception e) {//为核准
+							// TODO: handle exception
+							System.out.println("########CustomerFactory UsedStatusEnum.APPROVED update ########"+cusInfo.getId());
 							CustomerFactory.getLocalInstance(tempCTX).update(new ObjectUuidPK(cusInfo.getId()), cusInfo);
-						}else{
+						} 
+						DbUtil.execute(ctx,"update T_BD_CUSTOMER set FUsedStatus = 1 where  fnumber ='"+cusnumber+"' ");  
+					} else if (cusInfo.getUsedStatus() == UsedStatusEnum.FREEZED) {    //禁用
+						DbUtil.execute(ctx,"update T_BD_CUSTOMER set FUsedStatus = 0 where  fnumber ='"+cusnumber+"' "); 
+						try{
 							CustomerFactory.getLocalInstance(ctx).update(new ObjectUuidPK(cusInfo.getId()), cusInfo);
-						}
-					}else{
-						msg = msg+"编码为"+cusnumber+"的供应商已经禁用,不能修改;"; 
-					}
-				} 
-				
-				
+						}catch (Exception e) {
+							// TODO: handle exception
+							System.out.println("########CustomerFactory UsedStatusEnum.FREEZED CustomerFactory ########"+cusInfo.getId());
+							CustomerFactory.getLocalInstance(tempCTX).update(new ObjectUuidPK(cusInfo.getId()), cusInfo);
+						}  
+						DbUtil.execute(ctx,"update T_BD_CUSTOMER set FUsedStatus = 2 where  fnumber ='"+cusnumber+"' "); 
+						
+					}else  if (cusInfo.getUsedStatus() == UsedStatusEnum.DELETED) {    //删除
+						DbUtil.execute(ctx,"update T_BD_CUSTOMER set FUsedStatus = 0 where  fnumber ='"+cusnumber+"' "); 
+						try{
+							CustomerFactory.getLocalInstance(ctx).update(new ObjectUuidPK(cusInfo.getId()), cusInfo);
+						}catch (Exception e) {
+							// TODO: handle exception
+							System.out.println("########CustomerFactory UsedStatusEnum.DELETED CustomerFactory ########"+cusInfo.getId());
+							CustomerFactory.getLocalInstance(tempCTX).update(new ObjectUuidPK(cusInfo.getId()), cusInfo);
+						} 
+						DbUtil.execute(ctx,"update T_BD_CUSTOMER set FUsedStatus = 3 where  fnumber ='"+cusnumber+"' "); 
+					} 
+				}  
 				try {
 					iCustomer.update(new ObjectUuidPK(cusInfo.getId()), cusInfo);
 				} catch (EASBizException e) {
@@ -462,8 +475,7 @@ public class CustmerUtil {
 						e23.printStackTrace();  
 					}
 					 
-				}
-				DbUtil.execute(ctx,"update T_BD_CUSTOMER set FUsedStatus = 1 where  fnumber ='"+cusnumber+"' "); 
+				} 
 				map.put("code", "success");
 				
 				msg =  "客户编码为"+cusnumber+"的客户名称修改为"+cusname+";" ;
