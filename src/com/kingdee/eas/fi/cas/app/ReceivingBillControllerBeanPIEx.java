@@ -35,7 +35,7 @@ public class ReceivingBillControllerBeanPIEx extends ReceivingBillControllerBean
  		IObjectPK pk = super._addnew(ctx, model);
   		 if(InterfaceResource.MKLD_DB_ID.equals(ctx.getAIS()))
  			 ReceClaimRecordUtil.savaRecordBill(ctx, pk.toString());
-		return pk;
+ 		return pk;
 	}
 	
 
