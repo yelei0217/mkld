@@ -19,6 +19,7 @@ import com.kingdee.eas.mkld.sapinterage.SAPInterfaceLogInfo;
 import com.kingdee.eas.mkld.sapinterage.app.ClaimTypeMenu;
 import com.kingdee.eas.mkld.sapinterage.app.InterResultMenu;
 import com.kingdee.eas.mkld.sapinterage.app.SAPInterTypeMenu;
+import com.kingdee.eas.mkld.sapinterage.common.InterfaceResource;
 import com.kingdee.eas.mkld.sapinterage.common.SAPInterfaceUtil;
 import com.kingdee.eas.util.app.DbUtil;
 import com.kingdee.jdbc.rowset.IRowSet;
@@ -39,15 +40,16 @@ public class ReceiptSentRecordUtil {
 		StringBuffer sbr = new StringBuffer();
 		sbr.append("/*dialect*/insert into CT_SIG_ReceiptSentRecord ").append("\r\n");
 		sbr.append(" (FID,FNumber,FName_l2,CFRECEIPTNO,CFSOURCETYPE,CFSENTFLAG,FSIMPLENAME,CFTRANPACKAGEID,CFCOMPANYID,FCREATETIME,FLASTUPDATETIME )").append("\r\n");
-		sbr.append(" select  newbosid('314BE638'),FID,FRECEDBILLNUMBER, FRECEIPTNO,1,0,FBANKCHECKFLAG,FTRANPACKAGEID,FCOMPANYID, sysdate,FBIZTIME  ").append("\r\n");
-		sbr.append(" from T_BE_TransDetail ").append("\r\n");
-		sbr.append(" where FBizType = 1 ").append("\r\n");// -- 业务类型 普通
-		sbr.append(" and FRECEIPTNO  is not null ").append("\r\n");// -- 是否跟电子回单匹配 是
-		sbr.append(" and FRECEDBILLTYPE='FA44FD5B' ").append("\r\n");// -- 接收单据类型 收款单
-		sbr.append(" and FBIZTIME between to_date(to_char(sysdate-4,'yyyy/mm/dd'),'yyyy/mm/dd') and to_date(to_char(sysdate-1,'yyyy/mm/dd'),'yyyy/mm/dd')").append("\r\n");
+		sbr.append(" select  newbosid('314BE638'),a.FID,a.FRECEDBILLNUMBER, a.FRECEIPTNO,1,0,a.FBANKCHECKFLAG,a.FTRANPACKAGEID,a.FCOMPANYID, sysdate,a.FBIZTIME    ").append("\r\n");
+		sbr.append(" from T_BE_TransDetail a ").append("\r\n");
+		sbr.append(" inner join T_BD_AccountBanks b on a.FBANKACCOUNTID = b.FID ").append("\r\n");
+		sbr.append(" where b.FBANKACCOUNTNUMBER in ( ").append(InterfaceResource.Rece_Account_Ids).append(" ) ").append("\r\n");// -- 业务类型 普通
+		sbr.append(" and a.FRECEIPTNO  is not null ").append("\r\n");// -- 是否跟电子回单匹配 是
+		sbr.append(" and a.FRECEDBILLTYPE='FA44FD5B' ").append("\r\n");// -- 接收单据类型 收款单
+		sbr.append(" and a.FBIZTIME between to_date(to_char(sysdate-4,'yyyy/mm/dd'),'yyyy/mm/dd') and to_date(to_char(sysdate-1,'yyyy/mm/dd'),'yyyy/mm/dd')").append("\r\n");
 		//sbr.append(" and to_char(FBIZTIME,'yyyy/mm/dd') ='2022/05/20' ").append("\r\n"); //测试固定时间
-		sbr.append(" and not exists (select * from CT_SIG_ReceiptSentRecord r where r.FNUMBER = T_BE_TransDetail.FID ) ").append("\r\n");
-		sbr.append(" order by  FBIZDATE desc  ");
+		sbr.append(" and not exists (select * from CT_SIG_ReceiptSentRecord r where r.FNUMBER = a.FID ) ").append("\r\n");
+		sbr.append(" order by  a.FBIZDATE desc  ");
 		DbUtil.execute(ctx, sbr.toString());
 		sbr.setLength(0);
 		sbr = new StringBuffer();
@@ -57,13 +59,14 @@ public class ReceiptSentRecordUtil {
 		sbr.append(" from T_BE_TransDetail a ").append("\r\n");
 		sbr.append(" inner join T_BE_BankPayingBill b on a.FBANKCHECKFLAG = b.FBANKCHECKFLAG ").append("\r\n");
 		sbr.append(" inner join T_CAS_PaymentBill c on  b.FSOURCEBILLID = c.FID ").append("\r\n");
-		sbr.append(" where a.FBizType = 1 ").append("\r\n"); //-- 业务类型 普通
-		sbr.append(" and  a.FRECEIPTNO  is not null ").append("\r\n"); //-- 是否跟电子回单匹配 是
+		sbr.append(" inner join T_BD_AccountBanks d on a.FBANKACCOUNTID = d.FID ").append("\r\n");
+		sbr.append(" where d.FBANKACCOUNTNUMBER in ( ").append(InterfaceResource.Rece_Account_Ids).append(" ) ").append("\r\n");// //-- 业务类型 普通
+		sbr.append(" and a.FBizType = 1 and  a.FRECEIPTNO  is not null ").append("\r\n"); //-- 是否跟电子回单匹配 是
 		sbr.append(" and a.FIsKDRetFlag= 1 ").append("\r\n");  //-- 是否为EAS银企付款
 //		sbr.append(" and to_char(FBIZTIME,'yyyy/mm/dd') ='2022/05/20'").append("\r\n");
 		sbr.append(" and not exists (select * from CT_SIG_ReceiptSentRecord r where r.FNUMBER = a.FID )").append("\r\n");
 		sbr.append(" and a.FBIZTIME between to_date(to_char(sysdate-4,'yyyy/mm/dd'),'yyyy/mm/dd') and to_date(to_char(sysdate-1,'yyyy/mm/dd'),'yyyy/mm/dd')").append("\r\n");
-		sbr.append(" order by  a.FBIZDATE desc ");
+		sbr.append(" order by a.FBIZDATE desc ");
 		DbUtil.execute(ctx, sbr.toString());
 		
     	Date currentDate = new Date();

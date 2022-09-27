@@ -12,6 +12,7 @@ import com.kingdee.eas.mkld.sapinterage.SAPInterfaceLogInfo;
 import com.kingdee.eas.mkld.sapinterage.app.InterResultMenu;
 import com.kingdee.eas.mkld.sapinterage.app.SAPInterTypeMenu;
 import com.kingdee.eas.mkld.sapinterage.app.util.ReceClaimRecordUtil;
+import com.kingdee.eas.mkld.sapinterage.common.InterfaceResource;
 import com.kingdee.eas.mkld.sapinterage.common.OAInterfaceUtil;
 import com.kingdee.eas.util.app.DbUtil;
 import com.kingdee.jdbc.rowset.IRowSet;
@@ -105,7 +106,8 @@ public class BankPayingResultSynToOAUtil {
 		sbr.append(" inner join T_BE_BankPayingBill ep on ep.FSOURCEBILLID  = p.FID ");
 		sbr.append(" inner  join  T_BD_AccountBanks  accou on  accou.fid = p.FPAYERACCOUNTBANKID ");
 	//	sbr.append(" inner  join  T_BD_Bank  bank on  bank.fid = accou.FBANK ");
-		sbr.append(" where ep.FSTATE =6 ");
+		sbr.append(" where ep.FSTATE =6 and p.CFSourceSystem ='OA' ");
+		sbr.append(" and accou.FBANKACCOUNTNUMBER in ( ").append(InterfaceResource.Rece_Account_Ids).append(" ) ").append("\r\n");
 		if("p".equals(oper))// 付款单号
 			sbr.append("  and p.FNUMBER  ='").append(id).append("'");
 		if("ep".equals(oper))// 银行付款单ID
@@ -132,7 +134,8 @@ public class BankPayingResultSynToOAUtil {
 			sbr.append(" inner join T_BE_BankPayingBill ep on ep.FSOURCEBILLID  = p.FID ");
 			sbr.append(" inner join  T_BD_AccountBanks  accou on  accou.fid = p.FPAYERACCOUNTBANKID ");
 			sbr.append(" inner join  T_BD_Bank  bank on  bank.fid = accou.FBANK ");
-			sbr.append(" where ep.FSTATE =6 ");
+			sbr.append(" where ep.FSTATE =6 and p.CFSourceSystem ='OA' ");
+			sbr.append(" and accou.FBANKACCOUNTNUMBER in ( ").append(InterfaceResource.Rece_Account_Ids).append(" ) ").append("\r\n");
 			if("p".equals(oper))// 付款单号
 				sbr.append("  and p.FNUMBER  ='").append(billId).append("'");
 			if("ep".equals(oper))// 银行付款单ID
@@ -140,11 +143,9 @@ public class BankPayingResultSynToOAUtil {
 			try {
 				IRowSet rs=DbUtil.executeQuery(ctx, sbr.toString());
 				if(rs!=null && rs.next()){
-					
-					if( null!= rs.getObject("TYPE")  && "OA".equals(rs.getString("TYPE"))){  
+//					if( null!= rs.getObject("TYPE")  && "OA".equals(rs.getString("TYPE"))){  
 					//if( true ){  
 						int status = rs.getInt("STATE");
-						
 						SAPInterfaceLogInfo sAPInterfaceLogInfo= new SAPInterfaceLogInfo();
 						HashMap<String,Object> eMps = new HashMap<String,Object>();
 						if( 6 == status ){
@@ -195,7 +196,7 @@ public class BankPayingResultSynToOAUtil {
 						sAPInterfaceLogInfo.setInterType(SAPInterTypeMenu.BANKPAY);
 						SAPInterfaceLogFactory.getLocalInstance(ctx).save(sAPInterfaceLogInfo);
 					}
-				}
+//				}
 			} catch (Exception e) {
 				e.printStackTrace(); 
 			}

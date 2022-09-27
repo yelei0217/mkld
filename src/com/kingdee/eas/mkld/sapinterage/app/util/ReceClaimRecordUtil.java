@@ -82,8 +82,11 @@ public class ReceClaimRecordUtil {
 					bInfo.getSourceBillId() != null && !"".equals(bInfo.getSourceBillId())) {
 				String sId = bInfo.getSourceBillId();
 				String stype = BOSUuid.read(sId).getType().toString();
+				//收款 账号
+				AccountBankInfo accountInfo = AccountBankFactory.getLocalInstance(ctx).getAccountBankInfo(new ObjectUuidPK(bInfo.getPayeeAccountBank().getId()));
+				String bankAccount = accountInfo.getBankAccountNumber();
 				//交易明细
-				if("380D4F63".equals(stype)){
+				if("380D4F63".equals(stype) && InterfaceResource.Rece_Account_Id_Sets.contains(bankAccount)){
 					TransDetailInfo tdInfo = TransDetailFactory.getLocalInstance(ctx).getTransDetailInfo(new ObjectStringPK(sId));
 	                FilterInfo filter = new FilterInfo();
 	                filter.getFilterItems().add(new FilterItemInfo("PaymentId",rId,CompareType.EQUALS));
@@ -108,11 +111,9 @@ public class ReceClaimRecordUtil {
 								rInfo.setCustomerNo(bInfo.getPayerNumber());
 							//	rInfo.setClaimType(ClaimTypeMenu.CurrMonth);
 								rInfo.setClaimStatus(ClaimStatusMenu.Yes);
-								
 								isCustoemr = true;
 							}
 						} 
-						
 						
 						rInfo.setPayerName(tdInfo.getOppUnit());
 						rInfo.setDescription(tdInfo.getNumber());
@@ -125,17 +126,16 @@ public class ReceClaimRecordUtil {
 						String bizdateStr = format.format(bInfo.getBizDate());
 						rInfo.setYear(Integer.parseInt(bizdateStr.substring(0, 4)));
 						rInfo.setMonth(Integer.parseInt(bizdateStr.substring(5, 7)));
-						AccountBankInfo accountInfo = AccountBankFactory.getLocalInstance(ctx).getAccountBankInfo(new ObjectUuidPK(bInfo.getPayeeAccountBank().getId()));
-						String bankAccount = accountInfo.getBankAccountNumber();
+				
 						rInfo.setBankAccount(bankAccount);
 						
 						//根据收款银行账号获取事业部
-						if(InterfaceResource.Account_Business_Rale.get(bankAccount) !=null && "".equals(InterfaceResource.Account_Business_Rale.get(bankAccount))){
+						if(InterfaceResource.Account_2MDS_Rale.get(bankAccount) !=null && !"".equals(InterfaceResource.Account_2MDS_Rale.get(bankAccount))){
 							if(isCustoemr)
 								rInfo.setDmsSendStatus(SendStatusMenu.SentS);
 							else
 								rInfo.setDmsSendStatus(SendStatusMenu.UnSent);
-							
+							rInfo.setBusDeptName(InterfaceResource.Account_2MDS_Rale.get(bankAccount));
 						}else
 							rInfo.setDmsSendStatus(SendStatusMenu.SentS);
 						
@@ -166,7 +166,7 @@ public class ReceClaimRecordUtil {
 						rInfo.setSendSentFlag(SendStatusMenu.UnSent);
 						CurrencyInfo currInfo =CurrencyFactory.getLocalInstance(ctx).getCurrencyInfo(new ObjectUuidPK(bInfo.getCurrency().getId()));
 						rInfo.setCurrencyNo(currInfo.getIsoCode());
-						ibiz.addnew(rInfo);
+ 						ibiz.addnew(rInfo);
 	                }
 				}
 			}

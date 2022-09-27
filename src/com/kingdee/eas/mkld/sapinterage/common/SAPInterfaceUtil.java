@@ -71,12 +71,21 @@ public class SAPInterfaceUtil {
 		 return flag ;
 	 }
 	 
+	  /**
+	   *  测试 使用 https 
+	   *  生产 使用 http
+	   * @param strJson
+	   * @return
+	   */
 	  public static String sendSapRequest(String strJson){
 		  String result = null;
 		  try {
 			HttpClient httpClient = new HTTPSTrustClient().init();
-		//	String strJson = createSendReqStr(sentId,senType,jsonData);
-		    result = HTTPSClientUtil.doPostJson(httpClient, InterfaceResource.sap_base_url, strJson);
+ 		    result = HTTPSClientUtil.doPostJson(httpClient, InterfaceResource.sap_base_url, strJson);
+ 		    
+ 		    
+ 		    
+ 		    
 //		    result = sendPost( InterfaceResource.sap_base_url,strJson,getBasicAuth());
 		} catch (Exception e) {
  			e.printStackTrace();
