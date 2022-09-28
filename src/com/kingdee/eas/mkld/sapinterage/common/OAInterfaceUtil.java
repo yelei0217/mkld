@@ -120,8 +120,8 @@ public class OAInterfaceUtil {
 	   	            // 发送POST请求必须设置如下两行
 	   	            conn.setDoOutput(true);
 	   	            conn.setDoInput(true);
-	   	            conn.setRequestMethod("GET");    // POST方法
-	   	            // 设置通用的请求属性 
+	   	            conn.setRequestMethod("GET");    // POST方法 
+ 	   	            // 设置通用的请求属性 
 	   	          	conn.setRequestProperty("app-key", InterfaceResource.db_center_app_key);
 	   	          	conn.setRequestProperty("app-secret",InterfaceResource.db_center_app_secret);
 	   	            // conn.setRequestProperty("Params", "insertdt=2022-06-06 00:00:00&page_num=2&page_size=100");
@@ -161,6 +161,6 @@ public class OAInterfaceUtil {
 	        }
 	       
 	       return result;
-	   }  
+	   }   
 
 }

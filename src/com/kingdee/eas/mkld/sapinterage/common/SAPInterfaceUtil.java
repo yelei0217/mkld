@@ -80,13 +80,9 @@ public class SAPInterfaceUtil {
 	  public static String sendSapRequest(String strJson){
 		  String result = null;
 		  try {
-			HttpClient httpClient = new HTTPSTrustClient().init();
- 		    result = HTTPSClientUtil.doPostJson(httpClient, InterfaceResource.sap_base_url, strJson);
- 		    
- 		    
- 		    
- 		    
-//		    result = sendPost( InterfaceResource.sap_base_url,strJson,getBasicAuth());
+//			HttpClient httpClient = new HTTPSTrustClient().init();
+// 		    result = HTTPSClientUtil.doPostJson(httpClient, InterfaceResource.sap_base_url, strJson);
+		    result = sendPost(InterfaceResource.sap_base_url,strJson,getBasicAuth());
 		} catch (Exception e) {
  			e.printStackTrace();
 		}

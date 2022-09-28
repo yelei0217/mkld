@@ -139,7 +139,6 @@ public class ReceClaimRecordUtil {
 						}else
 							rInfo.setDmsSendStatus(SendStatusMenu.SentS);
 						
-						
 						rInfo.setReceDate(bInfo.getBizDate());
 						rInfo.setReceAmount(bInfo.getActRecAmt());
 						rInfo.setLoans(BigDecimal.ZERO);//´û¿î

@@ -15,11 +15,27 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
+
+import org.apache.commons.httpclient.HttpStatus;
+import org.apache.http.HttpEntity;
+import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
+import org.apache.http.client.config.RequestConfig;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.google.gson.Gson;
 import com.kingdee.bos.BOSException;
 import com.kingdee.bos.Context;
 import com.kingdee.bos.dao.IObjectPK;
@@ -77,6 +93,7 @@ import com.kingdee.eas.mkld.sapinterage.SAPInterfaceLogInfo;
 import com.kingdee.eas.mkld.sapinterage.app.InterResultMenu;
 import com.kingdee.eas.mkld.sapinterage.app.SAPInterTypeMenu;
 import com.kingdee.eas.mkld.sapinterage.common.InterfaceResource;
+import com.kingdee.eas.mkld.sapinterage.common.OAInterfaceUtil;
 import com.kingdee.eas.mkld.sapinterage.rest.HTTPSClientUtil;
 import com.kingdee.eas.mkld.sapinterage.rest.HTTPSTrustClient;
 import com.kingdee.eas.util.app.DbUtil;
@@ -184,8 +201,13 @@ public class CustmerUtil {
 			HttpClient httpClient;
 			String result = "";
 			try { 
-				httpClient = new HTTPSTrustClient().init();
-				result = HTTPSClientUtil.doGet(  httpClient, InterfaceResource.db_customer_path,  paramHeader,  paramBody) ;
+//				httpClient = new HTTPSTrustClient().init();
+//				result = HTTPSClientUtil.doGet(  httpClient, InterfaceResource.db_customer_path,  paramHeader,  paramBody) ;
+//				
+				//result = syncCustomerFormMDB(dataStr);
+				System.out.println(dataStr);
+				result = sendGet(dataStr);
+				//result =  OAInterfaceUtil.sendMessageToBDGet(dataStr);
 				
 				//result="{\"errCode\": 0, \"errMsg\": \"\", \"requestId\": \"\", \"value\": [{\"HEADER\": {\"PARTNER\": \"800045\", \"NAME_ORG1\": \"\\u5317\\u4eac\\u4eac\\u6e2f\\u76db\\u5143\\u8d38\\u6613\\u6709\\u9650\\u516c\\u53f8\", \"BU_SORT1\": null, \"CREATION_GROUP\": \"Z300\", \"CREATION_NM\": \"\\u96c6\\u56e2\\u5916\\u6709\\u4e1a\\u52a1\\u5f80\\u6765\\u5ba2\\u6237\\u4e3b\\u6570\\u636e\", \"COUNTRY\": \"CN\", \"ZPROVINCE\": \"110000\", \"ZPROVINCE_NM\": \"\\u5317\\u4eac\\u5e02\", \"STR_SUPPL2\": \"\\u5317\\u4eac\\u5e02\\u987a\\u4e49\\u533a\\u8d75\\u5168\\u8425\\u9547\\u767d\\u5e99\\u6751\\u59d4\\u4f1a\\u4e1c50\\u7c73\", \"NAME_CO\": null, \"TEL_NUMBER\": null, \"SMTP_ADDR\": null, \"TAXNUMXL\": \"91110113699648109N\", \"STREET\": \"\\u5317\\u4eac\\u5e02\\u987a\\u4e49\\u533a\\u8d75\\u5168\\u8425\\u9547\\u767d\\u5e99\\u6751\\u59d4\\u4f1a\\u4e1c50\\u7c73\", \"BKDSC\": \"\\u5317\\u4eac\\u94f6\\u884c\\u987a\\u4e49\\u652f\\u884c\", \"ACCNAME\": \"01090338840120105080045\", \"BKEXT\": \"010-85913361\", \"KATR1\": \"Z1\", \"KATR1_NM\": \"\\u589e\\u7968\", \"ADRNR\": null, \"INSERTDT\": \"2022-08-20 14:00:19\"}, \"BUSINESS\": [], \"ADDRESS\": []}]}";
 				if(result!=null ){
@@ -306,16 +328,24 @@ public class CustmerUtil {
 				return map;
 			}
 			String cusname = headerjson.getString("NAME_ORG1");
-			if (null== headerjson.get("CREATION_GROUP") || "".equals(headerjson.get("CREATION_GROUP")) ) {
-				msg =  cusnumber+"的客户分组不能为空" ;
-				map.put("msg", msg);
-				return map;
-			}
-			String cusclass = headerjson.getString("NAME_ORG1");
 			
-			if(sizeBus == 0 ){ 
+			String cusclass = ""; 
+			
+			if (null== headerjson.get("CREATION_GROUP") || "".equals(headerjson.get("CREATION_GROUP")) ) {
+//				msg =  cusnumber+"的客户分组不能为空" ;
+//				map.put("msg", msg);
+//				return map;
+				
+				cusclass = "999"; 
+			}else{
+				cusclass = headerjson.getString("CREATION_GROUP");
+			}
+			 
+			if( "".equals(cusclass)){ 
 				cusclass = "999";
 			}
+				
+			
 			CustomerInfo customerInfo = new CustomerInfo();
 			ICustomer iCustomer = CustomerFactory.getLocalInstance(ctx);
 			// 判断是否已存在
@@ -355,9 +385,9 @@ public class CustmerUtil {
 				customerInfo.setCU(ctrlUnitInfo);
 				// 根据category是101还是102采取不同逻辑
 				CSSPGroupInfo cGroupInfo = new CSSPGroupInfo(); 
-				if (null != cssMap.get(cusclass) &&   !"".equals( cssMap.get(cusclass) ) ) { 
+				if (  CSSPGroupFactory.getLocalInstance(ctx).exists("where number='"+cusclass+"' ") ) { 
 					//cGroupInfo.setId(BOSUuid.read(cssMap.get(cusclass))  ); 
-					cGroupInfo =  CSSPGroupFactory.getLocalInstance(ctx).getCSSPGroupInfo("where id='"+cssMap.get(cusclass)+"' ");
+					cGroupInfo =  CSSPGroupFactory.getLocalInstance(ctx).getCSSPGroupInfo("where number='"+cusclass+"' ");
 					customerInfo.setBrowseGroup(cGroupInfo);
 				} else{
 				 
@@ -429,13 +459,19 @@ public class CustmerUtil {
 				if(!cusname.equals(cusInfoname)){
 					cusInfo.setName(cusname); 
 					if (cusInfo.getUsedStatus() == UsedStatusEnum.APPROVED) {   //核准
-						DbUtil.execute(ctx,"update T_BD_CUSTOMER set FUsedStatus = 0 where  fnumber ='"+cusnumber+"' "); 
+						DbUtil.execute(ctx,"update T_BD_CUSTOMER set FUsedStatus = 0 where  fnumber ='"+cusnumber+"' ");  
 						try{
 							CustomerFactory.getLocalInstance(ctx).update(new ObjectUuidPK(cusInfo.getId()), cusInfo);
 						}catch (Exception e) {//为核准
-							// TODO: handle exception
-							System.out.println("########CustomerFactory UsedStatusEnum.APPROVED update ########"+cusInfo.getId());
-							CustomerFactory.getLocalInstance(tempCTX).update(new ObjectUuidPK(cusInfo.getId()), cusInfo);
+							// TODO: handle exception 
+							try{
+								DbUtil.execute(ctx,"update T_BD_CUSTOMER set FUsedStatus = 1 where  fnumber ='"+cusnumber+"' "); 
+								CustomerFactory.getLocalInstance(tempCTX).update(new ObjectUuidPK(cusInfo.getId()), cusInfo);
+							}catch (Exception e3) {//为核准
+								// TODO: handle exception 
+								e3.printStackTrace();
+								DbUtil.execute(ctx,"update T_BD_CUSTOMER set fname_l2 = '"+cusname+"' where  fnumber ='"+cusnumber+"' "); 
+							}  
 						} 
 						DbUtil.execute(ctx,"update T_BD_CUSTOMER set FUsedStatus = 1 where  fnumber ='"+cusnumber+"' ");  
 					} else if (cusInfo.getUsedStatus() == UsedStatusEnum.FREEZED) {    //禁用
@@ -443,9 +479,15 @@ public class CustmerUtil {
 						try{
 							CustomerFactory.getLocalInstance(ctx).update(new ObjectUuidPK(cusInfo.getId()), cusInfo);
 						}catch (Exception e) {
-							// TODO: handle exception
-							System.out.println("########CustomerFactory UsedStatusEnum.FREEZED CustomerFactory ########"+cusInfo.getId());
-							CustomerFactory.getLocalInstance(tempCTX).update(new ObjectUuidPK(cusInfo.getId()), cusInfo);
+							// TODO: handle exception 
+							try{
+								System.out.println("########CustomerFactory UsedStatusEnum.FREEZED CustomerFactory ########"+cusInfo.getId());
+								CustomerFactory.getLocalInstance(tempCTX).update(new ObjectUuidPK(cusInfo.getId()), cusInfo);
+							}catch (Exception e3) {//为核准
+								// TODO: handle exception 
+								e3.printStackTrace();
+								DbUtil.execute(ctx,"update T_BD_CUSTOMER set fname_l2 = '"+cusname+"' where  fnumber ='"+cusnumber+"' "); 
+							}  
 						}  
 						DbUtil.execute(ctx,"update T_BD_CUSTOMER set FUsedStatus = 2 where  fnumber ='"+cusnumber+"' "); 
 						
@@ -454,14 +496,20 @@ public class CustmerUtil {
 						try{
 							CustomerFactory.getLocalInstance(ctx).update(new ObjectUuidPK(cusInfo.getId()), cusInfo);
 						}catch (Exception e) {
-							// TODO: handle exception
-							System.out.println("########CustomerFactory UsedStatusEnum.DELETED CustomerFactory ########"+cusInfo.getId());
-							CustomerFactory.getLocalInstance(tempCTX).update(new ObjectUuidPK(cusInfo.getId()), cusInfo);
+							// TODO: handle exception 
+							try{
+								System.out.println("########CustomerFactory UsedStatusEnum.DELETED CustomerFactory ########"+cusInfo.getId());
+								CustomerFactory.getLocalInstance(tempCTX).update(new ObjectUuidPK(cusInfo.getId()), cusInfo);
+							}catch (Exception e3) {//为核准
+								// TODO: handle exception 
+								e3.printStackTrace();
+								DbUtil.execute(ctx,"update T_BD_CUSTOMER set fname_l2 = '"+cusname+"' where  fnumber ='"+cusnumber+"' "); 
+							}  
 						} 
 						DbUtil.execute(ctx,"update T_BD_CUSTOMER set FUsedStatus = 3 where  fnumber ='"+cusnumber+"' "); 
 					} 
 				}  
-				try {
+			/*try {
 					iCustomer.update(new ObjectUuidPK(cusInfo.getId()), cusInfo);
 				} catch (EASBizException e) {
 					// TODO Auto-generated catch block
@@ -475,7 +523,7 @@ public class CustmerUtil {
 						e23.printStackTrace();  
 					}
 					 
-				} 
+				} */
 				map.put("code", "success");
 				
 				msg =  "客户编码为"+cusnumber+"的客户名称修改为"+cusname+";" ;
@@ -636,10 +684,9 @@ public class CustmerUtil {
 		ctx.setUserName(user.getName());
 
 		FullOrgUnitInfo orgUnit = user.getDefOrgUnit();
-		String orgUnitId = orgUnit.getId().toString();
+		String orgUnitId = orgUnit.getId().toString();//"00000000-0000-0000-0000-000000000000CCE7AED4";//orgUnit.getId().toString();
 		IObjectPK orgUnitPk = new ObjectStringPK(orgUnitId);
-		orgUnit = FullOrgUnitFactory.getLocalInstance(ctx).getFullOrgUnitInfo(
-				orgUnitPk);
+		orgUnit = FullOrgUnitFactory.getLocalInstance(ctx).getFullOrgUnitInfo(orgUnitPk);
 
 		ctx.put("UserInfo", user);
 		ctx.put("SwitchToNewLoginFlow", "true");
@@ -741,4 +788,60 @@ public class CustmerUtil {
 
 		return ctx;
 	}
+	
+	
+	/**
+	 * 
+	 * @param sendStr
+	 * @return
+	 */
+	  private static String syncCustomerFormMDB(String param)
+	  {
+	    String responseString = null;
+	    OkHttpClient client = new OkHttpClient.Builder()
+	      .connectTimeout(15L, TimeUnit.SECONDS)
+	      .readTimeout(600L, TimeUnit.SECONDS)
+	      .build();
+	   // MediaType mediaType = MediaType.parse("application/json");
+	   // RequestBody body = RequestBody.create(mediaType, sendStr);
+	    RequestBody body =RequestBody.create(null, new byte[0]);
+	    Request request = new Request.Builder()
+	      .url(InterfaceResource.db_customer_path)
+	      .get()
+	      .put(body)
+	      .addHeader("app-key", InterfaceResource.db_center_app_key)
+	      .addHeader("app-secret", InterfaceResource.db_center_app_secret)
+	      .addHeader("Params", param)
+	      .build();
+	    try
+	    {
+	      Response response = client.newCall(request).execute();
+	      responseString = response.body().string();
+	    }
+	    catch (IOException e)
+	    {
+	      e.printStackTrace();
+	    }
+	    return responseString;
+	  }
+	   
+	  private String sendGet(String param){
+		    String result = "";
+	        CloseableHttpClient client = HttpClients.createDefault();
+	        HttpGet httpGet = new HttpGet(InterfaceResource.db_customer_path);
+	        httpGet.setHeader("app-key", InterfaceResource.db_center_app_key);
+	        httpGet.setHeader("app-secret",  InterfaceResource.db_center_app_secret);
+	        httpGet.setHeader("Params", param);
+	        try {
+				CloseableHttpResponse Response = client.execute(httpGet);
+				result = EntityUtils.toString(Response.getEntity());
+			} catch (ClientProtocolException e) {
+ 				e.printStackTrace();
+			} catch (IOException e) {
+ 				e.printStackTrace();
+			} 
+		    return result;
+		}
+	  
+	  
 }
