@@ -14,6 +14,8 @@ import org.apache.log4j.Logger;
 import com.google.gson.Gson;
 import com.kingdee.bos.BOSException;
 import com.kingdee.bos.Context;
+import com.kingdee.eas.common.EASBizException;
+import com.kingdee.eas.mkld.sapinterage.SAPInterfaceLogFactory;
 import com.kingdee.eas.mkld.sapinterage.SAPInterfaceLogInfo;
 import com.kingdee.eas.mkld.sapinterage.app.util.ReceClaimRecordUtil;
 import com.kingdee.eas.mkld.sapinterage.app.util.ReceiptSentRecordUtil;
@@ -114,24 +116,23 @@ public class ReceClaimSentFacadeControllerBean extends AbstractReceClaimSentFaca
 	@Override
 	protected String _sentCustomer2DMS(Context ctx) throws BOSException {
 		this.timer.reset(); 
-		
 		String sql ="/*dialect*/select distinct CFPayerName,CFBusDeptName from CT_SIG_ReceClaimRecord where CFDmsSendStatus = 0";
 		IRowSet rs = DbUtil.executeQuery(ctx, sql);
 		List lists= new ArrayList();
-		Set rIds = new HashSet();
+//		Set rIds = new HashSet();
 		  try {
 			if(rs!=null){
 				  while(rs.next()){
 					 if(rs.getObject("CFPayerName") !=null && !"".equals(rs.getObject("CFPayerName").toString()) && 
 							 rs.getObject("CFBusDeptName") !=null && !"".equals(rs.getObject("CFBusDeptName").toString()) ){
 							Map<String,String> mp = new HashMap<String,String>();
-							mp.put("business", rs.getObject("CFPayerName").toString());
-							mp.put("customername", rs.getObject("CFRECEIPTNO").toString());
-							//mp.put("", rs.getObject("CFSOURCETYPE").toString());
-							rIds.add(rs.getObject("FID").toString());
+							mp.put("business", rs.getObject("CFBusDeptName").toString());
+							mp.put("customername", rs.getObject("CFPayerName").toString());
+//							rIds.add(rs.getObject("FID").toString());
 							lists.add(mp);
 					 }
-				  }
+				  } 
+					
 				  if(lists !=null && lists.size() > 0){
 					  Map sentMp =new HashMap();
 					  sentMp.put("kx_channelcustomers_wait", lists);
@@ -151,6 +152,11 @@ public class ReceClaimSentFacadeControllerBean extends AbstractReceClaimSentFaca
 				        logInfo.setRequest(dataStr);
 				        logInfo.setRespond(sapReceRsp);
 				        logInfo.setDescription("未匹配到客户名称发送至DMS");
+				        try {
+							SAPInterfaceLogFactory.getLocalInstance(ctx).addnew(logInfo);
+						} catch (EASBizException e) {
+							e.printStackTrace();
+						 }
 				        
 				  }
 			  }

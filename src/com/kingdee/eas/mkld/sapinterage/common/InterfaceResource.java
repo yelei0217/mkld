@@ -174,7 +174,7 @@ public class InterfaceResource {
 	/** DMS dms_base_path **/
 	public static String dms_base_path ="http://47.102.138.30:7000";
 	
-	public static String copyCtxUser ="EAS-AUTO";  
+	public static String copyCtxUser ="user";  
 	
 	public static String  fileUrl = "/data/customer/";
 	

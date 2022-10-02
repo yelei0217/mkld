@@ -28,15 +28,15 @@ public class ReceClaimRecordListUI extends AbstractReceClaimRecordListUI
     @Override
     public void onLoad() throws Exception { 
     	super.onLoad();
-     	this.btnAddNew.setVisible(false);
-     	//this.btnEdit.setVisible(false);
-     	this.btnRemove.setVisible(false);
-     	this.btnCreateTo.setVisible(false);
-
-     	this.menuItemAddNew.setVisible(false);
-     	//this.menuItemEdit.setVisible(false);
-     	this.menuItemRemove.setVisible(false);
-     	this.menuItemCreateTo.setVisible(false);
+//     	this.btnAddNew.setVisible(false);
+//     	//this.btnEdit.setVisible(false);
+//     	this.btnRemove.setVisible(false);
+//     	this.btnCreateTo.setVisible(false);
+//
+//     	this.menuItemAddNew.setVisible(false);
+//     	//this.menuItemEdit.setVisible(false);
+//     	this.menuItemRemove.setVisible(false);
+//     	this.menuItemCreateTo.setVisible(false);
      	
     	KDWorkButton btnSend2OA = new KDWorkButton();
 		btnSend2OA.setText("付款单发送OA测试");// 设置按钮名称

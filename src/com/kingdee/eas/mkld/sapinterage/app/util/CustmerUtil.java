@@ -457,7 +457,12 @@ public class CustmerUtil {
 				System.out.println("########  address ########cusnumber"+cusnumber);
 				String cusInfoname = cusInfo.getName();
 				if(!cusname.equals(cusInfoname)){
+					
 					cusInfo.setName(cusname); 
+					
+					//修改认领记录单
+			    	ReceClaimRecordUtil.doUpdateClaimStaByCusName(ctx, cusnumber, cusname);
+			    	
 					if (cusInfo.getUsedStatus() == UsedStatusEnum.APPROVED) {   //核准
 						DbUtil.execute(ctx,"update T_BD_CUSTOMER set FUsedStatus = 0 where  fnumber ='"+cusnumber+"' ");  
 						try{

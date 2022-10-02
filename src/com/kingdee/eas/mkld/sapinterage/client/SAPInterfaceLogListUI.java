@@ -8,6 +8,7 @@ import java.awt.event.ActionEvent;
 import org.apache.log4j.Logger;
 
 import com.kingdee.bos.ui.face.CoreUIObject;
+import com.kingdee.eas.mkld.sapinterage.ReceClaimSentFacadeFactory;
 import com.kingdee.eas.mkld.sapinterage.SyncDBCusFacadeFactory;
 
 /**
@@ -21,15 +22,15 @@ public class SAPInterfaceLogListUI extends AbstractSAPInterfaceLogListUI
     public void onLoad() throws Exception {
      	super.onLoad();
      	
-     	this.btnAddNew.setVisible(false);
-     	this.btnEdit.setVisible(false);
-     	this.btnRemove.setVisible(false);
-     	this.btnCreateTo.setVisible(false);
-
-     	this.menuItemAddNew.setVisible(false);
-     	this.menuItemEdit.setVisible(false);
-     	this.menuItemRemove.setVisible(false);
-     	this.menuItemCreateTo.setVisible(false);
+//     	this.btnAddNew.setVisible(false);
+//     	this.btnEdit.setVisible(false);
+//     	this.btnRemove.setVisible(false);
+//     	this.btnCreateTo.setVisible(false);
+//
+//     	this.menuItemAddNew.setVisible(false);
+//     	this.menuItemEdit.setVisible(false);
+//     	this.menuItemRemove.setVisible(false);
+//     	this.menuItemCreateTo.setVisible(false);
     }
     /**
      * output class constructor
@@ -51,7 +52,9 @@ public class SAPInterfaceLogListUI extends AbstractSAPInterfaceLogListUI
     public void actionHelp_actionPerformed(ActionEvent e) throws Exception {
     	// TODO Auto-generated method stub
 //    	super.actionHelp_actionPerformed(e);
-    	SyncDBCusFacadeFactory.getRemoteInstance().SyncCustomer("");
+//    	SyncDBCusFacadeFactory.getRemoteInstance().SyncCustomer("");
+    	
+//    	ReceClaimSentFacadeFactory.getRemoteInstance().sentCustomer2DMS();
     }
 
     /**
