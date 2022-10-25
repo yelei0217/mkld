@@ -11,12 +11,14 @@ import java.util.Set;
 
 import org.apache.log4j.Logger;
 
+import com.alibaba.fastjson.JSONObject;
 import com.google.gson.Gson;
 import com.kingdee.bos.BOSException;
 import com.kingdee.bos.Context;
 import com.kingdee.eas.common.EASBizException;
 import com.kingdee.eas.mkld.sapinterage.SAPInterfaceLogFactory;
 import com.kingdee.eas.mkld.sapinterage.SAPInterfaceLogInfo;
+import com.kingdee.eas.mkld.sapinterage.app.util.PaymentSentRecordUtil;
 import com.kingdee.eas.mkld.sapinterage.app.util.ReceClaimRecordUtil;
 import com.kingdee.eas.mkld.sapinterage.app.util.ReceiptSentRecordUtil;
 import com.kingdee.eas.mkld.sapinterage.common.DMSInterfaceUtil;
@@ -116,7 +118,7 @@ public class ReceClaimSentFacadeControllerBean extends AbstractReceClaimSentFaca
 	@Override
 	protected String _sentCustomer2DMS(Context ctx) throws BOSException {
 		this.timer.reset(); 
-		String sql ="/*dialect*/select distinct CFPayerName,CFBusDeptName from CT_SIG_ReceClaimRecord where CFDmsSendStatus = 0";
+		String sql ="select distinct CFPayerName,CFBusDeptName from CT_SIG_ReceClaimRecord where CFDmsSendStatus = 0";
 		IRowSet rs = DbUtil.executeQuery(ctx, sql);
 		List lists= new ArrayList();
 //		Set rIds = new HashSet();
@@ -137,8 +139,9 @@ public class ReceClaimSentFacadeControllerBean extends AbstractReceClaimSentFaca
 					  Map sentMp =new HashMap();
 					  sentMp.put("kx_channelcustomers_wait", lists);
 					  Gson goso = new Gson();
-					  String dataStr = goso.toJson(sentMp);
-
+					  String dataStr = goso.toJson(sentMp); 
+//					  String dataStr = JSONObject.toJSONString(sentMp);
+					  
 					  Date currentDate = new Date();
 					  String sapReceRsp =  DMSInterfaceUtil.sendCustomer2dms(dataStr);
 					  String msgId = ReceClaimRecordUtil.getCurrentTimeStrS()+(int)(Math.random()*10000);
@@ -165,5 +168,25 @@ public class ReceClaimSentFacadeControllerBean extends AbstractReceClaimSentFaca
 		} 
 		return super._sentCustomer2DMS(ctx);
 	}
+
+
+	@Override
+	protected void _genPaymentRecord(Context ctx) throws BOSException {
+		PaymentSentRecordUtil.doGenRecord(ctx);
+		System.out.println("生成付款状态发送记录，花费时间：" + this.timer.msValue());
+		logger.info("生成付款状态发送记录，花费时间：" + this.timer.msValue());
+		 
+	}
+
+
+	@Override
+	protected void _SentPaymentRecord(Context ctx) throws BOSException {
+		PaymentSentRecordUtil.doSentRecord(ctx);
+		System.out.println("发送付款状态至OA系统，花费时间：" + this.timer.msValue());
+		logger.info("发送付款状态至OA系统，花费时间：" + this.timer.msValue());
+	}
+	
+	
+	
 	
 }

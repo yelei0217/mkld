@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <joinQuery xmlns="com.kingdee.bos.metadata">
     <package>com.kingdee.eas.mkld.sapinterage.app</package>
-    <name>ClaimAccountQuery</name>
-    <alias>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].alias</alias>
-    <description>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].description</description>
+    <name>PaymentSentRecordQuery</name>
+    <alias>joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].alias</alias>
+    <description>joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].description</description>
     <userDefined>true</userDefined>
     <reportDataSource />
-    <bizUnitPK>com.kingdee.eas.mkld.sapinterage.ClaimAccount</bizUnitPK>
+    <bizUnitPK>com.kingdee.eas.mkld.sapinterage.PaymentSentRecord</bizUnitPK>
     <connectionProvider />
     <subObjects>
         <subEntity>
-            <name>ClaimAccount</name>
-            <alias>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].subObjects.subEntity[ClaimAccount].alias</alias>
+            <name>PaymentSentRecord</name>
+            <alias>joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].subObjects.subEntity[PaymentSentRecord].alias</alias>
             <userDefined>true</userDefined>
             <query>
                 <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ClaimAccountQuery" />
+                <key name="name" value="PaymentSentRecordQuery" />
             </query>
             <entityRef>
                 <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ClaimAccount" />
+                <key name="name" value="PaymentSentRecord" />
             </entityRef>
         </subEntity>
         <subEntity>
             <name>creator</name>
-            <alias>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].subObjects.subEntity[creator].alias</alias>
+            <alias>joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].subObjects.subEntity[creator].alias</alias>
             <userDefined>true</userDefined>
             <query>
                 <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ClaimAccountQuery" />
+                <key name="name" value="PaymentSentRecordQuery" />
             </query>
             <entityRef>
                 <key name="package" value="com.kingdee.eas.base.permission.app" />
@@ -37,11 +37,11 @@
         </subEntity>
         <subEntity>
             <name>lastUpdateUser</name>
-            <alias>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].subObjects.subEntity[lastUpdateUser].alias</alias>
+            <alias>joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].subObjects.subEntity[lastUpdateUser].alias</alias>
             <userDefined>true</userDefined>
             <query>
                 <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ClaimAccountQuery" />
+                <key name="name" value="PaymentSentRecordQuery" />
             </query>
             <entityRef>
                 <key name="package" value="com.kingdee.eas.base.permission.app" />
@@ -49,29 +49,16 @@
             </entityRef>
         </subEntity>
         <subEntity>
-            <name>company</name>
-            <alias>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].subObjects.subEntity[company].alias</alias>
+            <name>Company</name>
+            <alias>joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].subObjects.subEntity[Company].alias</alias>
             <userDefined>true</userDefined>
             <query>
                 <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ClaimAccountQuery" />
+                <key name="name" value="PaymentSentRecordQuery" />
             </query>
             <entityRef>
                 <key name="package" value="com.kingdee.eas.basedata.org.app" />
                 <key name="name" value="CompanyOrgUnit" />
-            </entityRef>
-        </subEntity>
-        <subEntity>
-            <name>acccount</name>
-            <alias>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].subObjects.subEntity[acccount].alias</alias>
-            <userDefined>true</userDefined>
-            <query>
-                <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ClaimAccountQuery" />
-            </query>
-            <entityRef>
-                <key name="package" value="com.kingdee.eas.basedata.assistant.app" />
-                <key name="name" value="AccountBank" />
             </entityRef>
         </subEntity>
     </subObjects>
@@ -81,7 +68,7 @@
             <userDefined>true</userDefined>
             <formulaString />
             <constString />
-            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.propertyUnit[NewUnit0].displayName</displayName>
+            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.propertyUnit[NewUnit0].displayName</displayName>
             <groupType />
             <isSelector>false</isSelector>
             <isFilter>false</isFilter>
@@ -95,7 +82,7 @@
                         <key name="name" value="NewUnit0" />
                     </parentUnit>
                     <subEntity>
-                        <key name="name" value="ClaimAccount" />
+                        <key name="name" value="PaymentSentRecord" />
                     </subEntity>
                     <refProperty>
                         <key name="name" value="creator" />
@@ -104,7 +91,7 @@
             </propertyRefs>
             <query>
                 <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ClaimAccountQuery" />
+                <key name="name" value="PaymentSentRecordQuery" />
             </query>
         </propertyUnit>
         <propertyUnit>
@@ -112,7 +99,7 @@
             <userDefined>true</userDefined>
             <formulaString />
             <constString />
-            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.propertyUnit[NewUnit1].displayName</displayName>
+            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.propertyUnit[NewUnit1].displayName</displayName>
             <groupType />
             <isSelector>false</isSelector>
             <isFilter>false</isFilter>
@@ -135,7 +122,7 @@
             </propertyRefs>
             <query>
                 <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ClaimAccountQuery" />
+                <key name="name" value="PaymentSentRecordQuery" />
             </query>
         </propertyUnit>
         <propertyUnit>
@@ -143,7 +130,7 @@
             <userDefined>true</userDefined>
             <formulaString />
             <constString />
-            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.propertyUnit[NewUnit2].displayName</displayName>
+            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.propertyUnit[NewUnit2].displayName</displayName>
             <groupType />
             <isSelector>false</isSelector>
             <isFilter>false</isFilter>
@@ -157,7 +144,7 @@
                         <key name="name" value="NewUnit2" />
                     </parentUnit>
                     <subEntity>
-                        <key name="name" value="ClaimAccount" />
+                        <key name="name" value="PaymentSentRecord" />
                     </subEntity>
                     <refProperty>
                         <key name="name" value="lastUpdateUser" />
@@ -166,7 +153,7 @@
             </propertyRefs>
             <query>
                 <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ClaimAccountQuery" />
+                <key name="name" value="PaymentSentRecordQuery" />
             </query>
         </propertyUnit>
         <propertyUnit>
@@ -174,7 +161,7 @@
             <userDefined>true</userDefined>
             <formulaString />
             <constString />
-            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.propertyUnit[NewUnit3].displayName</displayName>
+            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.propertyUnit[NewUnit3].displayName</displayName>
             <groupType />
             <isSelector>false</isSelector>
             <isFilter>false</isFilter>
@@ -197,7 +184,7 @@
             </propertyRefs>
             <query>
                 <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ClaimAccountQuery" />
+                <key name="name" value="PaymentSentRecordQuery" />
             </query>
         </propertyUnit>
         <queryField>
@@ -205,7 +192,7 @@
             <userDefined>true</userDefined>
             <formulaString />
             <constString />
-            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[id].displayName</displayName>
+            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[id].displayName</displayName>
             <groupType />
             <isSelector>true</isSelector>
             <isFilter>true</isFilter>
@@ -219,7 +206,7 @@
                         <key name="name" value="id" />
                     </parentUnit>
                     <subEntity>
-                        <key name="name" value="ClaimAccount" />
+                        <key name="name" value="PaymentSentRecord" />
                     </subEntity>
                     <refProperty>
                         <key name="name" value="id" />
@@ -228,7 +215,7 @@
             </propertyRefs>
             <query>
                 <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ClaimAccountQuery" />
+                <key name="name" value="PaymentSentRecordQuery" />
             </query>
         </queryField>
         <queryField>
@@ -236,7 +223,7 @@
             <userDefined>true</userDefined>
             <formulaString />
             <constString />
-            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[name].displayName</displayName>
+            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[name].displayName</displayName>
             <groupType />
             <isSelector>true</isSelector>
             <isFilter>true</isFilter>
@@ -250,7 +237,7 @@
                         <key name="name" value="name" />
                     </parentUnit>
                     <subEntity>
-                        <key name="name" value="ClaimAccount" />
+                        <key name="name" value="PaymentSentRecord" />
                     </subEntity>
                     <refProperty>
                         <key name="name" value="name" />
@@ -259,7 +246,7 @@
             </propertyRefs>
             <query>
                 <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ClaimAccountQuery" />
+                <key name="name" value="PaymentSentRecordQuery" />
             </query>
         </queryField>
         <queryField>
@@ -267,7 +254,7 @@
             <userDefined>true</userDefined>
             <formulaString />
             <constString />
-            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[number].displayName</displayName>
+            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[number].displayName</displayName>
             <groupType />
             <isSelector>true</isSelector>
             <isFilter>true</isFilter>
@@ -281,7 +268,7 @@
                         <key name="name" value="number" />
                     </parentUnit>
                     <subEntity>
-                        <key name="name" value="ClaimAccount" />
+                        <key name="name" value="PaymentSentRecord" />
                     </subEntity>
                     <refProperty>
                         <key name="name" value="number" />
@@ -290,7 +277,7 @@
             </propertyRefs>
             <query>
                 <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ClaimAccountQuery" />
+                <key name="name" value="PaymentSentRecordQuery" />
             </query>
         </queryField>
         <queryField>
@@ -298,7 +285,7 @@
             <userDefined>true</userDefined>
             <formulaString />
             <constString />
-            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[simpleName].displayName</displayName>
+            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[simpleName].displayName</displayName>
             <groupType />
             <isSelector>true</isSelector>
             <isFilter>true</isFilter>
@@ -312,7 +299,7 @@
                         <key name="name" value="simpleName" />
                     </parentUnit>
                     <subEntity>
-                        <key name="name" value="ClaimAccount" />
+                        <key name="name" value="PaymentSentRecord" />
                     </subEntity>
                     <refProperty>
                         <key name="name" value="simpleName" />
@@ -321,7 +308,7 @@
             </propertyRefs>
             <query>
                 <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ClaimAccountQuery" />
+                <key name="name" value="PaymentSentRecordQuery" />
             </query>
         </queryField>
         <queryField>
@@ -329,7 +316,7 @@
             <userDefined>true</userDefined>
             <formulaString>#0</formulaString>
             <constString />
-            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[description].displayName</displayName>
+            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[description].displayName</displayName>
             <groupType />
             <isSelector>true</isSelector>
             <isFilter>true</isFilter>
@@ -343,7 +330,7 @@
                         <key name="name" value="description" />
                     </parentUnit>
                     <subEntity>
-                        <key name="name" value="ClaimAccount" />
+                        <key name="name" value="PaymentSentRecord" />
                     </subEntity>
                     <refProperty>
                         <key name="name" value="description" />
@@ -352,7 +339,7 @@
             </propertyRefs>
             <query>
                 <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ClaimAccountQuery" />
+                <key name="name" value="PaymentSentRecordQuery" />
             </query>
         </queryField>
         <queryField>
@@ -360,7 +347,7 @@
             <userDefined>true</userDefined>
             <formulaString />
             <constString />
-            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[createTime].displayName</displayName>
+            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[createTime].displayName</displayName>
             <groupType />
             <isSelector>true</isSelector>
             <isFilter>true</isFilter>
@@ -374,7 +361,7 @@
                         <key name="name" value="createTime" />
                     </parentUnit>
                     <subEntity>
-                        <key name="name" value="ClaimAccount" />
+                        <key name="name" value="PaymentSentRecord" />
                     </subEntity>
                     <refProperty>
                         <key name="name" value="createTime" />
@@ -383,7 +370,7 @@
             </propertyRefs>
             <query>
                 <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ClaimAccountQuery" />
+                <key name="name" value="PaymentSentRecordQuery" />
             </query>
         </queryField>
         <queryField>
@@ -391,7 +378,7 @@
             <userDefined>true</userDefined>
             <formulaString />
             <constString />
-            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[creator.number].displayName</displayName>
+            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[creator.number].displayName</displayName>
             <groupType />
             <isSelector>true</isSelector>
             <isFilter>true</isFilter>
@@ -414,7 +401,7 @@
             </propertyRefs>
             <query>
                 <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ClaimAccountQuery" />
+                <key name="name" value="PaymentSentRecordQuery" />
             </query>
         </queryField>
         <queryField>
@@ -422,7 +409,7 @@
             <userDefined>true</userDefined>
             <formulaString />
             <constString />
-            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[creator.name].displayName</displayName>
+            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[creator.name].displayName</displayName>
             <groupType />
             <isSelector>true</isSelector>
             <isFilter>true</isFilter>
@@ -445,7 +432,7 @@
             </propertyRefs>
             <query>
                 <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ClaimAccountQuery" />
+                <key name="name" value="PaymentSentRecordQuery" />
             </query>
         </queryField>
         <queryField>
@@ -453,7 +440,7 @@
             <userDefined>true</userDefined>
             <formulaString />
             <constString />
-            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[lastUpdateTime].displayName</displayName>
+            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[lastUpdateTime].displayName</displayName>
             <groupType />
             <isSelector>true</isSelector>
             <isFilter>true</isFilter>
@@ -467,7 +454,7 @@
                         <key name="name" value="lastUpdateTime" />
                     </parentUnit>
                     <subEntity>
-                        <key name="name" value="ClaimAccount" />
+                        <key name="name" value="PaymentSentRecord" />
                     </subEntity>
                     <refProperty>
                         <key name="name" value="lastUpdateTime" />
@@ -476,7 +463,7 @@
             </propertyRefs>
             <query>
                 <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ClaimAccountQuery" />
+                <key name="name" value="PaymentSentRecordQuery" />
             </query>
         </queryField>
         <queryField>
@@ -484,7 +471,7 @@
             <userDefined>true</userDefined>
             <formulaString />
             <constString />
-            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[lastUpdateUser.number].displayName</displayName>
+            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[lastUpdateUser.number].displayName</displayName>
             <groupType />
             <isSelector>true</isSelector>
             <isFilter>true</isFilter>
@@ -507,7 +494,7 @@
             </propertyRefs>
             <query>
                 <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ClaimAccountQuery" />
+                <key name="name" value="PaymentSentRecordQuery" />
             </query>
         </queryField>
         <queryField>
@@ -515,7 +502,7 @@
             <userDefined>true</userDefined>
             <formulaString />
             <constString />
-            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[lastUpdateUser.name].displayName</displayName>
+            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[lastUpdateUser.name].displayName</displayName>
             <groupType />
             <isSelector>true</isSelector>
             <isFilter>true</isFilter>
@@ -538,77 +525,15 @@
             </propertyRefs>
             <query>
                 <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ClaimAccountQuery" />
+                <key name="name" value="PaymentSentRecordQuery" />
             </query>
         </queryField>
         <queryField>
-            <name>isCalim</name>
+            <name>SentFlag</name>
             <userDefined>true</userDefined>
             <formulaString>#0</formulaString>
             <constString />
-            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[isCalim].displayName</displayName>
-            <groupType />
-            <isSelector>true</isSelector>
-            <isFilter>true</isFilter>
-            <isSorter>true</isSorter>
-            <isParameter>false</isParameter>
-            <returnType>Boolean</returnType>
-            <propertyRefs>
-                <propertyRef>
-                    <key>654145c0-cff3-479f-ae98-379d693d959e</key>
-                    <parentUnit>
-                        <key name="name" value="isCalim" />
-                    </parentUnit>
-                    <subEntity>
-                        <key name="name" value="ClaimAccount" />
-                    </subEntity>
-                    <refProperty>
-                        <key name="name" value="isCalim" />
-                    </refProperty>
-                </propertyRef>
-            </propertyRefs>
-            <query>
-                <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ClaimAccountQuery" />
-            </query>
-        </queryField>
-        <queryField>
-            <name>isSendDms</name>
-            <userDefined>true</userDefined>
-            <formulaString>#0</formulaString>
-            <constString />
-            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[isSendDms].displayName</displayName>
-            <groupType />
-            <isSelector>true</isSelector>
-            <isFilter>true</isFilter>
-            <isSorter>true</isSorter>
-            <isParameter>false</isParameter>
-            <returnType>Boolean</returnType>
-            <propertyRefs>
-                <propertyRef>
-                    <key>f020ba4f-1753-4855-b17d-e37f3d270643</key>
-                    <parentUnit>
-                        <key name="name" value="isSendDms" />
-                    </parentUnit>
-                    <subEntity>
-                        <key name="name" value="ClaimAccount" />
-                    </subEntity>
-                    <refProperty>
-                        <key name="name" value="isSendDms" />
-                    </refProperty>
-                </propertyRef>
-            </propertyRefs>
-            <query>
-                <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ClaimAccountQuery" />
-            </query>
-        </queryField>
-        <queryField>
-            <name>busDivision</name>
-            <userDefined>true</userDefined>
-            <formulaString>#0</formulaString>
-            <constString />
-            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[busDivision].displayName</displayName>
+            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[SentFlag].displayName</displayName>
             <groupType />
             <isSelector>true</isSelector>
             <isFilter>true</isFilter>
@@ -617,60 +542,29 @@
             <returnType>String</returnType>
             <propertyRefs>
                 <propertyRef>
-                    <key>f4c961ea-4f75-4a39-bf15-2384b22d44ef</key>
+                    <key>36ce5b51-6886-4b14-8644-43c88bf1e750</key>
                     <parentUnit>
-                        <key name="name" value="busDivision" />
+                        <key name="name" value="SentFlag" />
                     </parentUnit>
                     <subEntity>
-                        <key name="name" value="ClaimAccount" />
+                        <key name="name" value="PaymentSentRecord" />
                     </subEntity>
                     <refProperty>
-                        <key name="name" value="busDivision" />
+                        <key name="name" value="SentFlag" />
                     </refProperty>
                 </propertyRef>
             </propertyRefs>
             <query>
                 <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ClaimAccountQuery" />
+                <key name="name" value="PaymentSentRecordQuery" />
             </query>
         </queryField>
         <queryField>
-            <name>dataState</name>
+            <name>Company.name</name>
             <userDefined>true</userDefined>
             <formulaString>#0</formulaString>
             <constString />
-            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[dataState].displayName</displayName>
-            <groupType />
-            <isSelector>true</isSelector>
-            <isFilter>true</isFilter>
-            <isSorter>true</isSorter>
-            <isParameter>false</isParameter>
-            <returnType>Int</returnType>
-            <propertyRefs>
-                <propertyRef>
-                    <key>b9892a1e-a233-4e9a-bedb-d5248288308c</key>
-                    <parentUnit>
-                        <key name="name" value="dataState" />
-                    </parentUnit>
-                    <subEntity>
-                        <key name="name" value="ClaimAccount" />
-                    </subEntity>
-                    <refProperty>
-                        <key name="name" value="dataState" />
-                    </refProperty>
-                </propertyRef>
-            </propertyRefs>
-            <query>
-                <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ClaimAccountQuery" />
-            </query>
-        </queryField>
-        <queryField>
-            <name>company.name</name>
-            <userDefined>true</userDefined>
-            <formulaString>#0</formulaString>
-            <constString />
-            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[company.name].displayName</displayName>
+            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[Company.name].displayName</displayName>
             <groupType />
             <isSelector>true</isSelector>
             <isFilter>true</isFilter>
@@ -679,12 +573,12 @@
             <returnType>String</returnType>
             <propertyRefs>
                 <propertyRef>
-                    <key>6a770d83-e3a3-442b-8ef9-0f76dee14694</key>
+                    <key>88792e0a-b7d7-4bee-adf6-98d650c31dc8</key>
                     <parentUnit>
-                        <key name="name" value="company.name" />
+                        <key name="name" value="Company.name" />
                     </parentUnit>
                     <subEntity>
-                        <key name="name" value="company" />
+                        <key name="name" value="Company" />
                     </subEntity>
                     <refProperty>
                         <key name="name" value="name" />
@@ -693,15 +587,15 @@
             </propertyRefs>
             <query>
                 <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ClaimAccountQuery" />
+                <key name="name" value="PaymentSentRecordQuery" />
             </query>
         </queryField>
         <propertyUnit>
-            <name>c45d737d-1c57-44fd-a60a-6749c6e97565</name>
+            <name>0c4c59e3-af04-419c-9a29-7c020d3af9f0</name>
             <userDefined>true</userDefined>
             <formulaString />
             <constString />
-            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.propertyUnit[c45d737d-1c57-44fd-a60a-6749c6e97565].displayName</displayName>
+            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.propertyUnit[0c4c59e3-af04-419c-9a29-7c020d3af9f0].displayName</displayName>
             <groupType />
             <isSelector>false</isSelector>
             <isFilter>false</isFilter>
@@ -710,29 +604,29 @@
             <returnType />
             <propertyRefs>
                 <propertyRef>
-                    <key>aaa7b6a5-a103-4ac9-9dfd-3b95eb8513a4</key>
+                    <key>a7aa42a6-48e0-406b-a246-7b54ef7ffd96</key>
                     <parentUnit>
-                        <key name="name" value="c45d737d-1c57-44fd-a60a-6749c6e97565" />
+                        <key name="name" value="0c4c59e3-af04-419c-9a29-7c020d3af9f0" />
                     </parentUnit>
                     <subEntity>
-                        <key name="name" value="ClaimAccount" />
+                        <key name="name" value="PaymentSentRecord" />
                     </subEntity>
                     <refProperty>
-                        <key name="name" value="company" />
+                        <key name="name" value="Company" />
                     </refProperty>
                 </propertyRef>
             </propertyRefs>
             <query>
                 <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ClaimAccountQuery" />
+                <key name="name" value="PaymentSentRecordQuery" />
             </query>
         </propertyUnit>
         <propertyUnit>
-            <name>a4bf4d2f-ff53-4d20-ad22-a9771f1cdc77</name>
+            <name>ac01fbc9-1277-418c-bbc8-727d0020496c</name>
             <userDefined>true</userDefined>
             <formulaString />
             <constString />
-            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.propertyUnit[a4bf4d2f-ff53-4d20-ad22-a9771f1cdc77].displayName</displayName>
+            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.propertyUnit[ac01fbc9-1277-418c-bbc8-727d0020496c].displayName</displayName>
             <groupType />
             <isSelector>false</isSelector>
             <isFilter>false</isFilter>
@@ -741,12 +635,12 @@
             <returnType />
             <propertyRefs>
                 <propertyRef>
-                    <key>e460e945-107b-4b64-807e-14978600fe8e</key>
+                    <key>fb28d017-a312-4746-bfb2-6623d8f7179b</key>
                     <parentUnit>
-                        <key name="name" value="a4bf4d2f-ff53-4d20-ad22-a9771f1cdc77" />
+                        <key name="name" value="ac01fbc9-1277-418c-bbc8-727d0020496c" />
                     </parentUnit>
                     <subEntity>
-                        <key name="name" value="company" />
+                        <key name="name" value="Company" />
                     </subEntity>
                     <refProperty>
                         <key name="name" value="id" />
@@ -755,15 +649,15 @@
             </propertyRefs>
             <query>
                 <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ClaimAccountQuery" />
+                <key name="name" value="PaymentSentRecordQuery" />
             </query>
         </propertyUnit>
         <queryField>
-            <name>companyNo</name>
+            <name>ZBUDAT1</name>
             <userDefined>true</userDefined>
             <formulaString>#0</formulaString>
             <constString />
-            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[companyNo].displayName</displayName>
+            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[ZBUDAT1].displayName</displayName>
             <groupType />
             <isSelector>true</isSelector>
             <isFilter>true</isFilter>
@@ -772,29 +666,60 @@
             <returnType>String</returnType>
             <propertyRefs>
                 <propertyRef>
-                    <key>1524bc72-04f0-4d80-a5f2-f6c474b7981b</key>
+                    <key>380ed5af-b7f8-43f9-9c51-0a97bbc085d3</key>
                     <parentUnit>
-                        <key name="name" value="companyNo" />
+                        <key name="name" value="ZBUDAT1" />
                     </parentUnit>
                     <subEntity>
-                        <key name="name" value="ClaimAccount" />
+                        <key name="name" value="PaymentSentRecord" />
                     </subEntity>
                     <refProperty>
-                        <key name="name" value="companyNo" />
+                        <key name="name" value="ZBUDAT1" />
                     </refProperty>
                 </propertyRef>
             </propertyRefs>
             <query>
                 <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ClaimAccountQuery" />
+                <key name="name" value="PaymentSentRecordQuery" />
             </query>
         </queryField>
         <queryField>
-            <name>acccount.acctName</name>
+            <name>PAYAMOUNT</name>
             <userDefined>true</userDefined>
             <formulaString>#0</formulaString>
             <constString />
-            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[acccount.acctName].displayName</displayName>
+            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[PAYAMOUNT].displayName</displayName>
+            <groupType />
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
+            <isParameter>false</isParameter>
+            <returnType>Number</returnType>
+            <propertyRefs>
+                <propertyRef>
+                    <key>5bb350f8-e88c-405a-a0a4-9da6a2c527cb</key>
+                    <parentUnit>
+                        <key name="name" value="PAYAMOUNT" />
+                    </parentUnit>
+                    <subEntity>
+                        <key name="name" value="PaymentSentRecord" />
+                    </subEntity>
+                    <refProperty>
+                        <key name="name" value="PAYAMOUNT" />
+                    </refProperty>
+                </propertyRef>
+            </propertyRefs>
+            <query>
+                <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
+                <key name="name" value="PaymentSentRecordQuery" />
+            </query>
+        </queryField>
+        <queryField>
+            <name>OAID</name>
+            <userDefined>true</userDefined>
+            <formulaString>#0</formulaString>
+            <constString />
+            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[OAID].displayName</displayName>
             <groupType />
             <isSelector>true</isSelector>
             <isFilter>true</isFilter>
@@ -803,92 +728,92 @@
             <returnType>String</returnType>
             <propertyRefs>
                 <propertyRef>
-                    <key>354341bd-95ec-4cb5-be20-424be137c069</key>
+                    <key>8c357fb5-4791-41a7-acdc-35fe39d35a00</key>
                     <parentUnit>
-                        <key name="name" value="acccount.acctName" />
+                        <key name="name" value="OAID" />
                     </parentUnit>
                     <subEntity>
-                        <key name="name" value="acccount" />
+                        <key name="name" value="PaymentSentRecord" />
                     </subEntity>
                     <refProperty>
-                        <key name="name" value="acctName" />
+                        <key name="name" value="OAID" />
                     </refProperty>
                 </propertyRef>
             </propertyRefs>
             <query>
                 <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ClaimAccountQuery" />
+                <key name="name" value="PaymentSentRecordQuery" />
             </query>
         </queryField>
-        <propertyUnit>
-            <name>18255959-55e0-4d6d-979a-4458575a5bf3</name>
+        <queryField>
+            <name>ZBANKN1</name>
             <userDefined>true</userDefined>
-            <formulaString />
+            <formulaString>#0</formulaString>
             <constString />
-            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.propertyUnit[18255959-55e0-4d6d-979a-4458575a5bf3].displayName</displayName>
+            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[ZBANKN1].displayName</displayName>
             <groupType />
-            <isSelector>false</isSelector>
-            <isFilter>false</isFilter>
-            <isSorter>false</isSorter>
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
             <isParameter>false</isParameter>
-            <returnType />
+            <returnType>String</returnType>
             <propertyRefs>
                 <propertyRef>
-                    <key>d670d6ca-5912-4b03-b51d-d7a1913a5501</key>
+                    <key>6f0b7cc5-7376-4b6a-93fd-e2c95b73c6b9</key>
                     <parentUnit>
-                        <key name="name" value="18255959-55e0-4d6d-979a-4458575a5bf3" />
+                        <key name="name" value="ZBANKN1" />
                     </parentUnit>
                     <subEntity>
-                        <key name="name" value="ClaimAccount" />
+                        <key name="name" value="PaymentSentRecord" />
                     </subEntity>
                     <refProperty>
-                        <key name="name" value="acccount" />
+                        <key name="name" value="ZBANKN1" />
                     </refProperty>
                 </propertyRef>
             </propertyRefs>
             <query>
                 <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ClaimAccountQuery" />
+                <key name="name" value="PaymentSentRecordQuery" />
             </query>
-        </propertyUnit>
-        <propertyUnit>
-            <name>b57ec2ed-4abb-48f3-b852-29c7ebdca428</name>
+        </queryField>
+        <queryField>
+            <name>RecBillNum</name>
             <userDefined>true</userDefined>
-            <formulaString />
+            <formulaString>#0</formulaString>
             <constString />
-            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.propertyUnit[b57ec2ed-4abb-48f3-b852-29c7ebdca428].displayName</displayName>
+            <displayName>joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[RecBillNum].displayName</displayName>
             <groupType />
-            <isSelector>false</isSelector>
-            <isFilter>false</isFilter>
-            <isSorter>false</isSorter>
+            <isSelector>true</isSelector>
+            <isFilter>true</isFilter>
+            <isSorter>true</isSorter>
             <isParameter>false</isParameter>
-            <returnType />
+            <returnType>String</returnType>
             <propertyRefs>
                 <propertyRef>
-                    <key>be18a091-837b-4f5c-b757-c969a9f75d08</key>
+                    <key>5418b63c-4a39-49f6-8252-2618391709db</key>
                     <parentUnit>
-                        <key name="name" value="b57ec2ed-4abb-48f3-b852-29c7ebdca428" />
+                        <key name="name" value="RecBillNum" />
                     </parentUnit>
                     <subEntity>
-                        <key name="name" value="acccount" />
+                        <key name="name" value="PaymentSentRecord" />
                     </subEntity>
                     <refProperty>
-                        <key name="name" value="id" />
+                        <key name="name" value="RecBillNum" />
                     </refProperty>
                 </propertyRef>
             </propertyRefs>
             <query>
                 <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ClaimAccountQuery" />
+                <key name="name" value="PaymentSentRecordQuery" />
             </query>
-        </propertyUnit>
+        </queryField>
     </units>
     <defaultFilter>
         <name>defaultFilter</name>
         <formulaString />
         <query>
             <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-            <key name="name" value="ClaimAccountQuery" />
+            <key name="name" value="PaymentSentRecordQuery" />
         </query>
     </defaultFilter>
     <defaultSorters>
@@ -898,15 +823,15 @@
             <userDefined>true</userDefined>
             <query>
                 <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ClaimAccountQuery" />
+                <key name="name" value="PaymentSentRecordQuery" />
             </query>
             <configured>false</configured>
         </querySorterItem>
     </defaultSorters>
     <queryPK>
         <name>QueryPK</name>
-        <alias>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].queryPK[QueryPK].alias</alias>
-        <description>joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].queryPK[QueryPK].description</description>
+        <alias>joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].queryPK[QueryPK].alias</alias>
+        <description>joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].queryPK[QueryPK].description</description>
         <keyProperties>
             <queryField>
                 <key name="name" value="id" />
@@ -920,7 +845,7 @@
             <formulaString>#0</formulaString>
             <type>INNER JOIN</type>
             <leftObject>
-                <key name="name" value="ClaimAccount" />
+                <key name="name" value="PaymentSentRecord" />
             </leftObject>
             <rightObject>
                 <key name="name" value="creator" />
@@ -942,7 +867,7 @@
             </joinItems>
             <query>
                 <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ClaimAccountQuery" />
+                <key name="name" value="PaymentSentRecordQuery" />
             </query>
         </join>
         <join>
@@ -950,7 +875,7 @@
             <formulaString>#0</formulaString>
             <type>INNER JOIN</type>
             <leftObject>
-                <key name="name" value="ClaimAccount" />
+                <key name="name" value="PaymentSentRecord" />
             </leftObject>
             <rightObject>
                 <key name="name" value="lastUpdateUser" />
@@ -972,691 +897,638 @@
             </joinItems>
             <query>
                 <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ClaimAccountQuery" />
+                <key name="name" value="PaymentSentRecordQuery" />
             </query>
         </join>
         <join>
-            <name>df90baf0-6781-4ea1-90e6-137e2cb6eae3</name>
+            <name>6283ef60-3d24-41ba-95eb-ae7808548b1c</name>
             <formulaString>#0</formulaString>
             <type>LEFT OUTER JOIN</type>
             <leftObject>
-                <key name="name" value="ClaimAccount" />
+                <key name="name" value="PaymentSentRecord" />
             </leftObject>
             <rightObject>
-                <key name="name" value="company" />
+                <key name="name" value="Company" />
             </rightObject>
             <joinItems>
                 <joinItem>
-                    <name>84d708c8-e50a-499a-bc37-91ccd2aa9150</name>
+                    <name>28ad2764-f55e-4fa7-b0a9-9a4d76473f68</name>
                     <compareType>=</compareType>
                     <leftField>
-                        <key name="name" value="c45d737d-1c57-44fd-a60a-6749c6e97565" />
+                        <key name="name" value="0c4c59e3-af04-419c-9a29-7c020d3af9f0" />
                     </leftField>
                     <rightField>
-                        <key name="name" value="a4bf4d2f-ff53-4d20-ad22-a9771f1cdc77" />
+                        <key name="name" value="ac01fbc9-1277-418c-bbc8-727d0020496c" />
                     </rightField>
                     <join>
-                        <key name="name" value="df90baf0-6781-4ea1-90e6-137e2cb6eae3" />
+                        <key name="name" value="6283ef60-3d24-41ba-95eb-ae7808548b1c" />
                     </join>
                 </joinItem>
             </joinItems>
             <query>
                 <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ClaimAccountQuery" />
-            </query>
-        </join>
-        <join>
-            <name>d17738e5-c6f6-46f9-b3c6-abe799e5163d</name>
-            <formulaString>#0</formulaString>
-            <type>LEFT OUTER JOIN</type>
-            <leftObject>
-                <key name="name" value="ClaimAccount" />
-            </leftObject>
-            <rightObject>
-                <key name="name" value="acccount" />
-            </rightObject>
-            <joinItems>
-                <joinItem>
-                    <name>5173a2bb-69ba-48ad-8f28-2adbf2bdf4a7</name>
-                    <compareType>=</compareType>
-                    <leftField>
-                        <key name="name" value="18255959-55e0-4d6d-979a-4458575a5bf3" />
-                    </leftField>
-                    <rightField>
-                        <key name="name" value="b57ec2ed-4abb-48f3-b852-29c7ebdca428" />
-                    </rightField>
-                    <join>
-                        <key name="name" value="d17738e5-c6f6-46f9-b3c6-abe799e5163d" />
-                    </join>
-                </joinItem>
-            </joinItems>
-            <query>
-                <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
-                <key name="name" value="ClaimAccountQuery" />
+                <key name="name" value="PaymentSentRecordQuery" />
             </query>
         </join>
     </joins>
     <resource>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].alias">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].alias">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="认领银行账号" />
-            <lang locale="zh_HK" value="認領銀行賬號" />
-            <lang locale="zh_TW" value="認領銀行賬號" />
+            <lang locale="zh_CN" value="付款单发送记录" />
+            <lang locale="zh_HK" value="付款單發送記錄" />
+            <lang locale="zh_TW" value="付款單發送記錄" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].defaultSorters.querySorterItemextendedProperty.ColWidthInKDTable">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].defaultSorters.querySorterItemextendedProperty.ColWidthInKDTable">
             <lang locale="en_US" value="50" />
             <lang locale="zh_CN" value="50" />
             <lang locale="zh_TW" value="50" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].defaultSorters.querySorterItemextendedProperty.isCommonQueryFilter">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].defaultSorters.querySorterItemextendedProperty.isCommonQueryFilter">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].defaultSorters.querySorterItemextendedProperty.isCommonQuerySorter">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].defaultSorters.querySorterItemextendedProperty.isCommonQuerySorter">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].defaultSorters.querySorterItemextendedProperty.isUsingF7">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].defaultSorters.querySorterItemextendedProperty.isUsingF7">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].defaultSorters.querySorterItemextendedProperty.isVisibleForKDTable">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].defaultSorters.querySorterItemextendedProperty.isVisibleForKDTable">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].description">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="单级基础资料查询" />
             <lang locale="zh_HK" value="單級基礎資料查詢" />
             <lang locale="zh_TW" value="單級基礎資料查詢" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].extendedProperty.ColWidthInKDTable">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].extendedProperty.ColWidthInKDTable">
             <lang locale="en_US" value="50" />
             <lang locale="zh_CN" value="50" />
             <lang locale="zh_TW" value="50" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].extendedProperty.F7WindowTitle">
-            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.client.SapinterageResource.ClaimAccountQueryF7WindowTitle" />
-            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.client.SapinterageResource.ClaimAccountQueryF7WindowTitle" />
-            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.client.SapinterageResource.ClaimAccountQueryF7WindowTitle" />
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].extendedProperty.F7WindowTitle">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.client.SapinterageResource.PaymentSentRecordQueryF7WindowTitle" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.client.SapinterageResource.PaymentSentRecordQueryF7WindowTitle" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.client.SapinterageResource.PaymentSentRecordQueryF7WindowTitle" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].extendedProperty.f7WindowTitle">
-            <lang locale="en_US" value="认领银行账号" />
-            <lang locale="zh_CN" value="认领银行账号" />
-            <lang locale="zh_TW" value="认领银行账号" />
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].extendedProperty.f7WindowTitle">
+            <lang locale="en_US" value="付款单发送记录" />
+            <lang locale="zh_CN" value="付款单发送记录" />
+            <lang locale="zh_TW" value="付款单发送记录" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].extendedProperty.isCommonQueryFilter">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].extendedProperty.isCommonQueryFilter">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].extendedProperty.isCommonQuerySorter">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].extendedProperty.isCommonQuerySorter">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].extendedProperty.isUsingF7">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].extendedProperty.isUsingF7">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].extendedProperty.isVisibleForKDTable">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].extendedProperty.isVisibleForKDTable">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].queryPK[QueryPK].alias">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].queryPK[QueryPK].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].queryPK[QueryPK].description">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].queryPK[QueryPK].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].subObjects.subEntity[ClaimAccount].alias">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].subObjects.subEntity[Company].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].subObjects.subEntity[acccount].alias">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].subObjects.subEntity[PaymentSentRecord].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].subObjects.subEntity[company].alias">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].subObjects.subEntity[creator].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].subObjects.subEntity[creator].alias">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].subObjects.subEntity[lastUpdateUser].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].subObjects.subEntity[lastUpdateUser].alias">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.propertyUnit[0c4c59e3-af04-419c-9a29-7c020d3af9f0].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.propertyUnit[18255959-55e0-4d6d-979a-4458575a5bf3].displayName">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.propertyUnit[NewUnit0].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.propertyUnit[NewUnit0].displayName">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.propertyUnit[NewUnit1].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.propertyUnit[NewUnit1].displayName">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.propertyUnit[NewUnit2].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.propertyUnit[NewUnit2].displayName">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.propertyUnit[NewUnit3].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.propertyUnit[NewUnit3].displayName">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.propertyUnit[ac01fbc9-1277-418c-bbc8-727d0020496c].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.propertyUnit[a4bf4d2f-ff53-4d20-ad22-a9771f1cdc77].displayName">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_HK" value="null" />
-            <lang locale="zh_TW" value="null" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.propertyUnit[b57ec2ed-4abb-48f3-b852-29c7ebdca428].displayName">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_HK" value="null" />
-            <lang locale="zh_TW" value="null" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.propertyUnit[c45d737d-1c57-44fd-a60a-6749c6e97565].displayName">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="null" />
-            <lang locale="zh_HK" value="null" />
-            <lang locale="zh_TW" value="null" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[acccount.acctName].displayName">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="银行账户" />
-            <lang locale="zh_HK" value="銀行賬戶" />
-            <lang locale="zh_TW" value="銀行賬戶" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[acccount.acctName].extendedProperty.isCommonQueryFilter">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[acccount.acctName].extendedProperty.isCommonQuerySorter">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[acccount.acctName].extendedProperty.isUsingF7">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[busDivision].displayName">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="事业部" />
-            <lang locale="zh_HK" value="事業部" />
-            <lang locale="zh_TW" value="事業部" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[busDivision].extendedProperty.isCommonQueryFilter">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[busDivision].extendedProperty.isCommonQuerySorter">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[company.name].displayName">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[Company.name].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="公司" />
             <lang locale="zh_HK" value="公司" />
             <lang locale="zh_TW" value="公司" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[company.name].extendedProperty.isCommonQueryFilter">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[Company.name].extendedProperty.isCommonQueryFilter">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[company.name].extendedProperty.isCommonQuerySorter">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[Company.name].extendedProperty.isCommonQuerySorter">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[company.name].extendedProperty.isUsingF7">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[Company.name].extendedProperty.isUsingF7">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[companyNo].displayName">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[OAID].displayName">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="公司编码" />
-            <lang locale="zh_HK" value="公司編碼" />
-            <lang locale="zh_TW" value="公司編碼" />
+            <lang locale="zh_CN" value="OAID" />
+            <lang locale="zh_HK" value="OAID" />
+            <lang locale="zh_TW" value="OAID" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[companyNo].extendedProperty.isCommonQueryFilter">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[OAID].extendedProperty.isCommonQueryFilter">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[companyNo].extendedProperty.isCommonQuerySorter">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[OAID].extendedProperty.isCommonQuerySorter">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[createTime].displayName">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[PAYAMOUNT].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="付款金额" />
+            <lang locale="zh_HK" value="付款金額" />
+            <lang locale="zh_TW" value="付款金額" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[PAYAMOUNT].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[PAYAMOUNT].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[RecBillNum].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收款单号" />
+            <lang locale="zh_HK" value="收款單號" />
+            <lang locale="zh_TW" value="收款單號" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[RecBillNum].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[RecBillNum].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[SentFlag].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="发送状态" />
+            <lang locale="zh_HK" value="發送狀態" />
+            <lang locale="zh_TW" value="發送狀態" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[SentFlag].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[SentFlag].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[ZBANKN1].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="付款账号" />
+            <lang locale="zh_HK" value="付款賬號" />
+            <lang locale="zh_TW" value="付款賬號" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[ZBANKN1].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[ZBANKN1].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[ZBUDAT1].displayName">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="付款时间" />
+            <lang locale="zh_HK" value="付款時間" />
+            <lang locale="zh_TW" value="付款時間" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[ZBUDAT1].extendedProperty.isCommonQueryFilter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[ZBUDAT1].extendedProperty.isCommonQuerySorter">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[createTime].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="创建时间" />
             <lang locale="zh_HK" value="創建時間" />
             <lang locale="zh_TW" value="創建時間" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[createTime].extendedProperty.colWidthInKDTable">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[createTime].extendedProperty.colWidthInKDTable">
             <lang locale="en_US" value="50" />
             <lang locale="zh_CN" value="50" />
             <lang locale="zh_TW" value="50" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[createTime].extendedProperty.isCommonQueryFilter">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[createTime].extendedProperty.isCommonQueryFilter">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[createTime].extendedProperty.isCommonQuerySorter">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[createTime].extendedProperty.isCommonQuerySorter">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[createTime].extendedProperty.isUsingF7">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[createTime].extendedProperty.isUsingF7">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[createTime].extendedProperty.isVisibleForKDTable">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[createTime].extendedProperty.isVisibleForKDTable">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[creator.name].displayName">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[creator.name].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="别名" />
             <lang locale="zh_HK" value="別名" />
             <lang locale="zh_TW" value="別名" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[creator.name].extendedProperty.colWidthInKDTable">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[creator.name].extendedProperty.colWidthInKDTable">
             <lang locale="en_US" value="50" />
             <lang locale="zh_CN" value="50" />
             <lang locale="zh_TW" value="50" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[creator.name].extendedProperty.isCommonQueryFilter">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[creator.name].extendedProperty.isCommonQueryFilter">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[creator.name].extendedProperty.isCommonQuerySorter">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[creator.name].extendedProperty.isCommonQuerySorter">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[creator.name].extendedProperty.isUsingF7">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[creator.name].extendedProperty.isUsingF7">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[creator.name].extendedProperty.isVisibleForKDTable">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[creator.name].extendedProperty.isVisibleForKDTable">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[creator.number].displayName">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[creator.number].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="用户名" />
             <lang locale="zh_HK" value="用戶名" />
             <lang locale="zh_TW" value="用戶名" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[creator.number].extendedProperty.colWidthInKDTable">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[creator.number].extendedProperty.colWidthInKDTable">
             <lang locale="en_US" value="50" />
             <lang locale="zh_CN" value="50" />
             <lang locale="zh_TW" value="50" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[creator.number].extendedProperty.isCommonQueryFilter">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[creator.number].extendedProperty.isCommonQueryFilter">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[creator.number].extendedProperty.isCommonQuerySorter">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[creator.number].extendedProperty.isCommonQuerySorter">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[creator.number].extendedProperty.isUsingF7">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[creator.number].extendedProperty.isUsingF7">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[creator.number].extendedProperty.isVisibleForKDTable">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[creator.number].extendedProperty.isVisibleForKDTable">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[dataState].displayName">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="状态" />
-            <lang locale="zh_HK" value="狀態" />
-            <lang locale="zh_TW" value="狀態" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[dataState].extendedProperty.isCommonQueryFilter">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[dataState].extendedProperty.isCommonQuerySorter">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[description].displayName">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[description].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="描述" />
             <lang locale="zh_HK" value="描述" />
             <lang locale="zh_TW" value="描述" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[description].extendedProperty.colWidthInKDTable">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[description].extendedProperty.colWidthInKDTable">
             <lang locale="en_US" value="50" />
             <lang locale="zh_CN" value="50" />
             <lang locale="zh_TW" value="50" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[description].extendedProperty.isCommonQueryFilter">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[description].extendedProperty.isCommonQueryFilter">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[description].extendedProperty.isCommonQuerySorter">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[description].extendedProperty.isCommonQuerySorter">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[description].extendedProperty.isUsingF7">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[description].extendedProperty.isUsingF7">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[description].extendedProperty.isVisibleForKDTable">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[description].extendedProperty.isVisibleForKDTable">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[id].displayName">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[id].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="" />
             <lang locale="zh_TW" value="null" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[id].extendedProperty.colWidthInKDTable">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[id].extendedProperty.colWidthInKDTable">
             <lang locale="en_US" value="50" />
             <lang locale="zh_CN" value="50" />
             <lang locale="zh_TW" value="50" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[id].extendedProperty.isCommonQueryFilter">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[id].extendedProperty.isCommonQueryFilter">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[id].extendedProperty.isCommonQuerySorter">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[id].extendedProperty.isCommonQuerySorter">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[id].extendedProperty.isUsingF7">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[id].extendedProperty.isUsingF7">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[id].extendedProperty.isVisibleForKDTable">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[id].extendedProperty.isVisibleForKDTable">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[isCalim].displayName">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="是否收款账号" />
-            <lang locale="zh_HK" value="是否收款賬號" />
-            <lang locale="zh_TW" value="是否收款賬號" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[isCalim].extendedProperty.isCommonQueryFilter">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[isCalim].extendedProperty.isCommonQuerySorter">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[isSendDms].displayName">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="是否发送DMS" />
-            <lang locale="zh_HK" value="是否發送DMS" />
-            <lang locale="zh_TW" value="是否發送DMS" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[isSendDms].extendedProperty.isCommonQueryFilter">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[isSendDms].extendedProperty.isCommonQuerySorter">
-            <lang locale="en_US" value="true" />
-            <lang locale="zh_CN" value="true" />
-            <lang locale="zh_TW" value="true" />
-        </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[lastUpdateTime].displayName">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[lastUpdateTime].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="最后修改时间" />
             <lang locale="zh_HK" value="最後修改時間" />
             <lang locale="zh_TW" value="最後修改時間" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[lastUpdateTime].extendedProperty.colWidthInKDTable">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[lastUpdateTime].extendedProperty.colWidthInKDTable">
             <lang locale="en_US" value="50" />
             <lang locale="zh_CN" value="50" />
             <lang locale="zh_TW" value="50" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[lastUpdateTime].extendedProperty.isCommonQueryFilter">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[lastUpdateTime].extendedProperty.isCommonQueryFilter">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[lastUpdateTime].extendedProperty.isCommonQuerySorter">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[lastUpdateTime].extendedProperty.isCommonQuerySorter">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[lastUpdateTime].extendedProperty.isUsingF7">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[lastUpdateTime].extendedProperty.isUsingF7">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[lastUpdateTime].extendedProperty.isVisibleForKDTable">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[lastUpdateTime].extendedProperty.isVisibleForKDTable">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[lastUpdateUser.name].displayName">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[lastUpdateUser.name].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="别名" />
             <lang locale="zh_HK" value="別名" />
             <lang locale="zh_TW" value="別名" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[lastUpdateUser.name].extendedProperty.colWidthInKDTable">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[lastUpdateUser.name].extendedProperty.colWidthInKDTable">
             <lang locale="en_US" value="50" />
             <lang locale="zh_CN" value="50" />
             <lang locale="zh_TW" value="50" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[lastUpdateUser.name].extendedProperty.isCommonQueryFilter">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[lastUpdateUser.name].extendedProperty.isCommonQueryFilter">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[lastUpdateUser.name].extendedProperty.isCommonQuerySorter">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[lastUpdateUser.name].extendedProperty.isCommonQuerySorter">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[lastUpdateUser.name].extendedProperty.isUsingF7">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[lastUpdateUser.name].extendedProperty.isUsingF7">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[lastUpdateUser.name].extendedProperty.isVisibleForKDTable">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[lastUpdateUser.name].extendedProperty.isVisibleForKDTable">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[lastUpdateUser.number].displayName">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[lastUpdateUser.number].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="用户名" />
             <lang locale="zh_HK" value="用戶名" />
             <lang locale="zh_TW" value="用戶名" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[lastUpdateUser.number].extendedProperty.colWidthInKDTable">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[lastUpdateUser.number].extendedProperty.colWidthInKDTable">
             <lang locale="en_US" value="50" />
             <lang locale="zh_CN" value="50" />
             <lang locale="zh_TW" value="50" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[lastUpdateUser.number].extendedProperty.isCommonQueryFilter">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[lastUpdateUser.number].extendedProperty.isCommonQueryFilter">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[lastUpdateUser.number].extendedProperty.isCommonQuerySorter">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[lastUpdateUser.number].extendedProperty.isCommonQuerySorter">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[lastUpdateUser.number].extendedProperty.isUsingF7">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[lastUpdateUser.number].extendedProperty.isUsingF7">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[lastUpdateUser.number].extendedProperty.isVisibleForKDTable">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[lastUpdateUser.number].extendedProperty.isVisibleForKDTable">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[name].displayName">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[name].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="名称" />
             <lang locale="zh_HK" value="名稱" />
             <lang locale="zh_TW" value="名稱" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[name].extendedProperty.colWidthInKDTable">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[name].extendedProperty.colWidthInKDTable">
             <lang locale="en_US" value="50" />
             <lang locale="zh_CN" value="50" />
             <lang locale="zh_TW" value="50" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[name].extendedProperty.isCommonQueryFilter">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[name].extendedProperty.isCommonQueryFilter">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[name].extendedProperty.isCommonQuerySorter">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[name].extendedProperty.isCommonQuerySorter">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[name].extendedProperty.isUsingF7">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[name].extendedProperty.isUsingF7">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[name].extendedProperty.isVisibleForKDTable">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[name].extendedProperty.isVisibleForKDTable">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[number].displayName">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[number].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="编码" />
             <lang locale="zh_HK" value="編碼" />
             <lang locale="zh_TW" value="編碼" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[number].extendedProperty.colWidthInKDTable">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[number].extendedProperty.colWidthInKDTable">
             <lang locale="en_US" value="50" />
             <lang locale="zh_CN" value="50" />
             <lang locale="zh_TW" value="50" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[number].extendedProperty.isCommonQueryFilter">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[number].extendedProperty.isCommonQueryFilter">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[number].extendedProperty.isCommonQuerySorter">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[number].extendedProperty.isCommonQuerySorter">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[number].extendedProperty.isUsingF7">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[number].extendedProperty.isUsingF7">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[number].extendedProperty.isVisibleForKDTable">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[number].extendedProperty.isVisibleForKDTable">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[simpleName].displayName">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[simpleName].displayName">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="简称" />
             <lang locale="zh_HK" value="簡稱" />
             <lang locale="zh_TW" value="簡稱" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[simpleName].extendedProperty.colWidthInKDTable">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[simpleName].extendedProperty.colWidthInKDTable">
             <lang locale="en_US" value="50" />
             <lang locale="zh_CN" value="50" />
             <lang locale="zh_TW" value="50" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[simpleName].extendedProperty.isCommonQueryFilter">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[simpleName].extendedProperty.isCommonQueryFilter">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[simpleName].extendedProperty.isCommonQuerySorter">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[simpleName].extendedProperty.isCommonQuerySorter">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[simpleName].extendedProperty.isUsingF7">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[simpleName].extendedProperty.isUsingF7">
             <lang locale="en_US" value="false" />
             <lang locale="zh_CN" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
-        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery].units.queryField[simpleName].extendedProperty.isVisibleForKDTable">
+        <rs key="joinQuery[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery].units.queryField[simpleName].extendedProperty.isVisibleForKDTable">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />

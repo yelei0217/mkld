@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataTable xmlns="com.kingdee.bos.metadata">
     <package>com.kingdee.eas.mkld.sapinterage.app</package>
-    <name>CT_SIG_ClaimAccount</name>
-    <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].alias</alias>
-    <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].description</description>
+    <name>CT_SIG_PaymentSentRecord</name>
+    <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].alias</alias>
+    <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].description</description>
     <userDefined>true</userDefined>
-    <bizUnitPK>com.kingdee.eas.mkld.sapinterage.ClaimAccount</bizUnitPK>
+    <bizUnitPK>com.kingdee.eas.mkld.sapinterage.PaymentSentRecord</bizUnitPK>
     <columns>
         <column>
             <name>FName</name>
-            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FName].alias</alias>
-            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FName].description</description>
+            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FName].alias</alias>
+            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FName].description</description>
             <userDefined>true</userDefined>
             <isMultilingual>true</isMultilingual>
             <isEncoded>false</isEncoded>
@@ -23,8 +23,8 @@
         </column>
         <column>
             <name>FNumber</name>
-            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FNumber].alias</alias>
-            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FNumber].description</description>
+            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FNumber].alias</alias>
+            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FNumber].description</description>
             <userDefined>true</userDefined>
             <isMultilingual>false</isMultilingual>
             <isEncoded>false</isEncoded>
@@ -37,8 +37,8 @@
         </column>
         <column>
             <name>FDescription</name>
-            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FDescription].alias</alias>
-            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FDescription].description</description>
+            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FDescription].alias</alias>
+            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FDescription].description</description>
             <userDefined>true</userDefined>
             <isMultilingual>true</isMultilingual>
             <isEncoded>false</isEncoded>
@@ -51,8 +51,8 @@
         </column>
         <column>
             <name>FSimpleName</name>
-            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FSimpleName].alias</alias>
-            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FSimpleName].description</description>
+            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FSimpleName].alias</alias>
+            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FSimpleName].description</description>
             <userDefined>true</userDefined>
             <isMultilingual>false</isMultilingual>
             <isEncoded>false</isEncoded>
@@ -65,8 +65,8 @@
         </column>
         <column>
             <name>FID</name>
-            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FID].alias</alias>
-            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FID].description</description>
+            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FID].alias</alias>
+            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FID].description</description>
             <userDefined>true</userDefined>
             <isMultilingual>false</isMultilingual>
             <isEncoded>false</isEncoded>
@@ -79,8 +79,8 @@
         </column>
         <column>
             <name>FCreatorID</name>
-            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FCreatorID].alias</alias>
-            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FCreatorID].description</description>
+            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FCreatorID].alias</alias>
+            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FCreatorID].description</description>
             <userDefined>true</userDefined>
             <isMultilingual>false</isMultilingual>
             <isEncoded>false</isEncoded>
@@ -93,8 +93,8 @@
         </column>
         <column>
             <name>FCreateTime</name>
-            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FCreateTime].alias</alias>
-            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FCreateTime].description</description>
+            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FCreateTime].alias</alias>
+            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FCreateTime].description</description>
             <userDefined>true</userDefined>
             <isMultilingual>false</isMultilingual>
             <isEncoded>false</isEncoded>
@@ -107,8 +107,8 @@
         </column>
         <column>
             <name>FLastUpdateUserID</name>
-            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FLastUpdateUserID].alias</alias>
-            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FLastUpdateUserID].description</description>
+            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FLastUpdateUserID].alias</alias>
+            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FLastUpdateUserID].description</description>
             <userDefined>true</userDefined>
             <isMultilingual>false</isMultilingual>
             <isEncoded>false</isEncoded>
@@ -121,8 +121,8 @@
         </column>
         <column>
             <name>FLastUpdateTime</name>
-            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FLastUpdateTime].alias</alias>
-            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FLastUpdateTime].description</description>
+            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FLastUpdateTime].alias</alias>
+            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FLastUpdateTime].description</description>
             <userDefined>true</userDefined>
             <isMultilingual>false</isMultilingual>
             <isEncoded>false</isEncoded>
@@ -135,8 +135,8 @@
         </column>
         <column>
             <name>FControlUnitID</name>
-            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FControlUnitID].alias</alias>
-            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FControlUnitID].description</description>
+            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FControlUnitID].alias</alias>
+            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FControlUnitID].description</description>
             <userDefined>true</userDefined>
             <isMultilingual>false</isMultilingual>
             <isEncoded>false</isEncoded>
@@ -148,37 +148,37 @@
             <precision>0</precision>
         </column>
         <column>
-            <name>CFIsCalim</name>
-            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[CFIsCalim].alias</alias>
-            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[CFIsCalim].description</description>
+            <name>CFSentFlag</name>
+            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[CFSentFlag].alias</alias>
+            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[CFSentFlag].description</description>
             <userDefined>true</userDefined>
             <isMultilingual>false</isMultilingual>
             <isEncoded>false</isEncoded>
             <isNullable>true</isNullable>
             <defaultValue />
-            <sqlType>INT</sqlType>
-            <length>1</length>
+            <sqlType>VARCHAR</sqlType>
+            <length>100</length>
             <scale>0</scale>
             <precision>0</precision>
         </column>
         <column>
-            <name>CFIsSendDms</name>
-            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[CFIsSendDms].alias</alias>
-            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[CFIsSendDms].description</description>
+            <name>CFCompanyID</name>
+            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[CFCompanyID].alias</alias>
+            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[CFCompanyID].description</description>
             <userDefined>true</userDefined>
             <isMultilingual>false</isMultilingual>
             <isEncoded>false</isEncoded>
             <isNullable>true</isNullable>
             <defaultValue />
-            <sqlType>INT</sqlType>
-            <length>1</length>
+            <sqlType>VARCHAR</sqlType>
+            <length>44</length>
             <scale>0</scale>
             <precision>0</precision>
         </column>
         <column>
-            <name>CFBusDivision</name>
-            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[CFBusDivision].alias</alias>
-            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[CFBusDivision].description</description>
+            <name>CFZBUDAT1</name>
+            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[CFZBUDAT1].alias</alias>
+            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[CFZBUDAT1].description</description>
             <userDefined>true</userDefined>
             <isMultilingual>false</isMultilingual>
             <isEncoded>false</isEncoded>
@@ -190,64 +190,64 @@
             <precision>0</precision>
         </column>
         <column>
-            <name>CFDataState</name>
-            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[CFDataState].alias</alias>
-            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[CFDataState].description</description>
+            <name>CFPAYAMOUNT</name>
+            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[CFPAYAMOUNT].alias</alias>
+            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[CFPAYAMOUNT].description</description>
             <userDefined>true</userDefined>
             <isMultilingual>false</isMultilingual>
             <isEncoded>false</isEncoded>
             <isNullable>true</isNullable>
             <defaultValue />
-            <sqlType>INT</sqlType>
-            <length>0</length>
-            <scale>0</scale>
-            <precision>0</precision>
+            <sqlType>NUMERIC</sqlType>
+            <length>28</length>
+            <scale>10</scale>
+            <precision>28</precision>
         </column>
         <column>
-            <name>CFCompanyID</name>
-            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[CFCompanyID].alias</alias>
-            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[CFCompanyID].description</description>
-            <userDefined>true</userDefined>
-            <isMultilingual>false</isMultilingual>
-            <isEncoded>false</isEncoded>
-            <isNullable>true</isNullable>
-            <defaultValue />
-            <sqlType>VARCHAR</sqlType>
-            <length>44</length>
-            <scale>0</scale>
-            <precision>0</precision>
-        </column>
-        <column>
-            <name>CFCompanyNo</name>
-            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[CFCompanyNo].alias</alias>
-            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[CFCompanyNo].description</description>
+            <name>CFOAID</name>
+            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[CFOAID].alias</alias>
+            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[CFOAID].description</description>
             <userDefined>true</userDefined>
             <isMultilingual>false</isMultilingual>
             <isEncoded>false</isEncoded>
             <isNullable>true</isNullable>
             <defaultValue />
             <sqlType>NVARCHAR</sqlType>
-            <length>80</length>
+            <length>100</length>
             <scale>0</scale>
             <precision>0</precision>
         </column>
         <column>
-            <name>CFAcccountID</name>
-            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[CFAcccountID].alias</alias>
-            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[CFAcccountID].description</description>
+            <name>CFZBANKN1</name>
+            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[CFZBANKN1].alias</alias>
+            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[CFZBANKN1].description</description>
             <userDefined>true</userDefined>
             <isMultilingual>false</isMultilingual>
             <isEncoded>false</isEncoded>
             <isNullable>true</isNullable>
             <defaultValue />
-            <sqlType>VARCHAR</sqlType>
-            <length>44</length>
+            <sqlType>NVARCHAR</sqlType>
+            <length>100</length>
+            <scale>0</scale>
+            <precision>0</precision>
+        </column>
+        <column>
+            <name>CFRecBillNum</name>
+            <alias>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[CFRecBillNum].alias</alias>
+            <description>dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[CFRecBillNum].description</description>
+            <userDefined>true</userDefined>
+            <isMultilingual>false</isMultilingual>
+            <isEncoded>false</isEncoded>
+            <isNullable>true</isNullable>
+            <defaultValue />
+            <sqlType>NVARCHAR</sqlType>
+            <length>100</length>
             <scale>0</scale>
             <precision>0</precision>
         </column>
     </columns>
     <primaryKey>
-        <name>CPK_SIG_ClaimAIk6p</name>
+        <name>CPK_SIG_PmntSRIrvb</name>
         <userDefined>true</userDefined>
         <primaryKeyColumns>
             <primaryKeyColumn>
@@ -261,7 +261,7 @@
     </primaryKey>
     <foreignKeys>
         <foreignKey>
-            <name>CFK_SIG_SIGCACrtk6</name>
+            <name>CFK_SIG_SIGPSRCrrv</name>
             <userDefined>true</userDefined>
             <refTable>
                 <key name="package" value="com.kingdee.eas.base.permission.app" />
@@ -280,7 +280,7 @@
             </fkColumnPairs>
         </foreignKey>
         <foreignKey>
-            <name>CFK_SIG_SIGCALUUk6</name>
+            <name>CFK_SIG_SIGPSRLUrv</name>
             <userDefined>true</userDefined>
             <refTable>
                 <key name="package" value="com.kingdee.eas.base.permission.app" />
@@ -299,7 +299,7 @@
             </fkColumnPairs>
         </foreignKey>
         <foreignKey>
-            <name>CFK_SIG_SIGCACnUk6</name>
+            <name>CFK_SIG_SIGPSRCUrv</name>
             <userDefined>true</userDefined>
             <refTable>
                 <key name="package" value="com.kingdee.eas.basedata.org" />
@@ -318,7 +318,7 @@
             </fkColumnPairs>
         </foreignKey>
         <foreignKey>
-            <name>CFK_SIG_SIGCAOmpl5</name>
+            <name>CFK_SIG_SIGPSRFCrv</name>
             <userDefined>true</userDefined>
             <refTable>
                 <key name="package" value="com.kingdee.eas.basedata.org" />
@@ -336,241 +336,223 @@
                 </fkColumnPair>
             </fkColumnPairs>
         </foreignKey>
-        <foreignKey>
-            <name>CFK_SIG_SIGCACcc69</name>
-            <userDefined>true</userDefined>
-            <refTable>
-                <key name="package" value="com.kingdee.eas.basedata.assistant" />
-                <key name="name" value="T_BD_AccountBanks" />
-            </refTable>
-            <fkColumnPairs>
-                <fkColumnPair>
-                    <sequence>0</sequence>
-                    <refColumn>
-                        <key name="name" value="FID" />
-                    </refColumn>
-                    <fkColumn>
-                        <key name="name" value="CFAcccountID" />
-                    </fkColumn>
-                </fkColumnPair>
-            </fkColumnPairs>
-        </foreignKey>
     </foreignKeys>
     <resource>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].alias">
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].alias">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="认领银行账号" />
-            <lang locale="zh_HK" value="認領銀行賬號" />
-            <lang locale="zh_TW" value="認領銀行賬號" />
+            <lang locale="zh_CN" value="付款单发送记录" />
+            <lang locale="zh_HK" value="付款單發送記錄" />
+            <lang locale="zh_TW" value="付款單發送記錄" />
         </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[CFAcccountID].alias">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="银行账户" />
-            <lang locale="zh_HK" value="銀行賬戶" />
-            <lang locale="zh_TW" value="銀行賬戶" />
-        </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[CFAcccountID].description">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="银行账户" />
-            <lang locale="zh_HK" value="銀行賬戶" />
-            <lang locale="zh_TW" value="銀行賬戶" />
-        </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[CFBusDivision].alias">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="事业部" />
-            <lang locale="zh_HK" value="事業部" />
-            <lang locale="zh_TW" value="事業部" />
-        </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[CFBusDivision].description">
-            <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="事业部" />
-            <lang locale="zh_HK" value="事業部" />
-            <lang locale="zh_TW" value="事業部" />
-        </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[CFCompanyID].alias">
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[CFCompanyID].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="公司" />
             <lang locale="zh_HK" value="公司" />
             <lang locale="zh_TW" value="公司" />
         </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[CFCompanyID].description">
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[CFCompanyID].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="公司" />
             <lang locale="zh_HK" value="公司" />
             <lang locale="zh_TW" value="公司" />
         </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[CFCompanyNo].alias">
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[CFOAID].alias">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="公司编码" />
-            <lang locale="zh_HK" value="公司編碼" />
-            <lang locale="zh_TW" value="公司編碼" />
+            <lang locale="zh_CN" value="OAID" />
+            <lang locale="zh_HK" value="OAID" />
+            <lang locale="zh_TW" value="OAID" />
         </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[CFCompanyNo].description">
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[CFOAID].description">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="公司编码" />
-            <lang locale="zh_HK" value="公司編碼" />
-            <lang locale="zh_TW" value="公司編碼" />
+            <lang locale="zh_CN" value="OAID" />
+            <lang locale="zh_HK" value="OAID" />
+            <lang locale="zh_TW" value="OAID" />
         </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[CFDataState].alias">
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[CFPAYAMOUNT].alias">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="状态" />
-            <lang locale="zh_HK" value="狀態" />
-            <lang locale="zh_TW" value="狀態" />
+            <lang locale="zh_CN" value="付款金额" />
+            <lang locale="zh_HK" value="付款金額" />
+            <lang locale="zh_TW" value="付款金額" />
         </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[CFDataState].description">
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[CFPAYAMOUNT].description">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="状态" />
-            <lang locale="zh_HK" value="狀態" />
-            <lang locale="zh_TW" value="狀態" />
+            <lang locale="zh_CN" value="付款金额" />
+            <lang locale="zh_HK" value="付款金額" />
+            <lang locale="zh_TW" value="付款金額" />
         </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[CFIsCalim].alias">
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[CFRecBillNum].alias">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="是否收款账号" />
-            <lang locale="zh_HK" value="是否收款賬號" />
-            <lang locale="zh_TW" value="是否收款賬號" />
+            <lang locale="zh_CN" value="收款单号" />
+            <lang locale="zh_HK" value="收款單號" />
+            <lang locale="zh_TW" value="收款單號" />
         </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[CFIsCalim].description">
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[CFRecBillNum].description">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="是否收款账号" />
-            <lang locale="zh_HK" value="是否收款賬號" />
-            <lang locale="zh_TW" value="是否收款賬號" />
+            <lang locale="zh_CN" value="收款单号" />
+            <lang locale="zh_HK" value="收款單號" />
+            <lang locale="zh_TW" value="收款單號" />
         </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[CFIsSendDms].alias">
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[CFSentFlag].alias">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="是否发送DMS" />
-            <lang locale="zh_HK" value="是否發送DMS" />
-            <lang locale="zh_TW" value="是否發送DMS" />
+            <lang locale="zh_CN" value="发送状态" />
+            <lang locale="zh_HK" value="發送狀態" />
+            <lang locale="zh_TW" value="發送狀態" />
         </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[CFIsSendDms].description">
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[CFSentFlag].description">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="是否发送DMS" />
-            <lang locale="zh_HK" value="是否發送DMS" />
-            <lang locale="zh_TW" value="是否發送DMS" />
+            <lang locale="zh_CN" value="发送状态" />
+            <lang locale="zh_HK" value="發送狀態" />
+            <lang locale="zh_TW" value="發送狀態" />
         </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FControlUnitID].alias">
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[CFZBANKN1].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="付款账号" />
+            <lang locale="zh_HK" value="付款賬號" />
+            <lang locale="zh_TW" value="付款賬號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[CFZBANKN1].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="付款账号" />
+            <lang locale="zh_HK" value="付款賬號" />
+            <lang locale="zh_TW" value="付款賬號" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[CFZBUDAT1].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="付款时间" />
+            <lang locale="zh_HK" value="付款時間" />
+            <lang locale="zh_TW" value="付款時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[CFZBUDAT1].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="付款时间" />
+            <lang locale="zh_HK" value="付款時間" />
+            <lang locale="zh_TW" value="付款時間" />
+        </rs>
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FControlUnitID].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="控制单元" />
             <lang locale="zh_HK" value="控制單元" />
             <lang locale="zh_TW" value="控制單元" />
         </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FControlUnitID].description">
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FControlUnitID].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="控制单元" />
             <lang locale="zh_HK" value="控制單元" />
             <lang locale="zh_TW" value="控制單元" />
         </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FCreateTime].alias">
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FCreateTime].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="创建时间" />
             <lang locale="zh_HK" value="創建時間" />
             <lang locale="zh_TW" value="創建時間" />
         </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FCreateTime].description">
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FCreateTime].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="创建时间" />
             <lang locale="zh_HK" value="創建時間" />
             <lang locale="zh_TW" value="創建時間" />
         </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FCreatorID].alias">
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FCreatorID].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="创建者" />
             <lang locale="zh_HK" value="創建者" />
             <lang locale="zh_TW" value="創建者" />
         </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FCreatorID].description">
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FCreatorID].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="创建者" />
             <lang locale="zh_HK" value="創建者" />
             <lang locale="zh_TW" value="創建者" />
         </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FDescription].alias">
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FDescription].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="描述" />
             <lang locale="zh_HK" value="描述" />
             <lang locale="zh_TW" value="描述" />
         </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FDescription].description">
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FDescription].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="描述" />
             <lang locale="zh_HK" value="描述" />
             <lang locale="zh_TW" value="描述" />
         </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FID].alias">
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FID].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FID].description">
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FID].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FLastUpdateTime].alias">
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FLastUpdateTime].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="最后修改时间" />
             <lang locale="zh_HK" value="最後修改時間" />
             <lang locale="zh_TW" value="最後修改時間" />
         </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FLastUpdateTime].description">
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FLastUpdateTime].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="最后修改时间" />
             <lang locale="zh_HK" value="最後修改時間" />
             <lang locale="zh_TW" value="最後修改時間" />
         </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FLastUpdateUserID].alias">
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FLastUpdateUserID].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="最后修改者" />
             <lang locale="zh_HK" value="最後修改者" />
             <lang locale="zh_TW" value="最後修改者" />
         </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FLastUpdateUserID].description">
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FLastUpdateUserID].description">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="最后修改者" />
             <lang locale="zh_HK" value="最後修改者" />
             <lang locale="zh_TW" value="最後修改者" />
         </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FName].alias">
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FName].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="名称" />
             <lang locale="zh_HK" value="名稱" />
             <lang locale="zh_TW" value="名稱" />
         </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FName].description">
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FName].description">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="账户名称" />
-            <lang locale="zh_HK" value="賬戶名稱" />
-            <lang locale="zh_TW" value="賬戶名稱" />
+            <lang locale="zh_CN" value="名称" />
+            <lang locale="zh_HK" value="名稱" />
+            <lang locale="zh_TW" value="名稱" />
         </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FNumber].alias">
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FNumber].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="编码" />
             <lang locale="zh_HK" value="編碼" />
             <lang locale="zh_TW" value="編碼" />
         </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FNumber].description">
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FNumber].description">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="银行账号" />
-            <lang locale="zh_HK" value="銀行賬號" />
-            <lang locale="zh_TW" value="銀行賬號" />
+            <lang locale="zh_CN" value="编码" />
+            <lang locale="zh_HK" value="編碼" />
+            <lang locale="zh_TW" value="編碼" />
         </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FSimpleName].alias">
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FSimpleName].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="简称" />
             <lang locale="zh_HK" value="簡稱" />
             <lang locale="zh_TW" value="簡稱" />
         </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].columns.column[FSimpleName].description">
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].columns.column[FSimpleName].description">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="简称" />
-            <lang locale="zh_HK" value="簡稱" />
-            <lang locale="zh_TW" value="簡稱" />
+            <lang locale="zh_CN" value="付款银行" />
+            <lang locale="zh_HK" value="付款銀行" />
+            <lang locale="zh_TW" value="付款銀行" />
         </rs>
-        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_ClaimAccount].description">
+        <rs key="dataTable[com.kingdee.eas.mkld.sapinterage.app.CT_SIG_PaymentSentRecord].description">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="" />
-            <lang locale="zh_TW" value="單級基礎資料範本" />
+            <lang locale="zh_CN" value="回单发送记录" />
+            <lang locale="zh_HK" value="回單發送記錄" />
+            <lang locale="zh_TW" value="回單發送記錄" />
         </rs>
     </resource>
 </dataTable>

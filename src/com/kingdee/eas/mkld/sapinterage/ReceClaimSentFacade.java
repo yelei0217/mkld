@@ -124,4 +124,28 @@ public class ReceClaimSentFacade extends AbstractBizCtrl implements IReceClaimSe
             throw new EJBRemoteException(err);
         }
     }
+    /**
+     *生成付款单发送记录-User defined method
+     */
+    public void genPaymentRecord() throws BOSException
+    {
+        try {
+            getController().genPaymentRecord(getContext());
+        }
+        catch(RemoteException err) {
+            throw new EJBRemoteException(err);
+        }
+    }
+    /**
+     *发送付款单至OA-User defined method
+     */
+    public void SentPaymentRecord() throws BOSException
+    {
+        try {
+            getController().SentPaymentRecord(getContext());
+        }
+        catch(RemoteException err) {
+            throw new EJBRemoteException(err);
+        }
+    }
 }

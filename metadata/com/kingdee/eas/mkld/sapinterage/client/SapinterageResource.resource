@@ -47,6 +47,11 @@
             <value>i18nResource[com.kingdee.eas.mkld.sapinterage.client.SapinterageResource].resourceItems.resourceItem[ClaimAccountQueryF7WindowTitle].value</value>
             <userDefined>true</userDefined>
         </resourceItem>
+        <resourceItem>
+            <name>PaymentSentRecordQueryF7WindowTitle</name>
+            <value>i18nResource[com.kingdee.eas.mkld.sapinterage.client.SapinterageResource].resourceItems.resourceItem[PaymentSentRecordQueryF7WindowTitle].value</value>
+            <userDefined>true</userDefined>
+        </resourceItem>
     </resourceItems>
     <resource>
         <rs key="i18nResource[com.kingdee.eas.mkld.sapinterage.client.SapinterageResource].alias">
@@ -66,6 +71,12 @@
             <lang locale="zh_CN" value="认领银行账号" />
             <lang locale="zh_HK" value="認領銀行賬號" />
             <lang locale="zh_TW" value="認領銀行賬號" />
+        </rs>
+        <rs key="i18nResource[com.kingdee.eas.mkld.sapinterage.client.SapinterageResource].resourceItems.resourceItem[PaymentSentRecordQueryF7WindowTitle].value">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="付款单发送记录" />
+            <lang locale="zh_HK" value="付款單發送記錄" />
+            <lang locale="zh_TW" value="付款單發送記錄" />
         </rs>
         <rs key="i18nResource[com.kingdee.eas.mkld.sapinterage.client.SapinterageResource].resourceItems.resourceItem[ReceClaimRecordQueryF7WindowTitle].value">
             <lang locale="en_US" value="null" />

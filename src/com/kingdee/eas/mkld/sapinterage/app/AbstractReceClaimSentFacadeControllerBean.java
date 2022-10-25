@@ -189,4 +189,44 @@ public abstract class AbstractReceClaimSentFacadeControllerBean extends Abstract
         return null;
     }
 
+    public void genPaymentRecord(Context ctx) throws BOSException
+    {
+        try {
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("8fe65d75-db7e-43e8-aafb-86391a61429e"), new Object[]{ctx});
+            invokeServiceBefore(svcCtx);
+              if(!svcCtx.invokeBreak()) {
+            _genPaymentRecord(ctx);
+            }
+            invokeServiceAfter(svcCtx);
+        } catch (BOSException ex) {
+            throw ex;
+        } finally {
+            super.cleanUpServiceState();
+        }
+    }
+    protected void _genPaymentRecord(Context ctx) throws BOSException
+    {    	
+        return;
+    }
+
+    public void SentPaymentRecord(Context ctx) throws BOSException
+    {
+        try {
+            ServiceContext svcCtx = createServiceContext(new MetaDataPK("80941634-147c-4d64-9da5-e542c4e96811"), new Object[]{ctx});
+            invokeServiceBefore(svcCtx);
+              if(!svcCtx.invokeBreak()) {
+            _SentPaymentRecord(ctx);
+            }
+            invokeServiceAfter(svcCtx);
+        } catch (BOSException ex) {
+            throw ex;
+        } finally {
+            super.cleanUpServiceState();
+        }
+    }
+    protected void _SentPaymentRecord(Context ctx) throws BOSException
+    {    	
+        return;
+    }
+
 }

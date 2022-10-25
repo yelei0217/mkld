@@ -23,6 +23,12 @@ public class DMSInterfaceUtil {
 		mp.put("clienttypecode", InterfaceResource.dms_client_ytpe_code);
 		String result = sendPost(url, mp.toJSONString(),"");
 		if(result!=null && !"".equals(result)){
+//			JSONObject jo = JSONObject.parseObject(result);
+// 		    if(jo!=null && jo.getJSONObject("resp_data") !=null ){
+//		    	if(jo.getJSONObject("resp_data").get("token") != null && !"".equals(jo.getJSONObject("resp_data").get("token").toString())){
+//		    		token = jo.getJSONObject("resp_data").getString("token");
+//		    	}
+//		    }
 			 JsonObject returnData = new JsonParser().parse(result).getAsJsonObject();
 			 if(returnData.get("resp_data")!=null && returnData.get("resp_data").getAsJsonObject().get("token") !=null){
 				 token = returnData.get("resp_data").getAsJsonObject().get("token").getAsString();
@@ -87,6 +93,7 @@ public class DMSInterfaceUtil {
 	            while ((line = in.readLine()) != null) {
 	                result += line;
 	            }
+	            System.out.println("DMS接口返回信息："+result);
 	        } catch (Exception e) {
 	        	result = "发送 POST 请求出现异常！"+e;
 	            System.out.println("发送 POST 请求出现异常！"+e);

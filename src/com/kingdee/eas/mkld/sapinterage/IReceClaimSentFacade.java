@@ -21,4 +21,6 @@ public interface IReceClaimSentFacade extends IBizCtrl
     public String SentReceiptRecord() throws BOSException;
     public String sentCustomer2DMS() throws BOSException;
     public String updateClaimStaByCusName() throws BOSException;
+    public void genPaymentRecord() throws BOSException;
+    public void SentPaymentRecord() throws BOSException;
 }

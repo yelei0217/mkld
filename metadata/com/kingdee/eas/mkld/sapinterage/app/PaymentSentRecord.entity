@@ -1,0 +1,1026 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entityObject xmlns="com.kingdee.bos.metadata">
+    <package>com.kingdee.eas.mkld.sapinterage.app</package>
+    <name>PaymentSentRecord</name>
+    <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].alias</alias>
+    <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].description</description>
+    <userDefined>true</userDefined>
+    <bosType>080ABC86</bosType>
+    <stereoType>false</stereoType>
+    <businessImplName>com.kingdee.eas.mkld.sapinterage.PaymentSentRecord</businessImplName>
+    <businessControllerName>com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordController</businessControllerName>
+    <accessLevel>public</accessLevel>
+    <subClassingMode>normal</subClassingMode>
+    <methods>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getValue].description</description>
+            <innerID>e42a89bf-18f6-4bef-9e9f-617cbbda2fb6</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getValue].description</description>
+            <innerID>11f454a9-842a-43e9-9e51-27935e5861bd</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>pk</name>
+                    <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getValue].parameters.parameter[pk].alias</alias>
+                    <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getValue].parameters.parameter[pk].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.dao.IObjectPK</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+                <parameter>
+                    <name>selector</name>
+                    <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getValue].parameters.parameter[selector].alias</alias>
+                    <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getValue].parameters.parameter[selector].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.SelectorItemCollection</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getValue</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getValue].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getValue].description</description>
+            <innerID>a7b53129-4ac1-4b7a-9154-741422fad1ed</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectValue</returnValueType>
+            <metadataRef>com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getValue].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getValue].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getCollection].description</description>
+            <innerID>e2791868-3f2e-4390-b54d-2d155659debf</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getCollection].description</description>
+            <innerID>4d32eb5e-9a9d-474c-a3bb-3ce673511806</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>view</name>
+                    <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getCollection].parameters.parameter[view].alias</alias>
+                    <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getCollection].parameters.parameter[view].description</description>
+                    <direction>in</direction>
+                    <dataType>com.kingdee.bos.metadata.entity.EntityViewInfo</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>getCollection</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getCollection].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getCollection].description</description>
+            <innerID>0782facc-fddb-4c7e-bf5b-05f14367652c</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType>ObjectCollection</returnValueType>
+            <metadataRef>com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord</metadataRef>
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <parameters>
+                <parameter>
+                    <name>oql</name>
+                    <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getCollection].parameters.parameter[oql].alias</alias>
+                    <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getCollection].parameters.parameter[oql].description</description>
+                    <direction>in</direction>
+                    <dataType>String</dataType>
+                    <metadataRef />
+                    <userDefined>true</userDefined>
+                </parameter>
+            </parameters>
+            <configured>false</configured>
+        </method>
+    </methods>
+    <isAbstract>false</isAbstract>
+    <bizUnitPK>com.kingdee.eas.mkld.sapinterage.PaymentSentRecord</bizUnitPK>
+    <baseEntity>
+        <key name="package" value="com.kingdee.eas.framework.app" />
+        <key name="name" value="DataBase" />
+    </baseEntity>
+    <table>
+        <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
+        <key name="name" value="CT_SIG_PaymentSentRecord" />
+    </table>
+    <properties>
+        <ownProperty>
+            <name>SentFlag</name>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[SentFlag].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[SentFlag].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>Enum</dataType>
+            <metadataRef>com.kingdee.eas.mkld.sapinterage.app.SendStatusMenu</metadataRef>
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>80</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[SentFlag].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFSentFlag" />
+            </mappingField>
+        </ownProperty>
+        <linkProperty>
+            <name>Company</name>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.linkProperty[Company].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.linkProperty[Company].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="CFCompanyID" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
+                <key name="name" value="R_PaymentSentRecord_CompanyOrgUnit_Company" />
+            </relationship>
+        </linkProperty>
+        <ownProperty>
+            <name>ZBUDAT1</name>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[ZBUDAT1].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[ZBUDAT1].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>100</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[ZBUDAT1].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFZBUDAT1" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>PAYAMOUNT</name>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[PAYAMOUNT].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[PAYAMOUNT].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>BigDecimal</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>28</length>
+            <precision>28</precision>
+            <decimalDigits>10</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[PAYAMOUNT].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFPAYAMOUNT" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>OAID</name>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[OAID].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[OAID].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>100</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[OAID].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFOAID" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>ZBANKN1</name>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[ZBANKN1].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[ZBANKN1].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>100</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[ZBANKN1].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFZBANKN1" />
+            </mappingField>
+        </ownProperty>
+        <ownProperty>
+            <name>RecBillNum</name>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[RecBillNum].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[RecBillNum].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>100</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[RecBillNum].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFRecBillNum" />
+            </mappingField>
+        </ownProperty>
+    </properties>
+    <logicalKey>
+        <name>id</name>
+        <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].logicalKey[id].alias</alias>
+        <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].logicalKey[id].description</description>
+        <keyClass>com.kingdee.bos.dao.IObjectPK</keyClass>
+        <userDefined>true</userDefined>
+        <keyProperties>
+            <baseProperty>
+                <key name="name" value="id" />
+            </baseProperty>
+        </keyProperties>
+    </logicalKey>
+    <defaultView>
+        <name />
+        <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].defaultViewalias</alias>
+        <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].defaultViewdescription</description>
+    </defaultView>
+    <resource>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="付款单发送记录" />
+            <lang locale="zh_HK" value="付款單發送記錄" />
+            <lang locale="zh_TW" value="付款單發送記錄" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].defaultViewalias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].defaultViewdescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].defaultViewextendedProperty.OrgType">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].defaultViewextendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].defaultViewextendedProperty.defaultDisplayField">
+            <lang locale="en_US" value="name" />
+            <lang locale="zh_CN" value="name" />
+            <lang locale="zh_TW" value="name" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].defaultViewextendedProperty.defaultF7Query">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.app.ReceiptSentRecordQuery" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.app.ReceiptSentRecordQuery" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.app.ReceiptSentRecordQuery" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].defaultViewextendedProperty.editUI">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordEditUI" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].defaultViewextendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].defaultViewextendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].defaultViewextendedProperty.isParamObject">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].defaultViewextendedProperty.isSimpleEntity">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].defaultViewextendedProperty.listUI">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordListUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordListUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.client.ReceiptSentRecordListUI" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="回单发送记录" />
+            <lang locale="zh_HK" value="回單發送記錄" />
+            <lang locale="zh_TW" value="回單發送記錄" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].extendedProperty.OrgType">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].extendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].extendedProperty.defaultDisplayField">
+            <lang locale="en_US" value="name" />
+            <lang locale="zh_CN" value="name" />
+            <lang locale="zh_TW" value="name" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].extendedProperty.defaultF7Query">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordQuery" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].extendedProperty.editUI">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.client.PaymentSentRecordEditUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.client.PaymentSentRecordEditUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.client.PaymentSentRecordEditUI" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].extendedProperty.isParamObject">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].extendedProperty.isSimpleEntity">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].extendedProperty.listUI">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.client.PaymentSentRecordListUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.client.PaymentSentRecordListUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.client.PaymentSentRecordListUI" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].logicalKey[id].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].logicalKey[id].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getCollection].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getCollection].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getCollection].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getCollection].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getCollection].parameters.parameter[view].alias">
+            <lang locale="en_US" value="getCollection" />
+            <lang locale="zh_CN" value="取集合" />
+            <lang locale="zh_HK" value="取集合" />
+            <lang locale="zh_TW" value="取集合" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getCollection].parameters.parameter[view].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getValue].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getValue].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getValue].parameters.parameter[oql].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getValue].parameters.parameter[oql].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getValue].parameters.parameter[pk].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getValue].parameters.parameter[pk].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getValue].parameters.parameter[selector].alias">
+            <lang locale="en_US" value="getValue" />
+            <lang locale="zh_CN" value="取值" />
+            <lang locale="zh_HK" value="取值" />
+            <lang locale="zh_TW" value="取值" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].methods.method[getValue].parameters.parameter[selector].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.linkProperty[Company].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司" />
+            <lang locale="zh_HK" value="公司" />
+            <lang locale="zh_TW" value="公司" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.linkProperty[Company].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司" />
+            <lang locale="zh_HK" value="公司" />
+            <lang locale="zh_TW" value="公司" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.linkProperty[Company].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.linkProperty[Company].extendedProperty.dataField">
+            <lang locale="en_US" value="name" />
+            <lang locale="zh_CN" value="name" />
+            <lang locale="zh_TW" value="name" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.linkProperty[Company].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.linkProperty[Company].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.linkProperty[Company].extendedProperty.isForMapping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.linkProperty[Company].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.linkProperty[Company].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.linkProperty[Company].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.linkProperty[Company].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[OAID].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="OAID" />
+            <lang locale="zh_HK" value="OAID" />
+            <lang locale="zh_TW" value="OAID" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[OAID].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[OAID].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="OAID" />
+            <lang locale="zh_HK" value="OAID" />
+            <lang locale="zh_TW" value="OAID" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[OAID].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[OAID].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[OAID].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[OAID].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[OAID].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[OAID].extendedProperty.isForMapping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[OAID].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[OAID].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[OAID].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[OAID].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[PAYAMOUNT].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="付款金额" />
+            <lang locale="zh_HK" value="付款金額" />
+            <lang locale="zh_TW" value="付款金額" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[PAYAMOUNT].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[PAYAMOUNT].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="付款金额" />
+            <lang locale="zh_HK" value="付款金額" />
+            <lang locale="zh_TW" value="付款金額" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[PAYAMOUNT].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[PAYAMOUNT].extendedProperty.bizDataType">
+            <lang locale="en_US" value="DECIMAL" />
+            <lang locale="zh_CN" value="DECIMAL" />
+            <lang locale="zh_TW" value="DECIMAL" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[PAYAMOUNT].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[PAYAMOUNT].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[PAYAMOUNT].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[PAYAMOUNT].extendedProperty.isForMapping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[PAYAMOUNT].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[PAYAMOUNT].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[PAYAMOUNT].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[PAYAMOUNT].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[RecBillNum].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收款单号" />
+            <lang locale="zh_HK" value="收款單號" />
+            <lang locale="zh_TW" value="收款單號" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[RecBillNum].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[RecBillNum].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="收款单号" />
+            <lang locale="zh_HK" value="收款單號" />
+            <lang locale="zh_TW" value="收款單號" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[RecBillNum].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[RecBillNum].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[RecBillNum].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[RecBillNum].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[RecBillNum].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[RecBillNum].extendedProperty.isForMapping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[RecBillNum].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[RecBillNum].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[RecBillNum].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[RecBillNum].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[SentFlag].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="发送状态" />
+            <lang locale="zh_HK" value="發送狀態" />
+            <lang locale="zh_TW" value="發送狀態" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[SentFlag].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="SentS" />
+            <lang locale="zh_HK" value="SentS" />
+            <lang locale="zh_TW" value="SentS" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[SentFlag].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="发送状态" />
+            <lang locale="zh_HK" value="發送狀態" />
+            <lang locale="zh_TW" value="發送狀態" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[SentFlag].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[SentFlag].extendedProperty.bizDataType">
+            <lang locale="en_US" value="ENUM" />
+            <lang locale="zh_CN" value="ENUM" />
+            <lang locale="zh_TW" value="ENUM" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[SentFlag].extendedProperty.defaultValue">
+            <lang locale="en_US" value="SentS" />
+            <lang locale="zh_CN" value="SentS" />
+            <lang locale="zh_TW" value="SentS" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[SentFlag].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[SentFlag].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[SentFlag].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[SentFlag].extendedProperty.isForMapping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[SentFlag].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[SentFlag].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[SentFlag].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[SentFlag].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[ZBANKN1].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="付款账号" />
+            <lang locale="zh_HK" value="付款賬號" />
+            <lang locale="zh_TW" value="付款賬號" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[ZBANKN1].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[ZBANKN1].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="付款账号" />
+            <lang locale="zh_HK" value="付款賬號" />
+            <lang locale="zh_TW" value="付款賬號" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[ZBANKN1].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[ZBANKN1].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[ZBANKN1].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[ZBANKN1].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[ZBANKN1].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[ZBANKN1].extendedProperty.isForMapping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[ZBANKN1].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[ZBANKN1].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[ZBANKN1].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[ZBANKN1].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[ZBUDAT1].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="付款时间" />
+            <lang locale="zh_HK" value="付款時間" />
+            <lang locale="zh_TW" value="付款時間" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[ZBUDAT1].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[ZBUDAT1].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="付款时间" />
+            <lang locale="zh_HK" value="付款時間" />
+            <lang locale="zh_TW" value="付款時間" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[ZBUDAT1].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[ZBUDAT1].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[ZBUDAT1].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[ZBUDAT1].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[ZBUDAT1].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[ZBUDAT1].extendedProperty.isForMapping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[ZBUDAT1].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[ZBUDAT1].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[ZBUDAT1].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecord].properties.ownProperty[ZBUDAT1].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+    </resource>
+</entityObject>
+

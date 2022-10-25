@@ -5,7 +5,350 @@
     <alias>ruleSet[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountRuleSet].alias</alias>
     <description>ruleSet[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountRuleSet].description</description>
     <userDefined>true</userDefined>
+    <expressions>
+        <groupExpression>
+            <id>8f217cd5-75af-4856-8a68-252361ebb622</id>
+            <parentID />
+            <source>companyNo=company.number</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>92b2cfc4-6dff-4b21-b43b-bdf097195441</id>
+            <parentID>8f217cd5-75af-4856-8a68-252361ebb622</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>e30c4398-6793-47ca-9eda-0e4560a62291</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>e30c4398-6793-47ca-9eda-0e4560a62291</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtcompanyNo</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>98462376-a580-4b90-8a5d-e3a01f3e9c9b</id>
+            <parentID>8f217cd5-75af-4856-8a68-252361ebb622</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>34c62b16-cf0e-44fb-b650-bb860aed6e23</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>1f5cfb28-a9dd-4ac8-916c-113248f7ef95</id>
+                        <expressionID>c0fee9f1-fc48-4834-8b07-652eebd6372c</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>fb716a0e-f5d8-4f92-88c9-c518e21cb92a</id>
+                        <expressionID>485c5329-3dac-4ebe-b33a-4bb688e762d4</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>34c62b16-cf0e-44fb-b650-bb860aed6e23</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>c0fee9f1-fc48-4834-8b07-652eebd6372c</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>7326ed3d-e814-4327-8d18-241a9eec89d6</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>7326ed3d-e814-4327-8d18-241a9eec89d6</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtcompany</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>485c5329-3dac-4ebe-b33a-4bb688e762d4</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>number</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>9bd5ddc6-8636-46b9-8a72-beff7f39001c</id>
+            <parentID />
+            <source>name = acccount.acctName</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>a779cb92-0564-452d-b303-f51aae431acd</id>
+            <parentID>9bd5ddc6-8636-46b9-8a72-beff7f39001c</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>04003424-e340-446e-9709-83b5cee12c30</ownerID>
+                <name>defaultLangItemData</name>
+                <type>java.lang.Object</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>04003424-e340-446e-9709-83b5cee12c30</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtName</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>70823ce0-745c-4416-b84c-7fffd851206c</id>
+            <parentID>9bd5ddc6-8636-46b9-8a72-beff7f39001c</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>55b21adf-726e-41e4-9b54-8242be9e958c</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>89cfd846-2423-48ad-938b-4d4c97181d18</id>
+                        <expressionID>dd4847e3-1fde-4f1d-9ae7-f8f33b9b414d</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>58551c09-9d74-4ae4-8543-a5477f97f1a5</id>
+                        <expressionID>de04e755-9ce5-4560-b010-42108e8f448a</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>55b21adf-726e-41e4-9b54-8242be9e958c</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>dd4847e3-1fde-4f1d-9ae7-f8f33b9b414d</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>3b2224be-6f7c-4e02-bee0-d5190a681eb1</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>3b2224be-6f7c-4e02-bee0-d5190a681eb1</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtacccount</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>de04e755-9ce5-4560-b010-42108e8f448a</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>acctName</value>
+        </simpleExpression>
+        <groupExpression>
+            <id>ca12adc2-62aa-4777-a61c-d6b9c14c8076</id>
+            <parentID />
+            <source>number = acccount.bankAccountNumber</source>
+            <operator>=</operator>
+        </groupExpression>
+        <simpleExpression>
+            <id>3837f201-ad48-4c3e-930c-bbec4cba129b</id>
+            <parentID>ca12adc2-62aa-4777-a61c-d6b9c14c8076</parentID>
+            <source />
+            <type>PROPERTYACCESS</type>
+            <valueType>String</valueType>
+            <value />
+            <property>
+                <ownerID>a3161d55-e644-460d-ab27-0ae7d54c9e3f</ownerID>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </property>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a3161d55-e644-460d-ab27-0ae7d54c9e3f</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>txtNumber</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>b1b56208-dbe6-498d-b9cf-7cc1abde3847</id>
+            <parentID>ca12adc2-62aa-4777-a61c-d6b9c14c8076</parentID>
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>String</valueType>
+            <value />
+            <method>
+                <ownerID>bdc3cf57-a2cf-46f8-bf2b-6a7910af592b</ownerID>
+                <name>getProperty</name>
+                <type>Object</type>
+                <parameters>
+                    <parameter>
+                        <id>a3370bf1-51ee-453a-83a3-90cbc3498491</id>
+                        <expressionID>13102c5e-c266-4fce-9c90-684e89a73322</expressionID>
+                    </parameter>
+                    <parameter>
+                        <id>5908c2b5-33f0-4d9f-bd15-293b502705c3</id>
+                        <expressionID>0300f937-ddd8-4c96-8d70-6ede32f7d257</expressionID>
+                    </parameter>
+                </parameters>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>bdc3cf57-a2cf-46f8-bf2b-6a7910af592b</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>com.kingdee.bos.ui.face.UIRuleUtil</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>13102c5e-c266-4fce-9c90-684e89a73322</id>
+            <parentID />
+            <source />
+            <type>METHODINVOKE</type>
+            <valueType>Object</valueType>
+            <value />
+            <method>
+                <ownerID>a3dbdc3e-8ca0-4d2e-8c01-7200f63585d8</ownerID>
+                <name>getData</name>
+                <type>Object</type>
+            </method>
+        </simpleExpression>
+        <simpleExpression>
+            <id>a3dbdc3e-8ca0-4d2e-8c01-7200f63585d8</id>
+            <parentID />
+            <source />
+            <type>VARIANT</type>
+            <valueType>UNKOWN</valueType>
+            <value>(com.kingdee.bos.dao.IObjectValue)prmtacccount</value>
+        </simpleExpression>
+        <simpleExpression>
+            <id>0300f937-ddd8-4c96-8d70-6ede32f7d257</id>
+            <parentID />
+            <source />
+            <type>CONST</type>
+            <valueType>String</valueType>
+            <value>bankAccountNumber</value>
+        </simpleExpression>
+    </expressions>
+    <actions>
+        <action>
+            <id>6d4ece06-5e8f-453c-bc68-56217230ad15</id>
+            <name>ClaimAccount_companyNo_ActionInfo</name>
+            <alias>ruleSet[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountRuleSet].actions.action[ClaimAccount_companyNo_ActionInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountRuleSet].actions.action[ClaimAccount_companyNo_ActionInfo].description</description>
+            <expressionID>8f217cd5-75af-4856-8a68-252361ebb622</expressionID>
+        </action>
+        <action>
+            <id>143a78b9-26fb-4bf5-939c-1ae4def4737e</id>
+            <name>ELF3O2R8</name>
+            <alias>ruleSet[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountRuleSet].actions.action[ELF3O2R8].alias</alias>
+            <description>ruleSet[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountRuleSet].actions.action[ELF3O2R8].description</description>
+            <expressionID>9bd5ddc6-8636-46b9-8a72-beff7f39001c</expressionID>
+        </action>
+        <action>
+            <id>ff294d8f-71e8-4b7e-bff2-53cc3ffed79f</id>
+            <name>ELF3O2R8</name>
+            <alias>ruleSet[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountRuleSet].actions.action[ELF3O2R8].alias</alias>
+            <description>ruleSet[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountRuleSet].actions.action[ELF3O2R8].description</description>
+            <expressionID>ca12adc2-62aa-4777-a61c-d6b9c14c8076</expressionID>
+        </action>
+    </actions>
+    <rules>
+        <conditionRule>
+            <name>ClaimAccount_companyNo_RuleInfo</name>
+            <alias>ruleSet[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountRuleSet].rules.conditionRule[ClaimAccount_companyNo_RuleInfo].alias</alias>
+            <description>ruleSet[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountRuleSet].rules.conditionRule[ClaimAccount_companyNo_RuleInfo].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="6d4ece06-5e8f-453c-bc68-56217230ad15" />
+                </action>
+            </actions>
+        </conditionRule>
+        <conditionRule>
+            <name>ELF3O2R7</name>
+            <alias>ruleSet[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountRuleSet].rules.conditionRule[ELF3O2R7].alias</alias>
+            <description>ruleSet[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountRuleSet].rules.conditionRule[ELF3O2R7].description</description>
+            <ruleType>withproperty</ruleType>
+            <eventObjectName />
+            <eventType>CHANGE</eventType>
+            <eventName>CHANGE</eventName>
+            <actions>
+                <action>
+                    <key name="id" value="143a78b9-26fb-4bf5-939c-1ae4def4737e" />
+                </action>
+                <action>
+                    <key name="id" value="ff294d8f-71e8-4b7e-bff2-53cc3ffed79f" />
+                </action>
+            </actions>
+        </conditionRule>
+    </rules>
     <resource>
+        <rs key="ruleSet[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountRuleSet].actions.action[ClaimAccount_companyNo_ActionInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_number" />
+            <lang locale="zh_HK" value="攜帶字段屬性_number" />
+            <lang locale="zh_TW" value="攜帶字段屬性_number" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountRuleSet].actions.action[ClaimAccount_companyNo_ActionInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountRuleSet].actions.action[ELF3O2R8].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带关联属性_account" />
+            <lang locale="zh_HK" value="攜帶關聯屬性_account" />
+            <lang locale="zh_TW" value="攜帶關聯屬性_account" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountRuleSet].actions.action[ELF3O2R8].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
         <rs key="ruleSet[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountRuleSet].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
@@ -17,6 +360,45 @@
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountRuleSet].rules.conditionRule[ClaimAccount_companyNo_RuleInfo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带字段属性_number" />
+            <lang locale="zh_HK" value="攜帶字段屬性_number" />
+            <lang locale="zh_TW" value="攜帶字段屬性_number" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountRuleSet].rules.conditionRule[ClaimAccount_companyNo_RuleInfo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountRuleSet].rules.conditionRule[ClaimAccount_companyNo_RuleInfo].extendedProperty.columnName">
+            <lang locale="en_US" value="company" />
+            <lang locale="zh_CN" value="company" />
+            <lang locale="zh_TW" value="company" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountRuleSet].rules.conditionRule[ClaimAccount_companyNo_RuleInfo].extendedProperty.userDefined">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountRuleSet].rules.conditionRule[ELF3O2R7].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="携带关联属性_account" />
+            <lang locale="zh_HK" value="攜帶關聯屬性_account" />
+            <lang locale="zh_TW" value="攜帶關聯屬性_account" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountRuleSet].rules.conditionRule[ELF3O2R7].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="ruleSet[com.kingdee.eas.mkld.sapinterage.app.ClaimAccountRuleSet].rules.conditionRule[ELF3O2R7].extendedProperty.columnName">
+            <lang locale="en_US" value="acccount" />
+            <lang locale="zh_CN" value="acccount" />
+            <lang locale="zh_TW" value="acccount" />
         </rs>
     </resource>
 </ruleSet>

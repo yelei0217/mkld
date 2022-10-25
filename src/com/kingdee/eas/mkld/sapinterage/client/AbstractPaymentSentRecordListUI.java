@@ -43,13 +43,13 @@ import com.kingdee.bos.appframework.uip.UINavigator;
 /**
  * output class name
  */
-public abstract class AbstractClaimAccountListUI extends com.kingdee.eas.framework.client.ListUI
+public abstract class AbstractPaymentSentRecordListUI extends com.kingdee.eas.framework.client.ListUI
 {
-    private static final Logger logger = CoreUIObject.getLogger(AbstractClaimAccountListUI.class);
+    private static final Logger logger = CoreUIObject.getLogger(AbstractPaymentSentRecordListUI.class);
     /**
      * output class constructor
      */
-    public AbstractClaimAccountListUI() throws Exception
+    public AbstractPaymentSentRecordListUI() throws Exception
     {
         super();
         this.defaultObjectName = "mainQuery";
@@ -63,14 +63,14 @@ public abstract class AbstractClaimAccountListUI extends com.kingdee.eas.framewo
      */
     private void jbInit() throws Exception
     {
-        this.resHelper = new ResourceBundleHelper(AbstractClaimAccountListUI.class.getName());
+        this.resHelper = new ResourceBundleHelper(AbstractPaymentSentRecordListUI.class.getName());
         this.setUITitle(resHelper.getString("this.title"));
-        mainQueryPK = new MetaDataPK("com.kingdee.eas.mkld.sapinterage.app", "ClaimAccountQuery");
+        mainQueryPK = new MetaDataPK("com.kingdee.eas.mkld.sapinterage.app", "PaymentSentRecordQuery");
         // CoreUI
-		String tblMainStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles><c:Style id=\"sCol4\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol5\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol6\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol7\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol8\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol9\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol10\"><c:Protection hidden=\"true\" /></c:Style></Styles><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\"><t:ColumnGroup><t:Column t:key=\"number\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"simpleName\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"description\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"createTime\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol4\" /><t:Column t:key=\"lastUpdateTime\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol5\" /><t:Column t:key=\"creator.number\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol6\" /><t:Column t:key=\"creator.name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol7\" /><t:Column t:key=\"lastUpdateUser.number\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol8\" /><t:Column t:key=\"lastUpdateUser.name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol9\" /><t:Column t:key=\"id\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol10\" /><t:Column t:key=\"isCalim\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"isSendDms\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"busDivision\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"dataState\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"company.name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"companyNo\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"acccount.acctName\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{number}</t:Cell><t:Cell>$Resource{name}</t:Cell><t:Cell>$Resource{simpleName}</t:Cell><t:Cell>$Resource{description}</t:Cell><t:Cell>$Resource{createTime}</t:Cell><t:Cell>$Resource{lastUpdateTime}</t:Cell><t:Cell>$Resource{creator.number}</t:Cell><t:Cell>$Resource{creator.name}</t:Cell><t:Cell>$Resource{lastUpdateUser.number}</t:Cell><t:Cell>$Resource{lastUpdateUser.name}</t:Cell><t:Cell>$Resource{id}</t:Cell><t:Cell>$Resource{isCalim}</t:Cell><t:Cell>$Resource{isSendDms}</t:Cell><t:Cell>$Resource{busDivision}</t:Cell><t:Cell>$Resource{dataState}</t:Cell><t:Cell>$Resource{company.name}</t:Cell><t:Cell>$Resource{companyNo}</t:Cell><t:Cell>$Resource{acccount.acctName}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
+		String tblMainStrXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><DocRoot xmlns:c=\"http://www.kingdee.com/Common\" xmlns:f=\"http://www.kingdee.com/Form\" xmlns:t=\"http://www.kingdee.com/Table\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.kingdee.com/KDF KDFSchema.xsd\" version=\"0.0\"><Styles><c:Style id=\"sCol6\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol8\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol10\"><c:Protection hidden=\"true\" /></c:Style><c:Style id=\"sCol14\"><c:NumberFormat>&amp;double</c:NumberFormat></c:Style></Styles><Table id=\"KDTable\"><t:Sheet name=\"sheet1\"><t:Table t:selectMode=\"15\" t:mergeMode=\"0\" t:dataRequestMode=\"0\" t:pageRowCount=\"100\"><t:ColumnGroup><t:Column t:key=\"number\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"simpleName\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"description\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"createTime\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"lastUpdateTime\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"creator.number\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol6\" /><t:Column t:key=\"creator.name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"lastUpdateUser.number\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol8\" /><t:Column t:key=\"lastUpdateUser.name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"id\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol10\" /><t:Column t:key=\"SentFlag\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"Company.name\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"ZBUDAT1\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"PAYAMOUNT\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" t:styleID=\"sCol14\" /><t:Column t:key=\"OAID\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"ZBANKN1\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /><t:Column t:key=\"RecBillNum\" t:width=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\" t:moveable=\"true\" t:group=\"false\" t:required=\"false\" t:index=\"-1\" /></t:ColumnGroup><t:Head><t:Row t:name=\"header\" t:height=\"-1\" t:mergeable=\"true\" t:resizeable=\"true\"><t:Cell>$Resource{number}</t:Cell><t:Cell>$Resource{name}</t:Cell><t:Cell>$Resource{simpleName}</t:Cell><t:Cell>$Resource{description}</t:Cell><t:Cell>$Resource{createTime}</t:Cell><t:Cell>$Resource{lastUpdateTime}</t:Cell><t:Cell>$Resource{creator.number}</t:Cell><t:Cell>$Resource{creator.name}</t:Cell><t:Cell>$Resource{lastUpdateUser.number}</t:Cell><t:Cell>$Resource{lastUpdateUser.name}</t:Cell><t:Cell>$Resource{id}</t:Cell><t:Cell>$Resource{SentFlag}</t:Cell><t:Cell>$Resource{Company.name}</t:Cell><t:Cell>$Resource{ZBUDAT1}</t:Cell><t:Cell>$Resource{PAYAMOUNT}</t:Cell><t:Cell>$Resource{OAID}</t:Cell><t:Cell>$Resource{ZBANKN1}</t:Cell><t:Cell>$Resource{RecBillNum}</t:Cell></t:Row></t:Head></t:Table><t:SheetOptions><t:MergeBlocks><t:Head /></t:MergeBlocks></t:SheetOptions></t:Sheet></Table></DocRoot>";
 		
         this.tblMain.setFormatXml(resHelper.translateString("tblMain",tblMainStrXML));
-                this.tblMain.putBindContents("mainQuery",new String[] {"number","name","simpleName","description","createTime","lastUpdateTime","creator.number","creator.name","lastUpdateUser.number","lastUpdateUser.name","id","isCalim","isSendDms","busDivision","dataState","company.name","companyNo","acccount.acctName"});
+                this.tblMain.putBindContents("mainQuery",new String[] {"number","name","simpleName","description","createTime","lastUpdateTime","creator.number","creator.name","lastUpdateUser.number","lastUpdateUser.name","id","SentFlag","Company.name","ZBUDAT1","PAYAMOUNT","OAID","ZBANKN1","RecBillNum"});
 
 
         this.tblMain.checkParsed();
@@ -214,7 +214,7 @@ public abstract class AbstractClaimAccountListUI extends com.kingdee.eas.framewo
 	private void registerUIState(){		
 	}
 	public String getUIHandlerClassName() {
-	    return "com.kingdee.eas.mkld.sapinterage.app.ClaimAccountListUIHandler";
+	    return "com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordListUIHandler";
 	}
 	public IUIActionPostman prepareInit() {
 		IUIActionPostman clientHanlder = super.prepareInit();
@@ -332,13 +332,13 @@ public abstract class AbstractClaimAccountListUI extends com.kingdee.eas.framewo
         sic.add(new SelectorItemInfo("creator.number"));
         sic.add(new SelectorItemInfo("lastUpdateUser.number"));
         sic.add(new SelectorItemInfo("id"));
-        sic.add(new SelectorItemInfo("isCalim"));
-        sic.add(new SelectorItemInfo("isSendDms"));
-        sic.add(new SelectorItemInfo("busDivision"));
-        sic.add(new SelectorItemInfo("dataState"));
-        sic.add(new SelectorItemInfo("company.name"));
-        sic.add(new SelectorItemInfo("companyNo"));
-        sic.add(new SelectorItemInfo("acccount.acctName"));
+        sic.add(new SelectorItemInfo("SentFlag"));
+        sic.add(new SelectorItemInfo("Company.name"));
+        sic.add(new SelectorItemInfo("ZBUDAT1"));
+        sic.add(new SelectorItemInfo("PAYAMOUNT"));
+        sic.add(new SelectorItemInfo("OAID"));
+        sic.add(new SelectorItemInfo("ZBANKN1"));
+        sic.add(new SelectorItemInfo("RecBillNum"));
         return sic;
     }            protected java.util.List getQuerySorterFields() 
     { 
@@ -358,7 +358,7 @@ public abstract class AbstractClaimAccountListUI extends com.kingdee.eas.framewo
      */
     public IMetaDataPK getMetaDataPK()
     {
-        return new MetaDataPK("com.kingdee.eas.mkld.sapinterage.client", "ClaimAccountListUI");
+        return new MetaDataPK("com.kingdee.eas.mkld.sapinterage.client", "PaymentSentRecordListUI");
     }
 
     /**
@@ -366,7 +366,7 @@ public abstract class AbstractClaimAccountListUI extends com.kingdee.eas.framewo
      */
     protected String getEditUIName()
     {
-        return com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI.class.getName();
+        return com.kingdee.eas.mkld.sapinterage.client.PaymentSentRecordEditUI.class.getName();
     }
 
     /**
@@ -374,7 +374,7 @@ public abstract class AbstractClaimAccountListUI extends com.kingdee.eas.framewo
      */
     protected com.kingdee.eas.framework.ICoreBase getBizInterface() throws Exception
     {
-        return com.kingdee.eas.mkld.sapinterage.ClaimAccountFactory.getRemoteInstance();
+        return com.kingdee.eas.mkld.sapinterage.PaymentSentRecordFactory.getRemoteInstance();
     }
 
     /**
@@ -382,7 +382,7 @@ public abstract class AbstractClaimAccountListUI extends com.kingdee.eas.framewo
      */
     protected IObjectValue createNewData()
     {
-        com.kingdee.eas.mkld.sapinterage.ClaimAccountInfo objectValue = new com.kingdee.eas.mkld.sapinterage.ClaimAccountInfo();		
+        com.kingdee.eas.mkld.sapinterage.PaymentSentRecordInfo objectValue = new com.kingdee.eas.mkld.sapinterage.PaymentSentRecordInfo();		
         return objectValue;
     }
 

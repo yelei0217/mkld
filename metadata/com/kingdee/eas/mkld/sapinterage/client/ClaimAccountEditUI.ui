@@ -26,7 +26,7 @@
             <userDefined>false</userDefined>
             <classType>com.kingdee.bos.ctrl.swing.KDPanel</classType>
             <isContainer>true</isContainer>
-            <constraints>0,0,423,209</constraints>
+            <constraints>0,0,402,309</constraints>
             <tabIndex>0</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
@@ -37,7 +37,7 @@
             <userDefined>true</userDefined>
             <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
             <isContainer>true</isContainer>
-            <constraints>45,15,328,19</constraints>
+            <constraints>29,107,328,19</constraints>
             <tabIndex>0</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
@@ -79,7 +79,7 @@
             <userDefined>true</userDefined>
             <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
             <isContainer>true</isContainer>
-            <constraints>45,41,328,19</constraints>
+            <constraints>29,134,328,19</constraints>
             <tabIndex>0</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
@@ -121,7 +121,7 @@
             <userDefined>true</userDefined>
             <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
             <isContainer>true</isContainer>
-            <constraints>45,67,328,19</constraints>
+            <constraints>29,161,328,19</constraints>
             <tabIndex>0</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
@@ -163,7 +163,7 @@
             <userDefined>true</userDefined>
             <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
             <isContainer>true</isContainer>
-            <constraints>45,93,328,19</constraints>
+            <constraints>29,188,328,19</constraints>
             <tabIndex>0</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
@@ -219,10 +219,15 @@
             <userDefined>true</userDefined>
             <classType>com.kingdee.bos.ctrl.swing.KDCheckBox</classType>
             <isContainer>false</isContainer>
-            <constraints>251,148,118,19</constraints>
+            <constraints>235,244,118,19</constraints>
             <tabIndex>10</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>XYLayout</type>
+                <value />
+            </layoutInfo>
             <properties>
                 <property>
                     <name>text</name>
@@ -269,10 +274,15 @@
             <userDefined>true</userDefined>
             <classType>com.kingdee.bos.ctrl.swing.KDCheckBox</classType>
             <isContainer>false</isContainer>
-            <constraints>45,148,110,19</constraints>
+            <constraints>29,242,110,19</constraints>
             <tabIndex>11</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>XYLayout</type>
+                <value />
+            </layoutInfo>
             <properties>
                 <property>
                     <name>text</name>
@@ -319,7 +329,7 @@
             <userDefined>true</userDefined>
             <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
             <isContainer>true</isContainer>
-            <constraints>45,119,328,19</constraints>
+            <constraints>29,215,328,19</constraints>
             <tabIndex>0</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
@@ -368,7 +378,7 @@
             <userDefined>true</userDefined>
             <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
             <isContainer>true</isContainer>
-            <constraints>45,173,328,19</constraints>
+            <constraints>29,269,328,19</constraints>
             <tabIndex>0</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
@@ -403,6 +413,153 @@
                     <name>visible</name>
                     <type>boolean</type>
                     <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[contdataState].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="CoreUI" />
+            </parent>
+        </component>
+        <component>
+            <name>contcompany</name>
+            <alias>uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[contcompany].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
+            <isContainer>true</isContainer>
+            <constraints>29,26,328,19</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>LabelContainerLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>boundLabelText</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[contcompany].properties.property[boundLabelText].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelLength</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[contcompany].properties.property[boundLabelLength].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelUnderline</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[contcompany].properties.property[boundLabelUnderline].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[contcompany].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="CoreUI" />
+            </parent>
+        </component>
+        <component>
+            <name>contcompanyNo</name>
+            <alias>uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[contcompanyNo].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
+            <isContainer>true</isContainer>
+            <constraints>30,53,328,19</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>LabelContainerLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>boundLabelText</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[contcompanyNo].properties.property[boundLabelText].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelLength</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[contcompanyNo].properties.property[boundLabelLength].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelUnderline</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[contcompanyNo].properties.property[boundLabelUnderline].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[contcompanyNo].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="CoreUI" />
+            </parent>
+        </component>
+        <component>
+            <name>contacccount</name>
+            <alias>uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[contacccount].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDLabelContainer</classType>
+            <isContainer>true</isContainer>
+            <constraints>28,80,328,19</constraints>
+            <tabIndex>0</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>LabelContainerLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>boundLabelText</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[contacccount].properties.property[boundLabelText].value</value>
+                    <isMultiLan>true</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelLength</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[contacccount].properties.property[boundLabelLength].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>boundLabelUnderline</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[contacccount].properties.property[boundLabelUnderline].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[contacccount].properties.property[visible].value</value>
                     <isMultiLan>false</isMultiLan>
                     <userDefined>true</userDefined>
                 </property>
@@ -567,6 +724,11 @@
             <tabIndex>12</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>XYLayout</type>
+                <value />
+            </layoutInfo>
             <properties>
                 <property>
                     <name>visible</name>
@@ -624,6 +786,11 @@
             <tabIndex>13</tabIndex>
             <herited>false</herited>
             <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>XYLayout</type>
+                <value />
+            </layoutInfo>
             <properties>
                 <property>
                     <name>visible</name>
@@ -663,6 +830,244 @@
                     <userDefined>true</userDefined>
                 </propertyBinding>
             </propertyBindings>
+        </component>
+        <component>
+            <name>prmtcompany</name>
+            <alias>uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[prmtcompany].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox</classType>
+            <isContainer>false</isContainer>
+            <constraints>7</constraints>
+            <tabIndex>14</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>XYLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>queryInfo</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[prmtcompany].properties.property[queryInfo].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[prmtcompany].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>editable</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[prmtcompany].properties.property[editable].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>displayFormat</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[prmtcompany].properties.property[displayFormat].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>editFormat</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[prmtcompany].properties.property[editFormat].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>commitFormat</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[prmtcompany].properties.property[commitFormat].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>required</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[prmtcompany].properties.property[required].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="contcompany" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>data</propertyName>
+                    <propertyType>java.lang.Object</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>company</bindingField>
+                    <fieldType>com.kingdee.eas.basedata.org.CompanyOrgUnitInfo</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>true</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+            <rules>
+                <baseRule>
+                    <key name="name" value="ClaimAccount_companyNo_RuleInfo" />
+                </baseRule>
+            </rules>
+        </component>
+        <component>
+            <name>txtcompanyNo</name>
+            <alias>uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[txtcompanyNo].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.swing.KDTextField</classType>
+            <isContainer>false</isContainer>
+            <constraints>3</constraints>
+            <tabIndex>15</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>XYLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[txtcompanyNo].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>horizontalAlignment</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[txtcompanyNo].properties.property[horizontalAlignment].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>maxLength</name>
+                    <type>int</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[txtcompanyNo].properties.property[maxLength].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>required</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[txtcompanyNo].properties.property[required].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="contcompanyNo" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>text</propertyName>
+                    <propertyType>java.lang.String</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>companyNo</bindingField>
+                    <fieldType>String</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>true</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+        </component>
+        <component>
+            <name>prmtacccount</name>
+            <alias>uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[prmtacccount].alias</alias>
+            <userDefined>true</userDefined>
+            <classType>com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox</classType>
+            <isContainer>false</isContainer>
+            <constraints>7</constraints>
+            <tabIndex>16</tabIndex>
+            <herited>false</herited>
+            <bimUIObjectPK />
+            <layoutInfo>
+                <name />
+                <type>XYLayout</type>
+                <value />
+            </layoutInfo>
+            <properties>
+                <property>
+                    <name>queryInfo</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[prmtacccount].properties.property[queryInfo].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>visible</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[prmtacccount].properties.property[visible].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>editable</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[prmtacccount].properties.property[editable].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>displayFormat</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[prmtacccount].properties.property[displayFormat].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>editFormat</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[prmtacccount].properties.property[editFormat].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>commitFormat</name>
+                    <type>java.lang.String</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[prmtacccount].properties.property[commitFormat].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+                <property>
+                    <name>required</name>
+                    <type>boolean</type>
+                    <value>uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[prmtacccount].properties.property[required].value</value>
+                    <isMultiLan>false</isMultiLan>
+                    <userDefined>true</userDefined>
+                </property>
+            </properties>
+            <parent>
+                <key name="name" value="contacccount" />
+            </parent>
+            <propertyBindings>
+                <propertyBinding>
+                    <propertyName>data</propertyName>
+                    <propertyType>java.lang.Object</propertyType>
+                    <bindingObject>editData</bindingObject>
+                    <bindingField>acccount</bindingField>
+                    <fieldType>com.kingdee.eas.basedata.assistant.AccountBankInfo</fieldType>
+                    <accessType>2</accessType>
+                    <autoMode>false</autoMode>
+                    <herited>false</herited>
+                    <userDefined>true</userDefined>
+                </propertyBinding>
+            </propertyBindings>
+            <rules>
+                <baseRule>
+                    <key name="name" value="ELF3O2R7" />
+                </baseRule>
+            </rules>
         </component>
         <component>
             <name>btnPrint</name>
@@ -958,6 +1363,36 @@
             <lang locale="zh_HK" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[contacccount].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[contacccount].properties.property[boundLabelLength].value">
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_CN" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[contacccount].properties.property[boundLabelText].value">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="银行账户" />
+            <lang locale="zh_HK" value="銀行賬戶" />
+            <lang locale="zh_TW" value="銀行賬戶" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[contacccount].properties.property[boundLabelUnderline].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[contacccount].properties.property[visible].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
         <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[contbusDivision].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="null" />
@@ -983,6 +1418,66 @@
             <lang locale="zh_TW" value="true" />
         </rs>
         <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[contbusDivision].properties.property[visible].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[contcompanyNo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[contcompanyNo].properties.property[boundLabelLength].value">
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_CN" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[contcompanyNo].properties.property[boundLabelText].value">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司编码" />
+            <lang locale="zh_HK" value="公司編碼" />
+            <lang locale="zh_TW" value="公司編碼" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[contcompanyNo].properties.property[boundLabelUnderline].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[contcompanyNo].properties.property[visible].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[contcompany].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[contcompany].properties.property[boundLabelLength].value">
+            <lang locale="en_US" value="100" />
+            <lang locale="zh_CN" value="100" />
+            <lang locale="zh_HK" value="100" />
+            <lang locale="zh_TW" value="100" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[contcompany].properties.property[boundLabelText].value">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司" />
+            <lang locale="zh_HK" value="公司" />
+            <lang locale="zh_TW" value="公司" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[contcompany].properties.property[boundLabelUnderline].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[contcompany].properties.property[visible].value">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_HK" value="true" />
@@ -1080,9 +1575,9 @@
         </rs>
         <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[kDLabelContainer2].properties.property[boundLabelText].value">
             <lang locale="en_US" value="null" />
-            <lang locale="zh_CN" value="银行名称:" />
-            <lang locale="zh_HK" value="銀行名稱:" />
-            <lang locale="zh_TW" value="銀行名稱:" />
+            <lang locale="zh_CN" value="账户名称:" />
+            <lang locale="zh_HK" value="賬戶名稱:" />
+            <lang locale="zh_TW" value="賬戶名稱:" />
         </rs>
         <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[kDLabelContainer2].properties.property[boundLabelUnderline].value">
             <lang locale="en_US" value="true" />
@@ -1174,6 +1669,102 @@
             <lang locale="zh_HK" value="false" />
             <lang locale="zh_TW" value="false" />
         </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[prmtacccount].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="银行账户" />
+            <lang locale="zh_HK" value="銀行賬戶" />
+            <lang locale="zh_TW" value="銀行賬戶" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[prmtacccount].properties.property[commitFormat].value">
+            <lang locale="en_US" value="$number$" />
+            <lang locale="zh_CN" value="$number$" />
+            <lang locale="zh_HK" value="$number$" />
+            <lang locale="zh_TW" value="$number$" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[prmtacccount].properties.property[displayFormat].value">
+            <lang locale="en_US" value="$acctName$" />
+            <lang locale="zh_CN" value="$acctName$" />
+            <lang locale="zh_HK" value="$acctName$" />
+            <lang locale="zh_TW" value="$acctName$" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[prmtacccount].properties.property[editFormat].value">
+            <lang locale="en_US" value="$number$" />
+            <lang locale="zh_CN" value="$number$" />
+            <lang locale="zh_HK" value="$number$" />
+            <lang locale="zh_TW" value="$number$" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[prmtacccount].properties.property[editable].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[prmtacccount].properties.property[queryInfo].value">
+            <lang locale="en_US" value="com.kingdee.eas.basedata.assistant.app.F7AccountBankQuery" />
+            <lang locale="zh_CN" value="com.kingdee.eas.basedata.assistant.app.F7AccountBankQuery" />
+            <lang locale="zh_HK" value="com.kingdee.eas.basedata.assistant.app.F7AccountBankQuery" />
+            <lang locale="zh_TW" value="com.kingdee.eas.basedata.assistant.app.F7AccountBankQuery" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[prmtacccount].properties.property[required].value">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[prmtacccount].properties.property[visible].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[prmtcompany].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司" />
+            <lang locale="zh_HK" value="公司" />
+            <lang locale="zh_TW" value="公司" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[prmtcompany].properties.property[commitFormat].value">
+            <lang locale="en_US" value="$number$" />
+            <lang locale="zh_CN" value="$number$" />
+            <lang locale="zh_HK" value="$number$" />
+            <lang locale="zh_TW" value="$number$" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[prmtcompany].properties.property[displayFormat].value">
+            <lang locale="en_US" value="$name$" />
+            <lang locale="zh_CN" value="$name$" />
+            <lang locale="zh_HK" value="$name$" />
+            <lang locale="zh_TW" value="$name$" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[prmtcompany].properties.property[editFormat].value">
+            <lang locale="en_US" value="$number$" />
+            <lang locale="zh_CN" value="$number$" />
+            <lang locale="zh_HK" value="$number$" />
+            <lang locale="zh_TW" value="$number$" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[prmtcompany].properties.property[editable].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[prmtcompany].properties.property[queryInfo].value">
+            <lang locale="en_US" value="com.kingdee.eas.basedata.org.app.CompanyOrgUnitQuery" />
+            <lang locale="zh_CN" value="com.kingdee.eas.basedata.org.app.CompanyOrgUnitQuery" />
+            <lang locale="zh_HK" value="com.kingdee.eas.basedata.org.app.CompanyOrgUnitQuery" />
+            <lang locale="zh_TW" value="com.kingdee.eas.basedata.org.app.CompanyOrgUnitQuery" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[prmtcompany].properties.property[required].value">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[prmtcompany].properties.property[visible].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
         <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[txtDescription].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="描述" />
@@ -1235,6 +1826,36 @@
             <lang locale="zh_TW" value="false" />
         </rs>
         <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[txtbusDivision].properties.property[visible].value">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_HK" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[txtcompanyNo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司编码" />
+            <lang locale="zh_HK" value="公司編碼" />
+            <lang locale="zh_TW" value="公司編碼" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[txtcompanyNo].properties.property[horizontalAlignment].value">
+            <lang locale="en_US" value="2" />
+            <lang locale="zh_CN" value="2" />
+            <lang locale="zh_HK" value="2" />
+            <lang locale="zh_TW" value="2" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[txtcompanyNo].properties.property[maxLength].value">
+            <lang locale="en_US" value="80" />
+            <lang locale="zh_CN" value="80" />
+            <lang locale="zh_HK" value="80" />
+            <lang locale="zh_TW" value="80" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[txtcompanyNo].properties.property[required].value">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_HK" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="uiObject[com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI].components.component[txtcompanyNo].properties.property[visible].value">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_HK" value="true" />

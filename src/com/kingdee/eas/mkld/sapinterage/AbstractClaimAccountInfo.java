@@ -63,6 +63,39 @@ public class AbstractClaimAccountInfo extends com.kingdee.eas.framework.DataBase
         setInt("dataState", item.getValue());
 		}
     }
+    /**
+     * Object: 认领银行账号 's 公司 property 
+     */
+    public com.kingdee.eas.basedata.org.CompanyOrgUnitInfo getCompany()
+    {
+        return (com.kingdee.eas.basedata.org.CompanyOrgUnitInfo)get("company");
+    }
+    public void setCompany(com.kingdee.eas.basedata.org.CompanyOrgUnitInfo item)
+    {
+        put("company", item);
+    }
+    /**
+     * Object:认领银行账号's 公司编码property 
+     */
+    public String getCompanyNo()
+    {
+        return getString("companyNo");
+    }
+    public void setCompanyNo(String item)
+    {
+        setString("companyNo", item);
+    }
+    /**
+     * Object: 认领银行账号 's 银行账户 property 
+     */
+    public com.kingdee.eas.basedata.assistant.AccountBankInfo getAcccount()
+    {
+        return (com.kingdee.eas.basedata.assistant.AccountBankInfo)get("acccount");
+    }
+    public void setAcccount(com.kingdee.eas.basedata.assistant.AccountBankInfo item)
+    {
+        put("acccount", item);
+    }
     public BOSObjectType getBOSType()
     {
         return new BOSObjectType("738C4C1A");

@@ -7,6 +7,7 @@ import java.util.HashMap;
 import com.alibaba.fastjson.JSONObject;
 import com.kingdee.bos.BOSException;
 import com.kingdee.bos.Context;
+import com.kingdee.eas.fm.be.BankPayingBillStateEnum;
 import com.kingdee.eas.mkld.sapinterage.SAPInterfaceLogFactory;
 import com.kingdee.eas.mkld.sapinterage.SAPInterfaceLogInfo;
 import com.kingdee.eas.mkld.sapinterage.app.InterResultMenu;
@@ -73,7 +74,7 @@ public class BankPayingResultSynToOAUtil {
 					System.out.println("########  body ########"+JSONObject.toJSONString(eMps));
 					sAPInterfaceLogInfo.setReqTime(new Date()); 
 					sAPInterfaceLogInfo.setRequest(JSONObject.toJSONString(eMps));
-					String result =  OAInterfaceUtil.sendBankPayMessageToOAPost(JSONObject.toJSONString(eMps),1);
+					String result =  OAInterfaceUtil.sendBankPayMessageToOAPost(JSONObject.toJSONString(eMps));
 					System.out.println("########  result ########"+result);
 					if(null!=result && !"".equals(result)){
 						JSONObject jo = JSONObject.parseObject(result);
@@ -98,20 +99,19 @@ public class BankPayingResultSynToOAUtil {
 		}
 	}
 	
+ 
+	
 	
 	public static boolean judgePayMentExists(Context ctx,String oper,String id){
 		boolean flag = false;
 		StringBuffer sbr = new StringBuffer();
 		sbr.append(" select count(1) C from T_CAS_PaymentBill p ");
 		sbr.append(" inner join T_BE_BankPayingBill ep on ep.FSOURCEBILLID  = p.FID ");
-		sbr.append(" inner  join  T_BD_AccountBanks  accou on  accou.fid = p.FPAYERACCOUNTBANKID ");
-	//	sbr.append(" inner  join  T_BD_Bank  bank on  bank.fid = accou.FBANK ");
-		sbr.append(" where ep.FSTATE =6 and p.CFSourceSystem ='OA' ");
-		sbr.append(" and accou.FBANKACCOUNTNUMBER in ( ").append(InterfaceResource.Rece_Account_Ids).append(" ) ").append("\r\n");
-		if("p".equals(oper))// 付款单号
+  		sbr.append(" where ep.FSTATE =6 and p.CFSourceSystem ='OA' ");
+ 		if("p".equals(oper))// 付款单号
 			sbr.append("  and p.FNUMBER  ='").append(id).append("'");
 		if("ep".equals(oper))// 银行付款单ID
-			sbr.append("  and ep.FID  ='").append(id).append("'");
+			sbr.append("  and p.FID  ='").append(id).append("'");
 	    try {
 			IRowSet rs = DbUtil.executeQuery(ctx, sbr.toString());
 			if (rs.next() &&  rs.getObject("C") != null && !"".equals(rs.getObject("C").toString()) && 
@@ -134,25 +134,17 @@ public class BankPayingResultSynToOAUtil {
 			sbr.append(" inner join T_BE_BankPayingBill ep on ep.FSOURCEBILLID  = p.FID ");
 			sbr.append(" inner join  T_BD_AccountBanks  accou on  accou.fid = p.FPAYERACCOUNTBANKID ");
 			sbr.append(" inner join  T_BD_Bank  bank on  bank.fid = accou.FBANK ");
-			sbr.append(" where ep.FSTATE =6 and p.CFSourceSystem ='OA' ");
-			sbr.append(" and accou.FBANKACCOUNTNUMBER in ( ").append(InterfaceResource.Rece_Account_Ids).append(" ) ").append("\r\n");
-			if("p".equals(oper))// 付款单号
+			sbr.append(" where ep.FSTATE = 6 and p.CFSourceSystem ='OA' ");
+ 			if("p".equals(oper))// 付款单号
 				sbr.append("  and p.FNUMBER  ='").append(billId).append("'");
 			if("ep".equals(oper))// 银行付款单ID
-				sbr.append("  and ep.FID  ='").append(billId).append("'");
+				sbr.append("  and p.FID  ='").append(billId).append("'");
 			try {
 				IRowSet rs=DbUtil.executeQuery(ctx, sbr.toString());
-				if(rs!=null && rs.next()){
-//					if( null!= rs.getObject("TYPE")  && "OA".equals(rs.getString("TYPE"))){  
-					//if( true ){  
-						int status = rs.getInt("STATE");
-						SAPInterfaceLogInfo sAPInterfaceLogInfo= new SAPInterfaceLogInfo();
+				if(rs!=null && rs.next()){ 
+ 						SAPInterfaceLogInfo logInfo= new SAPInterfaceLogInfo();
 						HashMap<String,Object> eMps = new HashMap<String,Object>();
-						if( 6 == status ){
-							eMps.put("payStatus", "0");
-						}else{
-							eMps.put("payStatus", "1");
-						}
+						eMps.put("payStatus", "0");
 						String oaid = rs.getString("OAID");
 						String returnMsg = rs.getString("RETURNMSG");
 						
@@ -162,42 +154,39 @@ public class BankPayingResultSynToOAUtil {
 						String ZBUDAT1 = rs.getString("ZBUDAT1");
 						 
 						eMps.put("requestid", oaid);
-						//eMps.put("requestid", "505549");
-						eMps.put("remark", returnMsg); 
-						
+ 						eMps.put("remark", returnMsg); 
 						eMps.put("BANKNAME", BANKNAME);
 						eMps.put("ZBANKN1", ZBANKN1); 
 						eMps.put("ZBUDAT1", ZBUDAT1);
 						eMps.put("ZEASNUM", ZEASNUM);
 						
 						System.out.println("########  body ########"+JSONObject.toJSONString(eMps));
-						sAPInterfaceLogInfo.setReqTime(new Date()); 
-						sAPInterfaceLogInfo.setRequest(JSONObject.toJSONString(eMps));
-						
-						//修改收款認領單 狀態
-						if(rs.getObject("CFRecBillNum") !=null && !"".equals(rs.getObject("CFRecBillNum").toString())){
-							ReceClaimRecordUtil.doUpdateClaimStaByNumber(ctx, rs.getObject("CFRecBillNum").toString());
-						}
-						
-						String result =  OAInterfaceUtil.sendBankPayMessageToOAPost(JSONObject.toJSONString(eMps),1);
+						logInfo.setReqTime(new Date()); 
+						logInfo.setRequest(JSONObject.toJSONString(eMps));
+						String result = OAInterfaceUtil.sendBankPayMessageToOAPost(JSONObject.toJSONString(eMps));
 						System.out.println("########  result ########"+result);
 						if(null!=result && !"".equals(result)){
 							JSONObject jo = JSONObject.parseObject(result);
 							if(null!=jo.get("resultCode") && "0".equals(jo.get("resultCode"))){
-								sAPInterfaceLogInfo.setInterResult(InterResultMenu.SUCCESS);
-								sAPInterfaceLogInfo.setRespond(result);
+								logInfo.setInterResult(InterResultMenu.SUCCESS);
+								logInfo.setRespond(result);
+								
+								//修改收款認領單 狀態
+								if(rs.getObject("CFRecBillNum") !=null && !"".equals(rs.getObject("CFRecBillNum").toString())){
+									ReceClaimRecordUtil.doUpdateClaimStaByNumber(ctx, rs.getObject("CFRecBillNum").toString());
+								}
+								
 							}else{
-								sAPInterfaceLogInfo.setInterResult(InterResultMenu.FAIL);
-								sAPInterfaceLogInfo.setRespond(result);
+								logInfo.setInterResult(InterResultMenu.FAIL);
+								logInfo.setRespond(result);
 							}
 						}else{
-							sAPInterfaceLogInfo.setRespond("返回值为空，请查看");
+							logInfo.setRespond("返回值为空，请查看");
 						}
-						sAPInterfaceLogInfo.setInterType(SAPInterTypeMenu.BANKPAY);
-						SAPInterfaceLogFactory.getLocalInstance(ctx).save(sAPInterfaceLogInfo);
+						logInfo.setInterType(SAPInterTypeMenu.BANKPAY);
+						SAPInterfaceLogFactory.getLocalInstance(ctx).save(logInfo);
 					}
-//				}
-			} catch (Exception e) {
+ 			} catch (Exception e) {
 				e.printStackTrace(); 
 			}
 	}

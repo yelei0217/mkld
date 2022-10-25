@@ -128,7 +128,9 @@ public class ReceClaimRecordListUI extends AbstractReceClaimRecordListUI
     
     @Override
     public void actionHelp_actionPerformed(ActionEvent e) throws Exception {
-     	super.actionHelp_actionPerformed(e);
+//     	super.actionHelp_actionPerformed(e);
+    	ReceClaimSentFacadeFactory.getRemoteInstance().sentCustomer2DMS();
+		MsgBox.showInfo("发送客户至DMS--操作已完成");
     }
 
     @Override

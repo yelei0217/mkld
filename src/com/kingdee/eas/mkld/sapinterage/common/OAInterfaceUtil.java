@@ -49,7 +49,7 @@ public class OAInterfaceUtil {
 	  }
 	  
 
-		public static String sendBankPayMessageToOAPost(String param,int oper) {
+		public static String sendBankPayMessageToOAPost(String param) {
 			OutputStreamWriter out = null;
 	        BufferedReader in = null;
 	        String result = "";  
@@ -64,8 +64,8 @@ public class OAInterfaceUtil {
 	   	            conn.setDoInput(true);
 	   	            conn.setRequestMethod("POST");    // POST方法
 	   	            // 设置通用的请求属性
-	   	            //conn.setRequestProperty("accept", "*/*");
-	   	            //conn.setRequestProperty("connection", "Keep-Alive");
+	   	            conn.setRequestProperty("accept", "*/*");
+	   	            conn.setRequestProperty("connection", "Keep-Alive");
 	   	            //conn.setRequestProperty("user-agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1;SV1)");
 	   	          	conn.setRequestProperty("Content-Type", "application/json");
 	   	          	conn.setRequestProperty("Charset", "UTF-8");
@@ -84,6 +84,7 @@ public class OAInterfaceUtil {
 	   	            while ((line = in.readLine()) != null) {
 	   	                result += line;
 	   	            }
+	   	         System.out.println("发送OA系统"+result);
 	   	        } catch (Exception e) {
 	   	            System.out.println("发送 POST 请求出现异常！"+e);
 	   	            e.printStackTrace();

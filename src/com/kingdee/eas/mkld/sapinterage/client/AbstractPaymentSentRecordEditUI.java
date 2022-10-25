@@ -43,34 +43,36 @@ import com.kingdee.bos.appframework.uip.UINavigator;
 /**
  * output class name
  */
-public abstract class AbstractClaimAccountEditUI extends com.kingdee.eas.framework.client.EditUI
+public abstract class AbstractPaymentSentRecordEditUI extends com.kingdee.eas.framework.client.EditUI
 {
-    private static final Logger logger = CoreUIObject.getLogger(AbstractClaimAccountEditUI.class);
+    private static final Logger logger = CoreUIObject.getLogger(AbstractPaymentSentRecordEditUI.class);
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer kDLabelContainer1;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer kDLabelContainer2;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer kDLabelContainer3;
     protected com.kingdee.bos.ctrl.swing.KDLabelContainer kDLabelContainer4;
-    protected com.kingdee.bos.ctrl.swing.KDCheckBox chkisCalim;
-    protected com.kingdee.bos.ctrl.swing.KDCheckBox chkisSendDms;
-    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contbusDivision;
-    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contdataState;
-    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contcompany;
-    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contcompanyNo;
-    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contacccount;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contSentFlag;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contCompany;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contZBUDAT1;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contPAYAMOUNT;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contOAID;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contZBANKN1;
+    protected com.kingdee.bos.ctrl.swing.KDLabelContainer contRecBillNum;
     protected com.kingdee.bos.ctrl.swing.KDTextField txtNumber;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizMultiLangBox txtName;
     protected com.kingdee.bos.ctrl.swing.KDTextField txtSimpleName;
     protected com.kingdee.bos.ctrl.extendcontrols.KDBizMultiLangBox txtDescription;
-    protected com.kingdee.bos.ctrl.swing.KDTextField txtbusDivision;
-    protected com.kingdee.bos.ctrl.swing.KDComboBox dataState;
-    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtcompany;
-    protected com.kingdee.bos.ctrl.swing.KDTextField txtcompanyNo;
-    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtacccount;
-    protected com.kingdee.eas.mkld.sapinterage.ClaimAccountInfo editData = null;
+    protected com.kingdee.bos.ctrl.swing.KDComboBox SentFlag;
+    protected com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox prmtCompany;
+    protected com.kingdee.bos.ctrl.swing.KDTextField txtZBUDAT1;
+    protected com.kingdee.bos.ctrl.swing.KDFormattedTextField txtPAYAMOUNT;
+    protected com.kingdee.bos.ctrl.swing.KDTextField txtOAID;
+    protected com.kingdee.bos.ctrl.swing.KDTextField txtZBANKN1;
+    protected com.kingdee.bos.ctrl.swing.KDTextField txtRecBillNum;
+    protected com.kingdee.eas.mkld.sapinterage.PaymentSentRecordInfo editData = null;
     /**
      * output class constructor
      */
-    public AbstractClaimAccountEditUI() throws Exception
+    public AbstractPaymentSentRecordEditUI() throws Exception
     {
         super();
         this.defaultObjectName = "editData";
@@ -84,48 +86,52 @@ public abstract class AbstractClaimAccountEditUI extends com.kingdee.eas.framewo
      */
     private void jbInit() throws Exception
     {
-        this.resHelper = new ResourceBundleHelper(AbstractClaimAccountEditUI.class.getName());
+        this.resHelper = new ResourceBundleHelper(AbstractPaymentSentRecordEditUI.class.getName());
         this.setUITitle(resHelper.getString("this.title"));
         this.kDLabelContainer1 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.kDLabelContainer2 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.kDLabelContainer3 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.kDLabelContainer4 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
-        this.chkisCalim = new com.kingdee.bos.ctrl.swing.KDCheckBox();
-        this.chkisSendDms = new com.kingdee.bos.ctrl.swing.KDCheckBox();
-        this.contbusDivision = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
-        this.contdataState = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
-        this.contcompany = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
-        this.contcompanyNo = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
-        this.contacccount = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contSentFlag = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contCompany = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contZBUDAT1 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contPAYAMOUNT = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contOAID = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contZBANKN1 = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
+        this.contRecBillNum = new com.kingdee.bos.ctrl.swing.KDLabelContainer();
         this.txtNumber = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.txtName = new com.kingdee.bos.ctrl.extendcontrols.KDBizMultiLangBox();
         this.txtSimpleName = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.txtDescription = new com.kingdee.bos.ctrl.extendcontrols.KDBizMultiLangBox();
-        this.txtbusDivision = new com.kingdee.bos.ctrl.swing.KDTextField();
-        this.dataState = new com.kingdee.bos.ctrl.swing.KDComboBox();
-        this.prmtcompany = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
-        this.txtcompanyNo = new com.kingdee.bos.ctrl.swing.KDTextField();
-        this.prmtacccount = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
+        this.SentFlag = new com.kingdee.bos.ctrl.swing.KDComboBox();
+        this.prmtCompany = new com.kingdee.bos.ctrl.extendcontrols.KDBizPromptBox();
+        this.txtZBUDAT1 = new com.kingdee.bos.ctrl.swing.KDTextField();
+        this.txtPAYAMOUNT = new com.kingdee.bos.ctrl.swing.KDFormattedTextField();
+        this.txtOAID = new com.kingdee.bos.ctrl.swing.KDTextField();
+        this.txtZBANKN1 = new com.kingdee.bos.ctrl.swing.KDTextField();
+        this.txtRecBillNum = new com.kingdee.bos.ctrl.swing.KDTextField();
         this.kDLabelContainer1.setName("kDLabelContainer1");
         this.kDLabelContainer2.setName("kDLabelContainer2");
         this.kDLabelContainer3.setName("kDLabelContainer3");
         this.kDLabelContainer4.setName("kDLabelContainer4");
-        this.chkisCalim.setName("chkisCalim");
-        this.chkisSendDms.setName("chkisSendDms");
-        this.contbusDivision.setName("contbusDivision");
-        this.contdataState.setName("contdataState");
-        this.contcompany.setName("contcompany");
-        this.contcompanyNo.setName("contcompanyNo");
-        this.contacccount.setName("contacccount");
+        this.contSentFlag.setName("contSentFlag");
+        this.contCompany.setName("contCompany");
+        this.contZBUDAT1.setName("contZBUDAT1");
+        this.contPAYAMOUNT.setName("contPAYAMOUNT");
+        this.contOAID.setName("contOAID");
+        this.contZBANKN1.setName("contZBANKN1");
+        this.contRecBillNum.setName("contRecBillNum");
         this.txtNumber.setName("txtNumber");
         this.txtName.setName("txtName");
         this.txtSimpleName.setName("txtSimpleName");
         this.txtDescription.setName("txtDescription");
-        this.txtbusDivision.setName("txtbusDivision");
-        this.dataState.setName("dataState");
-        this.prmtcompany.setName("prmtcompany");
-        this.txtcompanyNo.setName("txtcompanyNo");
-        this.prmtacccount.setName("prmtacccount");
+        this.SentFlag.setName("SentFlag");
+        this.prmtCompany.setName("prmtCompany");
+        this.txtZBUDAT1.setName("txtZBUDAT1");
+        this.txtPAYAMOUNT.setName("txtPAYAMOUNT");
+        this.txtOAID.setName("txtOAID");
+        this.txtZBANKN1.setName("txtZBANKN1");
+        this.txtRecBillNum.setName("txtRecBillNum");
         // CoreUI		
         this.btnPrint.setVisible(false);		
         this.btnPrintPreview.setVisible(false);		
@@ -149,131 +155,89 @@ public abstract class AbstractClaimAccountEditUI extends com.kingdee.eas.framewo
         this.kDLabelContainer4.setBoundLabelUnderline(true);		
         this.kDLabelContainer4.setBoundLabelAlignment(7);		
         this.kDLabelContainer4.setVisible(true);
-        // chkisCalim		
-        this.chkisCalim.setText(resHelper.getString("chkisCalim.text"));		
-        this.chkisCalim.setVisible(true);		
-        this.chkisCalim.setHorizontalAlignment(2);
-        // chkisSendDms		
-        this.chkisSendDms.setText(resHelper.getString("chkisSendDms.text"));		
-        this.chkisSendDms.setVisible(true);		
-        this.chkisSendDms.setHorizontalAlignment(2);
-        // contbusDivision		
-        this.contbusDivision.setBoundLabelText(resHelper.getString("contbusDivision.boundLabelText"));		
-        this.contbusDivision.setBoundLabelLength(100);		
-        this.contbusDivision.setBoundLabelUnderline(true);		
-        this.contbusDivision.setVisible(true);
-        // contdataState		
-        this.contdataState.setBoundLabelText(resHelper.getString("contdataState.boundLabelText"));		
-        this.contdataState.setBoundLabelLength(100);		
-        this.contdataState.setBoundLabelUnderline(true);		
-        this.contdataState.setVisible(true);
-        // contcompany		
-        this.contcompany.setBoundLabelText(resHelper.getString("contcompany.boundLabelText"));		
-        this.contcompany.setBoundLabelLength(100);		
-        this.contcompany.setBoundLabelUnderline(true);		
-        this.contcompany.setVisible(true);
-        // contcompanyNo		
-        this.contcompanyNo.setBoundLabelText(resHelper.getString("contcompanyNo.boundLabelText"));		
-        this.contcompanyNo.setBoundLabelLength(100);		
-        this.contcompanyNo.setBoundLabelUnderline(true);		
-        this.contcompanyNo.setVisible(true);
-        // contacccount		
-        this.contacccount.setBoundLabelText(resHelper.getString("contacccount.boundLabelText"));		
-        this.contacccount.setBoundLabelLength(100);		
-        this.contacccount.setBoundLabelUnderline(true);		
-        this.contacccount.setVisible(true);
+        // contSentFlag		
+        this.contSentFlag.setBoundLabelText(resHelper.getString("contSentFlag.boundLabelText"));		
+        this.contSentFlag.setBoundLabelLength(100);		
+        this.contSentFlag.setBoundLabelUnderline(true);		
+        this.contSentFlag.setVisible(true);
+        // contCompany		
+        this.contCompany.setBoundLabelText(resHelper.getString("contCompany.boundLabelText"));		
+        this.contCompany.setBoundLabelLength(100);		
+        this.contCompany.setBoundLabelUnderline(true);		
+        this.contCompany.setVisible(true);
+        // contZBUDAT1		
+        this.contZBUDAT1.setBoundLabelText(resHelper.getString("contZBUDAT1.boundLabelText"));		
+        this.contZBUDAT1.setBoundLabelLength(100);		
+        this.contZBUDAT1.setBoundLabelUnderline(true);		
+        this.contZBUDAT1.setVisible(true);
+        // contPAYAMOUNT		
+        this.contPAYAMOUNT.setBoundLabelText(resHelper.getString("contPAYAMOUNT.boundLabelText"));		
+        this.contPAYAMOUNT.setBoundLabelLength(100);		
+        this.contPAYAMOUNT.setBoundLabelUnderline(true);		
+        this.contPAYAMOUNT.setVisible(true);
+        // contOAID		
+        this.contOAID.setBoundLabelText(resHelper.getString("contOAID.boundLabelText"));		
+        this.contOAID.setBoundLabelLength(100);		
+        this.contOAID.setBoundLabelUnderline(true);		
+        this.contOAID.setVisible(true);
+        // contZBANKN1		
+        this.contZBANKN1.setBoundLabelText(resHelper.getString("contZBANKN1.boundLabelText"));		
+        this.contZBANKN1.setBoundLabelLength(100);		
+        this.contZBANKN1.setBoundLabelUnderline(true);		
+        this.contZBANKN1.setVisible(true);
+        // contRecBillNum		
+        this.contRecBillNum.setBoundLabelText(resHelper.getString("contRecBillNum.boundLabelText"));		
+        this.contRecBillNum.setBoundLabelLength(100);		
+        this.contRecBillNum.setBoundLabelUnderline(true);		
+        this.contRecBillNum.setVisible(true);
         // txtNumber		
         this.txtNumber.setMaxLength(80);
         // txtName
         // txtSimpleName		
         this.txtSimpleName.setMaxLength(80);
         // txtDescription
-        // txtbusDivision		
-        this.txtbusDivision.setVisible(true);		
-        this.txtbusDivision.setHorizontalAlignment(2);		
-        this.txtbusDivision.setMaxLength(100);		
-        this.txtbusDivision.setRequired(false);
-        // dataState		
-        this.dataState.setVisible(true);		
-        this.dataState.addItems(EnumUtils.getEnumList("com.kingdee.eas.basedata.framework.DataStateEnum").toArray());		
-        this.dataState.setRequired(false);
-        // prmtcompany		
-        this.prmtcompany.setQueryInfo("com.kingdee.eas.basedata.org.app.CompanyOrgUnitQuery");		
-        this.prmtcompany.setVisible(true);		
-        this.prmtcompany.setEditable(true);		
-        this.prmtcompany.setDisplayFormat("$name$");		
-        this.prmtcompany.setEditFormat("$number$");		
-        this.prmtcompany.setCommitFormat("$number$");		
-        this.prmtcompany.setRequired(false);
-        prmtcompany.addDataChangeListener(new DataChangeListener() {
-		public void dataChanged(DataChangeEvent e) {
-			try {
-				prmtcompany_Changed();
-			}
-			catch (Exception exc) {
-				handUIException(exc);
-			}
-		}
-	});
-
-        // txtcompanyNo		
-        this.txtcompanyNo.setVisible(true);		
-        this.txtcompanyNo.setHorizontalAlignment(2);		
-        this.txtcompanyNo.setMaxLength(80);		
-        this.txtcompanyNo.setRequired(false);
-        // prmtacccount		
-        this.prmtacccount.setQueryInfo("com.kingdee.eas.basedata.assistant.app.F7AccountBankQuery");		
-        this.prmtacccount.setVisible(true);		
-        this.prmtacccount.setEditable(true);		
-        this.prmtacccount.setDisplayFormat("$acctName$");		
-        this.prmtacccount.setEditFormat("$number$");		
-        this.prmtacccount.setCommitFormat("$number$");		
-        this.prmtacccount.setRequired(false);
-        		prmtacccount.addSelectorListener(new SelectorListener() {
-		private FilterInfo oldFilter = null;
-		public void willShow(SelectorEvent e) {
-		if (prmtacccount.getEntityViewInfo() == null)
-			prmtacccount.setEntityViewInfo(new EntityViewInfo());
-		if (oldFilter == null)
-			oldFilter = prmtacccount.getEntityViewInfo().getFilter();
-		FilterInfo prmtacccount_FilterInfo = new FilterInfo();
-		prmtacccount_FilterInfo.setMaskString(" #-1");
-		if (com.kingdee.eas.framework.util.FilterUtility.hasFilterItem(oldFilter)) {
-			try{
-				prmtacccount_FilterInfo.mergeFilter(oldFilter,"AND");
-			}catch(Exception e1){
-				logger.error(e1);
-			}
-		}
-		if (prmtacccount.getSelector() != null && prmtacccount.getSelector() instanceof com.kingdee.eas.framework.client.ListUI) {
-			((com.kingdee.eas.framework.client.ListUI)prmtacccount.getSelector()).setFilterForQuery(prmtacccount_FilterInfo);
-			try {
-				((com.kingdee.eas.framework.client.ListUI)prmtacccount.getSelector()).onLoad();
-			}
-			catch(Exception e1){
-				logger.error(e1);
-			}
-		}
-		else {
-			prmtacccount.getEntityViewInfo().setFilter(prmtacccount_FilterInfo);
-			prmtacccount.getQueryAgent().resetRuntimeEntityView();
-			prmtacccount.setRefresh(true);
-		}
-		}
-		});
-					
-        prmtacccount.addDataChangeListener(new DataChangeListener() {
-		public void dataChanged(DataChangeEvent e) {
-			try {
-				prmtacccount_Changed();
-			}
-			catch (Exception exc) {
-				handUIException(exc);
-			}
-		}
-	});
-
-        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {chkisCalim,chkisSendDms,txtbusDivision,dataState,prmtcompany,txtcompanyNo,prmtacccount}));
+        // SentFlag		
+        this.SentFlag.setVisible(true);		
+        this.SentFlag.addItems(EnumUtils.getEnumList("com.kingdee.eas.mkld.sapinterage.app.SendStatusMenu").toArray());		
+        this.SentFlag.setRequired(false);
+        // prmtCompany		
+        this.prmtCompany.setQueryInfo("com.kingdee.eas.basedata.org.app.CompanyOrgUnitQuery");		
+        this.prmtCompany.setVisible(true);		
+        this.prmtCompany.setEditable(true);		
+        this.prmtCompany.setDisplayFormat("$name$");		
+        this.prmtCompany.setEditFormat("$number$");		
+        this.prmtCompany.setCommitFormat("$number$");		
+        this.prmtCompany.setRequired(false);
+        // txtZBUDAT1		
+        this.txtZBUDAT1.setVisible(true);		
+        this.txtZBUDAT1.setHorizontalAlignment(2);		
+        this.txtZBUDAT1.setMaxLength(100);		
+        this.txtZBUDAT1.setRequired(false);
+        // txtPAYAMOUNT		
+        this.txtPAYAMOUNT.setVisible(true);		
+        this.txtPAYAMOUNT.setHorizontalAlignment(2);		
+        this.txtPAYAMOUNT.setDataType(1);		
+        this.txtPAYAMOUNT.setSupportedEmpty(true);		
+        this.txtPAYAMOUNT.setMinimumValue( new java.math.BigDecimal("-1.0E18"));		
+        this.txtPAYAMOUNT.setMaximumValue( new java.math.BigDecimal("1.0E18"));		
+        this.txtPAYAMOUNT.setPrecision(10);		
+        this.txtPAYAMOUNT.setRequired(false);
+        // txtOAID		
+        this.txtOAID.setVisible(true);		
+        this.txtOAID.setHorizontalAlignment(2);		
+        this.txtOAID.setMaxLength(100);		
+        this.txtOAID.setRequired(false);
+        // txtZBANKN1		
+        this.txtZBANKN1.setVisible(true);		
+        this.txtZBANKN1.setHorizontalAlignment(2);		
+        this.txtZBANKN1.setMaxLength(100);		
+        this.txtZBANKN1.setRequired(false);
+        // txtRecBillNum		
+        this.txtRecBillNum.setVisible(true);		
+        this.txtRecBillNum.setHorizontalAlignment(2);		
+        this.txtRecBillNum.setMaxLength(100);		
+        this.txtRecBillNum.setRequired(false);
+        this.setFocusTraversalPolicy(new com.kingdee.bos.ui.UIFocusTraversalPolicy(new java.awt.Component[] {SentFlag,prmtCompany,txtZBUDAT1,txtPAYAMOUNT,txtOAID,txtZBANKN1,txtRecBillNum}));
         this.setFocusCycleRoot(true);
 		//Register control's property binding
 		registerBindings();
@@ -299,30 +263,31 @@ public abstract class AbstractClaimAccountEditUI extends com.kingdee.eas.framewo
      */
     public void initUIContentLayout()
     {
-        this.setBounds(new Rectangle(0, 0, 402, 309));
-        this.setLayout(null);
-        kDLabelContainer1.setBounds(new Rectangle(29, 107, 328, 19));
-        this.add(kDLabelContainer1, null);
-        kDLabelContainer2.setBounds(new Rectangle(29, 134, 328, 19));
-        this.add(kDLabelContainer2, null);
-        kDLabelContainer3.setBounds(new Rectangle(29, 161, 328, 19));
-        this.add(kDLabelContainer3, null);
-        kDLabelContainer4.setBounds(new Rectangle(29, 188, 328, 19));
-        this.add(kDLabelContainer4, null);
-        chkisCalim.setBounds(new Rectangle(235, 244, 118, 19));
-        this.add(chkisCalim, null);
-        chkisSendDms.setBounds(new Rectangle(29, 242, 110, 19));
-        this.add(chkisSendDms, null);
-        contbusDivision.setBounds(new Rectangle(29, 215, 328, 19));
-        this.add(contbusDivision, null);
-        contdataState.setBounds(new Rectangle(29, 269, 328, 19));
-        this.add(contdataState, null);
-        contcompany.setBounds(new Rectangle(29, 26, 328, 19));
-        this.add(contcompany, null);
-        contcompanyNo.setBounds(new Rectangle(30, 53, 328, 19));
-        this.add(contcompanyNo, null);
-        contacccount.setBounds(new Rectangle(28, 80, 328, 19));
-        this.add(contacccount, null);
+        this.setBounds(new Rectangle(0, 0, 310, 293));
+        this.setLayout(new KDLayout());
+        this.putClientProperty("OriginalBounds", new Rectangle(0, 0, 310, 293));
+        kDLabelContainer1.setBounds(new Rectangle(10, 10, 270, 19));
+        this.add(kDLabelContainer1, new KDLayout.Constraints(10, 10, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
+        kDLabelContainer2.setBounds(new Rectangle(10, 34, 270, 19));
+        this.add(kDLabelContainer2, new KDLayout.Constraints(10, 34, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
+        kDLabelContainer3.setBounds(new Rectangle(10, 130, 270, 19));
+        this.add(kDLabelContainer3, new KDLayout.Constraints(10, 130, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
+        kDLabelContainer4.setBounds(new Rectangle(10, 250, 270, 19));
+        this.add(kDLabelContainer4, new KDLayout.Constraints(10, 250, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
+        contSentFlag.setBounds(new Rectangle(10, 226, 270, 19));
+        this.add(contSentFlag, new KDLayout.Constraints(10, 226, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
+        contCompany.setBounds(new Rectangle(10, 202, 270, 19));
+        this.add(contCompany, new KDLayout.Constraints(10, 202, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
+        contZBUDAT1.setBounds(new Rectangle(10, 58, 270, 19));
+        this.add(contZBUDAT1, new KDLayout.Constraints(10, 58, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
+        contPAYAMOUNT.setBounds(new Rectangle(10, 106, 270, 19));
+        this.add(contPAYAMOUNT, new KDLayout.Constraints(10, 106, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
+        contOAID.setBounds(new Rectangle(10, 82, 270, 19));
+        this.add(contOAID, new KDLayout.Constraints(10, 82, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
+        contZBANKN1.setBounds(new Rectangle(10, 154, 270, 19));
+        this.add(contZBANKN1, new KDLayout.Constraints(10, 154, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
+        contRecBillNum.setBounds(new Rectangle(10, 178, 270, 19));
+        this.add(contRecBillNum, new KDLayout.Constraints(10, 178, 270, 19, KDLayout.Constraints.ANCHOR_TOP | KDLayout.Constraints.ANCHOR_BOTTOM | KDLayout.Constraints.ANCHOR_LEFT | KDLayout.Constraints.ANCHOR_RIGHT));
         //kDLabelContainer1
         kDLabelContainer1.setBoundEditor(txtNumber);
         //kDLabelContainer2
@@ -331,16 +296,20 @@ public abstract class AbstractClaimAccountEditUI extends com.kingdee.eas.framewo
         kDLabelContainer3.setBoundEditor(txtSimpleName);
         //kDLabelContainer4
         kDLabelContainer4.setBoundEditor(txtDescription);
-        //contbusDivision
-        contbusDivision.setBoundEditor(txtbusDivision);
-        //contdataState
-        contdataState.setBoundEditor(dataState);
-        //contcompany
-        contcompany.setBoundEditor(prmtcompany);
-        //contcompanyNo
-        contcompanyNo.setBoundEditor(txtcompanyNo);
-        //contacccount
-        contacccount.setBoundEditor(prmtacccount);
+        //contSentFlag
+        contSentFlag.setBoundEditor(SentFlag);
+        //contCompany
+        contCompany.setBoundEditor(prmtCompany);
+        //contZBUDAT1
+        contZBUDAT1.setBoundEditor(txtZBUDAT1);
+        //contPAYAMOUNT
+        contPAYAMOUNT.setBoundEditor(txtPAYAMOUNT);
+        //contOAID
+        contOAID.setBoundEditor(txtOAID);
+        //contZBANKN1
+        contZBANKN1.setBoundEditor(txtZBANKN1);
+        //contRecBillNum
+        contRecBillNum.setBoundEditor(txtRecBillNum);
 
     }
 
@@ -451,17 +420,17 @@ public abstract class AbstractClaimAccountEditUI extends com.kingdee.eas.framewo
 
 	//Regiester control's property binding.
 	private void registerBindings(){
-		dataBinder.registerBinding("isCalim", boolean.class, this.chkisCalim, "selected");
-		dataBinder.registerBinding("isSendDms", boolean.class, this.chkisSendDms, "selected");
 		dataBinder.registerBinding("number", String.class, this.txtNumber, "text");
 		dataBinder.registerBinding("name", String.class, this.txtName, "_multiLangItem");
 		dataBinder.registerBinding("simpleName", String.class, this.txtSimpleName, "text");
 		dataBinder.registerBinding("description", String.class, this.txtDescription, "_multiLangItem");
-		dataBinder.registerBinding("busDivision", String.class, this.txtbusDivision, "text");
-		dataBinder.registerBinding("dataState", com.kingdee.eas.basedata.framework.DataStateEnum.class, this.dataState, "selectedItem");
-		dataBinder.registerBinding("company", com.kingdee.eas.basedata.org.CompanyOrgUnitInfo.class, this.prmtcompany, "data");
-		dataBinder.registerBinding("companyNo", String.class, this.txtcompanyNo, "text");
-		dataBinder.registerBinding("acccount", com.kingdee.eas.basedata.assistant.AccountBankInfo.class, this.prmtacccount, "data");		
+		dataBinder.registerBinding("SentFlag", com.kingdee.eas.mkld.sapinterage.app.SendStatusMenu.class, this.SentFlag, "selectedItem");
+		dataBinder.registerBinding("Company", com.kingdee.eas.basedata.org.CompanyOrgUnitInfo.class, this.prmtCompany, "data");
+		dataBinder.registerBinding("ZBUDAT1", String.class, this.txtZBUDAT1, "text");
+		dataBinder.registerBinding("PAYAMOUNT", java.math.BigDecimal.class, this.txtPAYAMOUNT, "value");
+		dataBinder.registerBinding("OAID", String.class, this.txtOAID, "text");
+		dataBinder.registerBinding("ZBANKN1", String.class, this.txtZBANKN1, "text");
+		dataBinder.registerBinding("RecBillNum", String.class, this.txtRecBillNum, "text");		
 	}
 	//Regiester UI State
 	private void registerUIState(){
@@ -479,7 +448,7 @@ public abstract class AbstractClaimAccountEditUI extends com.kingdee.eas.framewo
 	        getActionManager().registerUIState(STATUS_VIEW, this.txtSimpleName, ActionStateConst.DISABLED);		
 	}
 	public String getUIHandlerClassName() {
-	    return "com.kingdee.eas.mkld.sapinterage.app.ClaimAccountEditUIHandler";
+	    return "com.kingdee.eas.mkld.sapinterage.app.PaymentSentRecordEditUIHandler";
 	}
 	public IUIActionPostman prepareInit() {
 		IUIActionPostman clientHanlder = super.prepareInit();
@@ -505,7 +474,7 @@ public abstract class AbstractClaimAccountEditUI extends com.kingdee.eas.framewo
     public void onShow() throws Exception
     {
         super.onShow();
-        this.chkisCalim.requestFocusInWindow();
+        this.SentFlag.requestFocusInWindow();
     }
 
 	
@@ -518,7 +487,7 @@ public abstract class AbstractClaimAccountEditUI extends com.kingdee.eas.framewo
     {
         IObjectValue ov = dataObject;        	    	
         super.setDataObject(ov);
-        this.editData = (com.kingdee.eas.mkld.sapinterage.ClaimAccountInfo)ov;
+        this.editData = (com.kingdee.eas.mkld.sapinterage.PaymentSentRecordInfo)ov;
     }
     protected void removeByPK(IObjectPK pk) throws Exception {
     	IObjectValue editData = this.editData;
@@ -608,17 +577,17 @@ public abstract class AbstractClaimAccountEditUI extends com.kingdee.eas.framewo
 	 */
 	protected void registerValidator() {
     	getValidateHelper().setCustomValidator( getValidator() );
-		getValidateHelper().registerBindProperty("isCalim", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("isSendDms", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("number", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("name", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("simpleName", ValidateHelper.ON_SAVE);    
 		getValidateHelper().registerBindProperty("description", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("busDivision", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("dataState", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("company", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("companyNo", ValidateHelper.ON_SAVE);    
-		getValidateHelper().registerBindProperty("acccount", ValidateHelper.ON_SAVE);    		
+		getValidateHelper().registerBindProperty("SentFlag", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("Company", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("ZBUDAT1", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("PAYAMOUNT", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("OAID", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("ZBANKN1", ValidateHelper.ON_SAVE);    
+		getValidateHelper().registerBindProperty("RecBillNum", ValidateHelper.ON_SAVE);    		
 	}
 
 
@@ -647,29 +616,6 @@ public abstract class AbstractClaimAccountEditUI extends com.kingdee.eas.framewo
         }
     }
 
-
-    /**
-     * output prmtcompany_Changed() method
-     */
-    public void prmtcompany_Changed() throws Exception
-    {
-        System.out.println("prmtcompany_Changed() Function is executed!");
-            txtcompanyNo.setText(com.kingdee.bos.ui.face.UIRuleUtil.getString(com.kingdee.bos.ui.face.UIRuleUtil.getProperty((com.kingdee.bos.dao.IObjectValue)prmtcompany.getData(),"number")));
-
-
-    }
-
-    /**
-     * output prmtacccount_Changed() method
-     */
-    public void prmtacccount_Changed() throws Exception
-    {
-        System.out.println("prmtacccount_Changed() Function is executed!");
-            txtName.setDefaultLangItemData(com.kingdee.bos.ui.face.UIRuleUtil.getString(com.kingdee.bos.ui.face.UIRuleUtil.getProperty((com.kingdee.bos.dao.IObjectValue)prmtacccount.getData(),"acctName")));
-txtNumber.setText(com.kingdee.bos.ui.face.UIRuleUtil.getString(com.kingdee.bos.ui.face.UIRuleUtil.getProperty((com.kingdee.bos.dao.IObjectValue)prmtacccount.getData(),"bankAccountNumber")));
-
-
-    }
     /**
      * output getSelectors method
      */
@@ -680,34 +626,25 @@ txtNumber.setText(com.kingdee.bos.ui.face.UIRuleUtil.getString(com.kingdee.bos.u
 		if(StringUtils.isEmpty(selectorAll)){
 			selectorAll = "true";
 		}
-        sic.add(new SelectorItemInfo("isCalim"));
-        sic.add(new SelectorItemInfo("isSendDms"));
         sic.add(new SelectorItemInfo("number"));
         sic.add(new SelectorItemInfo("name"));
         sic.add(new SelectorItemInfo("simpleName"));
         sic.add(new SelectorItemInfo("description"));
-        sic.add(new SelectorItemInfo("busDivision"));
-        sic.add(new SelectorItemInfo("dataState"));
+        sic.add(new SelectorItemInfo("SentFlag"));
 		if(selectorAll.equalsIgnoreCase("true"))
 		{
-			sic.add(new SelectorItemInfo("company.*"));
+			sic.add(new SelectorItemInfo("Company.*"));
 		}
 		else{
-        	sic.add(new SelectorItemInfo("company.id"));
-        	sic.add(new SelectorItemInfo("company.number"));
-        	sic.add(new SelectorItemInfo("company.name"));
+        	sic.add(new SelectorItemInfo("Company.id"));
+        	sic.add(new SelectorItemInfo("Company.number"));
+        	sic.add(new SelectorItemInfo("Company.name"));
 		}
-        sic.add(new SelectorItemInfo("companyNo"));
-		if(selectorAll.equalsIgnoreCase("true"))
-		{
-			sic.add(new SelectorItemInfo("acccount.*"));
-		}
-		else{
-        	sic.add(new SelectorItemInfo("acccount.id"));
-        	sic.add(new SelectorItemInfo("acccount.number"));
-        	sic.add(new SelectorItemInfo("acccount.name"));
-        	sic.add(new SelectorItemInfo("acccount.acctName"));
-		}
+        sic.add(new SelectorItemInfo("ZBUDAT1"));
+        sic.add(new SelectorItemInfo("PAYAMOUNT"));
+        sic.add(new SelectorItemInfo("OAID"));
+        sic.add(new SelectorItemInfo("ZBANKN1"));
+        sic.add(new SelectorItemInfo("RecBillNum"));
         return sic;
     }        
 
@@ -716,7 +653,7 @@ txtNumber.setText(com.kingdee.bos.ui.face.UIRuleUtil.getString(com.kingdee.bos.u
      */
     public IMetaDataPK getMetaDataPK()
     {
-        return new MetaDataPK("com.kingdee.eas.mkld.sapinterage.client", "ClaimAccountEditUI");
+        return new MetaDataPK("com.kingdee.eas.mkld.sapinterage.client", "PaymentSentRecordEditUI");
     }
 
     /**
@@ -724,7 +661,7 @@ txtNumber.setText(com.kingdee.bos.ui.face.UIRuleUtil.getString(com.kingdee.bos.u
      */
     protected String getEditUIName()
     {
-        return com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI.class.getName();
+        return com.kingdee.eas.mkld.sapinterage.client.PaymentSentRecordEditUI.class.getName();
     }
 
     /**
@@ -732,7 +669,7 @@ txtNumber.setText(com.kingdee.bos.ui.face.UIRuleUtil.getString(com.kingdee.bos.u
      */
     protected com.kingdee.eas.framework.ICoreBase getBizInterface() throws Exception
     {
-        return com.kingdee.eas.mkld.sapinterage.ClaimAccountFactory.getRemoteInstance();
+        return com.kingdee.eas.mkld.sapinterage.PaymentSentRecordFactory.getRemoteInstance();
     }
 
     /**
@@ -740,7 +677,7 @@ txtNumber.setText(com.kingdee.bos.ui.face.UIRuleUtil.getString(com.kingdee.bos.u
      */
     protected IObjectValue createNewData()
     {
-        com.kingdee.eas.mkld.sapinterage.ClaimAccountInfo objectValue = new com.kingdee.eas.mkld.sapinterage.ClaimAccountInfo();
+        com.kingdee.eas.mkld.sapinterage.PaymentSentRecordInfo objectValue = new com.kingdee.eas.mkld.sapinterage.PaymentSentRecordInfo();
         objectValue.setCreator((com.kingdee.eas.base.permission.UserInfo)(com.kingdee.eas.common.client.SysContext.getSysContext().getCurrentUser()));		
         return objectValue;
     }
@@ -757,7 +694,7 @@ txtNumber.setText(com.kingdee.bos.ui.face.UIRuleUtil.getString(com.kingdee.bos.u
      * output applyDefaultValue method
      */
     protected void applyDefaultValue(IObjectValue vo) {        
-		vo.put("dataState",new Integer(0));
+		vo.put("SentFlag","1");
         
     }        
 	protected void setFieldsNull(com.kingdee.bos.dao.AbstractObjectValue arg0) {

@@ -258,6 +258,54 @@
                 <key name="name" value="CFDataState" />
             </mappingField>
         </ownProperty>
+        <linkProperty>
+            <name>company</name>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.linkProperty[company].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.linkProperty[company].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="CFCompanyID" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
+                <key name="name" value="R_ClaimAccount_CompanyOrgUnit_company" />
+            </relationship>
+        </linkProperty>
+        <ownProperty>
+            <name>companyNo</name>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.ownProperty[companyNo].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.ownProperty[companyNo].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <dataType>String</dataType>
+            <metadataRef />
+            <isMultilingual>false</isMultilingual>
+            <isNullable>false</isNullable>
+            <formula />
+            <length>80</length>
+            <precision>0</precision>
+            <decimalDigits>0</decimalDigits>
+            <defaultValue>entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.ownProperty[companyNo].defaultValue</defaultValue>
+            <displayFormat />
+            <mappingField>
+                <key name="name" value="CFCompanyNo" />
+            </mappingField>
+        </ownProperty>
+        <linkProperty>
+            <name>acccount</name>
+            <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.linkProperty[acccount].alias</alias>
+            <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.linkProperty[acccount].description</description>
+            <userDefined>true</userDefined>
+            <configured>false</configured>
+            <mappingField>
+                <key name="name" value="CFAcccountID" />
+            </mappingField>
+            <relationship>
+                <key name="package" value="com.kingdee.eas.mkld.sapinterage.app" />
+                <key name="name" value="R_ClaimAccount_AccountBank_acccount" />
+            </relationship>
+        </linkProperty>
     </properties>
     <logicalKey>
         <name>id</name>
@@ -271,12 +319,79 @@
             </baseProperty>
         </keyProperties>
     </logicalKey>
+    <defaultView>
+        <name />
+        <alias>entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].defaultViewalias</alias>
+        <description>entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].defaultViewdescription</description>
+    </defaultView>
     <resource>
         <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="认领银行账号" />
             <lang locale="zh_HK" value="認領銀行賬號" />
             <lang locale="zh_TW" value="認領銀行賬號" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].defaultViewalias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].defaultViewdescription">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].defaultViewextendedProperty.OrgType">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].defaultViewextendedProperty.codingRuleEnabled">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].defaultViewextendedProperty.defaultDisplayField">
+            <lang locale="en_US" value="name" />
+            <lang locale="zh_CN" value="name" />
+            <lang locale="zh_TW" value="name" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].defaultViewextendedProperty.defaultF7Query">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.app.ClaimAccountQuery" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].defaultViewextendedProperty.editUI">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.client.ClaimAccountEditUI" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].defaultViewextendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].defaultViewextendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].defaultViewextendedProperty.isParamObject">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].defaultViewextendedProperty.isSimpleEntity">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].defaultViewextendedProperty.listUI">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.client.ClaimAccountListUI" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.client.ClaimAccountListUI" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.client.ClaimAccountListUI" />
         </rs>
         <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].description">
             <lang locale="en_US" value="null" />
@@ -429,6 +544,125 @@
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
         </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.linkProperty[acccount].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="银行账户" />
+            <lang locale="zh_HK" value="銀行賬戶" />
+            <lang locale="zh_TW" value="銀行賬戶" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.linkProperty[acccount].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="银行账户" />
+            <lang locale="zh_HK" value="銀行賬戶" />
+            <lang locale="zh_TW" value="銀行賬戶" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.linkProperty[acccount].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.linkProperty[acccount].extendedProperty.dataField">
+            <lang locale="en_US" value="acctName" />
+            <lang locale="zh_CN" value="acctName" />
+            <lang locale="zh_TW" value="acctName" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.linkProperty[acccount].extendedProperty.f7FilterItems">
+            <lang locale="en_US" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; &lt;filters /&gt;  " />
+            <lang locale="zh_CN" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; &lt;filters /&gt;  " />
+            <lang locale="zh_TW" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt; &lt;filters /&gt;  " />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.linkProperty[acccount].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.linkProperty[acccount].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.linkProperty[acccount].extendedProperty.isForMapping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.linkProperty[acccount].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.linkProperty[acccount].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.linkProperty[acccount].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.linkProperty[acccount].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.linkProperty[company].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司" />
+            <lang locale="zh_HK" value="公司" />
+            <lang locale="zh_TW" value="公司" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.linkProperty[company].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司" />
+            <lang locale="zh_HK" value="公司" />
+            <lang locale="zh_TW" value="公司" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.linkProperty[company].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.linkProperty[company].extendedProperty.dataField">
+            <lang locale="en_US" value="name" />
+            <lang locale="zh_CN" value="name" />
+            <lang locale="zh_TW" value="name" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.linkProperty[company].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.linkProperty[company].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.linkProperty[company].extendedProperty.isForMapping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.linkProperty[company].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.linkProperty[company].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.linkProperty[company].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.linkProperty[company].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
         <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.ownProperty[busDivision].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="事业部" />
@@ -493,6 +727,84 @@
             <lang locale="zh_TW" value="false" />
         </rs>
         <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.ownProperty[busDivision].extendedProperty.isVisibleForKDTable">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.ownProperty[companyNo].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司编码" />
+            <lang locale="zh_HK" value="公司編碼" />
+            <lang locale="zh_TW" value="公司編碼" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.ownProperty[companyNo].defaultValue">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="null" />
+            <lang locale="zh_HK" value="null" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.ownProperty[companyNo].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="公司编码" />
+            <lang locale="zh_HK" value="公司編碼" />
+            <lang locale="zh_TW" value="公司編碼" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.ownProperty[companyNo].extendedProperty.ColWidthInKDTable">
+            <lang locale="en_US" value="50" />
+            <lang locale="zh_CN" value="50" />
+            <lang locale="zh_TW" value="50" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.ownProperty[companyNo].extendedProperty.DataField">
+            <lang locale="en_US" value="company.number" />
+            <lang locale="zh_CN" value="company.number" />
+            <lang locale="zh_TW" value="company.number" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.ownProperty[companyNo].extendedProperty.DataSourceType">
+            <lang locale="en_US" value="BASEDATAEXT" />
+            <lang locale="zh_CN" value="BASEDATAEXT" />
+            <lang locale="zh_TW" value="BASEDATAEXT" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.ownProperty[companyNo].extendedProperty.bizDataType">
+            <lang locale="en_US" value="STRING" />
+            <lang locale="zh_CN" value="STRING" />
+            <lang locale="zh_TW" value="STRING" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.ownProperty[companyNo].extendedProperty.enableFieldPermission">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.ownProperty[companyNo].extendedProperty.isAsstAcctType">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.ownProperty[companyNo].extendedProperty.isForGrouping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.ownProperty[companyNo].extendedProperty.isForMapping">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.ownProperty[companyNo].extendedProperty.isForMatching">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.ownProperty[companyNo].extendedProperty.isForWrittenBack">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.ownProperty[companyNo].extendedProperty.isInCode">
+            <lang locale="en_US" value="false" />
+            <lang locale="zh_CN" value="false" />
+            <lang locale="zh_TW" value="false" />
+        </rs>
+        <rs key="entityObject[com.kingdee.eas.mkld.sapinterage.app.ClaimAccount].properties.ownProperty[companyNo].extendedProperty.isVisibleForKDTable">
             <lang locale="en_US" value="true" />
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />

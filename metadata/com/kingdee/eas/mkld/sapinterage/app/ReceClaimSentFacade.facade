@@ -117,6 +117,36 @@
             <userDefinedLogic />
             <configured>false</configured>
         </method>
+        <method>
+            <name>genPaymentRecord</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.mkld.sapinterage.app.ReceClaimSentFacade].methods.method[genPaymentRecord].alias</alias>
+            <description>facade[com.kingdee.eas.mkld.sapinterage.app.ReceClaimSentFacade].methods.method[genPaymentRecord].description</description>
+            <innerID>8fe65d75-db7e-43e8-aafb-86391a61429e</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <configured>false</configured>
+        </method>
+        <method>
+            <name>SentPaymentRecord</name>
+            <isListenerMethod>false</isListenerMethod>
+            <alias>facade[com.kingdee.eas.mkld.sapinterage.app.ReceClaimSentFacade].methods.method[SentPaymentRecord].alias</alias>
+            <description>facade[com.kingdee.eas.mkld.sapinterage.app.ReceClaimSentFacade].methods.method[SentPaymentRecord].description</description>
+            <innerID>80941634-147c-4d64-9da5-e542c4e96811</innerID>
+            <accessLevel>public</accessLevel>
+            <subClassingMode>normal</subClassingMode>
+            <returnValueType />
+            <metadataRef />
+            <transactionAttribute>Supports</transactionAttribute>
+            <userDefined>true</userDefined>
+            <userDefinedLogic />
+            <configured>false</configured>
+        </method>
     </methods>
     <resource>
         <rs key="facade[com.kingdee.eas.mkld.sapinterage.app.ReceClaimSentFacade].alias">
@@ -136,6 +166,18 @@
             <lang locale="zh_CN" value="true" />
             <lang locale="zh_TW" value="true" />
         </rs>
+        <rs key="facade[com.kingdee.eas.mkld.sapinterage.app.ReceClaimSentFacade].methods.method[SentPaymentRecord].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="发送付款单至OA" />
+            <lang locale="zh_HK" value="發送付款單至OA" />
+            <lang locale="zh_TW" value="發送付款單至OA" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.mkld.sapinterage.app.ReceClaimSentFacade].methods.method[SentPaymentRecord].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="发送付款单至OA" />
+            <lang locale="zh_HK" value="發送付款單至OA" />
+            <lang locale="zh_TW" value="發送付款單至OA" />
+        </rs>
         <rs key="facade[com.kingdee.eas.mkld.sapinterage.app.ReceClaimSentFacade].methods.method[SentReceiptRecord].alias">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="发送电子回单" />
@@ -147,6 +189,18 @@
             <lang locale="zh_CN" value="发送电子回单" />
             <lang locale="zh_HK" value="發送電子回單" />
             <lang locale="zh_TW" value="發送電子回單" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.mkld.sapinterage.app.ReceClaimSentFacade].methods.method[genPaymentRecord].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="生成付款单发送记录" />
+            <lang locale="zh_HK" value="生成付款單發送記錄" />
+            <lang locale="zh_TW" value="生成付款單發送記錄" />
+        </rs>
+        <rs key="facade[com.kingdee.eas.mkld.sapinterage.app.ReceClaimSentFacade].methods.method[genPaymentRecord].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="生成付款单发送记录" />
+            <lang locale="zh_HK" value="生成付款單發送記錄" />
+            <lang locale="zh_TW" value="生成付款單發送記錄" />
         </rs>
         <rs key="facade[com.kingdee.eas.mkld.sapinterage.app.ReceClaimSentFacade].methods.method[genReceiptRecord].alias">
             <lang locale="en_US" value="null" />

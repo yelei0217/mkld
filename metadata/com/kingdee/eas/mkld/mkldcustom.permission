@@ -1755,6 +1755,354 @@
                 </bizRef>
             </bizRefs>
         </permissionItem>
+        <permissionItem>
+            <innerID>90eb4e41-5606-4e7c-b762-2d1e85684394PERMITEM</innerID>
+            <name>认领银行账号_集合新增</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_集合新增].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_集合新增].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldsapinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_集合新增].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>738C4C1A</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.sapinterage.app</package>
+                    <name>ClaimAccount</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>db560ecc-0d9d-4dda-947c-8e049259f651</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>ClaimAccountEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionAddNew</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>11a4388d-b589-48f4-8f4c-e231b1262328</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>ClaimAccountListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionAddNew</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>ed45b12a-1f7e-466e-ba71-aa7ed8b1a090PERMITEM</innerID>
+            <name>认领银行账号_集合保存</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_集合保存].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_集合保存].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldsapinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_集合保存].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>738C4C1A</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.sapinterage.app</package>
+                    <name>ClaimAccount</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>02db0ca0-322d-4e22-8c4d-e9dba4ed6e7d</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>ClaimAccountEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionSave</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>f14a02a1-a7cd-47d4-a621-c160eb6f7cb8PERMITEM</innerID>
+            <name>认领银行账号_界面显示</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_界面显示].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_界面显示].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldsapinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_界面显示].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>738C4C1A</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.sapinterage.app</package>
+                    <name>ClaimAccount</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>f207b74b-13b0-43b6-a333-5389288a42b6</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>ClaimAccountEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionOnLoad</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>f357529d-321b-443d-a3f0-58b0bedd95a3</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>ClaimAccountListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionOnLoad</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>3d9e5a38-23e7-4745-9ff1-685a439f32bePERMITEM</innerID>
+            <name>认领银行账号_修改</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_修改].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_修改].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldsapinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_修改].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>738C4C1A</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.sapinterage.app</package>
+                    <name>ClaimAccount</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>a0603034-abd3-469e-b5d1-4a5367f07c5c</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>ClaimAccountEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionEdit</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>51665733-eb36-4b0d-a539-07aab9612629</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>ClaimAccountListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionEdit</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>bd8d7a74-a4f4-4a71-989a-76920ceab37dPERMITEM</innerID>
+            <name>认领银行账号_删除</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_删除].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_删除].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldsapinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_删除].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>738C4C1A</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.sapinterage.app</package>
+                    <name>ClaimAccount</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>c315a0db-34c5-4130-bd7c-e61dcdb2df5a</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>ClaimAccountEditUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionRemove</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+                <bizRef>
+                    <id>584deeb4-993e-434d-9281-89a9e7e3af56</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>ClaimAccountListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionRemove</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>6ef0296b-8b96-419d-9835-23759703e4e7PERMITEM</innerID>
+            <name>认领银行账号_查看</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_查看].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_查看].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldsapinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_查看].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>738C4C1A</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.sapinterage.app</package>
+                    <name>ClaimAccount</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>084be00e-9591-46cf-b0a5-1c963ac93416</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>ClaimAccountListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionView</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>e5d42c31-ed66-45aa-99c1-87ebeb1bdff2PERMITEM</innerID>
+            <name>认领银行账号_刷新</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_刷新].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_刷新].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldsapinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_刷新].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>738C4C1A</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.sapinterage.app</package>
+                    <name>ClaimAccount</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>41f944b2-179f-4e5c-abcb-5e3d64ef9086</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>ClaimAccountListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionRefresh</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
+        <permissionItem>
+            <innerID>6a0b5e96-6a66-4b8e-a857-5e8d30af2dd9PERMITEM</innerID>
+            <name>认领银行账号_查询</name>
+            <alias>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_查询].alias</alias>
+            <description>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_查询].description</description>
+            <type>OTHER</type>
+            <groupName>EAS系统.mkld.mkldsapinte</groupName>
+            <group>permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_查询].group</group>
+            <userDefined>true</userDefined>
+            <entityObjectRef>
+                <entityType>738C4C1A</entityType>
+                <userDefined>true</userDefined>
+                <metadataRef>
+                    <package>com.kingdee.eas.mkld.sapinterage.app</package>
+                    <name>ClaimAccount</name>
+                    <bosType>enty</bosType>
+                </metadataRef>
+            </entityObjectRef>
+            <bizRefs>
+                <bizRef>
+                    <id>9e0a3064-4f6d-42d3-a918-d7e3fc24cbc3</id>
+                    <userDefined>true</userDefined>
+                    <metadataRef>
+                        <package>com.kingdee.eas.mkld.sapinterage.client</package>
+                        <name>ClaimAccountListUI</name>
+                        <bosType>uioj</bosType>
+                    </metadataRef>
+                    <bizPropertys>
+                        <bizProperty>
+                            <property>ActionQuery</property>
+                            <userDefined>true</userDefined>
+                        </bizProperty>
+                    </bizPropertys>
+                </bizRef>
+            </bizRefs>
+        </permissionItem>
     </permissionItems>
     <dependences>
         <dependence>
@@ -1794,6 +2142,11 @@
             <lang locale="zh_CN" value="null" />
             <lang locale="zh_HK" value="null" />
             <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].dependences.dependenceextendedProperty.userDefined">
+            <lang locale="en_US" value="true" />
+            <lang locale="zh_CN" value="true" />
+            <lang locale="zh_TW" value="true" />
         </rs>
         <rs key="permission[com.kingdee.eas.mkld.mkldcustom].description">
             <lang locale="en_US" value="null" />
@@ -3244,6 +3597,302 @@
             <lang locale="zh_TW" value="20" />
         </rs>
         <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[收款认领记录_集合新增].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.SAP对接配置" />
+            <lang locale="zh_HK" value="系統.妙可藍多.SAP對接配置" />
+            <lang locale="zh_TW" value="系統.妙可藍多.SAP對接配置" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_修改].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="认领银行账号_修改" />
+            <lang locale="zh_HK" value="認領銀行賬號_修改" />
+            <lang locale="zh_TW" value="認領銀行賬號_修改" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_修改].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_修改].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.ClaimAccount" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.ClaimAccount" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.ClaimAccount" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_修改].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_修改].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_修改].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_修改].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.SAP对接配置" />
+            <lang locale="zh_HK" value="系統.妙可藍多.SAP對接配置" />
+            <lang locale="zh_TW" value="系統.妙可藍多.SAP對接配置" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_删除].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="认领银行账号_删除" />
+            <lang locale="zh_HK" value="認領銀行賬號_刪除" />
+            <lang locale="zh_TW" value="認領銀行賬號_刪除" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_删除].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_删除].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.ClaimAccount" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.ClaimAccount" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.ClaimAccount" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_删除].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_删除].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_删除].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_删除].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.SAP对接配置" />
+            <lang locale="zh_HK" value="系統.妙可藍多.SAP對接配置" />
+            <lang locale="zh_TW" value="系統.妙可藍多.SAP對接配置" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_刷新].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="认领银行账号_刷新" />
+            <lang locale="zh_HK" value="認領銀行賬號_刷新" />
+            <lang locale="zh_TW" value="認領銀行賬號_刷新" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_刷新].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_刷新].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.ClaimAccount" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.ClaimAccount" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.ClaimAccount" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_刷新].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_刷新].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_刷新].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_刷新].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.SAP对接配置" />
+            <lang locale="zh_HK" value="系統.妙可藍多.SAP對接配置" />
+            <lang locale="zh_TW" value="系統.妙可藍多.SAP對接配置" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_查看].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="认领银行账号_查看" />
+            <lang locale="zh_HK" value="認領銀行賬號_查看" />
+            <lang locale="zh_TW" value="認領銀行賬號_查看" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_查看].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_查看].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.ClaimAccount" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.ClaimAccount" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.ClaimAccount" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_查看].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_查看].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_查看].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_查看].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.SAP对接配置" />
+            <lang locale="zh_HK" value="系統.妙可藍多.SAP對接配置" />
+            <lang locale="zh_TW" value="系統.妙可藍多.SAP對接配置" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_查询].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="认领银行账号_查询" />
+            <lang locale="zh_HK" value="認領銀行賬號_查詢" />
+            <lang locale="zh_TW" value="認領銀行賬號_查詢" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_查询].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_查询].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.ClaimAccount" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.ClaimAccount" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.ClaimAccount" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_查询].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_查询].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_查询].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_查询].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.SAP对接配置" />
+            <lang locale="zh_HK" value="系統.妙可藍多.SAP對接配置" />
+            <lang locale="zh_TW" value="系統.妙可藍多.SAP對接配置" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_界面显示].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="认领银行账号_界面显示" />
+            <lang locale="zh_HK" value="認領銀行賬號_介面顯示" />
+            <lang locale="zh_TW" value="認領銀行賬號_介面顯示" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_界面显示].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_界面显示].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.ClaimAccount" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.ClaimAccount" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.ClaimAccount" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_界面显示].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_界面显示].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_界面显示].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_界面显示].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.SAP对接配置" />
+            <lang locale="zh_HK" value="系統.妙可藍多.SAP對接配置" />
+            <lang locale="zh_TW" value="系統.妙可藍多.SAP對接配置" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_集合保存].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="认领银行账号_集合保存" />
+            <lang locale="zh_HK" value="認領銀行賬號_集合保存" />
+            <lang locale="zh_TW" value="認領銀行賬號_集合保存" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_集合保存].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_集合保存].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.ClaimAccount" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.ClaimAccount" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.ClaimAccount" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_集合保存].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_集合保存].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_集合保存].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_集合保存].group">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="系统.妙可蓝多.SAP对接配置" />
+            <lang locale="zh_HK" value="系統.妙可藍多.SAP對接配置" />
+            <lang locale="zh_TW" value="系統.妙可藍多.SAP對接配置" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_集合新增].alias">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="认领银行账号_集合新增" />
+            <lang locale="zh_HK" value="認領銀行賬號_集合新增" />
+            <lang locale="zh_TW" value="認領銀行賬號_集合新增" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_集合新增].description">
+            <lang locale="en_US" value="null" />
+            <lang locale="zh_CN" value="" />
+            <lang locale="zh_TW" value="null" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_集合新增].extendedProperty.bizunit">
+            <lang locale="en_US" value="com.kingdee.eas.mkld.sapinterage.ClaimAccount" />
+            <lang locale="zh_CN" value="com.kingdee.eas.mkld.sapinterage.ClaimAccount" />
+            <lang locale="zh_TW" value="com.kingdee.eas.mkld.sapinterage.ClaimAccount" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_集合新增].extendedProperty.objecttype">
+            <lang locale="en_US" value="bizunit" />
+            <lang locale="zh_CN" value="bizunit" />
+            <lang locale="zh_TW" value="bizunit" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_集合新增].extendedProperty.orgRelation">
+            <lang locale="en_US" value="NONE" />
+            <lang locale="zh_CN" value="NONE" />
+            <lang locale="zh_TW" value="NONE" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_集合新增].extendedProperty.permItemType">
+            <lang locale="en_US" value="20" />
+            <lang locale="zh_CN" value="20" />
+            <lang locale="zh_TW" value="20" />
+        </rs>
+        <rs key="permission[com.kingdee.eas.mkld.mkldcustom].permissionItems.permissionItem[认领银行账号_集合新增].group">
             <lang locale="en_US" value="null" />
             <lang locale="zh_CN" value="系统.妙可蓝多.SAP对接配置" />
             <lang locale="zh_HK" value="系統.妙可藍多.SAP對接配置" />

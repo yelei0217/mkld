@@ -78,7 +78,7 @@ public class ReceClaimRecordUtil {
 		try {
 			ReceivingBillInfo bInfo = ReceivingBillFactory.getLocalInstance(ctx).getReceivingBillInfo(new ObjectStringPK(rId));
 			//收款单-财务组织ID在   收款公司id集合
-			if (InterfaceResource.Rece_Company_Id_Sets.contains(bInfo.getCompany().getId().toString()) &&
+			if (InterfaceResource.getReceCompanyIdSets(ctx).contains(bInfo.getCompany().getId().toString()) &&
 					bInfo.getSourceBillId() != null && !"".equals(bInfo.getSourceBillId())) {
 				String sId = bInfo.getSourceBillId();
 				String stype = BOSUuid.read(sId).getType().toString();
@@ -86,7 +86,7 @@ public class ReceClaimRecordUtil {
 				AccountBankInfo accountInfo = AccountBankFactory.getLocalInstance(ctx).getAccountBankInfo(new ObjectUuidPK(bInfo.getPayeeAccountBank().getId()));
 				String bankAccount = accountInfo.getBankAccountNumber();
 				//交易明细
-				if("380D4F63".equals(stype) && InterfaceResource.Rece_Account_Id_Sets.contains(bankAccount)){
+				if("380D4F63".equals(stype) && InterfaceResource.getReceCompanyIdSets(ctx).contains(bankAccount)){
 					TransDetailInfo tdInfo = TransDetailFactory.getLocalInstance(ctx).getTransDetailInfo(new ObjectStringPK(sId));
 	                FilterInfo filter = new FilterInfo();
 	                filter.getFilterItems().add(new FilterItemInfo("PaymentId",rId,CompareType.EQUALS));
@@ -130,12 +130,12 @@ public class ReceClaimRecordUtil {
 						rInfo.setBankAccount(bankAccount);
 						
 						//根据收款银行账号获取事业部
-						if(InterfaceResource.Account_2MDS_Rale.get(bankAccount) !=null && !"".equals(InterfaceResource.Account_2MDS_Rale.get(bankAccount))){
+						if(InterfaceResource.getAccount2MDSRale(ctx).get(bankAccount) !=null && !"".equals(InterfaceResource.getAccount2MDSRale(ctx).get(bankAccount))){
 							if(isCustoemr)
 								rInfo.setDmsSendStatus(SendStatusMenu.SentS);
 							else
 								rInfo.setDmsSendStatus(SendStatusMenu.UnSent);
-							rInfo.setBusDeptName(InterfaceResource.Account_2MDS_Rale.get(bankAccount));
+							rInfo.setBusDeptName(InterfaceResource.getAccount2MDSRale(ctx).get(bankAccount));
 						}else
 							rInfo.setDmsSendStatus(SendStatusMenu.SentS);
 						

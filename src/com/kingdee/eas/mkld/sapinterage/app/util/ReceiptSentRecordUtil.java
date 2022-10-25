@@ -33,60 +33,67 @@ public class ReceiptSentRecordUtil {
 	 * @throws BOSException
 	 */
 	public static void doGenReceiptRecord(Context ctx) throws BOSException {
-		//删除 7天之前的 数据
-		String delSql = "/*dialect*/ delete from CT_SIG_ReceiptSentRecord where FCREATETIME < to_date(to_char(sysdate-7,'yyyy/mm/dd'),'yyyy/mm/dd') ";
-		DbUtil.execute(ctx, delSql);
+		if(InterfaceResource.getReceAccountIdSets(ctx)!=null && InterfaceResource.getReceAccountIdSets(ctx).size()>0){
+    		String receAccountIds = "";
+			HashSet<String> set = InterfaceResource.getReceAccountIdSets(ctx);
+			Iterator it = set.iterator();
+			while(it.hasNext()){
+				receAccountIds = receAccountIds+"'"+it.next()+"',";
+			}
+			receAccountIds = receAccountIds.substring(0, receAccountIds.length()-1);
+			//删除 7天之前的 数据
+			String delSql = "/*dialect*/ delete from CT_SIG_ReceiptSentRecord where FCREATETIME < to_date(to_char(sysdate-7,'yyyy/mm/dd'),'yyyy/mm/dd') ";
+			DbUtil.execute(ctx, delSql);
 		
-		StringBuffer sbr = new StringBuffer();
-		sbr.append("/*dialect*/insert into CT_SIG_ReceiptSentRecord ").append("\r\n");
-		sbr.append(" (FID,FNumber,FName_l2,CFRECEIPTNO,CFSOURCETYPE,CFSENTFLAG,FSIMPLENAME,CFTRANPACKAGEID,CFCOMPANYID,FCREATETIME,FLASTUPDATETIME )").append("\r\n");
-		sbr.append(" select  newbosid('314BE638'),a.FID,a.FRECEDBILLNUMBER, a.FRECEIPTNO,1,0,a.FBANKCHECKFLAG,a.FTRANPACKAGEID,a.FCOMPANYID, sysdate,a.FBIZTIME    ").append("\r\n");
-		sbr.append(" from T_BE_TransDetail a ").append("\r\n");
-		sbr.append(" inner join T_BD_AccountBanks b on a.FBANKACCOUNTID = b.FID ").append("\r\n");
-		sbr.append(" where b.FBANKACCOUNTNUMBER in ( ").append(InterfaceResource.Rece_Account_Ids).append(" ) ").append("\r\n");// -- 业务类型 普通
-		sbr.append(" and a.FRECEIPTNO  is not null ").append("\r\n");// -- 是否跟电子回单匹配 是
-		sbr.append(" and a.FRECEDBILLTYPE='FA44FD5B' ").append("\r\n");// -- 接收单据类型 收款单
-		sbr.append(" and a.FBIZTIME between to_date(to_char(sysdate-4,'yyyy/mm/dd'),'yyyy/mm/dd') and to_date(to_char(sysdate-1,'yyyy/mm/dd'),'yyyy/mm/dd')").append("\r\n");
-		//sbr.append(" and to_char(FBIZTIME,'yyyy/mm/dd') ='2022/05/20' ").append("\r\n"); //测试固定时间
-		sbr.append(" and not exists (select * from CT_SIG_ReceiptSentRecord r where r.FNUMBER = a.FID ) ").append("\r\n");
-		sbr.append(" order by  a.FBIZDATE desc  ");
-		DbUtil.execute(ctx, sbr.toString());
-		sbr.setLength(0);
-		sbr = new StringBuffer();
-		sbr.append(" /*dialect*/insert into CT_SIG_ReceiptSentRecord").append("\r\n");
-		sbr.append(" (FID,FNumber,FName_l2,CFRECEIPTNO,CFSOURCETYPE,CFSENTFLAG,FSIMPLENAME,CFTRANPACKAGEID,CFCOMPANYID,FCREATETIME,FLASTUPDATETIME )").append("\r\n");
-		sbr.append(" select newbosid('314BE638'),a.FID,c.FNUMBER , a.FRECEIPTNO,2,0,a.FBANKCHECKFLAG,a.FTRANPACKAGEID,a.FCOMPANYID, sysdate,a.FBIZTIME").append("\r\n");
-		sbr.append(" from T_BE_TransDetail a ").append("\r\n");
-		sbr.append(" inner join T_BE_BankPayingBill b on a.FBANKCHECKFLAG = b.FBANKCHECKFLAG ").append("\r\n");
-		sbr.append(" inner join T_CAS_PaymentBill c on  b.FSOURCEBILLID = c.FID ").append("\r\n");
-		sbr.append(" inner join T_BD_AccountBanks d on a.FBANKACCOUNTID = d.FID ").append("\r\n");
-		sbr.append(" where d.FBANKACCOUNTNUMBER in ( ").append(InterfaceResource.Rece_Account_Ids).append(" ) ").append("\r\n");// //-- 业务类型 普通
-		sbr.append(" and a.FBizType = 1 and  a.FRECEIPTNO  is not null ").append("\r\n"); //-- 是否跟电子回单匹配 是
-		sbr.append(" and a.FIsKDRetFlag= 1 ").append("\r\n");  //-- 是否为EAS银企付款
-//		sbr.append(" and to_char(FBIZTIME,'yyyy/mm/dd') ='2022/05/20'").append("\r\n");
-		sbr.append(" and not exists (select * from CT_SIG_ReceiptSentRecord r where r.FNUMBER = a.FID )").append("\r\n");
-		sbr.append(" and a.FBIZTIME between to_date(to_char(sysdate-4,'yyyy/mm/dd'),'yyyy/mm/dd') and to_date(to_char(sysdate-1,'yyyy/mm/dd'),'yyyy/mm/dd')").append("\r\n");
-		sbr.append(" order by a.FBIZDATE desc ");
-		DbUtil.execute(ctx, sbr.toString());
-		
-    	Date currentDate = new Date();
+			StringBuffer sbr = new StringBuffer();
+			sbr.append("/*dialect*/insert into CT_SIG_ReceiptSentRecord ").append("\r\n");
+			sbr.append(" (FID,FNumber,FName_l2,CFRECEIPTNO,CFSOURCETYPE,CFSENTFLAG,FSIMPLENAME,CFTRANPACKAGEID,CFCOMPANYID,FCREATETIME,FLASTUPDATETIME )").append("\r\n");
+			sbr.append(" select  newbosid('314BE638'),a.FID,a.FRECEDBILLNUMBER, a.FRECEIPTNO,1,0,a.FBANKCHECKFLAG,a.FTRANPACKAGEID,a.FCOMPANYID, sysdate,a.FBIZTIME    ").append("\r\n");
+			sbr.append(" from T_BE_TransDetail a ").append("\r\n");
+			sbr.append(" inner join T_BD_AccountBanks b on a.FBANKACCOUNTID = b.FID ").append("\r\n");
+			sbr.append(" where b.FBANKACCOUNTNUMBER in ( ").append(receAccountIds).append(" ) ").append("\r\n");// -- 业务类型 普通
+			sbr.append(" and a.FRECEIPTNO  is not null ").append("\r\n");// -- 是否跟电子回单匹配 是
+			sbr.append(" and a.FRECEDBILLTYPE='FA44FD5B' ").append("\r\n");// -- 接收单据类型 收款单
+			sbr.append(" and a.FBIZTIME between to_date(to_char(sysdate-4,'yyyy/mm/dd'),'yyyy/mm/dd') and to_date(to_char(sysdate-1,'yyyy/mm/dd'),'yyyy/mm/dd')").append("\r\n");
+	 		sbr.append(" and not exists (select * from CT_SIG_ReceiptSentRecord r where r.FNUMBER = a.FID ) ").append("\r\n");
+			sbr.append(" order by  a.FBIZDATE desc  ");
+			DbUtil.execute(ctx, sbr.toString());
+			sbr.setLength(0);
+			sbr = new StringBuffer();
+			sbr.append(" /*dialect*/insert into CT_SIG_ReceiptSentRecord").append("\r\n");
+			sbr.append(" (FID,FNumber,FName_l2,CFRECEIPTNO,CFSOURCETYPE,CFSENTFLAG,FSIMPLENAME,CFTRANPACKAGEID,CFCOMPANYID,FCREATETIME,FLASTUPDATETIME )").append("\r\n");
+			sbr.append(" select newbosid('314BE638'),a.FID,c.FNUMBER , a.FRECEIPTNO,2,0,a.FBANKCHECKFLAG,a.FTRANPACKAGEID,a.FCOMPANYID, sysdate,a.FBIZTIME").append("\r\n");
+			sbr.append(" from T_BE_TransDetail a ").append("\r\n");
+			sbr.append(" inner join T_BE_BankPayingBill b on a.FBANKCHECKFLAG = b.FBANKCHECKFLAG ").append("\r\n");
+			sbr.append(" inner join T_CAS_PaymentBill c on  b.FSOURCEBILLID = c.FID ").append("\r\n");
+			sbr.append(" inner join T_BD_AccountBanks d on a.FBANKACCOUNTID = d.FID ").append("\r\n");
+	 		sbr.append(" where a.FBizType = 1 and  a.FRECEIPTNO  is not null ").append("\r\n"); //-- 是否跟电子回单匹配 是
+			sbr.append(" and a.FIsKDRetFlag= 1 ").append("\r\n");  //-- 是否为EAS银企付款
+	 		sbr.append(" and not exists (select * from CT_SIG_ReceiptSentRecord r where r.FNUMBER = a.FID )").append("\r\n");
+			sbr.append(" and a.FBIZTIME between to_date(to_char(sysdate-4,'yyyy/mm/dd'),'yyyy/mm/dd') and to_date(to_char(sysdate-1,'yyyy/mm/dd'),'yyyy/mm/dd')").append("\r\n");
+			sbr.append(" order by a.FBIZDATE desc ");
+			DbUtil.execute(ctx, sbr.toString());
+			
+	    	Date currentDate = new Date();
 
-		 String msgId = ReceClaimRecordUtil.getCurrentTimeStrS()+(int)(Math.random()*10000);
-	     SAPInterfaceLogInfo logInfo = new SAPInterfaceLogInfo();
-	     logInfo.setNumber(msgId);
-	     logInfo.setBizDate(currentDate);
-	     logInfo.setInterType(SAPInterTypeMenu.Receipt_Sent);
-	     logInfo.setClaimType(ClaimTypeMenu.CurrMonth);
-	     logInfo.setInterResult(InterResultMenu.SUCCESS);
-	     logInfo.setReqTime(currentDate);
-	     logInfo.setRequest("");
-	     logInfo.setRespond("");
-	     logInfo.setDescription("根据交易记录生成回单发送记录");
-	     try {
-		 	SAPInterfaceLogFactory.getLocalInstance(ctx).addnew(logInfo);
-		 } catch (EASBizException e) {
-			 e.printStackTrace();
+			 String msgId = ReceClaimRecordUtil.getCurrentTimeStrS()+(int)(Math.random()*10000);
+		     SAPInterfaceLogInfo logInfo = new SAPInterfaceLogInfo();
+		     logInfo.setNumber(msgId);
+		     logInfo.setBizDate(currentDate);
+		     logInfo.setInterType(SAPInterTypeMenu.Receipt_Sent);
+		     logInfo.setClaimType(ClaimTypeMenu.CurrMonth);
+		     logInfo.setInterResult(InterResultMenu.SUCCESS);
+		     logInfo.setReqTime(currentDate);
+		     logInfo.setRequest("");
+		     logInfo.setRespond("");
+		     logInfo.setDescription("根据交易记录生成回单发送记录");
+		     try {
+			 	SAPInterfaceLogFactory.getLocalInstance(ctx).addnew(logInfo);
+			 } catch (EASBizException e) {
+				 e.printStackTrace();
+			}
 		}
+	 
 	}
 	
 	/**
