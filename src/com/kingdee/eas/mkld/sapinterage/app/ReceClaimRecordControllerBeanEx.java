@@ -58,32 +58,19 @@ public class ReceClaimRecordControllerBeanEx extends com.kingdee.eas.mkld.sapint
 	     
     }
     protected void _sentNoClaimMonthEnd(Context ctx, IObjectValue model)throws BOSException
-    {
-    	 Map<String, String> mp = InterfaceResource.getAccount2MDSRale(ctx);
-    	 System.out.println(mp.size());
-    	 
-    		String receAccountIds = "";
-			HashSet<String> set = InterfaceResource.getReceAccountIdSets(ctx);
-			Iterator it = set.iterator();
-			while(it.hasNext()){
-				receAccountIds = receAccountIds+"'"+it.next()+"',";
-			}
-			receAccountIds = receAccountIds.substring(0, receAccountIds.length()-1);
-			
-    	 HashSet<String>  set2 = InterfaceResource.getReceCompanyIdSets(ctx);
-    	 
+    { 
 	     //super._sentNoClaimMonthEnd(ctx, model);
-//    	ReceClaimRecordInfo info = (ReceClaimRecordInfo)model;
-//	     if(info.getNumber()!=null && !"".equals(info.getNumber()) ){
-//	    	 String paymentNo = info.getNumber();
-//	    	 
-//				if( BankPayingResultSynToOAUtil.judgePayMentExists(ctx,"p",paymentNo)){
-//					BankPayingResultSynToOAUtil.synPayMentBillByBillNo(ctx,"p",paymentNo);
-//				}else{
-//				     String str = String.format("付款单单号:%s不存在", new Object[] { paymentNo });
-// 				    throw new BOSException("付款单发送异常【"+str+"】");
-//				}
-//	     }
+    	ReceClaimRecordInfo info = (ReceClaimRecordInfo)model;
+	     if(info.getNumber()!=null && !"".equals(info.getNumber()) ){
+	    	 String paymentNo = info.getNumber();
+	    	 
+				if( BankPayingResultSynToOAUtil.judgePayMentExists(ctx,"p",paymentNo)){
+					BankPayingResultSynToOAUtil.synPayMentBillByBillNo(ctx,"p",paymentNo);
+				}else{
+				     String str = String.format("付款单单号:%s不存在", new Object[] { paymentNo });
+ 				    throw new BOSException("付款单发送异常【"+str+"】");
+				}
+	     }
 	    	 
     }
 }				

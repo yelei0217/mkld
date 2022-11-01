@@ -118,7 +118,7 @@ public class ReceClaimSentFacadeControllerBean extends AbstractReceClaimSentFaca
 	@Override
 	protected String _sentCustomer2DMS(Context ctx) throws BOSException {
 		this.timer.reset(); 
-		String sql ="select distinct CFPayerName,CFBusDeptName from CT_SIG_ReceClaimRecord where CFDmsSendStatus = 0";
+		String sql ="select distinct CFPayerName,CFBusDeptName from CT_SIG_ReceClaimRecord where CFDmsSendStatus = 0 or CFDmsSendStatus = 3 ";
 		IRowSet rs = DbUtil.executeQuery(ctx, sql);
 		List lists= new ArrayList();
 //		Set rIds = new HashSet();
@@ -157,6 +157,10 @@ public class ReceClaimSentFacadeControllerBean extends AbstractReceClaimSentFaca
 				        logInfo.setDescription("未匹配到客户名称发送至DMS");
 				        try {
 							SAPInterfaceLogFactory.getLocalInstance(ctx).addnew(logInfo);
+							
+							String updateSql = "update CT_SIG_ReceClaimRecord set CFDmsSendStatus=3 where CFDmsSendStatus = 0 ";
+							DbUtil.execute(ctx,updateSql);
+							
 						} catch (EASBizException e) {
 							e.printStackTrace();
 						 }

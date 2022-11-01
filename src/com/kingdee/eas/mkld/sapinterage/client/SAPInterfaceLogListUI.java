@@ -54,7 +54,8 @@ public class SAPInterfaceLogListUI extends AbstractSAPInterfaceLogListUI
 //    	super.actionHelp_actionPerformed(e);
 //    	SyncDBCusFacadeFactory.getRemoteInstance().SyncCustomer("");
     	
-//    	ReceClaimSentFacadeFactory.getRemoteInstance().sentCustomer2DMS();
+    	ReceClaimSentFacadeFactory.getRemoteInstance().sentCustomer2DMS();
+     
     }
 
     /**

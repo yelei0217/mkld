@@ -16,10 +16,12 @@ public class SendStatusMenu extends StringEnum
     public static final String SENTS_VALUE = "1";//alias=已发送接收成功
     public static final String UNSENT_VALUE = "0";//alias=未发送
     public static final String SENTF_VALUE = "2";//alias=已发送接收失败
+    public static final String SENTNOSYNC_VALUE = "3";//alias=已发送未同步
 
     public static final SendStatusMenu SentS = new SendStatusMenu("SentS", SENTS_VALUE);
     public static final SendStatusMenu UnSent = new SendStatusMenu("UnSent", UNSENT_VALUE);
     public static final SendStatusMenu SentF = new SendStatusMenu("SentF", SENTF_VALUE);
+    public static final SendStatusMenu SentNoSync = new SendStatusMenu("SentNoSync", SENTNOSYNC_VALUE);
 
     /**
      * construct function

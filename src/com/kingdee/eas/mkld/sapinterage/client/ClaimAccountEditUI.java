@@ -47,7 +47,7 @@ public class ClaimAccountEditUI extends AbstractClaimAccountEditUI
  				filterInfo.getFilterItems().add(new FilterItemInfo("company.id",company.getId().toString(),CompareType.EQUALS));//认领类型：本月认领
  		}
 		filterInfo.getFilterItems().add(new FilterItemInfo("isClosed", new Integer(0)));
-		filterInfo.getFilterItems().add(new FilterItemInfo("isSetBankInterface", new Integer(1)));
+		//filterInfo.getFilterItems().add(new FilterItemInfo("isSetBankInterface", new Integer(1)));
 		evi.setFilter(filterInfo);
 		prmtacccount.setDisplayFormat("$number$ $name$");
 		prmtacccount.setCommitFormat("$number$");

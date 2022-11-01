@@ -86,7 +86,7 @@ public class ReceClaimRecordUtil {
 				AccountBankInfo accountInfo = AccountBankFactory.getLocalInstance(ctx).getAccountBankInfo(new ObjectUuidPK(bInfo.getPayeeAccountBank().getId()));
 				String bankAccount = accountInfo.getBankAccountNumber();
 				//交易明细
-				if("380D4F63".equals(stype) && InterfaceResource.getReceCompanyIdSets(ctx).contains(bankAccount)){
+				if("380D4F63".equals(stype) && InterfaceResource.getReceAccountIdSets(ctx).contains(bankAccount)){
 					TransDetailInfo tdInfo = TransDetailFactory.getLocalInstance(ctx).getTransDetailInfo(new ObjectStringPK(sId));
 	                FilterInfo filter = new FilterInfo();
 	                filter.getFilterItems().add(new FilterItemInfo("PaymentId",rId,CompareType.EQUALS));
@@ -229,6 +229,42 @@ public class ReceClaimRecordUtil {
 	 	}
 	}
 	
+	/**
+	 *  修改收款认领记录单 同步状态
+	 * @param ctx
+	 * @param rIds
+	 * @param type
+	 * @param oper
+	 */
+	private static void updateRecordSendSta(Context ctx,String id,String type,String oper){
+	 if( id !=null &&!"".equals(id) &&!"".equals(oper)&& type !=null &&!"".equals(type)){
+		//StringBuffer sbr = new StringBuffer();
+	      int sendFlag = 0;
+	      if(InterResultMenu.FAIL_VALUE.equals(oper))
+	    	  sendFlag = 2;
+	      else if(InterResultMenu.SUCCESS_VALUE.equals(oper)) 
+	    	  sendFlag = 1;
+//	      if (sbr.length() > 0)
+//	      {
+	    	  String updateSql = "";
+	    	  if("3".equals(type))
+	    		  updateSql=" CFSendSentFlag ="+sendFlag +" ";
+	    	  else if("2".equals(type))
+	    		  updateSql=" CFFirstSentFlag ="+sendFlag +",CFClaimType = 'B' ";
+	    	  else
+	    		  updateSql=" CFFirstSentFlag ="+sendFlag +" ";
+	    	  
+	    	  String sql ="update CT_SIG_ReceClaimRecord set "+updateSql+" where fid = '"+id+"'";
+
+	    	  try {
+					DbUtil.execute(ctx, sql);
+				} catch (BOSException e) {
+		 			e.printStackTrace();
+				}
+//	      	}
+	 	}
+	}
+	
 	
 	/**
 	 * @param ctx
@@ -249,13 +285,15 @@ public class ReceClaimRecordUtil {
         filter.setMaskString("#0 and #1 and (#2 or #3)");
         viewInfo.setFilter(filter);
         ReceClaimRecordCollection rcoll = ibiz.getReceClaimRecordCollection(viewInfo);
-        List<ReceClaimDTO> lists = null ;
+       // List<ReceClaimDTO> lists = null ;
         if(rcoll !=null && rcoll.size() > 0){
         	Iterator it = rcoll.iterator();
-        	lists = new ArrayList<ReceClaimDTO>();
         	Date currentDate = new Date();
-        	Set rIds = new HashSet();
+        	Gson gson = new Gson();
+        	//Set rIds = new HashSet();
         	while(it.hasNext()){
+        		List<ReceClaimDTO> 	lists = new ArrayList<ReceClaimDTO>();
+        		String rid ="";
         		ReceClaimRecordInfo rInfo = (ReceClaimRecordInfo) it.next();
         		ReceClaimDTO dto = new  ReceClaimDTO();
         		dto.setEASID(rInfo.getPaymentNo());//  收款单单号
@@ -271,45 +309,49 @@ public class ReceClaimRecordUtil {
         		dto.setDMBTR_BZJ(rInfo.getMargin());//  其中保证金金额
         		dto.setDMBTR_YJ(rInfo.getDeposit());//  其中押金金额
         		dto.setSGTXT(rInfo.getAbstract());//    摘要    
-        		rIds.add(rInfo.getId().toString());
+        		rid = rInfo.getId().toString();
         		lists.add(dto);
+        		
+                //1、根据封装的 list 拼接发送信息
+             
+                Map dataMp = new HashMap();
+                dataMp.put("ITEMS", lists);
+                String dataStr  = gson.toJson(dataMp);
+                String msgId = getCurrentTimeStrS()+(int)(Math.random()*10000);
+                String snedData = SAPInterfaceUtil.createSendReqStr(msgId,"FICO_I012",dataStr);
+                System.out.println("snedData:"+snedData);
+                String sapReceRsp = SAPInterfaceUtil.sendSapRequest(snedData);
+                System.out.println("sapReceRsp:"+sapReceRsp);
+                
+                lists.clear();
+                dataMp.clear();
+                
+        		 boolean sendResult = SAPInterfaceUtil.judgeInteSuccess(sapReceRsp);
+               InterResultMenu resultemnu = InterResultMenu.FAIL;
+                if(sendResult)
+            	   resultemnu = InterResultMenu.SUCCESS;
+                SAPInterfaceLogInfo logInfo = new SAPInterfaceLogInfo();
+                logInfo.setNumber(msgId);
+                logInfo.setBizDate(currentDate);
+                logInfo.setInterType(SAPInterTypeMenu.FICO_I012);
+                logInfo.setClaimType(ClaimTypeMenu.CurrMonth);
+                logInfo.setInterResult(resultemnu);
+                logInfo.setReqTime(currentDate);
+                logInfo.setRequest(dataStr);
+                logInfo.setRespond(sapReceRsp);
+                logInfo.setDescription("EAS收款认领结果传SAP:本月认领");
+        	        try {
+        				SAPInterfaceLogFactory.getLocalInstance(ctx).addnew(logInfo);
+        			} catch (EASBizException e) {
+        				e.printStackTrace();
+        			 }
+        			
+        		     if(rid !=null && !"".equals(rid) && InterResultMenu.SUCCESS_VALUE.equals(resultemnu.getValue())) 
+        		    	 updateRecordSendSta(ctx, rid,"1",InterResultMenu.SUCCESS_VALUE);
+        		     else
+        		    	 updateRecordSendSta(ctx, rid,"1",InterResultMenu.FAIL_VALUE);
         	} 
-        	
-        //1、根据封装的 list 拼接发送信息
-        Gson gson = new Gson();
-        Map dataMp = new HashMap();
-        dataMp.put("ITEMS", lists);
-        String dataStr  = gson.toJson(dataMp);
 
-        String msgId = getCurrentTimeStrS()+(int)(Math.random()*10000);
-        String snedData = SAPInterfaceUtil.createSendReqStr(msgId,"FICO_I012",dataStr);
-        System.out.println("snedData:"+snedData);
-        String sapReceRsp = SAPInterfaceUtil.sendSapRequest(snedData);
-        System.out.println("sapReceRsp:"+sapReceRsp);
-		 boolean sendResult = SAPInterfaceUtil.judgeInteSuccess(sapReceRsp);
-       InterResultMenu resultemnu = InterResultMenu.FAIL;
-        if(sendResult)
-    	   resultemnu = InterResultMenu.SUCCESS;
-        SAPInterfaceLogInfo logInfo = new SAPInterfaceLogInfo();
-        logInfo.setNumber(msgId);
-        logInfo.setBizDate(currentDate);
-        logInfo.setInterType(SAPInterTypeMenu.FICO_I012);
-        logInfo.setClaimType(ClaimTypeMenu.CurrMonth);
-        logInfo.setInterResult(resultemnu);
-        logInfo.setReqTime(currentDate);
-        logInfo.setRequest(dataStr);
-        logInfo.setRespond(sapReceRsp);
-        logInfo.setDescription("EAS收款认领结果传SAP:本月认领");
-	        try {
-				SAPInterfaceLogFactory.getLocalInstance(ctx).addnew(logInfo);
-			} catch (EASBizException e) {
-				e.printStackTrace();
-			 }
-			
-		     if(rIds !=null && rIds.size() >0 && InterResultMenu.SUCCESS_VALUE.equals(resultemnu.getValue())) 
-		    	 updateRecordSendSta(ctx, rIds,"1",InterResultMenu.SUCCESS_VALUE);
-		     else
-		    	 updateRecordSendSta(ctx, rIds,"1",InterResultMenu.FAIL_VALUE);
         }
 	}
 	
@@ -336,13 +378,17 @@ public class ReceClaimRecordUtil {
         filter.setMaskString("#0 and #1 and #2 and (#3 or #4) and #5");
         viewInfo.setFilter(filter);
         ReceClaimRecordCollection rcoll = ibiz.getReceClaimRecordCollection(viewInfo);
-        List<ReceClaimDTO> lists = null ;
+       // List<ReceClaimDTO> lists = null ;
         if(rcoll !=null && rcoll.size() > 0){
         	Iterator it = rcoll.iterator();
-        	lists = new ArrayList<ReceClaimDTO>();
+        	//lists = new ArrayList<ReceClaimDTO>();
         	Date currentDate = new Date();
-        	Set rIds = new HashSet();
+        	//Set rIds = new HashSet();          
+        	Gson gson = new Gson();
         	while(it.hasNext()){
+        		List<ReceClaimDTO> lists  = new ArrayList<ReceClaimDTO>();
+        		String rid ="";
+        		
         		ReceClaimRecordInfo rInfo = (ReceClaimRecordInfo) it.next();
         		ReceClaimDTO dto = new  ReceClaimDTO();
         		dto.setEASID(rInfo.getPaymentNo());//  收款单单号
@@ -358,45 +404,50 @@ public class ReceClaimRecordUtil {
         		dto.setDMBTR_BZJ(rInfo.getMargin());//  其中保证金金额
         		dto.setDMBTR_YJ(rInfo.getDeposit());//  其中押金金额
         		dto.setSGTXT(rInfo.getAbstract());//    摘要    
-        		rIds.add(rInfo.getId().toString());
+        		rid = rInfo.getId().toString();
         		lists.add(dto);
-        	} 
-        	
-        //1、根据封装的 list 拼接发送信息
-        Gson gson = new Gson();
-        Map dataMp = new HashMap();
-        dataMp.put("ITEMS", lists);
-        String dataStr  = gson.toJson(dataMp);
+        		
+        	    //1、根据封装的 list 拼接发送信息
+      
+                Map dataMp = new HashMap();
+                dataMp.put("ITEMS", lists);
+                String dataStr  = gson.toJson(dataMp);
 
-        String msgId = getCurrentTimeStrS()+(int)(Math.random()*10000);
-        String snedData = SAPInterfaceUtil.createSendReqStr(msgId,"FICO_I012",dataStr);
-        System.out.println("snedData:"+snedData);
-        String sapReceRsp = SAPInterfaceUtil.sendSapRequest(snedData);
-        System.out.println("sapReceRsp:"+sapReceRsp);
-		 boolean sendResult = SAPInterfaceUtil.judgeInteSuccess(sapReceRsp);
-       InterResultMenu resultemnu = InterResultMenu.FAIL;
-        if(sendResult)
-    	   resultemnu = InterResultMenu.SUCCESS;
-        SAPInterfaceLogInfo logInfo = new SAPInterfaceLogInfo();
-        logInfo.setNumber(msgId);
-        logInfo.setBizDate(currentDate);
-        logInfo.setInterType(SAPInterTypeMenu.FICO_I012);
-        logInfo.setClaimType(ClaimTypeMenu.NextMonth);
-        logInfo.setInterResult(resultemnu);
-        logInfo.setReqTime(currentDate);
-        logInfo.setRequest(dataStr);
-        logInfo.setRespond(sapReceRsp);
-        logInfo.setDescription("EAS收款认领结果传SAP:次月认领");
-	        try {
-				SAPInterfaceLogFactory.getLocalInstance(ctx).addnew(logInfo);
-			} catch (EASBizException e) {
-				e.printStackTrace();
-			 }
-			
-		     if(rIds !=null && rIds.size() >0 && InterResultMenu.SUCCESS_VALUE.equals(resultemnu.getValue())) 
-		    	 updateRecordSendSta(ctx, rIds,"3",InterResultMenu.SUCCESS_VALUE);
-		     else
-		    	 updateRecordSendSta(ctx, rIds,"3",InterResultMenu.FAIL_VALUE);
+                String msgId = getCurrentTimeStrS()+(int)(Math.random()*10000);
+                String snedData = SAPInterfaceUtil.createSendReqStr(msgId,"FICO_I012",dataStr);
+                System.out.println("snedData:"+snedData);
+                String sapReceRsp = SAPInterfaceUtil.sendSapRequest(snedData);
+                System.out.println("sapReceRsp:"+sapReceRsp);
+                
+                lists.clear();
+                dataMp.clear();
+                
+        		 boolean sendResult = SAPInterfaceUtil.judgeInteSuccess(sapReceRsp);
+               InterResultMenu resultemnu = InterResultMenu.FAIL;
+                if(sendResult)
+            	   resultemnu = InterResultMenu.SUCCESS;
+                SAPInterfaceLogInfo logInfo = new SAPInterfaceLogInfo();
+                logInfo.setNumber(msgId);
+                logInfo.setBizDate(currentDate);
+                logInfo.setInterType(SAPInterTypeMenu.FICO_I012);
+                logInfo.setClaimType(ClaimTypeMenu.NextMonth);
+                logInfo.setInterResult(resultemnu);
+                logInfo.setReqTime(currentDate);
+                logInfo.setRequest(dataStr);
+                logInfo.setRespond(sapReceRsp);
+                logInfo.setDescription("EAS收款认领结果传SAP:次月认领");
+        	        try {
+        				SAPInterfaceLogFactory.getLocalInstance(ctx).addnew(logInfo);
+        			} catch (EASBizException e) {
+        				e.printStackTrace();
+        			}
+        			
+        			if(rid !=null && !"".equals(rid) && InterResultMenu.SUCCESS_VALUE.equals(resultemnu.getValue())) 
+        		    	 updateRecordSendSta(ctx, rid,"3",InterResultMenu.SUCCESS_VALUE);
+        		     else
+        		    	 updateRecordSendSta(ctx, rid,"3",InterResultMenu.FAIL_VALUE);
+        	} 
+    
         }
 	}
 
@@ -495,7 +546,7 @@ public class ReceClaimRecordUtil {
 			DbUtil.execute(ctx,updateSql);
 		
 			// 已完成月底未认领发送
-			updateSql = "update CT_SIG_ReceClaimRecord set CFAgainClaimCusNo='"+cusNumber+"',CFClaimStatus=1,CFDmsSendStatus=1,CFClaimType='B' where CFCustomerNo ='E99999999' and CFPayerName ='"+cusName+"' and CFFirstSentFlag = 1 and CFSendSentFlag != 1 ";
+			updateSql = "/*dialect*/update CT_SIG_ReceClaimRecord set CFAgainClaimDate =sysdate, CFAgainClaimCusNo='"+cusNumber+"',CFClaimStatus=1,CFDmsSendStatus=1,CFClaimType='B' where CFCustomerNo ='E99999999' and CFPayerName ='"+cusName+"' and CFFirstSentFlag = 1 and CFSendSentFlag != 1 ";
 			DbUtil.execute(ctx,updateSql);
 		}
 	}

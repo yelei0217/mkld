@@ -33,7 +33,7 @@ public class ReceivingBillControllerBeanPIEx extends ReceivingBillControllerBean
 	protected IObjectPK _addnew(Context ctx, IObjectValue model)
 			throws BOSException, EASBizException {
  		IObjectPK pk = super._addnew(ctx, model);
-  		 if(InterfaceResource.MKLD_DB_ID.equals(ctx.getAIS()))
+  		//if(InterfaceResource.MKLD_DB_ID.equals(ctx.getAIS()))
  			 ReceClaimRecordUtil.savaRecordBill(ctx, pk.toString());
  		return pk;
 	}
